@@ -2,7 +2,9 @@
 
 ![alt text](https://img.shields.io/static/v1?label=coverage&message=100%&color=Blue)
 
-<img width="350" height="350" src="https://github.com/LakshaniNadeesha/benefit/blob/README-division/Logo/Logo.jpeg">
+<p align="center"
+<img width="350" height="350" src="https://github.com/LakshaniNadeesha/benefit/blob/README-division/Logo/Logo.jpeg" />
+</p>
 
 BeneFit is a **Human Resource Management System** that will be going to implement for Oracle Freight Solution Pvt Ltd. The purpose of this system is to formalize human resource tasks and manage their employees in a more effective and efficient way.This system will be developed to override the problems prevailing in the practicing manual system. This software is supported to eliminate and in some cases reduce the hardships faced by this existing system.
 
