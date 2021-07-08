@@ -7,9 +7,10 @@ featured: true
 hidden: false
 ---
 
-
-![OFS logo](OFS_logo.jpg)
-
+<p align = "center">
+   <img src="https://github.com/dilukshanbimsara/benefit/blob/README-division/Logo/Logo.jpeg" width="350" height="400" />
+</p>
+   
 ## <strong>What is OFS?</strong>
 
 <p align=justify>ORACLE FREUGHT SOLUTIONS Small and Medium Scale enterprise (SME). Their highly experienced team in freight forwarding industry is focus on providing the best tailor made solutions to move your cargo connecting Sri Lanka with any part of the world. Adapting to volatile global market conditions, they always make sure you get the most innovative and profitable deals based on pertaining conditions.</p>
