@@ -2,7 +2,7 @@
 
 ![alt text](https://img.shields.io/static/v1?label=coverage&message=100%&color=Blue)
 
-<p align="center"
+<p align="center">
 <img width="350" height="350" src="https://github.com/LakshaniNadeesha/benefit/blob/README-division/Logo/Logo.jpeg" />
 </p>
 
