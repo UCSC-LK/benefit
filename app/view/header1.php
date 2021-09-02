@@ -27,13 +27,5 @@
         </a>
     </button>
 </div>
-
-<di>
-    <?php
-    require 'logout_button.php'
-    ?>
-</di>
-
-
 </body>
 </html>
