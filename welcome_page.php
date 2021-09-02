@@ -43,7 +43,7 @@
         <div class="nav-bar">
             <ul>
                 <li><a href="https://ofslk.com/">ABOUT</a></li>
-                <li><a href="app/views/login.php">LOGIN</a></li>
+                <li><a href="app/view/login.php">LOGIN</a></li>
             </ul>
         </div>
     </div>
