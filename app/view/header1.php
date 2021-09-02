@@ -33,11 +33,6 @@
     require 'logout_button.php'
     ?>
 </di>
-<div>
-    <?php
-    require_once 'footer.php';
-    ?>
-</div>
 
 
 </body>
