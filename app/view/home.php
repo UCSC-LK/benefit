@@ -7,10 +7,6 @@ if(!isset($_SESSION['user'])){
     exit();
 }
 ?>
-<!---->
-<!--<h1>Welcome</h1>-->
-<!--<p>Login successfull</p>-->
-<?php //include('footer.php');?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,3 +63,6 @@ if(!isset($_SESSION['user'])){
     <?php require_once 'footer.php'
     ?>
 </div>
+    
+</body>   
+</html>
