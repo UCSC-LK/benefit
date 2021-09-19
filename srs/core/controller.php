@@ -12,7 +12,7 @@ class Controller
 		extract($data);
 		// code...
 
-		if(file_exists("./private/views/" . $view . ".view.php"))
+		if(file_exists("./srs/views/" . $view . ".view.php"))
 		{
 			require ("./srs/views/" . $view . ".view.php");
 		}else{
