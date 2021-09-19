@@ -1,5 +1,4 @@
 @import "color.css";
-
 body {
     font-family: Arial;
 }
@@ -39,7 +38,7 @@ body {
     padding: 25px;
     font-size: 20px;
     text-decoration: none;
-    /*color: #D3DBDD;*/
+    width: max-content;
     color: var(--dark_white);
     display: block;
 }
@@ -47,6 +46,7 @@ body {
 .nav-bar li:hover {
     background-color: darkgray;
 }
+
 
 /* bell notification*/
 
