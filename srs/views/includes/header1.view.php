@@ -11,15 +11,14 @@
 </head>
 <body>
 
-<div class="header">
-    <div class="nav-bar">
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">MY INFO</a></li>
-            <li><a href="#">DOCUMENTS</a></li>
-            <li><a href="#">USER MANAGEMENT(HR)</a></li>
-        </ul>
+<div class="header1">
+    <div class="nav-bar1" id="nav-bar">
+        <div class="list1"> <a href="#">HOME</a></div>
+        <div class="list1"> <a href="#">MY INFO</a></div>
+        <div class="list1"> <a href="#">DOCUMENTS</a></div>
+        <div class="list1"> <a href="#">USER MANAGEMENT(HR)</a></div>
     </div>
+
     <button type="button" class="icon-button">
         <a href="#">
             <span class="material-icons">notifications</span>

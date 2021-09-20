@@ -1,17 +1,17 @@
 @import "color.css";
-.header2 {
-    /* width: 100%; */
-    height: 80px;
-    background-color: #E4F1F5;
-    display: flex;
-    font-family: Arial;
-    position: relative;
-}
 
 .content {
     width: 80%;
     height: auto;
     padding: 0%;
+}
+
+.header2 {
+    height: 80px;
+    background-color: #E4F1F5;
+    display: flex;
+    font-family: Arial;
+    position: relative;
 }
 
 .nav-bar2 {
@@ -43,12 +43,14 @@
 
 .nav-bar2 a:hover {
     background-color: var(--grey);
+    height: 100%;
     color: black;
 }
 
+/*profile*/
 .profile_container {
     display: flex;
-    background-color: #E5EDF7;
+    /*background-color: #E5EDF7;*/
     max-width: 100%;
     height: 100%;
 }
@@ -63,12 +65,12 @@
 }
 
 .profile__image {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
     margin-top: 0;
-    padding: 10px;
+    padding: 20px;
 }
 
 .name {

@@ -73,7 +73,7 @@
                             </div>
                             <div class="benefit_card_column">
                                 <div class="card">
-                                    <p class="title">Medical Insurance</p>
+                                    <p class="title">Life Insurance</p>
                                     <div class="text">Remaining Amount</div>
                                     <div class="remain_amount">100,000 LKR</div>
                                     <div class="text">Max Amount</div>
@@ -84,7 +84,7 @@
                             </div>
                             <div class="benefit_card_column">
                                 <div class="card">
-                                    <p class="title">Medical Insurance</p>
+                                    <p class="title">Accident Insurance</p>
                                     <div class="text">Remaining Amount</div>
                                     <div class="remain_amount">100,000 LKR</div>
                                     <div class="text">Max Amount</div>
