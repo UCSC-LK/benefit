@@ -1,6 +1,6 @@
 @import "color.css";
 footer {
-    position: relative;
+    /*position: relative;*/
     width: 100%;
     height: 70px;
     background-color: var(--header);

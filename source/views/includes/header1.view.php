@@ -12,16 +12,25 @@
 </head>
 <body>
 
-<div class="header">
-    <div class="nav-bar">
-        <ul>
-            <li><a href="<?=PATH?>home">HOME</a></li>
-            <li><a href="<?=PATH?>profile">MY INFO</a></li>
-            <li><a href="#">DOCUMENTS</a></li>
-            <?php if(Auth::access('Supervisor')):?>
-            <li><a href="#">USER MANAGEMENT(HR)</a></li>
-             <?php endif;?>
-        </ul>
+<!--<div class="header">-->
+<div class="header1">
+<!--    <div class="nav-bar">-->
+<!--        <ul>-->
+<!--            <li><a href="--><?//=PATH?><!--home">HOME</a></li>-->
+<!--            <li><a href="--><?//=PATH?><!--profile">MY INFO</a></li>-->
+<!--            <li><a href="#">DOCUMENTS</a></li>-->
+<!--            --><?php //if(Auth::access('Supervisor')):?>
+<!--            <li><a href="#">USER MANAGEMENT(HR)</a></li>-->
+<!--             --><?php //endif;?>
+<!--        </ul>-->
+<!--    </div>-->
+    <div class="nav-bar1" id="nav-bar">
+        <div class="list1"> <a href="<?=PATH?>home">HOME</a></div>
+        <div class="list1"> <a href="<?=PATH?>profile"">MY INFO</a></div>
+        <div class="list1"> <a href="#">DOCUMENTS</a></div>
+        <?php if(Auth::access('Supervisor')):?>
+        <div class="list1"> <a href="#">USER MANAGEMENT(HR)</a></div>
+        <?php endif;?>
     </div>
     <button type="button" class="icon-button">
         <a href="#">
