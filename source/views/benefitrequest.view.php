@@ -4,44 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-<!--    <link rel="stylesheet" href="includes/css/header2.css" >-->
-<!--    <link rel="stylesheet" href="includes/css/benefitrequest.css" >-->
+    <!--    <link rel="stylesheet" href="includes/css/header2.css" >-->
+    <!--    <link rel="stylesheet" href="includes/css/benefitrequest.css" >-->
     <link rel="stylesheet" href="<?=CSS_PATH?>benefitrequest.css">
     <link rel="stylesheet" href="<?=CSS_PATH?>header1.css">
     <link rel="stylesheet" href="<?=CSS_PATH?>header2.css">
     <link rel="stylesheet" href="<?=CSS_PATH?>footer.css">
-<!--    <script deffer src="includes/js/benefits_form.js"></script>-->
+    <!--    <script deffer src="includes/js/benefits_form.js"></script>-->
     <title></title>
 </head>
 <body>
 
 <div>
     <?php
-        $this->view('includes/header1')
+    $this->view('includes/header1')
     ?>
 
 </div>
 
 <div class="profile_container">
     <div class="profile">
-        <img src="<?=IMG_PATH?>me.jpeg" alt="Profile Image" class="profile__image">
-        <div class="name">Sathya Udayangi</div>
-        <div class="job">Software Engineer</div>
-        <div class="contact">
-            <i class="material-icons">local_phone</i>071#######
-        </div>
-        <div class="email">
-            <i class="material-icons">email</i>sathyau@gmail.com
-        </div>
-        <div class="hire">Hired Date</div>
-        <div class="date">27th Aug 2019</div>
-        <div class="address">No 22, ABD Rd, Galle</div>
-        <div class="supervisor">
-            <i class="material-icons">supervisor_account</i>Mr.Dilukshan
-        </div>
-
+        <?php
+        $this->view('includes/profile1');
+        ?>
     </div>
-
 
     <div class="content">
 
@@ -60,16 +46,16 @@
                 <div>
                     <div class="benefit_form">
 
-                        <form action="" method="post">
+                        <form action="BenefitrequestController" method="post">
 
-                            <div class="row">
-                                <div class="column_1">
-                                    <label for="employee_id">Employee ID</label>
-                                </div>
-                                <div class="column_2">
-                                    <input type="text" id="employee_id" name="employee_id" required>
-                                </div>
-                            </div>
+                            <!--                            <div class="row">-->
+                            <!--                                <div class="column_1">-->
+                            <!--                                    <label for="employee_id">Employee ID</label>-->
+                            <!--                                </div>-->
+                            <!--                                <div class="column_2">-->
+                            <!--                                    <input type="text" id="employee_id" name="employee_id" required>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
 
                             <div class="row">
                                 <div class="column_1">
