@@ -31,15 +31,11 @@
     </div>
 
     <div class="content">
-
-        <div class="header2">
-            <div class="nav-bar2" id="nav-bar">
-                <div class="list"><a href="#">Time Off</a></div>
-                <div class="list"><a href="#">Reimbursements</a></div>
-                <div class="list"><a href="#">Benefits</a></div>
-                <div class="list"><a href="#">Performance</a></div>
-            </div>
-        </div>
+        <di>
+            <?php
+            $this->view('includes/header2')
+            ?>
+        </di>
 
         <div class="benefit_container">
             <div class="benefit_head">
