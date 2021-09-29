@@ -92,12 +92,12 @@
 
                 <?php
                 if (isset($pending)) {
-                    for($i=0; $i<sizeof($pending); $i++){
-                        $row=$pending[$i];
+                    for ($i = 0; $i < sizeof($pending); $i++) {
+                        $row = $pending[$i];
                         print "<div class='pending_benefits'>";
-                        echo "<div>".$row->benefit_type."</div>";
-                        echo "<div>".$row->claim_date."</div>";
-                        echo "<div>"."<i>Pending</i>"."</div>";
+                        echo "<div>" . $row->benefit_type . "</div>";
+                        echo "<div>" . $row->claim_date . "</div>";
+                        echo "<div>" . "<i>Pending</i>" . "</div>";
                         print "<input type='submit' value='Decline' class='delete_button'>";
                         echo "</div>";
                     }

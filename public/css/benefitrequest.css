@@ -12,7 +12,6 @@ body {
 
 .benefit_container {
     margin: 5px;
-    /*width: 100%;*/
     display: flex;
     flex-direction: column;
 }
@@ -20,7 +19,6 @@ body {
 .benefit_container .benefit_head {
     background-color: rgb(255, 255, 255);
     width: 100%;
-    /*padding: 10px;*/
 }
 
 .benefit_container .benefit_head .claim_benefit {
@@ -35,18 +33,15 @@ body {
 }
 
 .benefit_form .row {
-    /*padding: 40px;*/
     padding-left: 40px;
     padding-top: 30px;
     display: flex;
     justify-items: center;
-    /*align-items: flex-start;*/
 }
 
 .benefit_form .row .column_1 {
     font-size: medium;
     padding: 12px 20px;
-    /*padding-left: 20px;*/
     width: 20%;
     color: #1C1D1D;
 }
@@ -54,10 +49,9 @@ body {
 .benefit_form .row .column_2 {
     width: 70%;
     padding-left: 15px;
-
 }
 
-.column_2 select {
+.column_2 select, .column_2 input, .column_2 textarea {
     width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -68,10 +62,9 @@ body {
 }
 
 .benefit_form .row .report_submission {
-    width: 100%;
+    width: 97%;
     height: 160px;
     justify-content: center;
-    /*background-color: var(--grey);*/
     text-align: center;
     border-radius: 10px;
     border-style: dotted;
@@ -94,13 +87,12 @@ body {
     padding-top: 20px;
 }
 
-.claim_button{
+.claim_button {
     /*padding-left: 40px;*/
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
     justify-content: center;
-
 }
 
 input[type=submit] {

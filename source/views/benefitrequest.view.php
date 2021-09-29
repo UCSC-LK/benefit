@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <!--    <link rel="stylesheet" href="includes/css/header2.css" >-->
     <!--    <link rel="stylesheet" href="includes/css/benefitrequest.css" >-->
-    <link rel="stylesheet" href="<?=CSS_PATH?>benefitrequest.css">
-    <link rel="stylesheet" href="<?=CSS_PATH?>header1.css">
-    <link rel="stylesheet" href="<?=CSS_PATH?>header2.css">
-    <link rel="stylesheet" href="<?=CSS_PATH?>footer.css">
+    <link rel="stylesheet" href="<?= CSS_PATH ?>benefitrequest.css">
+    <link rel="stylesheet" href="<?= CSS_PATH ?>header1.css">
+    <link rel="stylesheet" href="<?= CSS_PATH ?>header2.css">
+    <link rel="stylesheet" href="<?= CSS_PATH ?>footer.css">
     <!--    <script deffer src="includes/js/benefits_form.js"></script>-->
     <title></title>
 </head>
@@ -33,10 +34,10 @@
 
         <div class="header2">
             <div class="nav-bar2" id="nav-bar">
-                <div class="list"> <a href="#">Time Off</a></div>
-                <div class="list"> <a href="#">Reimbursements</a></div>
-                <div class="list"> <a href="#">Benefits</a></div>
-                <div class="list"> <a href="#">Performance</a></div>
+                <div class="list"><a href="#">Time Off</a></div>
+                <div class="list"><a href="#">Reimbursements</a></div>
+                <div class="list"><a href="#">Benefits</a></div>
+                <div class="list"><a href="#">Performance</a></div>
             </div>
         </div>
 
@@ -47,15 +48,6 @@
                     <div class="benefit_form">
 
                         <form action="BenefitrequestController" method="post">
-
-                            <!--                            <div class="row">-->
-                            <!--                                <div class="column_1">-->
-                            <!--                                    <label for="employee_id">Employee ID</label>-->
-                            <!--                                </div>-->
-                            <!--                                <div class="column_2">-->
-                            <!--                                    <input type="text" id="employee_id" name="employee_id" required>-->
-                            <!--                                </div>-->
-                            <!--                            </div>-->
 
                             <div class="row">
                                 <div class="column_1">
@@ -85,7 +77,8 @@
                                     <label for="claiming_amount">Claiming Amount</label>
                                 </div>
                                 <div class="column_2">
-                                    <input type="text" id="claiming_amount" name="claiming_amount" placeholder="Rs.20,000" required>
+                                    <input type="text" id="claiming_amount" name="claiming_amount"
+                                           placeholder="Rs.20,000" required>
                                 </div>
                             </div>
 
@@ -94,7 +87,8 @@
                                     <label for="subject">Reason</label>
                                 </div>
                                 <div class="column_2">
-                                    <textarea id="subject" name="subject" placeholder="Why You Are Applying..." style="height:200px; width: 550px;" required></textarea>
+                                    <textarea id="subject" name="subject" placeholder="Why You Are Applying..."
+                                              style="height:200px; width: 550px;" required></textarea>
                                 </div>
                             </div>
 
@@ -125,7 +119,7 @@
                                 });
 
                                 report_submission.addEventListener("change", function () {
-                                    if(report_submission.value) {
+                                    if (report_submission.value) {
                                         custom_text.innerHTML = report_submission.value;
                                     } else {
                                         custom_text.innerHTML = "No File chose, yet";

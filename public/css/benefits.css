@@ -162,13 +162,14 @@ AAAAAAAAAAAAAAAAAAAAAAAA */
 .pending_benefits div {
     justify-content: center;
     padding: 10px;
-    font-size: large;
+    font-size: medium;
     width: 25%;
 }
 
 .pending_benefits input {
-    background-color: #45a049;
+    background-color: blue;
     border-radius: 20px;
+    margin: 5px;
     width: 20%;
 }
 
