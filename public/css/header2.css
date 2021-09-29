@@ -3,14 +3,14 @@
 .content {
     width: 80%;
     height: auto;
-    padding: 0%;
+    padding: 0;
 }
 
 .header2 {
     height: 80px;
-    background-color: #7FD0EE;
+    background-color: #E4F1F5;
     display: flex;
-    font-family: Arial;
+    font-family: Arial, serif;
     position: relative;
 }
 
