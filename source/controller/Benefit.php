@@ -16,12 +16,13 @@ class Benefit extends Controller
         $ar = auth::user();
         $pending = $user->where_condition('employee_ID','benefit_status', $ar ,'pending');
 
-        if(sizeof($pending)){
-            $this->view('benefit', ['pending' => $pending]);
-        }
-        else{
-            $this->view('benefit');
-        }
+//        if(sizeof($pending)){
+//            $this->view('benefit', ['pending' => $pending]);
+//        }
+//        else{
+//            $this->view('benefit');
+//        }
+        $this->view('benefit', ['pending' => $pending]);
 
 
     }
