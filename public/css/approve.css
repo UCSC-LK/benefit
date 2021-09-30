@@ -6,7 +6,7 @@ body {
     font-family: Arial;
 }
 
-.container {
+.approve-container {
     padding-top: 1%;
     padding-left: 2%;
     padding-bottom: 5%;
@@ -15,10 +15,11 @@ body {
     height: 100%;
 }
 
-.header {
+.header-approve {
     background-color: white;
     width: 60%;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .details {
@@ -42,6 +43,7 @@ body {
     padding-left: 10%;
     float: center;
     display: flex;
+    margin: auto;
 }
 
 .tab {

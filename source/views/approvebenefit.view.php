@@ -10,9 +10,19 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <img src="me.jpeg" alt="Profile Image" class="profile__image">
+<div>
+    <?php
+    $this->view('includes/header1');
+    ?>
+</div>
+  <div>
+    <?php
+    $this->view('includes/navigation');
+    ?>
+</div>  
+    <div class="approve-container">
+        <div class="header-approve">
+            <img src="<?= IMG_PATH?>profile/Chathura.png" alt="Profile Image" class="profile__image">
             <p class="name">Sathya Udayangi<span class="tab"></span> 2021/09/10
             </p>
         </div>
@@ -82,7 +92,9 @@
             </div>
         </div>
     </div>
-
+    <div>
+    <?php $this->view('includes/footer')?>
+</div>
 
 </body>
 
