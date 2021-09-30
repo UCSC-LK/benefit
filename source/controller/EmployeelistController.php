@@ -6,7 +6,7 @@ class EmployeelistController extends Controller{
 
         $user = new EmployeelistModel();
 
-        $data = $user->where('department_ID',2);
+        $data = $user->where('department_ID',1);
 
         // if(count($_POST)>0){
 
