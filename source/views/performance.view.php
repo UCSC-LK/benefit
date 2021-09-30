@@ -72,6 +72,8 @@ var myChart2 = new Chart(ctx, {
 </div>
 </div>
 </div>
-
+<div>
+    <?php $this->view('includes/footer')?>
+</div>
 </body>
 </html>

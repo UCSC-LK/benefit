@@ -13,6 +13,26 @@
     <title>Leaves</title>
 </head>
 <body>
+<div>
+    <?php
+    $this->view('includes/header1')
+    ?>
+
+</div>
+
+<div class="profile_container">
+    <div class="profile">
+        <?php
+        $this->view('includes/profile1');
+        ?>
+    </div>
+
+    <div class="content">
+        <div>
+            <?php
+            $this->view('includes/header2')
+            ?>
+        </div>  
     <div class="leave_container">
         <div class="timeoff_head">
             <div class="head_title">
@@ -119,10 +139,14 @@
             </table>
         </div>
     </div>
-
+    </div>
     <script>
         feather.replace()
     </script>
-
+   
+</div>
+    <?php $this->view('includes/footer')?>
+</div>
 </body>
+
 </html>
