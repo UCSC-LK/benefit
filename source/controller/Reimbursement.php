@@ -32,7 +32,7 @@ class Reimbursement extends Controller
 				$arr['claim_amount']=$_POST['claim_amount'];
 				$arr['invoice_submission']=$_POST['invoice_submission'];
 				$arr['reimbursement_status']="pending";
-				$arr['reimbursement_description']=$_POST['subject'];
+				//$arr['reimbursement_description']=$_POST['subject'];
 				$user->insert($arr);
 				//redirect
 				$this->redirect('Reimbursement');
