@@ -1,43 +1,46 @@
-body {
-    margin: 0;
-    padding: 0;
+body{
+    margin: 0; padding: 0; 
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--background);
+    background-color:var(--background);
     display: flex;
-    flex-direction: column;
+    flex-direction : column;
     justify-content: center;
     /* background-color: aqua; */
 }
 
 input {
-    outline: none !important;
-    font-size: large;
-    border-style: none;
-    border-bottom: solid 1px rgba(0, 0, 0, 0.418);
-    color: var(--header_dark);
+   outline: none !important;
+   font-size: large;
+   border-style: none;
+   border-bottom: solid 1px rgba(0, 0, 0, 0.418);
+   color:var(--header_dark);
+   
 }
 
-.main_container {
-    width: 100vw;
+.main_container{
+    max-width: 100vw;
     display: flex;
     justify-content: center;
+    /* height:100vh; */
 }
 
-.main_container .form {
+.main_container .form{
     width: 70%;
+    
     margin: 8px;
-    padding-bottom: 20px;
+    padding-bottom: 20px; 
     height: auto;
-    background-color: rgb(255, 255, 255);
+    background-color:rgb(255, 255, 255);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;  
+    box-shadow: 3px 5px 15px rgba(0,0,0,.20);
 }
 
 .main_container .form .title {
     text-align: center;
-    font-size: x-large;
+    font-size:x-large;
     font-weight: bold;
     /* background-color: var(--blue); */
 }
@@ -46,11 +49,12 @@ input {
     max-width: 100%;
 }
 
-.main_container .form .input_feild .detail {
+.main_container .form .input_feild .detail{
     padding: 15px;
     display: flex;
     justify-content: space-between;
 }
+
 
 .main_container .form .input_feild form {
     max-width: 100%;
@@ -77,7 +81,7 @@ input {
     width: 100%;
 }
 
-.main_container .form .input_feild form .address {
+.main_container .form .input_feild form .address{
     display: flex;
     flex-direction: column;
 }
@@ -94,21 +98,22 @@ input {
     height: 30px;
 }
 
-.main_container .form .input_feild form div .address_content label {
+.main_container .form .input_feild form div .address_content label{
     display: block;
     width: 150px;
-    text-align: left;
+    text-align:left;
     padding: 4px;
+
 }
 
 .main_container .form .input_feild form .marital input {
     width: 40px;
-    padding-left: 10px;
+    padding-left: 10px; 
     height: 15px;
 }
 
 .main_container .form .input_feild form div select {
-    border-radius: 3px;
+    border-radius: 3px;  
     height: 30px;
     padding: 4px;
     font-size: large;
@@ -131,6 +136,20 @@ input {
     visibility: hidden;
 }
 
+.foot{
+    width:100%;
+    height:70px;
+    background-color:var(--header);
+    display:flex;
+    justify-content:center;
+}
+
+.fot{
+    color:white;
+    margin:auto;
+}
+
+
 .main_container .form .input_feild form .buttons button {
     width: 150px;
     color: rgb(255, 255, 255);
@@ -138,7 +157,7 @@ input {
     border-radius: 5px;
     height: 40px;
     cursor: pointer;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .50);
+    box-shadow: 3px 5px 15px rgba(0,0,0,.50);
     border-style: none;
     /* box-shadow: 3px 6px 6px ; */
 }
@@ -151,20 +170,22 @@ input {
     background-color: blue;
 }
 
-.main_container .form .input_feild form .buttons :hover {
+
+.main_container .form .input_feild form .buttons  :hover{
     height: 41px;
     width: 152px;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .75);
+    box-shadow: 3px 5px 15px rgba(0,0,0,.75);
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px){
     .main_container {
         /* margin: 4%; */
         max-width: 100%;
         /* padding-right: 5px; */
         flex-direction: column-reverse;
     }
-    .main_container .form {
+
+    .main_container .form{
         /* max-width: 100%; */
         width: 100%;
         margin: 0px;
@@ -174,9 +195,11 @@ input {
 }
 
 @media screen and (max-width: 737px) {
+
     .main_container {
         margin: 1%;
     }
+
     .main_container .form .input_feild form div {
         display: flex;
         flex-direction: column;
@@ -186,14 +209,17 @@ input {
         flex-direction: column;
         margin-left: 0;
     }
+
     .main_container .form .input_feild form div .address_content label {
-        text-align: start;
+        text-align:start;
         padding: 8px;
     }
+
     .main_container .form .input_feild form .marital {
         display: flex;
         flex-direction: row;
     }
+
     .main_container .form .input_feild form .buttons {
         display: flex;
         flex-direction: row;
