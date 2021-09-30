@@ -9,6 +9,11 @@
     <title>Employees</title>
 </head>
 <body>
+<div>
+    <?php
+    $this->view('includes/header1');
+    ?>
+</div>
 <div class="main_container">
     <div class="head">
         <p>Branch Name</p>
@@ -132,6 +137,9 @@
         </div>
 
     </div>
+</div>
+<div>
+    <?php $this->view('includes/footer')?>
 </div>
 </body>
 </html>
