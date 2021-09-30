@@ -18,7 +18,7 @@
 </div>
   <div>
     <?php
-    $this->view('includes/navigation');
+    $this->view('includes/parentemployeenavbar');
     ?>
 </div>
     <div class="testbox">

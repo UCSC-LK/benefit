@@ -17,7 +17,7 @@
 </div>
   <div>
     <?php
-    $this->view('includes/navigation');
+    $this->view('includes/hrmanagernavbar');
     ?>
 </div>  
     <div class="approve-container">

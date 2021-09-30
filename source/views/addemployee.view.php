@@ -22,7 +22,7 @@
 </div>
   <div>
     <?php
-    $this->view('includes/navigation');
+    $this->view('includes/hrofficernavbar');
     ?>
 </div>
     <div class="add_employee_main_container">
