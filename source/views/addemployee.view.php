@@ -13,8 +13,18 @@
     <!-- use deffer for run js file after loading html-->
     <title>Add Employee</title>
 </head>
-<body>
 
+<body>
+<div>
+    <?php
+    $this->view('includes/header1');
+    ?>
+</div>
+  <div>
+    <?php
+    $this->view('includes/navigation');
+    ?>
+</div>
     <div class="add_employee_main_container">
         <div class="form">
         <?php
@@ -178,5 +188,8 @@
         
     </div>
     <script src="public\js\addemployee.js"></script>
+    <div>
+    <?php $this->view('includes/footer')?>
+</div>
 </body>
 </html>
