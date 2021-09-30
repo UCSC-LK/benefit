@@ -5,7 +5,7 @@
 class PerformanceModel extends Model
 {
 
-	protected $table = "performances";
+	protected $table = "performance";
 
 	
 	/*public function validate($DATA)
