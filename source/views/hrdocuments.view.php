@@ -19,24 +19,24 @@
                 <div class="card">
                     <h4>Employee Application Form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_application_form.png" alt="" style="width:100%">
-                    <button class="btn" onclick="document.getElementById('link').click()"><i class="fa fa-download"></i>      Download</button>
-                    <a id="link" href="employment-application-form.docx" download hidden></a>
+                    <button class="btn" onclick="document.getElementById('link-1').click()"><i class="fa fa-download"></i>      Download</button>
+                    <a id="link-1" href="<?= DOC_PATH ?>employment-application-form.docx" download hidden></a>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
                     <h4>Employee Emergency Contact Form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_emergency_form.png" alt="" style="width:100%">
-                    <button class="btn" onclick="document.getElementById('link').click()"><i class="fa fa-download"></i>      Download</button>
-                    <a id="link" href="employee-emergency-form.docx" download hidden></a>
+                    <button class="btn" onclick="document.getElementById('link-2').click()"><i class="fa fa-download"></i>      Download</button>
+                    <a id="link-2" href="<?= DOC_PATH ?>employee-emergency-form.docx" download hidden></a>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
                     <h4>Disciplinary action form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_disciplinary_form.png" alt="" style="width:100%">
-                    <button class="btn" onclick="document.getElementById('link').click()"><i class="fa fa-download"></i>      Download</button>
-                    <a id="link" href="disciplinary-action-form.docx" download hidden></a>
+                    <button class="btn" onclick="document.getElementById('link-3').click()"><i class="fa fa-download"></i>      Download</button>
+                    <a id="link-3" href="<?= DOC_PATH ?>disciplinary-action-form.docx" download hidden></a>
                 </div>
             </div>
         </div>
@@ -46,24 +46,24 @@
                 <div class="card">
                     <h4>HR Service Request Form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_hr_request_form.png" alt="" style="width:100%">
-                    <button class="btn" onclick="document.getElementById('link').click()"><i class="fa fa-download"></i>      Download</button>
-                    <a id="link" href="hr-service-request-form.docx" download hidden></a>
+                    <button class="btn" onclick="document.getElementById('link-4').click()"><i class="fa fa-download"></i>      Download</button>
+                    <a id="link-4" href="<?= DOC_PATH ?>hr-service-request-form.docx" download hidden></a>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
                     <h4>Exit Interview Form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_exit_interview_form.png" alt="" style="width:100%">
-                    <button class="btn" onclick="document.getElementById('link').click()"><i class="fa fa-download"></i>      Download</button>
-                    <a id="link" href="exit-interview-form.docx" download hidden></a>
+                    <button class="btn" onclick="document.getElementById('link-5').click()"><i class="fa fa-download"></i>      Download</button>
+                    <a id="link-5" href="<?= DOC_PATH ?>exit-interview-form.docx" download hidden></a>
                 </div>
             </div>
             <div class="column">
                 <div class="card">
                     <h4>Travel Request Form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_travel_request_form.png" alt="" style="width:100%">
-                    <button class="btn" onclick="document.getElementById('link').click()"><i class="fa fa-download"></i>      Download</button>
-                    <a id="link" href="travel_request_form.pdf" download hidden></a>
+                    <button class="btn" onclick="document.getElementById('link-6').click()"><i class="fa fa-download"></i>      Download</button>
+                    <a id="link-6" href="<?= DOC_PATH ?>travel-request-form.docx" download hidden></a>
                 </div>
             </div>
         </div>
