@@ -105,7 +105,11 @@
                                     <td><?php print_r($vai->reimbursement_status);
                                     if($vai->reimbursement_status=="pending")
                                     {?>
-                                        <button type="Submit" value="Submit" name="delete">Delete</button>
+                                        <!--<button type="Submit" value="Submit" name="delete">Delete</button>-->
+                                        <a href="<?=PATH?>Reimbursement/delete/<?=$vai->invoice_submission?>">
+                                        <button  type="Submit" value="Submit" name="delete">Delete</button>
+                                        </a>
+
 
 
                                     <?php }?>
