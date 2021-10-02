@@ -122,6 +122,10 @@ input[type=submit] {
     width: 70%;
 }
 
+input[type=submit]:hover {
+    background-color: blue;
+}
+
 /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAA */
@@ -167,10 +171,14 @@ AAAAAAAAAAAAAAAAAAAAAAAA */
 }
 
 .pending_benefits input {
-    background-color: blue;
+    background-color: #2828CF;
     border-radius: 20px;
     margin: 5px;
     width: 20%;
+}
+
+.pending_benefits input[type=submit]:hover {
+    background-color: blue;
 }
 
 .benefit_container .benefit_history #benefit_history_result {
@@ -191,11 +199,15 @@ AAAAAAAAAAAAAAAAAAAAAAAA */
 
 .benefit_type input {
     color: white;
-    background-color: blue;
+    background-color: #2828CF;
     padding: 2px;
     width: 80px;
     border-radius: 5px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .25);
+}
+
+.benefit_type input[type=submit]:hover {
+    background-color: blue;
 }
 
 

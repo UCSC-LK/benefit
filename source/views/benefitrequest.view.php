@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="column_2">
                                     <textarea id="subject" name="subject" placeholder="Why You Are Applying..."
-                                              style="height:200px; width: 550px;" required></textarea>
+                                              required></textarea>
                                 </div>
                             </div>
 
@@ -95,8 +95,9 @@
                             </div>
                             <div class="row">
                                 <div class="report_submission">
-                                    <input type="file" id="report_submission" name="report_submission" hidden="hidden">
-                                    <span id="custom-text"><div class="file_text">No file chosen, yet</div></span>
+                                    <input type="file" id="report_submission" name="report_submission"
+                                           accept=".pdf, .png" multiple hidden="hidden">
+                                    <span id="custom-text"><div class="file_text">No file chosen, yet....</div></span>
                                     <span id="upload"><div class="upload"><a href="#">Upload Here</a></div></span>
                                 </div>
                             </div>
@@ -106,15 +107,15 @@
                             </div>
 
                             <script type="text/javascript">
-                                const report_submission = document.getElementById("report_submission");
-                                const custom_text = document.getElementById("custom_text");
-                                const upload = document.getElementById("upload");
+                                const report_submission = document.getElementById('report_submission');
+                                const custom_text = document.getElementById('custom_text');
+                                const upload = document.getElementById('upload');
 
                                 upload.addEventListener("click", function () {
                                     report_submission.click();
                                 });
 
-                                report_submission.addEventListener("change", function () {
+                                report_submission.addEventListener("click", function () {
                                     if (report_submission.value) {
                                         custom_text.innerHTML = report_submission.value;
                                     } else {
