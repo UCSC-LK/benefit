@@ -73,7 +73,14 @@ class Model extends Database
         return $this->query($query, $data);
 
     }
-
+    
+     public function deleteper($id)
+    {
+        $query = "delete from $this->table where invoice_submission= :id";
+        $data['id'] = $id;
+        return $this->query($query,$data);
+        
+    }
 
 }
 
