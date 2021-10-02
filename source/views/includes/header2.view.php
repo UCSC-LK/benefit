@@ -13,7 +13,7 @@
 <div class="header2">
     <nav class="stroke">
         <ul>
-            <li><a href="">Time Off</a></li>
+            <li><a href="<?= PATH ?>LeavedetailsController">Time Off</a></li>
             <li><a href="<?= PATH ?>Reimbursement">Reimbursement</a></li>
             <li><a href="<?= PATH ?>Benefit">Benefit</a></li>
             <li><a href="<?= PATH ?>Performance">Performance</a></li>

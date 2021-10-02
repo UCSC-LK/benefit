@@ -15,11 +15,11 @@ body {
     background-color: #E4F1F5;
     display: flex;
     font-family: Arial, serif;
-    /*position: relative;*/
+    position: relative;
 }
 
 /* NAVIGATION */
-nav {
+.header2 nav {
     display: flex;
     position: relative;
     width: 100%;
@@ -27,7 +27,7 @@ nav {
     background: #E4F1F5;
 }
 
-nav ul {
+.header2 nav ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
@@ -37,39 +37,39 @@ nav ul {
     width: 100%;
 }
 
-nav ul li {
+.header2 nav ul li {
     display: inline-block;
+    justify-content: space-evenly;
     width: 20%;
 }
 
-nav ul li a {
+.header2 nav ul li a {
     display: block;
     padding: 15px;
     text-decoration: none;
-    /*color: #aaa;*/
     color: var(--header);
     font-weight: 800;
     text-transform: uppercase;
     margin: 0 5px;
 }
 
-nav ul li a,
-nav ul li a:after,
-nav ul li a:before {
+.header2 nav ul li a,
+.header2 nav ul li a:after,
+.header2 nav ul li a:before {
     transition: all .5s;
 }
 
-nav ul li a:hover {
+.header2 nav ul li a:hover {
     color: #555;
 }
 
 
 /* stroke */
-nav.stroke ul li a {
+.header2 nav.stroke ul li a {
     position: relative;
 }
 
-nav.stroke ul li a:after {
+.header2 nav.stroke ul li a:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -82,6 +82,6 @@ nav.stroke ul li a:after {
     height: 1px;
 }
 
-nav.stroke ul li a:hover:after {
+.header2 nav.stroke ul li a:hover:after {
     width: 100%;
 }
