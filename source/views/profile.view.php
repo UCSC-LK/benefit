@@ -22,14 +22,9 @@
     </div>
 
     <div class="content">
-        <div class="header2">
-            <div class="nav-bar2" id="nav-bar">
-                <div class="list"><a href="#">Time Off</a></div>
-                <div class="list"><a href="<?= PATH ?>Reimbursement">Reimbursements</a></div>
-                <div class="list"><a href="<?= PATH ?>BenefitrequestController">Benefits</a></div>
-                <div class="list"><a href="<?=PATH?>Performance">Performance</a></div>
-            </div>
-        </div>
+        <?php
+        $this->view('includes/header2');
+        ?>
     </div>
 
 </div>

@@ -1,5 +1,9 @@
 @import "color.css";
 
+body {
+    font-family: 'Arial', Serif, serif;
+}
+
 .content {
     width: 80%;
     height: auto;
@@ -11,39 +15,73 @@
     background-color: #E4F1F5;
     display: flex;
     font-family: Arial, serif;
+    /*position: relative;*/
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background: #E4F1F5;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-align: center;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+    width: 20%;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    /*color: #aaa;*/
+    color: var(--header);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 5px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all .5s;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+
+/* stroke */
+nav.stroke ul li a {
     position: relative;
 }
 
-.nav-bar2 {
-    overflow: hidden;
-    display: flex;
+nav.stroke ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
     width: 100%;
-    height: 100%;
 }
-
-.list {
-    width: 100%;
-    height: 100%;
-    float: left;
-    text-align: center;
-}
-
-.nav-bar2 .list a {
-    display: block;
-    color: var(--black);
-    text-align: center;
-    text-decoration: none;
-    font-size: 25px;
-    padding: 25px;
-}
-
-.nav-bar2 .icon {
-    display: none;
-}
-
-.nav-bar2 a:hover {
-    background-color: var(--grey);
-    height: 100%;
-    color: black;
-}
-
