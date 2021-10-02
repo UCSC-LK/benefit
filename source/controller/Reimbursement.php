@@ -50,7 +50,7 @@ class Reimbursement extends Controller
 
     }
 
-    function delete()
+    /*function delete()
     {
         if(!Auth::logged_in($id=null))
         {
@@ -68,5 +68,22 @@ class Reimbursement extends Controller
             $this->redirect('logout');
         }
         $this->view('reimbursementreq');
-    }
+    }*/
+    
+        function delete($id=null)
+         {
+        //echo "$id";
+       
+        if(!Auth::logged_in())
+        {
+            $this->redirect('login');
+        }
+        $user=new ReimbursementrequestModel();
+        if(count($_POST)>0)
+        {
+            $user->deleteper($id);
+            $this->redirect('Reimbursement');
+        }
+        $this->view('reimbursementreq.delete');
+        }
 }
