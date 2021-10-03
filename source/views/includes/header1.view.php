@@ -13,13 +13,21 @@
 <body>
 
 <div class="header1">
-    <nav class="list1">
+            <div class="nav-bar1" id="nav-bar">
+                <div class="list1"> <a href="<?=PATH?>home">HOME</a></div>
+                <div class="list1"> <a href="<?=PATH?>profile">MY INFO</a></div>
+                <div class="list1"> <a href="#">DOCUMENTS</a></div>
+                <?php if(Auth::access('Supervisor')||Auth::access('HR Officer')):?>
+                <div class="list1"> <a href="#">USER MANAGEMENT(HR)</a></div>
+            <?php endif;?>
+        </div>
+    <!--<nav class="list1">
         <ul>
             <li><a href="<?= PATH ?>Home">Home</a></li>
             <li><a href="<?= PATH ?>leavedetailscontroller">My Info</a></li>
             <li><a href="#">Documents</a></li>
         </ul>
-    </nav>
+    </nav>-->
 
     <button type="button" class="icon-button">
         <a href="#">
