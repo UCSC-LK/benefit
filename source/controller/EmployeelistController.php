@@ -6,7 +6,8 @@ class EmployeelistController extends Controller{
 
         $user = new EmployeelistModel();
 
-        $data = $user->where('department_ID',1);
+        $data = $user->where('department_ID',3);
+        //////////////////////////////////////// department_ID come from home view/////////////////////////////////////////////
 
         // if(count($_POST)>0){
 
@@ -25,13 +26,12 @@ class EmployeelistController extends Controller{
 
             if(isset($_POST['delete'])){
                 // $arr['employee_ID'] = $_POST['id'];
-                if(!isset($_SESSION)) { 
-                    session_start(); 
-                } 
+                session_start(); 
+                
 
                 $_SESSION['id'] = $_POST['id'];
 
-                $this->redirect('#');
+                $this->redirect('DeleteemployeeController');
             }
 
         // }
