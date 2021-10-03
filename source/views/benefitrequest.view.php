@@ -31,11 +31,9 @@
     </div>
 
     <div class="content">
-        <di>
             <?php
             $this->view('includes/header2')
             ?>
-        </di>
 
         <div class="benefit_container">
             <div class="benefit_head">
