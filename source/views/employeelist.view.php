@@ -31,7 +31,7 @@
                 if (boolval($rows)) {
                     if (count($rows) > 0) {
                         foreach ($rows as $entry) {
-                            if ($entry->designation_code == 1) {
+                            if ($entry->user_role == "Manager") {
                                 ?>
                                 <form method="post">
                                     <div class="cards">
@@ -69,7 +69,7 @@
                 if (boolval($rows)) {
                     if (count($rows) > 0) {
                         foreach ($rows as $entry) {
-                            if ($entry->designation_code == 2) {
+                            if ($entry->user_role == "Supervisor") {
                                 ?>
                                 <form method="post">
                                     <div class="cards">
@@ -107,7 +107,7 @@
                 if (boolval($rows)) {
                     if (count($rows) > 0) {
                         foreach ($rows as $entry) {
-                            if ($entry->designation_code == 3) {
+                            if ($entry->user_role == "Employee") {
                                 ?>
                                 <form method="post">
                                     <div class="cards">
