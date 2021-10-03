@@ -31,14 +31,6 @@
             <div class="reimbursement_details">
                 <form action="#" method="POST">
 
-                    <!-- <div class="row">
-                         <div class="column_1">
-                             <label for="emp_id">Employee ID</label>
-                         </div>
-                         <div class="column_2">
-                             <input type="text" id="employee_id" name="employee_id" placeholder="1">
-                         </div>
-                     </div>-->
                     <div class="row">
                         <div class="column_1">
                             <label for="c_date">Claim Date</label>
@@ -60,20 +52,22 @@
                             <label for="subject">Pay For</label>
                         </div>
                         <div class="column_2">
-                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px; width: 550px;"  ></textarea>
-                        </div>
-                    </div>
-
-                    <div class="invoice">
-                        <div class="column_3">
-                            <label for="submission">Invoice Submission</label>
-                        </div>
-                        <div class="invoice_submission">
-                            <input type="file" id="invoice_submission" name="invoice_submission" style="height:250px; width: 600px;">
+                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;"  ></textarea>
                         </div>
                     </div>
 
                     <div class="row">
+                        <div class="column_1">
+                            <label for="submission">Invoice Submission</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="invoice_submission">
+                            <input type="file" id="invoice_submission" name="invoice_submission">
+                        </div>
+                    </div>
+
+                    <div class="apply_button">
                         <input type="submit" value="Apply" name="submit">
                     </div>
                 </form>
