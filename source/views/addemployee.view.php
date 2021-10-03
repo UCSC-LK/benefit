@@ -4,41 +4,151 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/color.css">
+    <link rel="stylesheet" href="public\css\color.css">
     <!-- <link rel="stylesheet" href="<?= CSS_PATH ?>addemployee.css"> -->
-    <link rel="stylesheet" href="public/css/addemployee.css">
+    <link rel="stylesheet" href="public\css\addemployee.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- <script deffer src="../../public/js/add_employee.js"></script>  -->
     <!-- use deffer for run js file after loading html-->
     <title>Add Employee</title>
 </head>
 
 <body>
-<div>
-    <?php
-    $this->view('includes/header1');
-    ?>
-</div>
-  <div>
-    <?php
-    $this->view('includes/hrofficernavbar');
-    ?>
-</div>
-    <div class="add_employee_main_container">
-        <div class="form">
+    <div>
         <?php
-            if(boolval($err)){
-                if(count($err)>1){
-                    for ($i = 1; $i< count($err); $i++){
-                        $new = "<script>alert('$err[$i]') </script>";
-                        echo $new;
-                    }
-                }
-            }
-            
-            
+            $this->view('includes/header1')
         ?>
+    </div>
+
+    <div>
+        <?php
+            $this->view('includes/header2')
+        ?>
+    </div> 
+
+    <?php
+    // if($rows[4]){
+    //     $alert = "<script> alert ('$rows[4]') </script>";
+    //     echo $alert;
+    // }
+    for($i = 4; $i < 10; $i++){
+        if($rows[$i]){
+           $alert = "<script> alert ('$rows[$i]') </script>";
+           echo $alert;
+        }
+    }
+    ?>
+    <div class="add_employee_main_container">
+
+        <div class="supervisor_list">
+            <div class="main_dp">
+                <div class="title">
+                    <p>Operational Department</p>
+                </div>
+                <div class="data">
+                    <table>
+                        <tr>
+                            <th class="id">Employee ID</th>
+                            <th>Name</th>
+                        </tr>
+                        <?php
+                            if($rows[0]){
+                                foreach ($rows[0] as $entry){ ?>
+                                    <tr>
+                                        <td> <?php echo $entry->employee_ID ?> </td>
+                                        <td> <?php echo $entry->first_name ?> <?php echo $entry->last_name ?> </td>
+                                    </tr>
+    
+                        <?php
+                            } 
+                        }?>
+
+                    </table>
+                </div>
+            </div>
+            <div class="hr_dp">
+                <div class="title">
+                    <p>HR Department</p>
+                </div>
+                <div class="data">
+                    <table>
+                        <tr>
+                            <th class="id">Employee ID</th>
+                            <th>Name</th>
+                        </tr>
+                        <?php
+                            if($rows[1]){
+                                foreach ($rows[1] as $entry){ ?>
+                                    <tr>
+                                        <td> <?php echo $entry->employee_ID ?> </td>
+                                        <td> <?php echo $entry->first_name ?> <?php echo $entry->last_name ?> </td>
+                                    </tr>
+    
+                        <?php
+                            } 
+                        }     
+                        ?>
+                        
+        
+                    </table>
+                </div>
+
+            </div>
+            
+            <div class="sells_dp">
+                <div class="title">
+                    <p>Sells Department</p>
+                </div>
+                <div class="data">
+                    <table>
+                        <tr>
+                            <th class="id">Employee ID</th>
+                            <th>Name</th>
+                        </tr>
+                        <?php
+                            if($rows[2]){
+                                foreach ($rows[2] as $entry){ ?>
+                                    <tr>
+                                        <td> <?php echo $entry->employee_ID ?> </td>
+                                        <td> <?php echo $entry->first_name ?> <?php echo $entry->last_name ?> </td>
+                                    </tr>
+    
+                        <?php
+                            } 
+                        }?>
+        
+                    </table>
+                </div>
+            </div>
+            <div class="acc_dp">
+                <div class="title">
+                    <p>Accounting Department</p>
+                </div>
+                <div class="data">
+                    <table>
+                        <tr>
+                            <th class="id">Employee ID</th>
+                            <th>Name</th>
+                        </tr>
+                        <?php
+                            if($rows[3]){
+                                foreach ($rows[3] as $entry){ ?>
+                                    <tr>
+                                        <td> <?php echo $entry->employee_ID ?> </td>
+                                        <td> <?php echo $entry->first_name ?> <?php echo $entry->last_name ?> </td>
+                                    </tr>
+    
+                        <?php
+                            } 
+                        }?>
+        
+                    </table>
+                </div>
+            </div>
+
+        </div>
+       
+        <div class="form">
             <div class="title">
                 <p>Add New Employee</p>
             </div>
@@ -113,7 +223,11 @@
                     
                     <div>
                         <label for="user_role">User Role</label>
-                        <input type="text" id="user_role" name="user_role" size="50"><br>
+                        <select id="user_role" name="user_role">
+                            <option value="Employee">Employee</option>
+                            <option value="Supervisor">Supervisor</option>
+                            <option value="Manager">Manager</option>        
+                        </select>
                     </div>
 
                     <div>
@@ -121,11 +235,12 @@
                         <input type="email" id="email" name="email" size="50" required><br>
                     </div>
                 
-                    <div>
+                    <div class="pwd">
                         <label for="password">Password</label>
-                        <input type="password" id="pwd" name="pwd" size="50" required><i class="far fa-eye" id="eye1"></i><br>           
+                        <input type="password" id="pwd" name="pwd" size="50" required> <i class="far fa-eye" id="eye1"></i><br>           
                     </div>
-                    <div>
+
+                    <div class="pwd">
                         <label for="confirm">Confirm Password</label>
                         <input type="password" id="confirm" name="confirm" size="50" required><i class="far fa-eye" id="eye2"></i><br>
                     </div>
@@ -157,11 +272,11 @@
                     </div>
 
                     <div class="image">
-                        <label for="">Profile Picture </label>
+                        <label for="">Profile Picture (less than 500Kb)</label>
 
                         <div class="upload">
                             <input type="file"   name="image" id="image"  onchange="loadFile(event)" style="display: none;">
-                            <label for="image" id="image" name="image">Upload Image</label>
+                            <label for="image" id="image" name="image">Upload Image </label>
                             <div>
                                 <img id="output" width="200" />
                             </div>
@@ -181,15 +296,13 @@
                     </div>
                     
                 </form>
-
-
             </div>
         </div>
         
     </div>
     <script src="public\js\addemployee.js"></script>
-    <div>
-    <?php $this->view('includes/footer')?>
-</div>
+    <div class="foot">
+        <p class="fot">Copyright © 2021 Oracle Freight Solutions | Powered by Oracle Freight Solutions</p>
+    </div>
 </body>
 </html>
