@@ -67,9 +67,9 @@ class Auth
 
 		$logged_in_rank = $_SESSION['USER']->user_role;
 
-		$RANK['CEO'] 	    = ['CEO','HR Manager','Supervisor','HR Officer'];
+		//$RANK['CEO'] 	    = ['CEO','HR Manager','Supervisor','HR Officer'];
 		$RANK['HR Manager'] = ['HR Manager','Supervisor','HR Officer'];
-		$RANK['HR Officer'] = ['HR Officer','Employee','Supervisor'];
+		$RANK['HR Officer'] = ['HR Officer','Employee'];
 		$RANK['Supervisor'] = ['Employee','Supervisor'];
 		$RANK['Employee'] 	= ['Employee'];
 
