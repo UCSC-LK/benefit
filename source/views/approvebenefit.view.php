@@ -23,7 +23,7 @@
     <div class="approve-container">
         <div class="header-approve">
             <img src="<?= IMG_PATH?>profile/Chathura.png" alt="Profile Image" class="profile__image">
-            <p class="name">Sathya Udayangi<span class="tab"></span> 2021/09/10
+            <p class="name"><?php print_r($requested[0]['first_name']); echo " "; print_r($requested[0]['last_name']); ?><span class="tab"></span><?php print_r($requested[0]['details'][0]->claim_date); ?>
             </p>
         </div>
         <div class="details">
@@ -32,7 +32,7 @@
                     <label for="benefit_type">Benefit Type</label>
                 </div>
                 <div class="column_2">
-                    <p class="values">Medical</p>
+                    <p class="values"><?php print_r($requested[0]['details'][0]->benefit_type) ?></p>
                 </div>
             </div>
             <div class="row">
@@ -40,7 +40,7 @@
                     <label for="date">Date</label>
                 </div>
                 <div class="column_2">
-                    <p class="values">2021/09/10</p>
+                    <p class="values"><?php print_r($requested[0]['details'][0]->claim_date) ?></p>
                 </div>
             </div>
             <div class="row">
@@ -48,7 +48,7 @@
                     <label for="claim_date">Claim Amount</label>
                 </div>
                 <div class="column_2">
-                    <p class="values">50, 000 LKR</p>
+                    <p class="values"><?php print_r($requested[0]['details'][0]->claim_amount) ?></p>
                 </div>
             </div>
             <div class="row">
@@ -56,7 +56,7 @@
                     <label for="reason">Reason</label>
                 </div>
                 <div class="column_2">
-                    <p class="values">Heart Operation</p>
+                    <p class="values"><?php print_r($requested[0]['details'][0]->benefit_description) ?></p>
                 </div>
             </div>
             <div class="row">
