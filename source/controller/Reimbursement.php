@@ -8,10 +8,10 @@ class Reimbursement extends Controller
 
     function index()
     {
-        // if(!Auth::logged_in())
-        // {
-        //     $this->redirect('login');
-        // }
+        if(!Auth::logged_in())
+        {
+           $this->redirect('login');
+        }
 
 
         $errors=array();
@@ -23,8 +23,8 @@ class Reimbursement extends Controller
         if(count($_POST)>0)
         {
             $user=new ReimbursementrequestModel();
-            //($user->validate($_POST)
-            if(isset($_POST['submit']))
+            $validate = $user->where('invoice_submission',$_POST['invoice_submission']);
+            if(isset($_POST['submit']) && $validate==false)
             {
 
                 $arr['employee_ID']=Auth::user();
@@ -32,9 +32,9 @@ class Reimbursement extends Controller
                 $arr['claim_amount']=$_POST['claim_amount'];
                 $arr['invoice_submission']=$_POST['invoice_submission'];
                 $arr['reimbursement_status']="pending";
-                //$arr['reimbursement_description']=$_POST['subject'];
+               
                 $user->insert($arr);
-                //redirect
+            
                 $this->redirect('Reimbursement');
             }
             else
