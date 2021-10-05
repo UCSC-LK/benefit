@@ -71,6 +71,11 @@
                         <input type="submit" value="Apply" name="submit">
                     </div>
                 </form>
+                <?php
+                if(boolval($errors)){
+                    print_r($errors);
+                }
+                ?>
                 <div class="history">
 
                     <div class="column_4">
