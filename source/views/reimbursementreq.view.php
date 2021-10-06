@@ -82,11 +82,11 @@
                         <label for="claim_history">Claim History</label>
                     </div>
                     <table id="claim_history_table">
-                        <form method="post" action="Reimbursement/delete">
+                        <!-- <form method="post" action="Reimbursement/delete"> -->
                             <tr>
                                 <th>Date</th>
-                                <th>Description</th>
                                 <th>Amount</th>
+                                <th>Status</th>
                             </tr>
 
 
@@ -119,7 +119,7 @@
                             }
                             else{
                             ?><td><?php echo "No history";}?></td>
-                        </form>
+                        <!-- </form> -->
                     </table>
                 </div>
             </div>
