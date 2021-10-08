@@ -17,7 +17,7 @@
         <ul>
             <li><a href="<?= PATH ?>Home">Home</a></li>
             <li><a href="<?= PATH ?>leavedetailscontroller">My Info</a></li>
-            <li><a href="#">Documents</a></li>
+            <li><a href="<?=PATH?>hrdocuments">Documents</a></li>
             <?php if(Auth::access('Supervisor')||Auth::access('HR Officer')):?>
                 <li><a href="#">USER MANAGEMENT(HR)</a></li>
             <?php endif;?>

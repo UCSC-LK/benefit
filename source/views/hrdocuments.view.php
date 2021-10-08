@@ -13,6 +13,9 @@
 
 <body>
     <div class="hrdocuments_container">
+    <div>
+   <?php $this->view('includes/header1')?>
+</div>
         <h1 class="h1">HR Documents</h1>
         <div class="row">
             <div class="column">
@@ -68,6 +71,11 @@
             </div>
         </div>
     </div>
+    <div>
+    <?php
+    $this->view('includes/footer');
+    ?>
+</div>
 </body>
 
 </html>

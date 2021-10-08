@@ -71,17 +71,22 @@
                         <input type="submit" value="Apply" name="submit">
                     </div>
                 </form>
+                <?php
+                if(boolval($errors)){
+                    print_r($errors);
+                }
+                ?>
                 <div class="history">
 
                     <div class="column_4">
                         <label for="claim_history">Claim History</label>
                     </div>
                     <table id="claim_history_table">
-                        <form method="post" action="Reimbursement/delete">
+                        <!-- <form method="post" action="Reimbursement/delete"> -->
                             <tr>
                                 <th>Date</th>
-                                <th>Description</th>
                                 <th>Amount</th>
+                                <th>Status</th>
                             </tr>
 
 
@@ -101,7 +106,7 @@
                                     {?>
                                         <!--<button type="Submit" value="Submit" name="delete">Delete</button>-->
                                         <a href="<?=PATH?>Reimbursement/delete/<?=$vai->invoice_submission?>">
-                                        <button  type="Submit" value="Submit" name="delete">Delete</button>
+                                        <button  type="Submit" value="Submit" name="delete" class="delete_button">Delete</button>
                                         </a>
 
 
@@ -114,7 +119,7 @@
                             }
                             else{
                             ?><td><?php echo "No history";}?></td>
-                        </form>
+                        <!-- </form> -->
                     </table>
                 </div>
             </div>
