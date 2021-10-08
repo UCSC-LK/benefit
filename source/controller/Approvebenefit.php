@@ -43,7 +43,7 @@ class Approvebenefit extends Controller
                 }
             }
             if($requested) {
-                $this->view('myworkers', ['requested' => $requested]);
+                $this->view('approvebenefit', ['requested' => $requested]);
             }
         }
         else {
