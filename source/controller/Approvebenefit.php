@@ -37,12 +37,13 @@ class Approvebenefit extends Controller
                 if ($requested[$j]['details']) {
                     $requested[$j]['first_name'] = $employer[$j]['first_name'];
                     $requested[$j]['last_name'] = $employer[$j]['last_name'];
-//                    print_r($requested[$j]['details']);
-//                    echo "<br>";
+//                    print_r($requested);
+//                    echo "<br>"."no errorss"."<br>";
+//                    print_r($requested[1]['details']);
                 }
             }
             if($requested) {
-                $this->view('approvebenefit', ['requested' => $requested]);
+                $this->view('myworkers', ['requested' => $requested]);
             }
         }
         else {
