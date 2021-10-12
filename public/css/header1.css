@@ -1,64 +1,99 @@
 @import "color.css";
 
 body {
-    font-family: Arial;
+    font-family: Arial, serif;
 }
 
-.header {
-    width: 100%;
-    height: 100px;
+.header1 {
+    height: 80px;
+    background-color: var(--header);
     display: flex;
     justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.header1 nav {
+    display: flex;
+    position: relative;
+    width: 70%;
     background-color: var(--header);
 }
 
-.nav-bar {
-    width: 100vw;
-    /*height: 100px;*/
-    align-items: center;
-    text-align: center;
-}
-
-.nav-bar ul {
-    width: 30%;
-    height: 75%;
-    padding-left: 200px;
+.header1 nav ul {
     display: flex;
-    justify-content: normal;
-}
-
-.nav-bar ul li {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
+    justify-content: left;
     list-style: none;
+    text-align: center;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+    width: 100%;
 }
 
-.nav-bar ul li a {
-    padding: 25px;
-    font-size: 20px;
-    text-decoration: none;
-    /*color: #D3DBDD;*/
-    color: var(--dark_white);
+.header1 nav ul li {
+    display: inline-block;
+    width: max-content;
+}
+
+.header1 nav ul li a {
     display: block;
+    padding: 15px;
+    text-decoration: none;
+    width: max-content;
+    /*color: #aaa;*/
+    color: var(--light_green);
+    font-size: larger;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 5px;
 }
 
-.nav-bar li:hover {
-    background-color: darkgray;
+.header1 nav ul li a,
+.header1 nav ul li a:after,
+.header1 nav ul li a:before {
+    transition: all .5s;
 }
+
+.header1 nav ul li a:hover {
+    /*color: #555;*/
+    color: #c7e2ea;
+}
+
+
+/* stroke */
+.header1 nav.list1 ul li a {
+    position: relative;
+}
+
+.header1 nav.list1 ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: '.';
+    color: transparent;
+    background: #c7e2ea;
+    height: 1px;
+}
+
+.header1 nav.list1 ul li a:hover:after {
+    width: 100%;
+}
+
 
 /* bell notification*/
 
 .icon-button {
     position: relative;
     display: flex;
-    right: 15%;
+    right: 5%;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
-    top: 30px;
+    width: 40px;
+    height: 40px;
+    top: 20px;
     color: #333333;
     background: #dddddd;
     border: none;
@@ -78,8 +113,8 @@ body {
     position: absolute;
     top: -10px;
     right: -10px;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     background: red;
     color: #ffffff;
     display: flex;
