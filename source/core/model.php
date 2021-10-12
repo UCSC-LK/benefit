@@ -65,22 +65,6 @@ class Model extends Database
         return $this->query($query, $data);
     }
 
-    /*public function update_performance($id, $data)
-    {
-        $str = "";
-        foreach ($data as $key => $value) {
-            // code...
-            $str .= $key . "=:" . $key . ",";
-        }
-
-        $str = trim($str, ",");
-
-        $data['id'] = $id;
-        $query = "update $this->table set $str where employee_ID = :id";
-
-        return $this->query($query, $data);
-    }*/
-
 
     public function delete($id)
     {
