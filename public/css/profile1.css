@@ -1,0 +1,85 @@
+@import "color.css";
+/*profile*/
+.profile_container {
+    display: flex;
+    /*background-color: #E5EDF7;*/
+    max-width: 100%;
+    height: 100%;
+}
+
+.profile {
+    font-family: Arial, serif;
+    text-align: center;
+    width: 20%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.profile__image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 0;
+    padding: 20px;
+}
+
+.name {
+    padding-top: 30px;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: var(--black);
+}
+
+.job {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.hire {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--header);
+}
+
+.date {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.address {
+    font-size: 0.9em;
+    margin-bottom: 20px;
+    color: var(--black);
+}
+
+.supervisor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--header);
+}
