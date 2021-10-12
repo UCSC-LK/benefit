@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    /* justify-content:space-around; */
+    align-items: center;
+    font-size: large;
+    /* max-height: 100vh; */
+    /* height: 100%; */
+    width: 100vw;
+}
+
+.head{
+    width: 100%;
+}
+.main_container {
+    /* max-width: 1000px; */
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* height: 100%; */
+    /* background-color: var(--light_blue); */
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    /* box-shadow: 3px 5px 15px rgba(0,0,0,.250); */
+}
+
+
+
+p {
+    font-weight: bold;
+    opacity: 75%;
+    color: var(--header);
+}
+
+.main_container .title {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    background-color: var(--background_light);
+}
+
+.main_container .title p {
+    font-weight: bolder;
+    color: black;
+    opacity: 75%;
+}
+
+.main_container .input_feild {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+}
+
+.main_container .input_feild form {
+    background-color: white;
+    padding: 10px;
+    width: 650px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.main_container .input_feild form div {
+    margin-top: 25px;
+}
+
+.main_container .input_feild form .leave_type select,
+option {
+    font-size: large;
+    opacity: 75%;
+}
+
+.main_container .input_feild form .leave_type {
+    display: flex;
+}
+
+.main_container .input_feild form .full_day .full_duration {
+    margin-left: 30px;
+}
+
+.main_container .input_feild form .full_day .full_duration .start_date,
+.end_date {
+    display: flex;
+    padding-top: 10px;
+}
+
+.main_container .input_feild form .half_day .half_duration {
+    margin-left: 30px;
+    display: flex;
+}
+
+.main_container .input_feild form .half_day .half_duration .item,
+.date_item {
+    /* margin: 5px; */
+    display: flex;
+}
+
+label {
+    display: block;
+    width: 150px;
+    opacity: 75%;
+    /* background-color: violet; */
+}
+
+.main_container .input_feild form .half_day .half_duration .item label {
+    text-align: right;
+    width: auto;
+    padding-left: 10px;
+}
+
+.main_container .input_feild form .half_day .half_duration .item {
+    padding: 5px;
+}
+
+.main_container .input_feild form .half_day .half_duration .item input {
+    cursor: pointer;
+}
+
+.main_container .input_feild form .buttons button {
+    width: 150px;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, .20);
+    border-style: none;
+    /* box-shadow: 3px 6px 6px ; */
+}
+
+.main_container .input_feild form .buttons #cancel {
+    background-color: red;
+}
+
+.main_container .input_feild form .buttons #request {
+    background-color: blue;
+}
+
+.main_container .input_feild form .buttons {
+    /* margin-top: 5px; */
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_container .input_feild form .buttons :hover {
+    /* width: 152px; */
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, .75);
+}
+
+.fot {
+    width: 100%;
+}
+
+@media screen and (max-width: 690px) {
+    body {
+        font-size: medium;
+    }
+    label {
+        display: block;
+        width: 100px;
+    }
+
+    .main_container{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .main_container .input_feild form {
+        background-color: white;
+        padding: 10px;
+        width: auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .main_container .input_feild {
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+    .main_container .input_feild form div {
+        margin-top: 15px;
+    }
+    .main_container .input_feild form .half_day .half_duration {
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .main_container .input_feild form .half_day .half_duration .item label {
+        padding-right: 5px;
+        width: auto;
+        margin-left: 100px;
+    }
+    .main_container .input_feild form .buttons button {
+        width: 100px;
+    }
+    .main_container .input_feild form .leave_type select,
+    option {
+        font-size: medium;
+    }
+}
