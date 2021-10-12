@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+}
+
+.approve-container {
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-bottom: 5%;
+    padding-right: 2%;
+    background-color: #c4d9f3;
+    height: 100%;
+}
+
+.header-approve {
+    background-color: white;
+    width: 60%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.details {
+    background-color: white;
+    padding-bottom: 3%;
+}
+
+.profile__image {
+    float: left;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 0;
+    padding: 10px;
+    display: flex;
+}
+
+.name {
+    padding: 5%;
+    padding-left: 10%;
+    float: center;
+    display: flex;
+    margin: auto;
+}
+
+.tab {
+    display: inline-block;
+    margin-left: 20%;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: 35;
+}
+
+.row {
+    padding-left: 2%;
+}
+
+.column_1 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+}
+
+.column_2 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+}
+
+.column_3 {
+    float: left;
+    padding-top: 15px;
+    margin-top: 6px;
+    width: 80%;
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40%;
+    padding-right: 20%;
+    padding-top: 2%;
+}
+
+.approve_button {
+    background-color: #2828CF;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 25%;
+}
+
+.reject_button {
+    background-color: #FC3341;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 25%;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+table {
+    padding-top: 10px;
+    padding-left: 15%;
+    width: 80%;
+    padding-bottom: 50px;
+}
+
+th {
+    background-color: #E4F1F5;
+    border: 1px solid white;
+    height: 40px;
+}
+
+input[type=text],
+textarea {
+    font-family: Arial;
+    width: 30%;
+    height: 40px;
+    padding: 15px;
+    padding-left: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=date],
+textarea {
+    font-family: Arial;
+    width: 30%;
+    height: 40px;
+    padding: 15px;
+    padding-left: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .column_1,
+    .column_2,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
