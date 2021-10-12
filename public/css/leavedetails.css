@@ -1,0 +1,245 @@
+
+body{
+    margin: 0; padding: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+}
+
+.leave_container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+
+.leave_container .timeoff_head {
+    background-color: var(--background);
+    max-width: 100%;
+    padding: 10px;
+}
+
+a:link {
+    text-decoration: none;
+  }
+  
+.main_title {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.700); 
+    font-size: x-large;
+    display: block;
+    border-bottom: 2px solid rgba(99, 94, 94, 0.527);
+}
+
+.leave_container .timeoff_head .leave_card {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+.leave_container .timeoff_head .leave_card .card{
+    width: 20%;
+    width: 200px;
+    margin: 5px;
+    height: auto;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px rgba(0,0,0,.20);
+    cursor: pointer;
+}
+
+.leave_container .timeoff_head .leave_card .card p{
+    font-size: medium;
+    color: var(--light_blue);
+}
+
+.leave_container .timeoff_head .leave_card .card .title{
+    font-size: x-large;
+    color: rgba(0, 0, 0, 0.600); 
+    font-weight: bold;
+}
+
+.leave_container .timeoff_head .leave_card .card .icon .remain{
+    color: var(--header);
+    font-weight: bold;
+    font-size: x-large;
+}
+
+
+.icon {
+    display: flex;
+    justify-content: center;
+    height:50px;
+}
+
+.leave_container .timeoff_head .leave_card .card .icon .item{
+    margin: auto;
+    margin-right: 0px;
+}
+
+.leave_container .timeoff_head .leave_card .card .icon p {
+    margin: auto;
+    margin-left: 0px;
+    font-size: x-large;
+    padding-left: 5px;
+}
+
+
+/* UPCOMING TIME OFF MAIN DIVITION TO OTHER */
+.leave_container .upcoming_timeoff {
+    background-color: var(--background);
+    max-width: 100%;
+    padding: 10px;
+}
+
+.leave_container .upcoming_timeoff .upcoming_header {
+    display: flex;
+    justify-content: left;
+    background-color: var(--background_light);
+    padding: 5px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px rgba(0,0,0,.15);
+}
+
+/*code duplicate*/
+
+.leave_container .upcoming_timeoff .upcoming_header .item{
+    margin: auto;
+    padding-right: 10px;
+}
+
+.leave_container .upcoming_timeoff .upcoming_detail{
+    display: flex;
+    margin-left: 60px;
+    padding-left: 10px;
+    max-width: 100%;
+    background-color: var(--background_light);
+}
+
+
+.leave_container .upcoming_timeoff .upcoming_detail .icon .item {
+    margin: auto;
+    padding-right: 10px;
+}
+
+.leave_container .upcoming_timeoff .upcoming_detail .description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.leave_container .upcoming_timeoff .upcoming_detail .description .leave_name p {
+    margin: 3px;
+    color: rgb(116, 107, 107);
+}
+
+.leave_container .upcoming_timeoff .upcoming_detail .description .leave_status {
+    text-align: center;
+}
+
+.leave_container .upcoming_timeoff .upcoming_detail .description #reson {
+    font-size: small;
+}
+
+.leave_container .leave_history {
+    background-color: var(--background_light);
+    max-width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.leave_container .leave_history .history_header  {
+    display: flex;
+    background-color: var(--white);
+    padding:10px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px rgba(0,0,0,.15); 
+}
+
+.leave_container .leave_history .history_header .item {
+    margin: auto;
+    padding-right: 10px;
+}
+
+.leave_container .leave_history #leave_history_result {
+    margin: 20px;
+}
+
+.leave_type {
+    margin: 20px;
+    padding-left: 20px;
+}
+
+.leave_type #leave, input{
+    height: 25px;
+    border-style: none;
+    border-bottom: 1px solid rgb(145, 143, 143);
+    cursor: pointer;
+}
+
+.leave_type input {
+    color: white;
+    background-color: blue;
+    padding: 2px;
+    width: 80px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 15px rgba(0,0,0,.25);
+}
+
+
+/* Dont work */
+/* .leave_type form #input :hover {
+    box-shadow: 3px 5px 15px rgba(0,0,0,.50);
+    width:70px;
+} */
+
+
+table th{
+    border: 1px solid rgb(213, 213, 214);
+    background-color: rgb(221, 221, 243);
+}
+.leave_container .timeoff_head .leave_card :hover{
+    box-shadow: 3px 5px 15px rgba(0,0,0,.50);
+}
+
+.leave_container .timeoff_head .leave_card .card :hover{
+    box-shadow: 3px 5px 15px rgba(0,0,0,.00);
+}
+
+
+@media screen and (max-width: 450px){
+    .leave_container .timeoff_head .leave_card .card{
+        display: block;
+        /*background-color: aqua;*/
+        width: 150px;
+        height: auto;
+        margin: 5px;
+        background-color:white;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 3px 5px 15px rgba(0,0,0,.20);
+        cursor: pointer;
+    }
+    
+    .leave_container .timeoff_head .leave_card {
+        /*background-color: var(--background);*/
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 5px;  
+    }
+    
+
+}
