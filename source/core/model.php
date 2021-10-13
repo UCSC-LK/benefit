@@ -71,6 +71,15 @@ class Model extends Database
         'login_count'=>$login_count,
         ]);
     }
+    
+    public function updatebannedbanned_table($id)
+    {
+         $query = "update $this->table set login_count = login_count + 1 
+                             where id = :id limit 1";
+        return $this->query($query,[
+        'id'=>$id
+        ]);
+    }
     public function insert($data)
     {
 
