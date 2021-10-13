@@ -225,8 +225,10 @@
                         <label for="user_role">User Role</label>
                         <select id="user_role" name="user_role">
                             <option value="Employee">Employee</option>
-                            <option value="Supervisor">Supervisor</option>
-                            <option value="Manager">Manager</option>        
+                            <!-- <option value="Supervisor">Supervisor</option> -->
+                            <option value="HR Manager">HR Manager</option>    
+                            <option value="HR Officer">HR Officer</option>        
+    
                         </select>
                     </div>
 
