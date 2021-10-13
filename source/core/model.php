@@ -47,6 +47,14 @@ class Model extends Database
         ]);
     }
     
+    public function updatebannedlogin_count($id)
+    {
+        $query = "update $this->table banned set login_count = 0 where id = :id limit 1";
+        return $this->query($query,[
+        'id'=>$id
+        ]);
+    }
+    
     public function findAll()
     {
 
