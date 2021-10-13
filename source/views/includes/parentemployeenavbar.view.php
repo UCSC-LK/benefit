@@ -16,10 +16,12 @@
     <div class="header">
         <div class="nav-bar">
             <ul>
+                <?php if(Auth::access('Supervisor')):?>
                 <li><a href="<?=PATH?>Supervisor">Approve Reimbursement</a></li>
-                <li><a href="#">Approve Leave</a></li>
+                <li><a href="<?=PATH?>LeaveapproveController">Approve Leave</a></li>
                 <li><a href="<?= PATH ?>Supervisor/Performance">Add Performance</a></li>
                 <li><a href="<?=PATH ?>Markattendance">Mark Attendance</a></li>
+                <?php endif;?>
             </ul>
         </div>
     </div>
