@@ -28,6 +28,14 @@ class Model extends Database
             'value' => $value
         ]);
     }
+    
+    public function wherebanned($ip)
+    {
+        $query = "select * from $this->table where ip_address = :ip limit 1";
+        return $this->query($query,[
+        'ip'=>$ip
+        ]);
+    }
 
     public function findAll()
     {
