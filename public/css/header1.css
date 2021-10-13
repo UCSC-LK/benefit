@@ -1,12 +1,11 @@
 @import "color.css";
-
 body {
     font-family: Arial, serif;
 }
 
 .header1 {
     height: 80px;
-    background-color: var(--header);
+    background-color: #5016d0;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -61,6 +60,7 @@ body {
 
 
 /* stroke */
+
 .header1 nav.list1 ul li a {
     position: relative;
 }
