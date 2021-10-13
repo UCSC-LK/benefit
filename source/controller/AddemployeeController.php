@@ -84,16 +84,15 @@ class AddemployeeController extends Controller
 								$complete = move_uploaded_file($file_temp_name, $file_designation);
 								
 								$arr['profile_image'] = $file_designation;
-								// $arr1[4] = 0;
-								// move_uploaded_file($file_temp_name, $nic.".".$file_actual_ext);
+								
 			
 							}else {
 								$complete = false;
-								$arr1[4] = "Uploaded image too big";
+								$arr1[4] = "Uploaded image too big (try image size < 500kb)";
 
 							}
 						}else {
-							// echo "An error file cannot upload ";
+							
 							$complete = false;
 							$arr1[5] = "Image cannot upload try again!";
 						}
