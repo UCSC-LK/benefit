@@ -1,4 +1,4 @@
-body{
+body {
     /*background-color: #E5EDF7;*/
 }
 
@@ -61,7 +61,6 @@ label {
     margin-top: 30px;
 }
 
-
 .col_3 {
     display: flex;
     float: left;
@@ -87,7 +86,10 @@ label {
 }
 
 @media screen and (max-width: 600px) {
-    .col_1, .col_2, .col_3, input[type=submit] {
+    .col_1,
+    .col_2,
+    .col_3,
+    input[type=submit] {
         width: 100%;
         margin-top: 0;
     }
@@ -110,7 +112,8 @@ input[type=submit] {
     padding-right: 20%;
 }
 
-.buttons .delete_button , .buttons .update_button {
+.buttons .delete_button,
+.buttons .update_button {
     color: white;
     font-weight: bold;
     font-size: medium;
