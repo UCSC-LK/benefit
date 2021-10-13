@@ -40,7 +40,7 @@ class Benefit extends Controller
         // print_r($id);
         if(count($_POST)>0)
         {
-            $user->deleteper('report_location',$id);
+            $user->deleteper('claim_date',$id);
             $this->redirect('Benefit');
         }
         $this->view('reimbursementreq.delete');

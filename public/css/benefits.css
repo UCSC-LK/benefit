@@ -53,6 +53,11 @@ body {
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .50);
 }
 
+.benefit_container .benefit_head .benefit_card .card:hover{
+    cursor: pointer;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 1);
+}
+
 .benefit_card:after {
     content: "";
     display: table;

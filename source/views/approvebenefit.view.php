@@ -60,7 +60,7 @@
                         <label for="date">Date</label>
                     </div>
                     <div class="column_2">
-                        <p><?php print_r($requested[$i]['details']->claim_date) ?></p>
+                        <p><?php print_r($requested[$i]['details']->claim_date); ?></p>
                     </div>
                 </div>
                 <div class="row">
@@ -68,7 +68,7 @@
                         <label for="claim_date">Claim Amount</label>
                     </div>
                     <div class="column_2">
-                        <p><?php print_r($requested[$i]['details']->claim_amount) ?></p>
+                        <p><?php print_r($requested[$i]['details']->claim_amount); ?></p>
                     </div>
                 </div>
                 <div class="row">
@@ -76,7 +76,7 @@
                         <label for="reason">Reason</label>
                     </div>
                     <div class="column_2">
-                        <p><?php print_r($requested[$i]['details']->benefit_description) ?></p>
+                        <p><?php print_r($requested[$i]['details']->benefit_description); ?></p>
                     </div>
                 </div>
                 <div class="row">
