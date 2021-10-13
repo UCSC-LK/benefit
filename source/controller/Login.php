@@ -141,4 +141,57 @@ class Login extends Controller
 	$this->view('createnewpsw');
 	}
 	
+	function check_if_banned($login_attempt = false,$login_success = false)
+	{
+
+	$limit = 3;
+	$ip =$this->get_ip();
+	
+	$user=new BannedModel();
+	$row=$user->wherebanned($ip);
+
+			if(is_array($row) && count($row) > 0){
+				$row = $row[0];
+				 $id=$row->id;
+				$time = time();
+				if($row->banned > $time){
+					//if banned
+					//$this->redirect('Dined');
+					require ("./source/views/404.view.php");
+					die;
+				}else{
+
+					if($login_attempt){
+					
+						if($row->login_count>= $limit){
+							
+							$expire = ($time + (60 * 5));
+							$row=$user->updatebanned($id,$expire);
+							
+							return;
+						}else
+
+						if($login_success){
+
+							//reset login count on success
+							$row=$user->updatebannedlogin_count($id);
+						}else{
+
+							//add to login count on failure
+							$row=$user->updatebannedbanned_table($id);
+					}
+				}
+
+				return;
+
+			}
+		}
+	
+
+	$login_count = 0;
+	$banned = 0;
+	$row=$user->updatebannedfinal($ip,$banned,$login_count);
+	}
+
+	
 }
