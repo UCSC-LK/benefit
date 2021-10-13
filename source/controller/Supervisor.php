@@ -96,6 +96,29 @@ class Supervisor extends Controller
 			$this->view('404');
 		}
 	}
+	
+	function Delete_Performance($id=null)
+	{
+
+		if(!Auth::logged_in())
+		{
+			$this->redirect('login');
+		}
+		if(Auth::access('Supervisor'))
+		{
+			if(count($_POST)>0)
+			{
+
+				$user= new PerformanceModel();
+				$row=$user->delete($id);
+				$this->redirect('Supervisor');
+			}
+		$this->view('supervisorviewperformance.delete');
+		}
+		else{
+			$this->view('404');
+		}
+	}
 
 	
 
