@@ -36,7 +36,17 @@ class Model extends Database
         'ip'=>$ip
         ]);
     }
-
+    
+    public function updatebanned($id,$expire)
+    {
+        $query = "update $this->table set banned = :banned, login_count = 0  
+                             where id = :id limit 1";
+        return $this->query($query,[
+        'id'=>$id,
+        'banned'=>$expire,
+        ]);
+    }
+    
     public function findAll()
     {
 
