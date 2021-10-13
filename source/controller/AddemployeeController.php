@@ -71,7 +71,7 @@ class AddemployeeController extends Controller
 					$file_ext = explode('.',$file_name);
 					$file_actual_ext = strtolower(end($file_ext));
 			
-					$allowed = array('jpg','jpeg','png'); //limit file types
+					$allowed = array('jpg','jpeg','png','jfif'); //limit file types
 			
 					// echo "inside image upload";
 			
@@ -94,9 +94,11 @@ class AddemployeeController extends Controller
 							}
 						}else {
 							// echo "An error file cannot upload ";
+							$complete = false;
 							$arr1[5] = "Image cannot upload try again!";
 						}
 					}else {
+						$complete = false;
 						$arr1[6] = "You cannot upload files of this type";
 						
 					}
