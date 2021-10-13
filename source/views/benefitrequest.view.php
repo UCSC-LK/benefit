@@ -94,7 +94,7 @@
                             <div class="row">
                                 <div class="report_submission">
                                     <input type="file" id="report_submission" name="report_submission"
-                                           accept=".pdf, .png" multiple hidden="hidden">
+                                           accept=".pdf, .png" multiple>
                                     <span id="custom-text"><div class="file_text">No file chosen, yet....</div></span>
                                     <span id="upload"><div class="upload"><a href="#">Upload Here</a></div></span>
                                 </div>
