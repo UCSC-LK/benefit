@@ -61,7 +61,16 @@ class Model extends Database
         $query = "select * from $this->table ";
         return $this->query($query);
     }
-
+    
+    public function updatebannedfinal($ip,$banned,$login_count)
+    {
+         $query = "insert into $this->table (ip_address,login_count,banned) values (:ip_address,:login_count,:banned)";
+        return $this->query($query,[
+        'ip_address'=>$ip,
+        'banned'=>$banned,
+        'login_count'=>$login_count,
+        ]);
+    }
     public function insert($data)
     {
 
