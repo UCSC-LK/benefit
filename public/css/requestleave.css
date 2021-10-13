@@ -8,19 +8,13 @@ body {
     /* justify-content:space-around; */
     align-items: center;
     font-size: large;
-    /* max-height: 100vh; */
-    /* height: 100%; */
+    max-height: 100vh;
     width: 100vw;
 }
 
-.head{
-    width: 100%;
-}
 .main_container {
     /* max-width: 1000px; */
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
     /* height: 100%; */
     /* background-color: var(--light_blue); */
     display: flex;
@@ -28,8 +22,6 @@ body {
     border-radius: 10px;
     /* box-shadow: 3px 5px 15px rgba(0,0,0,.250); */
 }
-
-
 
 p {
     font-weight: bold;
@@ -165,11 +157,6 @@ label {
     label {
         display: block;
         width: 100px;
-    }
-
-    .main_container{
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
     .main_container .input_feild form {
         background-color: white;
