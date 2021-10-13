@@ -18,10 +18,9 @@
             <ul>
             <?php if(Auth::access('HR Officer')):?>
                 <li><a href="<?=PATH?>AddemployeeController">Register Employee</a></li>
-                <li><a href="<?=PATH?>AddemployeeController">Remove Employee</a></li>
+                <li><a href="<?=PATH?>EmployeelistController">Remove Employee</a></li>
                 <li><a href="<?=PATH?>Hrdocuments/updatedecuments">Update Documents</a></li>
                 <li><a href="#">Update Benefits</a></li>
-                <li><a href="#">Handle Hierarchy</a></li>
                 <?php endif;?>
             </ul>
         </div>

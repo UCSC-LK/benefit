@@ -14,10 +14,21 @@
     $this->view('includes/header1');
     ?>
 </div>
+<?php if(Auth::access('HR Manager')):?>
 <?php
     $this->view('includes/hrmanagernavbar');
     ?>
 </div>
+<?php endif;?>
+
+
+<?php if(Auth::access('HR Officer')):?>
+<?php
+    $this->view('includes/hrofficernavbar');
+    ?>
+</div>
+<?php endif;?>
+
 
 <div class="main_container">
     <div class="head">
