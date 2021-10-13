@@ -13,6 +13,11 @@
 
 			 	<div class="confirmation">
 			 	<h3>Are you sure you want to delete this Employee's Performance?</h3>
+			 	              <h4 class="erro" style="color: red;"><?php
+                if(boolval($errors)){
+                    print_r($errors);
+                }
+                ?></h4>
  				<form method="post">
 			 	<!--<input disabled autofocus class="form-control" value="<?=get_var('claim',$vai[0]->claim_amount)?>" type="text" name="claim" placeholder="claim"><br><br>-->
 			 	<input type="hidden" name="id">
