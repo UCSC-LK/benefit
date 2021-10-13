@@ -1,49 +1,70 @@
+@import "color.css";
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial;
+    font-family: Arial, serif;
+    background-color: #c4d9f3;
+}
+
+.handling_title {
+    width: 100%;
+    font-size: xx-large;
+    color: var(--header);
+    text-align: center;
+    justify-content: center;
 }
 
 .approve-container {
-    padding-top: 1%;
-    padding-left: 2%;
-    padding-bottom: 5%;
-    padding-right: 2%;
-    background-color: #c4d9f3;
-    height: 100%;
+    padding-left: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header-approve {
+    display: flex;
+    justify-content: space-between;
     background-color: white;
-    width: 60%;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, .50);
+    width: 50%;
+    max-height: max-content;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
 }
 
-.details {
-    background-color: white;
-    padding-bottom: 3%;
+.header-approve:hover {
+    background-color: var(--grey);
 }
 
 .profile__image {
     float: left;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     border-radius: 50%;
     margin-top: 0;
+    margin-left: 15px;
+    margin-right: 10px;
     padding: 10px;
     display: flex;
 }
 
-.name {
-    padding: 5%;
-    padding-left: 10%;
-    float: center;
-    display: flex;
-    margin: auto;
+.header-approve .name {
+    max-width: max-content;
+    font-size: large;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header-approve .date {
+    margin-right: 30px;
+    font-size: large;
 }
 
 .tab {
@@ -51,42 +72,51 @@ body {
     margin-left: 20%;
 }
 
-label {
-    padding: 12px 12px 12px 0;
+.details {
+    background-color: white;
+    width: 50%;
+    border-radius: 10px;
+    margin-left: 20%;
+}
+
+.details .row {
+    width: 100%;
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-items: center;
+}
+
+.details .row .column_1 {
+    width: 30%;
+    padding-left: 15px;
+}
+
+.details .row .column_1 label{
+    /*padding: 12px 20px;*/
+    margin: 8px 0;
     display: inline-block;
-    font-size: 35;
+    box-sizing: border-box;
+
 }
 
-.row {
-    padding-left: 2%;
+.details .row .column_2 {
+    width: 50%;
+    padding-left: 15px;
 }
 
-.column_1 {
-    float: left;
-    width: 20%;
-    margin-top: 6px;
-}
-
-.column_2 {
-    float: left;
-    width: 80%;
-    margin-top: 6px;
-}
-
-.column_3 {
-    float: left;
-    padding-top: 15px;
-    margin-top: 6px;
-    width: 80%;
-    display: block;
+.details .row .column_2 p {
+    /*padding: 12px 20px;*/
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 .buttons {
     display: flex;
     justify-content: space-between;
-    padding-left: 40%;
-    padding-right: 20%;
-    padding-top: 2%;
+    padding: 10px 20px 20px;
 }
 
 .approve_button {
@@ -98,78 +128,24 @@ label {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 25%;
+    width: 20%;
 }
 
 .reject_button {
-    background-color: #FC3341;
+    background-color: #cc0000;
     color: white;
     font-weight: bold;
     font-size: medium;
-    padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 25%;
+    width: 20%;
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
+.reject_button:hover {
+    background-color: red;
 }
 
-table {
-    padding-top: 10px;
-    padding-left: 15%;
-    width: 80%;
-    padding-bottom: 50px;
-}
-
-th {
-    background-color: #E4F1F5;
-    border: 1px solid white;
-    height: 40px;
-}
-
-input[type=text],
-textarea {
-    font-family: Arial;
-    width: 30%;
-    height: 40px;
-    padding: 15px;
-    padding-left: 5px;
-    border: 1px solid black;
-    border-radius: 4px;
-    resize: vertical;
-}
-
-input[type=date],
-textarea {
-    font-family: Arial;
-    width: 30%;
-    height: 40px;
-    padding: 15px;
-    padding-left: 5px;
-    border: 1px solid black;
-    border-radius: 4px;
-}
-
-
-/* Clear floats after the columns */
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-
-@media screen and (max-width: 600px) {
-    .column_1,
-    .column_2,
-    input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-    }
+.approve_button:hover {
+    background-color: blue;
 }
