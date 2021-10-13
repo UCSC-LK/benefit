@@ -20,6 +20,14 @@ class Benefit extends Controller
 
     }
 
+    function update(){
+        if (!Auth::logged_in()) {
+            $this->redirect('login');
+        }
+
+        $this->view('updatebenefit');
+    }
+
     
 
 }
