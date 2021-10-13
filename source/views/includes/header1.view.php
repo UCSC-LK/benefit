@@ -20,11 +20,14 @@
             <li><a href="<?=PATH?>hrdocuments">Documents</a></li>
             <li><a href="<?=PATH?>Hierarchy">Hierarchy</a></li>
 
-            <?php if(Auth::access('Supervisor')||Auth::access('HR Officer')):?>
+            <?php if(Auth::access('Supervisor')):?>
                 <li><a href="<?=PATH?>Approvereimbursement">USER MANAGEMENT(HR)</a></li>
                 <?php endif;?>
             <?php if(Auth::access('HR Manager')):?>
                 <li><a href="<?=PATH?>EmployeelistController">USER MANAGEMENT(HR)</a></li>
+            <?php endif;?>
+            <?php if(Auth::access('HR Officer')):?>
+                <li><a href="<?=PATH?>AddemployeeController">USER MANAGEMENT(HR)</a></li>
             <?php endif;?>
         </ul>
     </nav>
