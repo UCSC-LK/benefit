@@ -79,4 +79,66 @@ class Login extends Controller
 		$this->view('forgotpassword');
 	}
 	
+	function forgotpassword2()
+	{
+
+		if(isset($_POST["reset-password"]))
+		{
+			$selector=$_POST['selector'];
+			$validator=$_POST['validator'];
+			$password=$_POST['password'];
+			$passwordRepeat=$_POST['pwd-password'];
+
+			if(empty($password)||empty($passwordRepeat))
+			{
+				$this->view('createnewpsw');
+				exit();
+			}
+			elseif ($password!=$passwordRepeat) {
+				$this->view('createnewpsw');
+				exit();
+			}
+			$currentDate=date("U");
+			$user= new PwdResetModel();
+			$row=$user->where('pwdResetSelector',$selector);
+
+			if(!isset($row))
+			{
+				echo "You need to re-submit your reset req";
+				exit();
+			}
+			else
+			{
+				$row=$row[0];
+				$userEmail=$row->pwdResetEmail;
+				$tokenBin=hex2bin($validator);
+				$tokenCheck=password_verify($tokenBin, $row->pwdResetToken);
+
+				if ($tokenCheck===false) 
+				{
+					print_r( "You need to re-submit your reset req");
+					exit();
+				}
+				elseif ($tokenCheck===true) {
+					$tokenEmail=$row->pwdResetEmail;
+					$user= new EmployeelistModel();
+					$newpassword=password_hash($password, PASSWORD_DEFAULT);
+					$arr['password']=$newpassword;
+					$row=$user->where('email',$userEmail);
+					$row=$row[0];
+					$row=$user->update($row->employee_ID,$arr);
+					$user=new PwdResetModel();
+					$row=$user->deletepsw($tokenEmail);
+					$this->redirect('login');
+				}
+			}
+		}
+		/*else
+		{
+			$this->redirect('login');
+		}*/
+
+	$this->view('createnewpsw');
+	}
+	
 }
