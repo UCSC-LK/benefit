@@ -18,23 +18,4 @@ class Hrdocuments extends Controller
 		$this->view('hrdocuments');
 		
 	}
-
-	function hierarchy()
-	{
-
-		if(!Auth::logged_in())
-		{
-			$this->redirect('login');
-		}
-		
-		
-		$this->view('hierarchy');
-		
-	}
-
-	
-
-	
-
-
 }
