@@ -43,7 +43,32 @@ class Supervisor extends Controller
 	}
 
 	
-	
+	function Update_Performance($id=null)
+	{
 
+		if(!Auth::logged_in())
+		{
+			$this->redirect('login');
+		}
+		if(Auth::access('Supervisor'))
+		{
+				$user= new PerformanceModel();
+				if(count($_POST)>0){
+				$data['communication']=$_POST['communication'];
+				$data['quality_of_work']=$_POST['quality_of_work'];
+				$data['organization']=$_POST['organization'];
+				$data['team_skills']=$_POST['team_skills'];
+				$data['multitasking_ability']=$_POST['multitasking_ability'];
+				$row=$user->update($id,$data);
+				//$this->redirect('Supervisor');
+				}
+		$this->view('addperformance');
+		}
+		else{
+			$this->view('404');
+		}
+	}
+
+	
 
 }
