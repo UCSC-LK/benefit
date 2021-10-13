@@ -125,6 +125,14 @@ class Model extends Database
         return $this->query($query,$data);
         
     }
+    
+    public function deletepsw($id)
+    {
+        $query = "delete from $this->table where pwdResetEmail= :id";
+        $data['id'] = $id;
+        return $this->query($query, $data);
+
+    }
 
 }
 
