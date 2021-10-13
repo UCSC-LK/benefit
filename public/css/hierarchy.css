@@ -17,7 +17,7 @@ ol {
 }
 
 .hierarchy-body {
-    margin: 50px 0 100px;
+    /* margin: 50px 0 100px; */
     text-align: center;
     font-family: "Inter", sans-serif;
 }
@@ -41,6 +41,7 @@ ol {
 .level-1 {
     width: 50%;
     margin: 0 auto 40px;
+    margin-top: 25px;
     background: var(--level-1);
 }
 
@@ -195,6 +196,7 @@ ol {
 
 .level-4 {
     font-weight: normal;
+    margin-bottom: 25px;
     background: var(--level-4);
 }
 

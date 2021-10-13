@@ -9,9 +9,13 @@
     <title></title>
 </head>
 
+<div>
+   <?php $this->view('includes/header1')?>
+</div>
 <body class="hierarchy-body">
 
     <div class="hierarchy-container">
+
         <h1 class="level-1 rectangle">CEO</h1>
         <ol class="level-2-wrapper">
             <li>
@@ -94,6 +98,12 @@
             </li>
         </ol>
     </div>
+
+    <div>
+    <?php
+    $this->view('includes/footer');
+    ?>
+</div>
 </body>
 
 </html>
