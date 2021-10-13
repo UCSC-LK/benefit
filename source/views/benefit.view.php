@@ -40,6 +40,7 @@
                 <div>
 
                     <form action="BenefitrequestController">
+                        <a href="<?=PATH?>BenefitrequestController">
                         <div class="benefit_card">
 
                             <div class="benefit_card_column">
@@ -76,6 +77,7 @@
                                 </div>
                             </div>
                         </div>
+                        </a>
                         <div class="claim_button">
                             <input type="submit" value="Apply" name="submit">
                         </div>
@@ -99,7 +101,7 @@
                                 <div><?php print_r($row->benefit_type); ?> </div>
                                 <div><?php print_r($row->claim_date); ?></div>
                                 <div><i>Pending</i></div>
-                                <a href="<?=PATH?>Benefit/delete/<?=$row->report_location?>">
+                                <a href="<?=PATH?>Benefit/delete/<?=$row->claim_date?>">
                                     <button type='submit' value='Decline' name="delete" class='delete_button'>Decline</button>
                                 </a>
                             </div>

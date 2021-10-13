@@ -28,7 +28,7 @@ class BenefitrequestController extends Controller
                 $arr['claim_amount'] = $_POST['claiming_amount'];
                 $arr['benefit_status'] = "pending";
                 $arr['benefit_description'] = $_POST['subject'];
-                $arr['report_location'] = "null";
+                $arr['report_location'] = $_POST['report_submission'];
 
 
                 $user->insert($arr);
