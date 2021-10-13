@@ -1,4 +1,4 @@
-body {
+/*body {
     background: #E5ECEC;
     font-family: Arial;
 }
@@ -69,4 +69,115 @@ body {
     text-align: center;
     margin-top: 10px;
     color: var(--red);
+}*/
+body {
+    background-color: #D3DBDD;
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: #5016d0;
+    text-align: center;
+    bottom: 0;
+}
+
+.ofs {
+    color: #DCDCE0;
+    font-size: 15px;
+    margin: auto;
+    padding-top: 25px;
+}
+
+.container {
+    width: 30%;
+    margin: auto;
+    padding-top: 7%;
+    border-radius: 5px;
+    border-color: #707070;
+}
+
+.box-a {
+    border: 1px #707070 solid;
+    background-color: white;
+    color: #0D0D0D;
+    padding-top: 1%;
+    border-radius: 10px;
+    width: 450px;
+}
+
+.h3 {
+    border: 1px;
+    margin: auto;
+    width: 98%;
+    height: 8%;
+    color: white;
+    background-color:  #5016d0;
+    text-align: center;
+    padding-top: 15px;
+    word-spacing: 3px;
+}
+
+.frm {
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.form1 {
+    padding-bottom: 10%;
+    padding-left: 105px;
+    padding-top: 5px;
+}
+
+input {
+    text-align: center;
+    color: #0D0D0D;
+}
+
+.new1 {
+    width: 240px;
+    height: 40px;
+    border-radius: 5px;
+    /* background-color: #DCDCE0; */
+}
+
+.shw {
+    font-size: 15px;
+    padding-left: 35%;
+}
+
+.form2 {
+    padding-left: 29%;
+    padding-top: 5%;
+    padding-bottom: 8%;
+}
+
+.form2 button {
+    width: 60%;
+    height: 5%;
+    font-size: 20px;
+    border-radius: 5px;
+    /*background-color: #2828CF;*/
+     background-color: #5016d0;
+    color: white;
+    box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.5);
+}
+
+.psw {
+    color: #2B2BE4;
+    border: #707070;
+    padding-left: 36%;
+    padding-top: 5%;
+    font-size: 15px;
+}
+
+.h {
+    padding-left: 5%;
+    text-align: center;
+    margin-top: 10px;
+    color: #FF2300;
 }
