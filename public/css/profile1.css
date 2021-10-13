@@ -1,5 +1,7 @@
 @import "color.css";
+
 /*profile*/
+
 .profile_container {
     display: flex;
     /*background-color: #E5EDF7;*/
@@ -13,7 +15,9 @@
     width: 20%;
     height: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background-color: white;
+    background-color: #5016d0;
+    border-radius: 10px;
+    margin-left: 5px;
 }
 
 .profile__image {
@@ -29,13 +33,13 @@
     padding-top: 30px;
     font-weight: bold;
     font-size: 1.4em;
-    color: var(--black);
+    color: white;
 }
 
 .job {
     font-size: 1.1em;
     margin-bottom: 20px;
-    color: var(--black);
+    color: white;
 }
 
 .contact {
@@ -44,7 +48,7 @@
     justify-content: center;
     font-size: 1em;
     margin-bottom: 20px;
-    color: var(--black);
+    color: white;
 }
 
 .email {
@@ -53,25 +57,25 @@
     justify-content: center;
     font-size: 1em;
     margin-bottom: 20px;
-    color: var(--black);
+    color: white;
 }
 
 .hire {
     font-size: 0.9em;
     font-weight: bold;
-    color: var(--header);
+    color: white;
 }
 
 .date {
     font-size: 0.8em;
     margin-bottom: 20px;
-    color: var(--black);
+    color: white;
 }
 
 .address {
     font-size: 0.9em;
     margin-bottom: 20px;
-    color: var(--black);
+    color: white;
 }
 
 .supervisor {
@@ -81,5 +85,5 @@
     font-size: 0.9em;
     font-weight: bold;
     margin-bottom: 20px;
-    color: var(--header);
+    color: white;
 }
