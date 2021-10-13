@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.reimbursement_container {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    width: 100%;
+}
+
+.heading h2 {
+    background-color: rgb(255, 255, 255);
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: #1C1D1D;
+}
+
+.row {
+    padding-left: 40px;
+    padding-top: 30px;
+    display: flex;
+    justify-items: center;
+}
+
+.column_1 {
+    font-size: medium;
+    padding: 12px 20px;
+    width: 20%;
+    color: #1C1D1D;
+}
+
+.column_2 {
+    width: 70%;
+    padding-left: 15px;
+}
+
+.column_2 input,
+.column_2 textarea {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.invoice_submission {
+    width: 97%;
+    height: 160px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border-style: dotted;
+}
+
+.apply_button {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type=submit] {
+    background-color: #2828CF;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 33px;
+    width: 80%;
+}
+
+.delete_button {
+    background-color: #2828CF;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 33px;
+    width: 30%;
+    margin-left: 35%;
+}
+
+.update_button {
+    background-color: #2828CF;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 33px;
+    width: 30%;
+    margin-left: 35%;
+}
+
+table {
+    padding-top: 10px;
+    width: 100%;
+}
+
+th {
+    border: 1px solid rgb(213, 213, 214);
+    background-color: rgb(221, 221, 243);
+}
+
+
+/* Delete confirmation CSS styles*/
+
+.delete-body {
+    justify-content: center;
+    padding-top: 10%;
+    padding-left: 30%;
+    text-align: center;
+}
+
+.confirmation {
+    border-radius: 15px;
+    border: 2px solid;
+    padding: 30px;
+    width: 45%;
+    margin-left: 2%;
+}
+
+.h3 {
+    font-family: arial;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.delete-confirmation {
+    background-color: #2828CF;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: Arial;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 33px;
+    width: 28%;
+    margin-left: 15%;
+    margin-right: 7%;
+    margin-top: 3%;
+}
+
+.cancle-confirmation {
+    background-color: #FF2300;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 33px;
+    width: 28%;
+    margin-right: 5%;
+    margin-top: 3%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+
+
+/* 
+@media screen and (max-width: 600px) {
+    .column_1,
+    .column_2,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+} */
