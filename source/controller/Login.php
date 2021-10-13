@@ -5,6 +5,7 @@
  */
 class Login extends Controller
 {
+	
 	function index()
 	{
 		$this->check_if_banned();
@@ -42,7 +43,7 @@ class Login extends Controller
 			'errors'=>$errors,
 		]);
 	}
-	
+
 	function forgotpassword()
 	{
 		if(isset($_POST['reset-req']))
@@ -78,7 +79,7 @@ class Login extends Controller
 		}
 		$this->view('forgotpassword');
 	}
-	
+
 	function forgotpassword2()
 	{
 
@@ -140,7 +141,9 @@ class Login extends Controller
 
 	$this->view('createnewpsw');
 	}
-	
+
+
+
 	function check_if_banned($login_attempt = false,$login_success = false)
 	{
 
