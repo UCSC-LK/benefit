@@ -20,7 +20,7 @@ class Controller
 		}
 	}
 
-	public function load_model($model)
+	/*public function load_model($model)
 	{
 
 		if(file_exists("./source/models/".ucfirst($model).".php"))
@@ -30,7 +30,7 @@ class Controller
 		}
 		
 		return false;
-	}
+	}*/
 
 	public function redirect($link)
 	{
