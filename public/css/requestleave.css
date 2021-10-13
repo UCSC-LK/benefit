@@ -12,15 +12,18 @@ body {
     width: 100vw;
 }
 
+.head{
+    width: 100%;
+}
 .main_container {
     /* max-width: 1000px; */
     margin-top: 10px;
-    /* height: 100%; */
+    height: 100;
     /* background-color: var(--light_blue); */
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    /* box-shadow: 3px 5px 15px rgba(0,0,0,.250); */
+    box-shadow: 3px 5px 5px rgba(0,0,0,.200);
 }
 
 p {
@@ -148,6 +151,8 @@ label {
 
 .fot {
     width: 100%;
+    position:absolute;
+    bottom: 0;
 }
 
 @media screen and (max-width: 690px) {
@@ -189,5 +194,10 @@ label {
     .main_container .input_feild form .leave_type select,
     option {
         font-size: medium;
+    }
+
+    .fot {
+        width: 100%;
+        position:relative;
     }
 }
