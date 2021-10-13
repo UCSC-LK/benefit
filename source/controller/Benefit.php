@@ -28,7 +28,32 @@ class Benefit extends Controller
         $this->view('updatebenefit');
     }
 
-    
+    function delete($id=null)
+    {
+        //echo "$id";
+
+        if(!Auth::logged_in())
+        {
+            $this->redirect('login');
+        }
+        $user=new BenefitrequestModel();
+        // print_r($id);
+        if(count($_POST)>0)
+        {
+            $user->deleteper('report_location',$id);
+            $this->redirect('Benefit');
+        }
+        $this->view('reimbursementreq.delete');
+    }
+
+//    function update(){
+//        if(!Auth::logged_in())
+//        {
+//            $this->redirect('login');
+//        }
+//
+//        $this->view('reimbursement.update');
+//    }
 
 }
 

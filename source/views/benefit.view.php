@@ -94,14 +94,16 @@
                 if (boolval($pending)) {
                     if (isset($pending)) {
                         for ($i = 0; $i < sizeof($pending); $i++) {
-                            $row = $pending[$i];
-                            print "<div class='pending_benefits'>";
-                            echo "<div>" . $row->benefit_type . "</div>";
-                            echo "<div>" . $row->claim_date . "</div>";
-                            echo "<div>" . "<i>Pending</i>" . "</div>";
-                            print "<input type='submit' value='Decline' class='delete_button'>";
-                            echo "</div>";
-                        }
+                            $row = $pending[$i]; ?>
+                            <div class='pending_benefits'>
+                                <div><?php print_r($row->benefit_type); ?> </div>
+                                <div><?php print_r($row->claim_date); ?></div>
+                                <div><i>Pending</i></div>
+                                <a href="<?=PATH?>Benefit/delete/<?=$row->report_location?>">
+                                    <button type='submit' value='Decline' name="delete" class='delete_button'>Decline</button>
+                                </a>
+                            </div>
+                        <?php }
                     }
                 }
                 ?>
