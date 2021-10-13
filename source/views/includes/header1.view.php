@@ -9,6 +9,7 @@
 
     <title></title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body>
 
@@ -32,12 +33,38 @@
         </ul>
     </nav>
 
-    <button type="button" class="icon-button">
-        <a href="#">
-            <span class="material-icons">notifications</span>
-            <span class="icon-button_badge">2</span>
-        </a>
-    </button>
+    <div class="dd_main">
+        <button type="button" class="icon-button">
+            <a >
+                <span class="material-icons">notifications</span>
+                <span class="icon-button_badge">2</span>
+            </a>
+
+            <div class="dd_menu">
+                <div class="dd_left">
+                    <ul>
+                        <li>  <a href="<?= PATH ?>leavedetailscontroller"> <i class="fa fa-user" aria-hidden="true"></i> </a></li>
+                        <!-- <li></li> -->
+                        <li> <a href="<?= PATH ?>login"> <i class="fas fa-sign-out-alt"> </a></i></li>
+                    </ul>
+                </div>
+                <div class="dd_right">
+                    <ul>
+                        <li> <a href="<?= PATH ?>leavedetailscontroller">My Info </a></li>
+                        <li> <a href="<?= PATH ?>login">Log Out </a></li>
+                    </ul>
+                </div>
+            </div>
+        </button>
+    </div>
+    
 </div>
+<script>
+	var dd_main = document.querySelector(".dd_main");
+
+	dd_main.addEventListener("click", function(){
+		this.classList.toggle("active");
+	})
+</script>
 </body>
 </html>
