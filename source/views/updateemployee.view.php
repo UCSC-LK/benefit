@@ -14,9 +14,14 @@
         <?php $this->view('includes/header1')?>
     </div>
 
-    <div>
-        <?php $this->view('includes/header2')?>
-    </div>
+    <?php if(Auth::access('HR Manager')):?>
+<div>
+    <?php
+    $this->view('includes/hrmanagernavbar');
+    ?>
+</div> 
+<?php endif;?> 
+
     
     <div class="main_container">
 
@@ -90,7 +95,7 @@
                 
                 ?>
                     <div class="buttons">
-                        <button type="reset" id="cancel">Cancel</button>
+                        <button type="sumbit" id="cancel" name="cancel">Cancel</button>
                         <button type="submit" id="add" name="submit">Update</button>
                     </div>
                     
@@ -101,9 +106,12 @@
         </div>
         
     </div>
+    <div>
+    <?php
+    $this->view('includes/footer')
+    ?>
 
-     <div class="foot">
-        <p class="fot">Copyright © 2021 Oracle Freight Solutions | Powered by Oracle Freight Solutions</p>
-    </div>
+</div>
+    
 </body>
 </html>

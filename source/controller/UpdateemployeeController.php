@@ -40,11 +40,20 @@ class UpdateemployeeController extends Controller{
                     $this->redirect('EmployeelistController');
                 }
             }
+           
         }
+        if(isset($_POST['cancel'])){
+            // $this->view('employeelist',['rows'=>$data]);
+            $this->redirect('EmployeelistController');
 
+    }
+      
         $this->view('updateemployee',['rows'=>$data]);
         // $this->view('updateemployee');
+     
     }
+
+   
 
     function email_validate($email , $user){
 		// $select = new AddemployeeModel();
