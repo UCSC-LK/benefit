@@ -14,6 +14,11 @@
     $this->view('includes/header1');
     ?>
 </div>
+<?php
+    $this->view('includes/hrmanagernavbar');
+    ?>
+</div>
+
 <div class="main_container">
     <div class="head">
         <p>Branch Name</p>
@@ -46,8 +51,8 @@
                                             <p><?php echo $entry->email ?></p>
                                         </div>
                                         <div class="butons">
-                                            <button type="submit" id="edit" name="edit">Edit</button>
-                                            <button type="submit" id="delete" name="delete">Delete</button>
+                                            <button class="button-btn" type="submit" id="edit" name="edit">Edit</button>
+                                            <button class="button-btn" type="submit" id="delete" name="delete">Delete</button>
                                         </div>
                                     </div>
                                 </form>
@@ -84,8 +89,8 @@
                                             <p><?php echo $entry->email ?></p>
                                         </div>
                                         <div class="butons">
-                                            <button type="submit" id="edit" name="edit">Edit</button>
-                                            <button type="submit" id="delete" name="delete">Delete</button>
+                                            <button class="button-btn" type="submit" id="edit" name="edit">Edit</button>
+                                            <button class="button-btn" type="submit" id="delete" name="delete">Delete</button>
                                         </div>
                                     </div>
                                 </form>
@@ -122,8 +127,8 @@
                                             <p><?php echo $entry->email ?></p>
                                         </div>
                                         <div class="butons">
-                                            <button type="submit" id="edit" name="edit">Edit</button>
-                                            <button type="submit" id="delete" name="delete">Delete</button>
+                                            <button class="button-btn" type="submit" id="edit" name="edit">Edit</button>
+                                            <button class="button-btn" type="submit" id="delete" name="delete">Delete</button>
                                         </div>
                                     </div>
                                 </form>

@@ -106,7 +106,7 @@ img {
     justify-content: space-around;
 }
 
-button {
+.button-btn {
     width: auto;
     color: rgb(255, 255, 255);
     font-size: medium;
