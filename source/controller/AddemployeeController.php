@@ -77,7 +77,7 @@ class AddemployeeController extends Controller
 			
 					if (in_array($file_actual_ext, $allowed)) {
 						if ($file_error === 0) {
-							if ($file_size < 500000){ //set max size of image 500 KB
+							if ($file_size < 5000000){ //set max size of image 5000 KB
 			
 								$file_name_new = $arr['first_name']. "." .$file_actual_ext; //Rename profile picture with employee id
 								$file_designation =  'public/img/profile/' .$file_name_new;
