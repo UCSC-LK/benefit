@@ -10,6 +10,9 @@
 </head>
 <body class="update-body">
 	<!-- <h1>delete</h1> -->
+	<div class="heading">
+                <h2>Update Claim Reimbursement</h2>
+            </div>
 
 	<div class="update_reimbursement">
 	<form action="#" method="POST">
