@@ -18,4 +18,15 @@ class Hrdocuments extends Controller
 		$this->view('hrdocuments');
 		
 	}
+
+
+	function updatedecuments(){
+		if(!Auth::logged_in())
+		{
+			$this->redirect('login');
+		}
+		
+		
+		$this->view('hrdocumentsupdate');
+	}
 }
