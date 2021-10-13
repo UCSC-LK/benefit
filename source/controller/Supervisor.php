@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PerformanceModel Controller
+ * Supervisor Controller
  */
 class Supervisor extends Controller
 {
@@ -99,21 +99,28 @@ class Supervisor extends Controller
 	
 	function Delete_Performance($id=null)
 	{
-
+			$errors=array();
 		if(!Auth::logged_in())
 		{
 			$this->redirect('login');
 		}
 		if(Auth::access('Supervisor'))
 		{
+				
 			if(count($_POST)>0)
 			{
-
 				$user= new PerformanceModel();
+				$row=$user->where('employee_ID',$id);
+				if(!empty($row)){
+
 				$row=$user->delete($id);
 				$this->redirect('Supervisor');
+				}
+				else{
+					$errors="This employee dosen't have a recodes yet";
+				}
 			}
-		$this->view('supervisorviewperformance.delete');
+		$this->view('supervisorviewperformance.delete',['errors'=>$errors]);
 		}
 		else{
 			$this->view('404');
