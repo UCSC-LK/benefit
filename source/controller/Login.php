@@ -110,7 +110,19 @@ class Login extends Controller
 			}
 			else
 			{
+
+				if(empty($row))
+				{
+				echo "You need to re-submit your reset req";
+				exit();
+				}
 				$row=$row[0];
+				if($currentDate>$row->pwdResetExpires)
+				{
+				echo "You need to re-submit your reset req";
+				$row=$user->deletepsw($row->pwdResetEmail);
+				exit();
+				}
 				$userEmail=$row->pwdResetEmail;
 				$tokenBin=hex2bin($validator);
 				$tokenCheck=password_verify($tokenBin, $row->pwdResetToken);
