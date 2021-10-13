@@ -193,5 +193,20 @@ class Login extends Controller
 	$row=$user->updatebannedfinal($ip,$banned,$login_count);
 	}
 
-	
+	function get_ip()
+	{
+		$ip = "";
+
+	if(isset($_SERVER['HTTP_X_FORWARDED_FOR'])){
+
+		return $_SERVER['HTTP_X_FORWARDED_FOR'];
+	}
+
+	if(isset($_SERVER['REMOTE_ADDR'])){
+
+		return $_SERVER['REMOTE_ADDR'];
+	}
+		return $ip;
+	}
+
 }
