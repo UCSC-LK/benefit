@@ -17,7 +17,7 @@
    <?php $this->view('includes/header1')?>
 </div>
 
-<?php if(Auth::access('HR Manager')):?>
+< <?php if(Auth::access('HR Manager')||Auth::access('HR Officer')):?>
 <div>
     <?php
     $this->view('includes/hrmanagernavbar');
