@@ -25,6 +25,13 @@
     ?>
 </div> 
 <?php endif;?>
+<?php if(Auth::access('HR Officer')):?>
+<div>
+    <?php
+    $this->view('includes/hrofficernavbar');
+    ?>
+</div> 
+<?php endif;?>
 <div class="update_benefit">
     <div class="update_head">
         Update Benefits
