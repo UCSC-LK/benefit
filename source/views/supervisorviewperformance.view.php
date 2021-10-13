@@ -37,10 +37,10 @@
                                <!-- <form method="post">-->
                                     <div class="cards">
                                         
-                                        <div class="img">
+                                        <!-- <div class="img">
                                             <img src="<?php echo $entry->profile_image?>" alt="not found">
 
-                                        </div>
+                                        </div> -->
                                         <div class="name">
                                             <p><?php echo $entry->first_name ?> <?php echo $entry->last_name ?> </p>
                                         </div>
