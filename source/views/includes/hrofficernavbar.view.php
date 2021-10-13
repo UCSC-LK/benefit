@@ -20,7 +20,7 @@
                 <li><a href="<?=PATH?>AddemployeeController">Register Employee</a></li>
                 <li><a href="<?=PATH?>EmployeelistController">Remove Employee</a></li>
                 <li><a href="<?=PATH?>Hrdocuments/updatedecuments">Update Documents</a></li>
-                <li><a href="#">Update Benefits</a></li>
+                <li><a href="<?=PATH?>Benefit/update">Update Benefits</a></li>
                 <?php endif;?>
             </ul>
         </div>
