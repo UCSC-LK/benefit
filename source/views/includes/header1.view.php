@@ -18,6 +18,8 @@
             <li><a href="<?= PATH ?>Home">Home</a></li>
             <li><a href="<?= PATH ?>leavedetailscontroller">My Info</a></li>
             <li><a href="<?=PATH?>hrdocuments">Documents</a></li>
+            <li><a href="<?=PATH?>hrdcouments/hierarchy">Hierarchy</a></li>
+
             <?php if(Auth::access('Supervisor')||Auth::access('HR Officer')):?>
                 <li><a href="<?=PATH?>Approvereimbursement">USER MANAGEMENT(HR)</a></li>
                 <?php endif;?>
