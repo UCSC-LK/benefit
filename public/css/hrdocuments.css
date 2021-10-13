@@ -4,6 +4,8 @@
 
 body {
     font-family: Arial;
+    margin: 0;
+    padding: 0;
 }
 
 .hrdocuments_container {
