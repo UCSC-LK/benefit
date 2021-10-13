@@ -16,11 +16,13 @@
     <div class="header">
         <div class="nav-bar">
             <ul>
-                <li><a href="#">Register Employee</a></li>
+            <?php if(Auth::access('HR Officer')):?>
+                <li><a href="<?=PATH?>AddemployeeController">Register Employee</a></li>
                 <li><a href="#">Remove Employee</a></li>
                 <li><a href="#">Update Documents</a></li>
                 <li><a href="#">Update Benefits</a></li>
                 <li><a href="#">Handle Hierarchy</a></li>
+                <?php endif;?>
             </ul>
         </div>
     </div>

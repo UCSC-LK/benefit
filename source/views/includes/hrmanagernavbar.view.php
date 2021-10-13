@@ -20,7 +20,7 @@
                 <li><a href="<?=PATH?>EmployeelistController">Update Employee Details</a></li>
                 <li><a href="<?=PATH?>Approvebenefit">Approve Benefits</a></li>
                 <li><a href="<?=PATH?>LeaveapproveController">Approve Leaves</a></li>
-                <li><a href="<?=PATH?>Hrdocuments">Update Documents</a></li>
+                <li><a href="<?=PATH?>Hrdocuments/updatedecuments">Update Documents</a></li>
                 <li><a href="<?=PATH?>Approvebenefit/updatebenefit">Update Benefits</a></li>
                 <?php endif;?>
             </ul>
