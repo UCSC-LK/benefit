@@ -15,6 +15,22 @@
             $this->view('includes/header1')
         ?>
     </div>
+
+    <?php if(Auth::access('Supervisor')):?>   
+    <div>
+    <?php
+    $this->view('includes/parentemployeenavbar');
+    ?>
+</div> 
+<?php endif;?>
+
+<?php if(Auth::access('HR Manager')):?>
+<div>
+    <?php
+    $this->view('includes/hrmanagernavbar');
+    ?>
+</div> 
+<?php endif;?>
     <!-- <h1>This is Leave Approve Page</h1> -->
     <div class="main_container">
       <div class="empployee_details">
