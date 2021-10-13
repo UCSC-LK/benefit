@@ -9,14 +9,20 @@ body {
     display: flex;
     justify-content: space-between;
     position: relative;
-    width: 100%;
+    max-width: 100%;
+    /* margin-bottom: 5px; */
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .header1 nav {
     display: flex;
     position: relative;
     width: 70%;
-    background-color: var(--header);
+    background-color: #5016d0;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 
 .header1 nav ul {
