@@ -17,10 +17,17 @@
    <?php $this->view('includes/header1')?>
 </div>
 
-< <?php if(Auth::access('HR Manager')||Auth::access('HR Officer')):?>
+<?php if(Auth::access('HR Manager')):?>
 <div>
     <?php
     $this->view('includes/hrmanagernavbar');
+    ?>
+</div> 
+<?php endif;?>
+<?php if(Auth::access('HR Officer')):?>
+<div>
+    <?php
+    $this->view('includes/hrofficernavbar');
     ?>
 </div> 
 <?php endif;?>
@@ -30,7 +37,7 @@
                 <div class="card">
                     <h4>Employee Application Form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_application_form.png" alt="" style="width:100%">
-                    <?php if(Auth::access('HR Manager')):?>
+                    <?php if(Auth::access('HR Manager') || Auth::access('HR Officer')):?>
                     <button class="btn" onclick="document.getElementById('link-1').click()"><i class="fa fa-download"></i>      Update</button>
                     <?php endif;?>
 
@@ -41,7 +48,7 @@
                 <div class="card">
                     <h4>Employee Emergency Contact Form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_emergency_form.png" alt="" style="width:100%">
-                    <?php if(Auth::access('HR Manager')):?>
+                    <?php if(Auth::access('HR Manager') || Auth::access('HR Officer')):?>
                     <button class="btn" onclick="document.getElementById('link-1').click()"><i class="fa fa-download"></i>      Update</button>
                     <?php endif;?>
 
@@ -52,7 +59,7 @@
                 <div class="card">
                     <h4>Disciplinary action form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_disciplinary_form.png" alt="" style="width:100%">
-                    <?php if(Auth::access('HR Manager')):?>
+                    <?php if(Auth::access('HR Manager') || Auth::access('HR Officer')):?>
                     <button class="btn" onclick="document.getElementById('link-1').click()"><i class="fa fa-download"></i>      Update</button>
                     <?php endif;?>
 
@@ -66,7 +73,7 @@
                 <div class="card">
                     <h4>HR Service Request Form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_hr_request_form.png" alt="" style="width:100%">
-                    <?php if(Auth::access('HR Manager')):?>
+                    <?php if(Auth::access('HR Manager') || Auth::access('HR Officer')):?>
                     <button class="btn" onclick="document.getElementById('link-1').click()"><i class="fa fa-download"></i>      Update</button>
                     <?php endif;?>
 
@@ -77,7 +84,7 @@
                 <div class="card">
                     <h4>Exit Interview Form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_exit_interview_form.png" alt="" style="width:100%">
-                    <?php if(Auth::access('HR Manager')):?>
+                    <?php if(Auth::access('HR Manager') || Auth::access('HR Officer')):?>
                     <button class="btn" onclick="document.getElementById('link-1').click()"><i class="fa fa-download"></i>      Update</button>
                     <?php endif;?>
                 
@@ -89,7 +96,7 @@
                 <div class="card">
                     <h4>Travel Request Form</h4>
                     <img src="<?= IMG_PATH?>hrdocuments/emp_travel_request_form.png" alt="" style="width:100%">
-                    <?php if(Auth::access('HR Manager')):?>
+                    <?php if(Auth::access('HR Manager') || Auth::access('HR Officer')):?>
                     <button class="btn" onclick="document.getElementById('link-1').click()"><i class="fa fa-download"></i>      Update</button>
                     <?php endif;?>
 

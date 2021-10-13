@@ -19,12 +19,14 @@
             $this->view('includes/header1')
         ?>
     </div>
-
+<?php if(Auth::access('HR Officer')):?>
     <div>
-        <?php
-            $this->view('includes/header2')
-        ?>
-    </div> 
+    <?php
+    $this->view('includes/hrofficernavbar');
+    ?>
+</div>
+<?php endif;?>
+
 
     <?php
     // if($rows[4]){
