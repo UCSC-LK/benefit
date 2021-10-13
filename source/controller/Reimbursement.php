@@ -126,7 +126,7 @@ class Reimbursement extends Controller
         // print_r($id);
         if(count($_POST)>0)
         {
-            $user->deleteper($id);
+            $user->deleteper('invoice_submission',$id);
             $this->redirect('Reimbursement');
         }
         $this->view('reimbursementreq.delete');
