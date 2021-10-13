@@ -53,5 +53,21 @@ class Approvebenefit extends Controller
 
     }
 
+    function updatebenefit(){
+        if (!Auth::logged_in()) {
+            $this->redirect('login');
+        }
 
-}
+        if(Auth::access('HR Manager'))
+		{
+		
+		$this->view('updatebenefit');
+		}
+		else{
+			$this->view('404');
+		}
+	}
+
+    }
+
+

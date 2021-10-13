@@ -18,7 +18,13 @@
     ?>
 </div>
 
-
+<?php if(Auth::access('HR Manager')):?>
+<div>
+    <?php
+    $this->view('includes/hrmanagernavbar');
+    ?>
+</div> 
+<?php endif;?>
 <div class="update_benefit">
     <div class="update_head">
         Update Benefits
