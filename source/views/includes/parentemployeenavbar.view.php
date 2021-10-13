@@ -17,9 +17,9 @@
         <div class="nav-bar">
             <ul>
                 <li><a href="<?=PATH?>Supervisor">Approve Reimbursement</a></li>
+                <li><a href="#">Approve Leave</a></li>
                 <li><a href="<?= PATH ?>Supervisor/Performance">Add Performance</a></li>
-                <li><a href="#">Add Performance</a></li>
-                <li><a href="#">Mark Attendance</a></li>
+                <li><a href="<?=PATH ?>Markattendance">Mark Attendance</a></li>
             </ul>
         </div>
     </div>
