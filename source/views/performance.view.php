@@ -21,7 +21,7 @@
             $this->view('includes/profile1');
             ?>
         </div>
-    <div class="content">
+    <div class="content" id="cont">
 <!-- <div class="header2">
     <div class="nav-bar2" id="nav-bar">
         <div class="list"><a href="#">Time Off</a></div>
@@ -30,7 +30,7 @@
         <div class="list"><a href="<?=PATH?>Performance">Performance</a></div>
     </div>
 </div> -->
-<?php
+    <?php
         $this->view('includes/header2');
         ?>
    <div>
@@ -49,31 +49,31 @@
     ?>
 
     <script >
-var labels2 = ['Communication', 'Quality of work', 'Organization', 'Team skills','Multitasking ability'];
-var  data2 = <?=json_encode($row)?>;
-var colors2 = ['#a88d32', '#73a832', '#32a89e' ,'#8f72e8' ,'#a274a6'];
+        var labels2 = ['Communication', 'Quality of work', 'Organization', 'Team skills','Multitasking ability'];
+        var  data2 = <?=json_encode($row)?>;
+        var colors2 = ['#a88d32', '#73a832', '#32a89e' ,'#8f72e8' ,'#a274a6'];
 
-var ctx = document.getElementById("myChart2").getContext('2d');
+        var ctx = document.getElementById("myChart2").getContext('2d');
 
-var myChart2 = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: labels2,
-        datasets: [ {
-            data: data2,
-            backgroundColor: colors2
-        }]
-    },
-    options: {
-        title: {
-            
-            display: true
-        },
-        legend: {
-          display: false
-        }
-    }
-});
+        var myChart2 = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels2,
+                datasets: [ {
+                    data: data2,
+                    backgroundColor: colors2
+                }]
+            },
+            options: {
+                title: {
+                    
+                    display: true
+                },
+                legend: {
+                display: false
+                }
+            }
+        });
 
     </script>
 <?php }
