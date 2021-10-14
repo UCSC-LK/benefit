@@ -71,6 +71,7 @@ class Supervisor extends Controller
 
 	function Insert_Performance($id=null)
 	{
+		$errors=array();
 
 		if(!Auth::logged_in())
 		{
@@ -80,6 +81,16 @@ class Supervisor extends Controller
 		{
 			
 				$user= new PerformanceModel();
+				
+				//$row =$user->where('$employee_ID',$id);
+				if($row =$user->where('employee_ID',$id)){
+				$errors['errors']="This employee alredy has a recode you can only update";
+				$this->view('addperformance',['errors'=>$errors]);
+				
+				exit();
+				//$this->redirect('Supervisor/Performance');
+				}
+				
 				if(count($_POST)>0){
 				$data['employee_ID']=$id;
 				$data['communication']=$_POST['communication'];
