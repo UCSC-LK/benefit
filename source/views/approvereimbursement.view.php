@@ -22,10 +22,26 @@
     ?>
 </div>  
     <div class="approve-container">
+<?php
+
+// for ($i = 0; $i < sizeof($requested); $i++) {
+//     if ($requested>= 1) {?>
         <div class="header-approve">
         <img src="<?= IMG_PATH?>profile/Chathura.png"  class="profile__image">
-            <p class="name">Sathya Udayangi<span class="tab"></span> 2021/09/10
-            </p>
+        <p class="name">Sathya Udayangi<span class="tab"></span> 2021/09/10
+        </p>
+             <!-- <p class='name'>
+                    <?php
+                    // print_r($requested[$i]['first_name']);
+                    // echo " ";
+                    // print_r($requested[$i]['last_name']);
+                    ?>
+                </p> -->
+                <!-- <p class='date'>
+                    <?php
+
+                    // print_r($requested[$i]['details']->claim_date); ?>
+                </p> -->
         </div>
         <div class="details">
             <div class="row">
@@ -33,7 +49,8 @@
                     <label for="c_date">Claim Date</label>
                 </div>
                 <div class="column_2">
-                    <p class="values">2021/09/21</p>
+                <?php // print_r($requested[$i]['details']->claim_date); ?>
+                <p class="values">2021/09/21</p>
                 </div>
             </div>
             <div class="row">
@@ -41,7 +58,9 @@
                     <label for="c_amount">Claim Amount</label>
                 </div>
                 <div class="column_2">
-                    <p class="values">10 000 LKR</p>
+                <?php // print_r($requested[$i]['details']->claim_amount); ?>
+                <p class="values">10 000 LKR</p>
+
                 </div>
             </div>
             <div class="row">
@@ -57,25 +76,14 @@
                     <label for="document">Documents</label>
                 </div>
                 <div class="column_2">
-                    <p class="values">https://www.abc.lk</p>
+                <?php //print_r($requested[$i]['details']->invoice_submission); ?>
+                <p class="values">https://www.abc.lk</p>
                 </div>
             </div>
             <div class="row">
                 <div class="column_3">
                     <label for="claim_history">Reimbursement History</label>
                 </div>
-                <table id="claim_history_table">
-                    <tr>
-                        <th>Date</th>
-                        <th>Description</th>
-                        <th>Amount</th>
-                    </tr>
-                    <tr>
-                        <th>2021/05/08</th>
-                        <th>Fuel Cost</th>
-                        <th>Rs.5 000</th>
-                    </tr>
-                </table>
             </div>
 
 
@@ -84,6 +92,10 @@
                 <input class="approve_button" type="submit" value="Approve" name="approve">
             </div>
         </div>
+        <?php
+    //      }
+    // } 
+    ?>
     </div>
 
     <div>
