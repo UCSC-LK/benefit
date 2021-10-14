@@ -67,7 +67,8 @@
 		</div>
 		</div>
 		
-		<a href="<?=PATH?>Reimbursement/updatereim">
+		
+		<a href="<?=PATH?>Reimbursement/updatereimbursement/<?=$entry->employee_ID?>">
         <button  type="submit" value="submit" name="update" class="update-confirmation">Update</button>
         </a>
 
