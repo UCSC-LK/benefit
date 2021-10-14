@@ -1,5 +1,4 @@
 @import "color.css";
-
 * {
     box-sizing: border-box;
 }
@@ -93,12 +92,11 @@ body {
     padding-left: 15px;
 }
 
-.details .row .column_1 label{
+.details .row .column_1 label {
     /*padding: 12px 20px;*/
     margin: 8px 0;
     display: inline-block;
     box-sizing: border-box;
-
 }
 
 .details .row .column_2 {
@@ -150,3 +148,14 @@ body {
 .approve_button:hover {
     background-color: blue;
 }
+
+
+/*mark attendance*/
+
+
+/* .name {
+    padding: 5%;
+    padding-left: 10%;
+    float: center;
+    display: flex;
+} */
