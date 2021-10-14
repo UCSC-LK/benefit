@@ -24,7 +24,7 @@
 </div>
     <div class="approve-container">
         <div class="header-approve">
-        <img src="<?= IMG_PATH?>profile/Chathura.png" alt="Profile Image" class="profile__image">
+        <img src="<?= IMG_PATH?>profile/Sathya.jpeg" alt="Profile Image" class="profile__image">
             <p class="name">Sathya Udayangi</p>
         </div>
 

@@ -27,7 +27,7 @@
 // for ($i = 0; $i < sizeof($requested); $i++) {
 //     if ($requested>= 1) {?>
         <div class="header-approve">
-        <img src="<?= IMG_PATH?>profile/Chathura.png"  class="profile__image">
+        <img src="<?= IMG_PATH?>profile/Sathya.jpeg"  class="profile__image">
         <p class="name">Sathya Udayangi<span class="tab"></span> 2021/09/10
         </p>
              <!-- <p class='name'>
