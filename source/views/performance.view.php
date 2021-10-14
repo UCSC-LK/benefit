@@ -44,8 +44,8 @@
     <?php
     if(boolval($row)>0){ 
     $row=[$row[0]->communication,$row[0]->quality_of_work,$row[0]->organization,$row[0]->team_skills,$row[0]->multitasking_ability];
-    
-
+   
+   
     ?>
 
     <script >
