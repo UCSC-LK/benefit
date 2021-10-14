@@ -109,7 +109,7 @@
                                         <a href="<?=PATH?>Reimbursement/delete/<?=$vai->invoice_submission?>">
                                         <button  type="Submit" value="Submit" name="delete" class="delete_button">Delete</button>
                                         </a>
-                                        <a href="<?=PATH?>Reimbursement/updatereimbursement">
+                                        <a href="<?=PATH?>Reimbursement/update_reimbursement">
                                         <button  type="Submit" value="Submit" name="update" class="update_button">Update</button>
                                         </a>
 
