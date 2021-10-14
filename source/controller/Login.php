@@ -10,7 +10,11 @@ class Login extends Controller
 	{
 		$this->check_if_banned();
 		$errors = array();
-		
+		if(count($_POST) >0 && empty($_POST['g-recaptcha-response'])){
+			$errors['con']="Check your internet connection or captcha";
+				$this->view('login',['errors'=>$errors]);
+			exit();
+		}
 		if(count($_POST) > 0 && $_POST['g-recaptcha-response']!="")
  		{
  			$secret='6Lc2qbkcAAAAAKIVv59_eU08VutKajP2UMzzoOz5';
