@@ -14,6 +14,7 @@
     <?php
      if(boolval($errors))
      {
+       error_reporting(E_ERROR | E_PARSE);
       foreach ($errors as $key ) {
        $alert = "<script> alert ('$key')</script>";
           echo $alert;
