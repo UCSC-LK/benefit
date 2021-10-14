@@ -96,6 +96,7 @@
                             if(boolval($row)){
 
                                 for ($i=0; $i <sizeof($row) ; $i++) {
+
                                     $vai=$row[$i];
                                     ?>
                                     <tr>
@@ -108,7 +109,7 @@
                                         <a href="<?=PATH?>Reimbursement/delete/<?=$vai->invoice_submission?>">
                                         <button  type="Submit" value="Submit" name="delete" class="delete_button">Delete</button>
                                         </a>
-                                        <a href="<?=PATH?>Reimbursement/update">
+                                        <a href="<?=PATH?>Reimbursement/updatereimbursement">
                                         <button  type="Submit" value="Submit" name="update" class="update_button">Update</button>
                                         </a>
 
