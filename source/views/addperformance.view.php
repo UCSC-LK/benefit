@@ -11,6 +11,16 @@
 
   </head>
   <body>
+    <?php
+     if(boolval($errors))
+     {
+      foreach ($errors as $key ) {
+       $alert = "<script> alert ('$key')</script>";
+          echo $alert;
+          
+     }
+     }
+    ?>
   <div>
     <?php
     $this->view('includes/header1');
@@ -27,8 +37,6 @@
 
         <hr />
         <h3>Overall experience of employee</h3>
-        <!-- <label class="h2" for="employee_ID">Enter emp id:</label><br>
-  <input type="text" id="employee_ID" name="employee_ID" placeholder="Id"required> -->
         <table>
           <tr>
             <th class="first-col"></th>
@@ -88,4 +96,6 @@
 </div>
   </body>
 </html>
+
+
 
