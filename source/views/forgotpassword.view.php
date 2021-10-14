@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <div class="box-a">
-        <h3 class="h3">ORACAL FIGHT SOUTION (PVT) LTD</h3>
+        <h3 class="h3">ORACLE FREIGHT SOLUTIONS (PVT) LTD</h3>
         <form class="frm" action="" method="post">
     
             <div class="form1" >
@@ -18,7 +18,7 @@
                 <input type="text" class="new1" placeholder="Enter UserEmail" name="email" required><br>
             </div>
             <div class="form2">
-                <button type="submit" name="reset-req">reset password</button>
+                <button type="submit" name="reset-req">Reset Password</button>
             </div>
         </form>
         <div class="check-email" style="text-align: center; color: #5016d0;">

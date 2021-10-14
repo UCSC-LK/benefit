@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <div class="box-a">
-        <h3 class="h3">ORACAL FIGHT SOUTION (PVT) LTD</h3>
+        <h3 class="h3">ORACLE FREIGHT SOLUTIONS (PVT) LTD</h3>
         <form class="frm" action="" method="post">
             <div class="new2" style=" color: red; text-align: center;">
              <?php
