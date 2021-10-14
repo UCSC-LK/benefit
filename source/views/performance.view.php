@@ -21,7 +21,7 @@
             $this->view('includes/profile1');
             ?>
         </div>
-<div class="content">
+    <div class="content">
 <!-- <div class="header2">
     <div class="nav-bar2" id="nav-bar">
         <div class="list"><a href="#">Time Off</a></div>
@@ -84,7 +84,7 @@ else{
 </div>
 </div>
 </div>
-<div>
+<div class="fot">
     <?php $this->view('includes/footer')?>
 </div>
 </body>
