@@ -10,19 +10,9 @@ class Login extends Controller
 	{
 		$this->check_if_banned();
 		$errors = array();
-		if(count($_POST) >0 && empty($_POST['g-recaptcha-response'])){
-			$errors['con']="Check your internet connection or captcha";
-				$this->view('login',['errors'=>$errors]);
-			exit();
-		}
-		if(count($_POST) > 0 && $_POST['g-recaptcha-response']!="")
+		
+		if(count($_POST) > 0 )
  		{
- 			$secret='6Lc2qbkcAAAAAKIVv59_eU08VutKajP2UMzzoOz5';
- 			$verifyResponse= file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
- 			$responseData= json_decode($verifyResponse);
- 			if (!$responseData->success) {
- 				$this->redirect('login');
- 			}
  			$user = new Employeedetails();
  			if($row = $user->where('email',$_POST['email']))
  			{
@@ -184,7 +174,7 @@ class Login extends Controller
 					
 						if($row->login_count>= $limit){
 							
-							$expire = ($time + (60 * 5));
+							$expire = ($time + (60 * 60));
 							$row=$user->updatebanned($id,$expire);
 							
 							return;
