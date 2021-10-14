@@ -15,9 +15,9 @@
             </div>
 
 			<?php 
-                if(boolval($rows)){
-                    if(count($rows)>0)
-                    foreach($rows as $entry){?>
+                // if(boolval($rows)){
+                //     if(count($rows)>0)
+                //     foreach($rows as $entry){?>
 
 	<div class="update_reimbursement">
 	<form method="post">
@@ -27,7 +27,7 @@
 			<label for="c_date">Claim Date</label>
 			</div>
 		<div class="column_2">
-			<input type="date" id="claim_date" name="claim_date" value="<?php echo $entry->claim_date?>">
+			<input type="date" id="claim_date" name="claim_date">
 		</div>
 		</div>
 
@@ -36,22 +36,16 @@
 			<label for="c_amount">Claim Amount</label>
 			</div>
 		<div class="column_2">
-			<input type="text" id="claim_amount" name="claim_amount" value="<?php echo $entry->claim_amount?>">
+			<input type="text" id="claim_amount" name="claim_amount">
 		</div>
 		</div>
-
-		
-		<?php }
-                }
-                
-                ?>
 		
 		<div class="row">
 			<div class="column_1">
 			<label for="subject">Pay For</label>
 			</div>
 		<div class="column_2">
-			<textarea id="subject" name="subject" value="<?php echo $entry->reimbursement_reason?> "style="height:200px;" ></textarea>
+			<textarea id="subject" name="subject" style="height:200px;" ></textarea>
 		</div>
 		</div>
 
@@ -63,12 +57,12 @@
 
 		<div class="row">
 			<div class="invoice_submission">
-			<input type="file" id="invoice_submission" name="invoice_submission" value="<?php echo $entry->invoice_submission?>">
+			<input type="file" id="invoice_submission" name="invoice_submission">
 		</div>
 		</div>
+		<!-- </form>	 -->
 		
-		
-		<a href="<?=PATH?>Reimbursement/updatereimbursement/<?=$entry->employee_ID?>">
+		<a href="<?=PATH?>Reimbursement/update_reimbursement">
         <button  type="submit" value="submit" name="update" class="update-confirmation">Update</button>
         </a>
 
