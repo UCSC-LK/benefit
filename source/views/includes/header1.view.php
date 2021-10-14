@@ -45,13 +45,13 @@
                     <ul>
                         <li>  <a href="<?= PATH ?>leavedetailscontroller"> <i class="fa fa-user" aria-hidden="true"></i> </a></li>
                         <!-- <li></li> -->
-                        <li> <a href="<?= PATH ?>login"> <i class="fas fa-sign-out-alt"> </a></i></li>
+                        <li> <a href="<?= PATH ?>Logout"> <i class="fas fa-sign-out-alt"> </a></i></li>
                     </ul>
                 </div>
                 <div class="dd_right">
                     <ul>
                         <li> <a href="<?= PATH ?>leavedetailscontroller">My Info </a></li>
-                        <li> <a href="<?= PATH ?>login">Log Out </a></li>
+                        <li> <a href="<?= PATH ?>Logout">Log Out </a></li>
                     </ul>
                 </div>
             </div>
