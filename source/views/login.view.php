@@ -28,7 +28,7 @@
                 <input type="password" class="new1" placeholder="Enter Password" name="password" id="myInput"
                        required><br>
             </div>
-             <div class="g-recaptcha" style="margin: 10px 75px;" data-sitekey="6Lc2qbkcAAAAAKbtG3WQneC22v408VLrnmf_4VNW"></div>
+             <!-- <div class="g-recaptcha" style="margin: 10px 75px;" data-sitekey="6Lc2qbkcAAAAAKbtG3WQneC22v408VLrnmf_4VNW"></div> -->
             <div class="shw" >
                 <input type="checkbox" onclick="myFunction()">Show Password
                 <script>
