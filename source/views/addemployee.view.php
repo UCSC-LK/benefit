@@ -29,10 +29,7 @@
 
 
     <?php
-    // if($rows[4]){
-    //     $alert = "<script> alert ('$rows[4]') </script>";
-    //     echo $alert;
-    // }
+
     for($i = 4; $i < 11; $i++){
         if($rows[$i]){
            $alert = "<script> alert ('$rows[$i]') </script>";
@@ -241,7 +238,12 @@
                 
                     <div class="pwd">
                         <label for="password">Password</label>
-                        <input type="password" id="pwd" name="pwd" size="50" required> <i class="far fa-eye" id="eye1"></i><br>           
+                        <!-- <div class="pwdinner"> -->
+                        <input type="password" id="pwd" name="pwd" size="50" required> <i class="far fa-eye" id="eye1"></i><br>
+                        <!-- </div> -->
+                        
+                        <p id="message"> Password is <span id="strenght" ></span></p>
+
                     </div>
 
                     <div class="pwd">
@@ -304,9 +306,10 @@
         </div>
         
     </div>
-    <script src="public\js\addemployee.js"></script>
+   
     <div class="foot">
         <p class="fot">Copyright © 2021 Oracle Freight Solutions | Powered by Oracle Freight Solutions</p>
     </div>
+    <script src="public\js\addemployee.js"></script>
 </body>
 </html>

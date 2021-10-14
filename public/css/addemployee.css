@@ -12,18 +12,15 @@ input {
    font-size: large;
    border-style: none;
    border-bottom: solid 1px rgba(0, 0, 0, 0.418);
-   color: var(--header_dark);
-   
+   color: var(--header_dark);  
 }
 
 .add_employee_main_container {
     width: 100%;
     padding-bottom: 10px; 
-        /* just look boarder radius */
     height: auto;
     background-color:var(--background_light);
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
 }
 
@@ -38,7 +35,6 @@ input {
     margin: 8px;
     padding-bottom: 10px;
     box-shadow: 3px 5px 15px rgba(0,0,0,.50);
-    /* justify-content: center; */
 }
 
 .add_employee_main_container .supervisor_list  table{
@@ -79,16 +75,13 @@ thead {
     width: calc( 100% - 1em )
 }
 
-
 .add_employee_main_container .form{
     width: 70%;
     margin: 8px;
     padding-bottom: 10px; 
-        /* just look boarder radius */
     height: auto;
     background-color:rgb(255, 255, 255);
     border-radius: 5px;
-    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     align-items: center;  
@@ -99,7 +92,6 @@ thead {
     text-align: center;
     font-size:x-large;
     font-weight: bold;
-    /* background-color: var(--blue); */
 }
 
 .add_employee_main_container .form .input_feild {
@@ -123,7 +115,6 @@ thead {
     display: block;
     width: 200px;
     height: 30px;
-    /* background-color: aqua; */
 }
 
 .add_employee_main_container .form .input_feild div input {
@@ -140,14 +131,12 @@ thead {
 .add_employee_main_container .form .input_feild form div .address_content {
     display: flex;
     flex-direction: column;
-    /* background-color: blue; */
     margin-left: 150px;
     max-width: 100%;
 }
 .add_employee_main_container .form .input_feild form div .address_content input {
     padding-left: 10px;
-    height: 30px;
-    
+    height: 30px;   
 }
 
 
@@ -168,7 +157,6 @@ thead {
 .add_employee_main_container .form .input_feild form .gender input {
     width: 40px;
     padding-left: 10px;
-   
     height: 15px;
 }
 
@@ -178,19 +166,16 @@ thead {
     padding: 4px;
     font-size: large;
     color: var(--header_dark);
-
 }
 
 .add_employee_main_container .form .input_feild form div select option{
     font-size: large;
     color: var(--header_dark);
-
 }
 
 .add_employee_main_container .form .input_feild form .buttons {
     max-width: 100%;
     display: flex;
-    /* background-color: rgb(165, 67, 67); */
     justify-content: space-between;
 }
 
@@ -203,7 +188,6 @@ thead {
     cursor: pointer;
     box-shadow: 3px 5px 15px rgba(0,0,0,.50);
     border-style: none;
-    /* box-shadow: 3px 6px 6px ; */
 }
 
 .add_employee_main_container .form .input_feild form .buttons #cancel {
@@ -217,13 +201,10 @@ thead {
 
 .add_employee_main_container .form .input_feild form .buttons  :hover{
     height: 41px;
-    /* width: 152px; */
     box-shadow: 3px 5px 15px rgba(0,0,0,.75);
 }
 
 .add_employee_main_container.form .input_feild form .image {
-    /* padding-right: 80px; */
-    /* width: 60%; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -240,16 +221,11 @@ thead {
     border-radius: 5px;
     text-align: center;
     padding: 5px;
-    /* height: 30px; */
-    /* color: white; */
     cursor: pointer;
 }
 
 .add_employee_main_container .form .input_feild form .upload :hover {
-    /* background-color:rgb(163, 194, 230); */
     box-shadow: 3px 5px 15px rgba(0,0,0,.25);
-    /* color: white; */
-
 }
 
 .add_employee_main_container .form .input_feild form .upload #image {
@@ -257,8 +233,19 @@ thead {
 }
 
 .pwd input {
-    /* background-color: black; */
     max-width: 50%;
+}
+/* 
+.pwdinner{
+    margin: 0;
+    padding: 0px !important;
+    display: flex;
+    flex-direction: row;
+} */
+
+#message{
+    margin: 10px;
+    display: none;
 }
 
 .foot{
@@ -276,18 +263,14 @@ thead {
 
 @media screen and (max-width: 1000px){
     .add_employee_main_container {
-        /* margin: 4%; */
         max-width: 100%;
-        /* padding-right: 5px; */
         flex-direction: column-reverse;
     }
 
     .add_employee_main_container .form{
-        /* max-width: 100%; */
         width: 100%;
         margin: 0px;
         margin-bottom: 10px;
-        /* padding: 5px; */
     }
 
     .add_employee_main_container .supervisor_list{
