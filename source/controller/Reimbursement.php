@@ -18,6 +18,8 @@ class Reimbursement extends Controller
         $ar=Auth::user();
         $row=array();
         $row = $user->where('employee_ID',$ar);
+      
+
 
         if(count($_POST)>0)
         {
@@ -135,29 +137,32 @@ class Reimbursement extends Controller
 
 
 
-        function updatereimbursement(){
+        function updatereimbursement($id=null){
 
-
+        // echo "$id";
         // if(!isset($_SESSION)) { 
         //     session_start(); 
         //     }  
-            
-        $user = new ReimbursementrequestModel();
+        if(!Auth::logged_in())
+        {
+            $this->redirect('login');
+        }
 
+        $user = new ReimbursementrequestModel();
         $ar=Auth::user();
         $data= $user->where('Employee_ID',$ar);
+        // $arr1 = $user->where('reimbursement_status', 'pending');
 
      
         if(count($_POST)>0){
-            
-
             if(isset($_POST['submit'])){
-
+                $arr['employee_ID']=Auth::user();
                 $arr['claim_date'] = filter_input(INPUT_POST, 'claim_date', FILTER_SANITIZE_STRING);
                 $arr['claim_amount'] = filter_input(INPUT_POST, 'claim_amount', FILTER_SANITIZE_STRING);
-                $arr['reimbursement_reason'] = filter_input(INPUT_POST, 'reimbursement_reason', FILTER_SANITIZE_STRING);
-                $arr['invoice_submission'] = filter_input(INPUT_POST, 'invoice_submission', FILTER_SANITIZE_STRING);
-                echo $arr;
+                $arr['reimbursement_reason'] = $_POST['subject'];
+                $arr['invoice_submission'] = $_POST['invoice_submission'];
+                $arr['reimbursement_status']="pending";
+                //echo $arr;
                 // echo $_POST['invoice_submission'];
                 // $data= $user->where('invoice_submission', $arr['invoice_submission'] );
                 // echo $arr['invoice_submission'] ;
@@ -172,39 +177,46 @@ class Reimbursement extends Controller
         }
 
         $this->view('reimbursement.update',['rows'=>$data]);
+        
         }
 
 
-        function updatereim(){
+        // function updatereim(){
 
-            echo "hello";
+        //     echo "hello";
 
-            $user = new ReimbursementrequestModel();
+        //     $user = new ReimbursementrequestModel();
 
-            $ar=Auth::user();
-            $data= $user->where('Employee_ID',$ar);
+        //     $ar=Auth::user();
+        //     $data= $user->where('Employee_ID',$ar);
             
-            if(count($_POST)>0){
+        //     if(count($_POST)>0){
             
 
-            if(isset($_POST['submit'])){
+        //     if(isset($_POST['Submit'])){
 
-                $arr['claim_date'] = filter_input(INPUT_POST, 'claim_date', FILTER_SANITIZE_STRING);
-                $arr['claim_amount'] = filter_input(INPUT_POST, 'claim_amount', FILTER_SANITIZE_STRING);
-                $arr['reimbursement_reason'] = filter_input(INPUT_POST, 'reimbursement_reason', FILTER_SANITIZE_STRING);
-                $arr['invoice_submission'] = filter_input(INPUT_POST, 'invoice_submission', FILTER_SANITIZE_STRING);
-                echo $arr;
-                // echo $_POST['invoice_submission'];
-                // $data= $user->where('invoice_submission', $arr['invoice_submission'] );
-                // echo $arr['invoice_submission'] ;
-                // echo $data;
-                $set = $user->update($ar,$arr);
+        //         // $arr['claim_date'] = filter_input(INPUT_POST, 'claim_date', FILTER_SANITIZE_STRING);
+        //         // $arr['claim_amount'] = filter_input(INPUT_POST, 'claim_amount', FILTER_SANITIZE_STRING);
+        //         // $arr['reimbursement_reason'] = filter_input(INPUT_POST, 'reimbursement_reason', FILTER_SANITIZE_STRING);
+        //         // $arr['invoice_submission'] = filter_input(INPUT_POST, 'invoice_submission', FILTER_SANITIZE_STRING);
+        //         // echo $arr;
+        //         $arr['employee_ID']=Auth::user();
+        //         $arr['claim_date']=$_POST['claim_date'];
+        //         $arr['claim_amount']=$_POST['claim_amount'];
+        //         $arr['reimbursement_reason']=$_POST['subject'];
+        //         $arr['invoice_submission']=$_POST['invoice_submission'];
+        //         $arr['reimbursement_status']="pending";
+        //         // echo $_POST['invoice_submission'];
+        //         // $data= $user->where('invoice_submission', $arr['invoice_submission'] );
+        //         // echo $arr['invoice_submission'] ;
+        //         // echo $data;
+        //         $set = $user->update($ar,$arr);
 
 
-                if((isset($set))){
-                    $this->redirect('Reimbursement');
-                }
-            }           
-        }
-        }
+        //         if((isset($set))){
+        //             $this->redirect('Reimbursement');
+        //         }
+        //     }           
+        // }
+        // }
 }
