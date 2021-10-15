@@ -8,6 +8,19 @@
 <title>Forgot-password</title>
 
 <body>
+        <?php
+    error_reporting(E_ERROR | E_PARSE);
+     if(boolval($errors))
+     {
+       error_reporting(E_ERROR | E_PARSE);
+      foreach ($errors as $key ) {
+        // code...
+      
+       $alert = "<script> alert ('$key')</script>";
+          print_r($alert);   
+        }
+     }
+    ?>
     <!--<?php
     $selector=$_GET['selector'];
     $validator=$_GET['validator'];
@@ -28,7 +41,7 @@
                 <input type="hidden" name="selector" value="<?php echo $selector ?>">
                 <input type="hidden"  name="validator" value="<?php echo $validator ?>">
                 <input class="new1" name="password" required id="password" placeholder="Enter password" type="text" size="25" maxlength="100" onkeyup="return passwordChanged();" /><br>
-                <p><span class="new1" style="position: relative;" id="strength"></span></p>
+                <label  id="strength"></label><br>
                <!--  <input type="text" class="new1" placeholder="Enter password" name="password" required><br> -->
 
                 <input type="text" class="new1" placeholder="Re-enter password" name="pwd-password" required><br> 
@@ -72,4 +85,5 @@
 
 </body>
 </html>
+
 
