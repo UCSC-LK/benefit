@@ -14,7 +14,7 @@ class AddemployeeController extends Controller
 		$sells = $select->where('department_ID',3);
 		$acc = $select->where('department_ID',4);
 		$arr1 = array($oper,$hr,$sells,$acc);
-		for ($x = 4; $x < 11; $x++) {
+		for ($x = 4; $x < 14; $x++) {
 			$arr1[$x] = null;
 		  }
 		// $this->view('addemployee',['rows'=>$arr1]);
@@ -56,10 +56,43 @@ class AddemployeeController extends Controller
 
 				$str['user_role'] = "Supervisor";
 
-				// $user->update($_POST['supervisor'],$str);
+				$fhide = $_POST['fhide'];
+				$lhide = $_POST['lhide'];
+				$phide = $_POST['phide'];
+				$nichide = $_POST['nichide'];
 
-				// if(isset($_POST['submit'])) {
-					//submit button is clicked
+				// echo $fhide;
+				// echo $lhide;
+				// echo $phide;
+				// echo $nichide;
+
+				if( $fhide == "false" || $lhide == "false" ){
+					$arr1[11] = "Name is not valied type";
+					$jsvalidate = false;
+					echo "inside name validation \n <br>";
+					echo $jsvalidate." ".$fhide;
+				}else{
+					$jsvalidate = true;
+				}
+				if($phide == "false"){
+					$jsvalidate = false;
+					$arr1[12] = "Include a Strong Password!";
+					echo "inside pass validation \n <br>";
+					echo $jsvalidate." ".$phide;
+				}else{
+					$jsvalidate=true;
+				}
+				if($nichide == "false"){
+					$jsvalidate = false;
+					$arr1[13] = "NIC is Invalied!";
+					echo "inside nic validation \n <br>";
+					echo $jsvalidate." ".$nichide;
+				}else{
+					$jsvalidate =true;
+				}
+
+				
+
 					$file = $_FILES['image'];
 			
 					$file_name = $_FILES['image']['name'];
@@ -101,37 +134,31 @@ class AddemployeeController extends Controller
 						$arr1[6] = "You cannot upload files of this type";
 						
 					}
-			
-				// }else{
-				// 	echo "something wrong";
-				// }
-				// $arr['profile_image'] = $_POST[];
+	
 				$arr['designation_code'] = $_POST['designation'];
 				$arr['department_ID'] = $_POST['department'];
 
-				// if($confirm != $pass){
-				// 	$arr1[7] = "Confirmed password not correct";
-				// 	// echo "Confirmed password not correct";
-				// }
 				if($validate){
 					$arr1[8] = "email is allready used!";
 				}
 				elseif($diff->format('%y') < 18){
 					$arr1[10] = "Employee Age must be greater than 18!";
 				}
-				elseif($complete && $confirm == $pass && ($diff->format('%y') >= 18)){
+				elseif($complete  && $confirm == $pass && ($diff->format('%y') >= 18) && $jsvalidate){
 					
 
 					$user->insert($arr);
 					$user->update($_POST['supervisor'],$str);
-
+					echo "inside inseart \n <br>";
+					echo $jsvalidate;
 					// $arr1[9] = "ff";
-					$this->redirect('AddemployeeRedirectController');
+					if($jsvalidate){
+						$this->redirect('AddemployeeRedirectController');	
+					}
 				}
 				else{
-					$arr1[9] = "Confirmed password not correct";
+					$arr1[9] = "Upload Not Completed!";
 					
-					// echo "upload welaa nee ";
 				}
 				
 			}

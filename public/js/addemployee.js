@@ -51,7 +51,7 @@ var lett = /[abcdefghijklmnopqrstuvwxyz]/;
 pass.addEventListener('input',()=> {
     if(pass.value.length >0 ){
         msg.style.display = "block";
-        phide.innerHTML = "false";
+        phide.value = "false";
     }
     else{
         msg.style.display= "none";
@@ -61,12 +61,12 @@ pass.addEventListener('input',()=> {
         msg.style.color = "red"
         msg.style.fontWeight = "bold"
         pass.style.borderBottomColor = "red";
-        phide.innerHTML = "false";
+        document.getElementById("phide").value = "false";
     }
     if(pass.value.length > 4 && (format.test(pass.value) || hasNumber.test(pass.value))){
         if(pass.value.length > 5 && format.test(pass.value) && hasNumber.test(pass.value) && lett.test(pass.value)){
             str.innerHTML = "Strong";
-            phide.innerHTML = "true";
+            document.getElementById("phide").value = "true";
             msg.style.color = "green";
             pass.style.borderBottomColor = "green";
             msg.style.fontWeight = "bold"
@@ -75,7 +75,7 @@ pass.addEventListener('input',()=> {
             msg.style.color = "blue";
             msg.style.fontWeight = "bold"
             pass.style.borderBottomColor = "blue";
-            phide.innerHTML = "false";
+            document.getElementById("phide").value = "false";
         }
         
     }
@@ -92,12 +92,13 @@ fname.addEventListener('input',()=>{
     if(format.test(fname.value) || hasNumber.test(fname.value)){
         fval.style.display = "block";
         fname.style.color = "red";
-        fhide.innerHTML = "false"
+        document.getElementById("fhide").value = "false";
     }
     else{
         fval.style.display = "none";
         fname.style.color = "var(--header_dark)";
-        fhide.innerHTML = "true";
+        // fhide.innerHTML = "true";
+        document.getElementById("fhide").value = "true";
     }
 })
 
@@ -105,12 +106,14 @@ lname.addEventListener('input',()=>{
     if(format.test(lname.value) || hasNumber.test(lname.value)){
         lval.style.display = "block";
         lname.style.color = "red";
-        lhide.innerHTML = "false";
+        // lhide.innerHTML = "false";
+        document.getElementById("lhide").value = "false";
     }
     else{
         lval.style.display = "none";
         lname.style.color = "var(--header_dark)";
-        lhide.innerHTML = "true";
+        // lhide.innerHTML = "true";
+        document.getElementById("lhide").value = "true";
     }
 })
 
@@ -121,7 +124,8 @@ var nichide = document.getElementById("nichide");
 nic.addEventListener('input',()=>{
     if(nic.value.length < 10 && nic.value.length > 0){
         nicval.innerHTML = "Minimum 10 digits must includes";
-        nichide.innerHTML = "false";
+        // nichide.innerHTML = "false";
+        document.getElementById("nichide").value = "false";
         nicval.style.display = "block";
         nicval.style.color = "red";
     }
@@ -133,11 +137,13 @@ nic.addEventListener('input',()=>{
             nicval.innerHTML = "NIC is Valied";
             nicval.style.display = "block";
             nicval.style.color = "green";
-            nichide.innerHTML = "true";
+            // nichide.innerHTML = "true";
+            document.getElementById("nichide").value = "true";
         }
         else{
             nicval.innerHTML = "NIC is Not Valied";
-            nichide.innerHTML = "false";
+            // nichide.innerHTML = "false";
+            document.getElementById("nichide").value = "false";
             nicval.style.display = "block";
             nicval.style.color = "red";
         }
@@ -145,7 +151,8 @@ nic.addEventListener('input',()=>{
     else if(nic.value.length == 12){
         if(!format.test(nic.value) && !lett.test(nic.value)){
             nicval.innerHTML = "NIC is Valied";
-            nichide.innerHTML = "true";
+            // nichide.innerHTML = "true";
+            document.getElementById("nichide").value = "true";
             nicval.style.display = "block";
             nicval.style.color = "green";
         }
@@ -153,12 +160,14 @@ nic.addEventListener('input',()=>{
             nicval.innerHTML = "NIC is Not Valied";
             nicval.style.color = "red";
             nicval.style.display = "block";
-            nichide.innerHTML = "false";
+            // nichide.innerHTML = "false";
+            document.getElementById("nichide").value = "false";
         }
     }
     else{
         nicval.innerHTML = "NIC is Not Valied";
-        nichide.innerHTML = "false";
+        // nichide.innerHTML = "false";
+        document.getElementById("nichide").value = "false";
         nicval.style.display = "block";
         nicval.style.color = "red";
     }
