@@ -5,15 +5,47 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <!--    <link rel="stylesheet" href="includes/css/header2.css" >-->
-    <!--    <link rel="stylesheet" href="includes/css/benefitrequest.css" >-->
     <link rel="stylesheet" href="<?= CSS_PATH ?>benefitrequest.css">
-    <link rel="stylesheet" href="<?= CSS_PATH ?>header1.css">
-    <link rel="stylesheet" href="<?= CSS_PATH ?>header2.css">
-    <link rel="stylesheet" href="<?= CSS_PATH ?>footer.css">
-    <!--    <script deffer src="includes/js/benefits_form.js"></script>-->
     <title></title>
 </head>
+<script type="text/javascript">
+    function number_validation(){
+        var n = document.forms["myform"]["claiming_amount"].value;
+        if(isNaN(n)){
+            document.getElementById("numberText").innerHTML = "<div style='font-family: Arial,serif; font-size: smaller; color: red'><i class='fas fa-exclamation' style='color: red;'></i> Please enter Numeric value</div>";
+            var r1 = false;
+            reason_validation();
+            return false;
+        }
+        else{
+            if(r1){
+                document.getElementById("numberText").innerHTML = "<span>&#10003;</span>";
+            }
+            else{
+                var f1 = reason_validation();
+                var f2 = true;
+                if(f1 && f2){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        }
+    }
+
+    function reason_validation(){
+        var m = document.forms["myform"]["subject"].value;
+        if(isNaN(m)){
+            document.getElementById("reasonText").innerHTML = "<span>&#10003;</span>";
+            return true;
+        }
+        else{
+            document.getElementById("reasonText").innerHTML = "<div style='font-family: Arial; color: red'><i class='fas fa-exclamation' style='color: red;'></i> Please enter your reason correctly</div>";
+            return false;
+        }
+    }
+</script>
 <body>
 
 <div>
@@ -41,14 +73,14 @@
                 <div>
                     <div class="benefit_form">
 
-                        <form action="BenefitrequestController" method="post">
+                        <form name="myform" action="BenefitrequestController" method="post" onsubmit=" return number_validation()">
 
                             <div class="row">
                                 <div class="column_1">
                                     <label for="benefit_type">Benefit_type</label>
                                 </div>
                                 <div class="column_2">
-                                    <select id="benefit_type" name="benefit_type">
+                                    <select id="benefit_type" name="benefit_type" required>
                                         <option></option>
                                         <option>Medical Insurance</option>
                                         <option>Life Insurance</option>
@@ -62,7 +94,7 @@
                                     <label for="claiming_date">Date</label>
                                 </div>
                                 <div class="column_2">
-                                    <input type="date" id="claiming_date" name="claiming_date" placeholder="mm/dd/yyyy">
+                                    <input type="date" id="claiming_date" value="<?php echo date('Y-m-d')?>" name="claiming_date" placeholder="mm/dd/yyyy" readonly>
                                 </div>
                             </div>
 
@@ -72,9 +104,11 @@
                                 </div>
                                 <div class="column_2">
                                     <input type="text" id="claiming_amount" name="claiming_amount"
-                                           placeholder="Rs.20,000" required>
+                                           placeholder="Rs.20,000.00" required pattern="[0-9._%+-]+\.[0-9]{2}$">
+                                    <span id="numberText"></span>
                                 </div>
                             </div>
+
 
                             <div class="row">
                                 <div class="column_1">
@@ -83,6 +117,7 @@
                                 <div class="column_2">
                                     <textarea id="subject" name="subject" placeholder="Why You Are Applying..."
                                               required></textarea>
+                                    <span id="reasonText"></span>
                                 </div>
                             </div>
 
@@ -94,7 +129,7 @@
                             <div class="row">
                                 <div class="report_submission">
                                     <input type="file" id="report_submission" name="report_submission"
-                                           accept=".pdf, .png" multiple>
+                                           accept=".pdf, .png" multiple required>
                                     <span id="custom-text"><div class="file_text">No file chosen, yet....</div></span>
                                     <span id="upload"><div class="upload"><a href="#">Upload Here</a></div></span>
                                 </div>
@@ -121,6 +156,7 @@
                                     }
                                 });
 
+
                             </script>
 
                         </form>
@@ -140,6 +176,7 @@
     ?>
 
 </div>
+<!--<script src="public\js\Benefitrequest.js"></script>-->
 </body>
 </html>
 
