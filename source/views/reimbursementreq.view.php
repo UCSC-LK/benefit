@@ -29,14 +29,15 @@
                 <h2>Claim Reimbursement</h2>
             </div>
             <div class="reimbursement_details">
-                <form action="#" method="POST">
+            <form name="myform" action="#" method="POST" onsubmit=" return validation()">
+
 
                     <div class="row">
                         <div class="column_1">
                             <label for="c_date">Claim Date</label>
                         </div>
                         <div class="column_2">
-                            <input type="date" id="claim_date" name="claim_date" placeholder="mm/dd/yyyy">
+                            <input type="date" id="claim_date" name="claim_date" placeholder="mm/dd/yyyy" min="2021-10-11" max="2021-10-18" required>
                         </div>
                     </div>
                     <div class="row">
@@ -44,15 +45,15 @@
                             <label for="c_amount">Claim Amount</label>
                         </div>
                         <div class="column_2">
-                            <input type="text" id="claim_amount" name="claim_amount" placeholder="Rs.20, 000" >
+                            <input type="text" id="claim_amount" name="claim_amount" placeholder="2000.00"></br>
                         </div>
                     </div>
                     <div class="row">
                         <div class="column_1">
-                            <label for="subject">Pay For</label>
+                            <label for="subject">Reason</label>
                         </div>
                         <div class="column_2">
-                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;"  ></textarea>
+                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;" required></textarea></br>
                         </div>
                     </div>
 
@@ -63,7 +64,7 @@
                     </div>
                     <div class="row">
                         <div class="invoice_submission">
-                            <input type="file" id="invoice_submission" name="invoice_submission">
+                            <input type="file" id="invoice_submission" name="invoice_submission"  accept=".pdf, .jpeg, .png" required>
                         </div>
                     </div>
 
@@ -107,11 +108,9 @@
                                     {?>
                                         <!--<button type="Submit" value="Submit" name="delete">Delete</button>-->
                                         <a href="<?=PATH?>Reimbursement/delete/<?=$vai->invoice_submission?>">
-                                        <button  type="Submit" value="Submit" name="delete" class="delete_button">Delete</button>
-                                        </a>
+                                        <button  type="Submit" value="Submit" name="delete" class="delete_button">Delete</button></a>
                                         <a href="<?=PATH?>Reimbursement/update_reimbursement">
-                                        <button  type="Submit" value="Submit" name="update" class="update_button">Update</button>
-                                        </a>
+                                        <button  type="Submit" value="Submit" name="update" class="update_button">Update</button></a>
 
 
 
@@ -136,6 +135,7 @@
 <div>
     <?php $this->view('includes/footer')?>
 </div>
+<script src="public\js\reimbursement.js"></script>
 </body>
 </html>
 
