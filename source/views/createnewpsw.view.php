@@ -21,17 +21,20 @@
         {?>-->
             <div class="container">
     <div class="box-a">
-        <h3 class="h3">ORACAL FIGHT SOUTION (PVT) LTD</h3>
+        <h3 class="h3" style="">ORACAL FIGHT SOUTION (PVT) LTD</h3>
         <form class="frm"  method="post">
     
             <div class="form1" >
                 <input type="hidden" name="selector" value="<?php echo $selector ?>">
-                <input type="hidden" name="validator" value="<?php echo $validator ?>">
-                <input type="text" class="new1" placeholder="Enter password" name="password" required><br>
-                <input type="text" class="new1" placeholder="Reenter password" name="pwd-password" required><br>
+                <input type="hidden"  name="validator" value="<?php echo $validator ?>">
+                <input class="new1" name="password" required id="password" placeholder="Enter password" type="text" size="25" maxlength="100" onkeyup="return passwordChanged();" /><br>
+                <p><span class="new1" style="position: relative;" id="strength"></span></p>
+               <!--  <input type="text" class="new1" placeholder="Enter password" name="password" required><br> -->
+
+                <input type="text" class="new1" placeholder="Re-enter password" name="pwd-password" required><br> 
             </div>
             <div class="form2">
-                <button type="submit" name="reset-password">reset password</button>
+                 <button type="submit" name="reset-password">reset password</button>
             </div>
         </form>
     </div>
@@ -42,6 +45,26 @@
     }
 
     ?>
+    <script language="javascript">
+    function passwordChanged() {
+        var strength = document.getElementById('strength');
+        var strongRegex = new RegExp("^(?=.{14,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+        var mediumRegex = new RegExp("^(?=.{10,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+        var enoughRegex = new RegExp("(?=.{8,}).*", "g");
+        var pwd = document.getElementById("password");
+        if (pwd.value.length == 0) {
+            strength.innerHTML = 'Type Password';
+        } else if (false == enoughRegex.test(pwd.value)) {
+            strength.innerHTML = 'More Characters';
+        } else if (strongRegex.test(pwd.value)) {
+            strength.innerHTML = '<span style="color:green">Strong!</span>';
+        } else if (mediumRegex.test(pwd.value)) {
+            strength.innerHTML = '<span style="color:orange">Medium!</span>';
+        } else {
+            strength.innerHTML = '<span style="color:red">Weak!</span>';
+        }
+    }
+</script>
 
 <div class="footer">
     <p class="ofs">Copyright © 2021 Oracle Freight Solutions | Powered by Oracle Freight Solutions</p>
@@ -49,3 +72,4 @@
 
 </body>
 </html>
+
