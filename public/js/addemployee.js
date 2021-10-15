@@ -8,7 +8,6 @@ var showPassword = false;
 eye1.addEventListener("click",function(){
 
     if(showPassword == false) {
-        // confir.setAttribute("type","text");
         password.setAttribute("type","text");
         eye1.classList.add("fa-eye-slash");
         eye1.classList.remove("fa-eye");
@@ -44,6 +43,7 @@ eye2.addEventListener("click",function(){
 var pass = document.getElementById("pwd");
 var msg = document.getElementById("message");
 var str = document.getElementById("strenght");
+var phide = document.getElementById("phide");
 var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
 var hasNumber = /\d/;
 var lett = /[abcdefghijklmnopqrstuvwxyz]/;
@@ -51,6 +51,7 @@ var lett = /[abcdefghijklmnopqrstuvwxyz]/;
 pass.addEventListener('input',()=> {
     if(pass.value.length >0 ){
         msg.style.display = "block";
+        phide.innerHTML = "false";
     }
     else{
         msg.style.display= "none";
@@ -60,10 +61,12 @@ pass.addEventListener('input',()=> {
         msg.style.color = "red"
         msg.style.fontWeight = "bold"
         pass.style.borderBottomColor = "red";
+        phide.innerHTML = "false";
     }
     if(pass.value.length > 4 && (format.test(pass.value) || hasNumber.test(pass.value))){
         if(pass.value.length > 5 && format.test(pass.value) && hasNumber.test(pass.value) && lett.test(pass.value)){
             str.innerHTML = "Strong";
+            phide.innerHTML = "true";
             msg.style.color = "green";
             pass.style.borderBottomColor = "green";
             msg.style.fontWeight = "bold"
@@ -72,10 +75,91 @@ pass.addEventListener('input',()=> {
             msg.style.color = "blue";
             msg.style.fontWeight = "bold"
             pass.style.borderBottomColor = "blue";
+            phide.innerHTML = "false";
         }
         
     }
 })
 
+var fname = document.getElementById("fname");
+var lname = document.getElementById("lname");
+var fval = document.getElementById("fval");
+var lval = document.getElementById("lval");
+var fhide = document.getElementById("fhide");
+var lhide = document.getElementById("lhide");
 
+fname.addEventListener('input',()=>{
+    if(format.test(fname.value) || hasNumber.test(fname.value)){
+        fval.style.display = "block";
+        fname.style.color = "red";
+        fhide.innerHTML = "false"
+    }
+    else{
+        fval.style.display = "none";
+        fname.style.color = "var(--header_dark)";
+        fhide.innerHTML = "true";
+    }
+})
 
+lname.addEventListener('input',()=>{
+    if(format.test(lname.value) || hasNumber.test(lname.value)){
+        lval.style.display = "block";
+        lname.style.color = "red";
+        lhide.innerHTML = "false";
+    }
+    else{
+        lval.style.display = "none";
+        lname.style.color = "var(--header_dark)";
+        lhide.innerHTML = "true";
+    }
+})
+
+var nic = document.getElementById("nic");
+var nicval = document.getElementById("nicval");
+var nichide = document.getElementById("nichide");
+
+nic.addEventListener('input',()=>{
+    if(nic.value.length < 10 && nic.value.length > 0){
+        nicval.innerHTML = "Minimum 10 digits must includes";
+        nichide.innerHTML = "false";
+        nicval.style.display = "block";
+        nicval.style.color = "red";
+    }
+    else if(nic.value.length == 10){
+       
+        var le = nic.value.slice(9);
+        var num = nic.value.slice(0,9);
+        if(!format.test(num) && !lett.test(num) && (le == "v" || le == "V") ){
+            nicval.innerHTML = "NIC is Valied";
+            nicval.style.display = "block";
+            nicval.style.color = "green";
+            nichide.innerHTML = "true";
+        }
+        else{
+            nicval.innerHTML = "NIC is Not Valied";
+            nichide.innerHTML = "false";
+            nicval.style.display = "block";
+            nicval.style.color = "red";
+        }
+    }
+    else if(nic.value.length == 12){
+        if(!format.test(nic.value) && !lett.test(nic.value)){
+            nicval.innerHTML = "NIC is Valied";
+            nichide.innerHTML = "true";
+            nicval.style.display = "block";
+            nicval.style.color = "green";
+        }
+        else{
+            nicval.innerHTML = "NIC is Not Valied";
+            nicval.style.color = "red";
+            nicval.style.display = "block";
+            nichide.innerHTML = "false";
+        }
+    }
+    else{
+        nicval.innerHTML = "NIC is Not Valied";
+        nichide.innerHTML = "false";
+        nicval.style.display = "block";
+        nicval.style.color = "red";
+    }
+})

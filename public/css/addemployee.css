@@ -235,13 +235,14 @@ thead {
 .pwd input {
     max-width: 50%;
 }
-/* 
-.pwdinner{
+
+#fval, #lval ,#nicval{
+    font-size: small;
+    font-weight: bold;
     margin: 0;
-    padding: 0px !important;
-    display: flex;
-    flex-direction: row;
-} */
+    display: none;
+    color: red;
+}
 
 #message{
     margin: 10px;
