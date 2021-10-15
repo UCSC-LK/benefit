@@ -156,11 +156,15 @@
                     <div>
                         <label for="fname" >First Name</label>
                         <input type="text" id="fname" name="fname" size="50" required><br>
+                        <p id="fval">Name Not Valied</p>
+                        <input type="hidden" name="fhide" id="fhide">
                     </div>
 
                     <div>
                         <label for="lname" >Last Name</label>
                         <input type="text" id="lname" name="lname" size="50"><br>
+                        <p id="lval">Name Not Valied</p>
+                        <input type="hidden" name="lhide" id="lhide">
                     </div>
                     
                     <div>
@@ -203,6 +207,8 @@
                     <div>
                         <label for="nic">NIC</label>
                         <input type="text" id="nic" name="nic" size="50" required><br>
+                        <p id="nicval"></p>
+                        <input type="hidden" name="nichide" id="nichide">
                     </div> 
                     
                     <div class="gender">
@@ -241,7 +247,7 @@
                         <!-- <div class="pwdinner"> -->
                         <input type="password" id="pwd" name="pwd" size="50" required> <i class="far fa-eye" id="eye1"></i><br>
                         <!-- </div> -->
-                        
+                        <input type="hidden" name="phide" id="phide">
                         <p id="message"> Password is <span id="strenght" ></span></p>
 
                     </div>
