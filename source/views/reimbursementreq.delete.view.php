@@ -19,8 +19,7 @@
 			 	<button class="delete-confirmation" type="submit" value="Delete">Delete</button>
 
 			 	<a href="<?=PATH?>/Reimbursement">
-			 		<input class="cancle-confirmation" type="button" value="Cancel">
-			 	</a>
+			 		<input class="cancle-confirmation" type="button" value="Cancel"></a>
 			 </form>
 				 </div>		     
 </body>

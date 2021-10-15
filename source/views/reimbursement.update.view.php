@@ -63,12 +63,10 @@
 		<!-- </form>	 -->
 		
 		<a href="<?=PATH?>Reimbursement/update_reimbursement">
-        <button  type="submit" value="submit" name="update" class="update-confirmation">Update</button>
-        </a>
+        <button  type="submit" value="submit" name="update" class="update-confirmation">Update</button></a>
 
 		<a href="<?=PATH?>/Reimbursement">
-		<input class="cancle-confirmation" type="button" value="Cancel">
-		</a>
+		<input class="cancle-confirmation" type="button" value="Cancel"></a>
 
 	
 	</form>
