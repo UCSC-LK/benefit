@@ -76,7 +76,7 @@ class Login extends Controller
 
 	function forgotpassword2()
 	{
-
+		//print_r($_POST);
 		if(isset($_POST["reset-password"]))
 		{
 			$selector=$_POST['selector'];
@@ -84,37 +84,86 @@ class Login extends Controller
 			$password=$_POST['password'];
 			$passwordRepeat=$_POST['pwd-password'];
 
+
+
 			if(empty($password)||empty($passwordRepeat))
 			{
-				$this->view('createnewpsw');
-				exit();
+				$errors['arr']="Passwords not be empty";
+				foreach ($errors as $key ) {
+       				$alert = "<script> alert ('$key')</script>";
+         			 print_r($alert); 
+       			 }
+       			 $this->view('createnewpsw');
+       			 exit();
 			}
+
 			elseif ($password!=$passwordRepeat) {
-				$this->view('createnewpsw');
-				exit();
+				$errors['arr']="Passwords are not match";
+				foreach ($errors as $key ) {
+       				$alert = "<script> alert ('$key')</script>";
+         			 print_r($alert); 
+       			 }
+       			 $this->view('createnewpsw');
+       			 exit();
 			}
+
+			$uppercase = preg_match('@[A-Z]@', $password);
+			$lowercase = preg_match('@[a-z]@', $password);
+			$number    = preg_match('@[0-9]@', $password);
+			$specialChars = preg_match('@[^\w]@', $password);
+
+			if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+   			 
+   			$errors['arr']="Password size should be at least Medium";
+				foreach ($errors as $key ) {
+       				$alert = "<script> alert ('$key')</script>";
+         			 print_r($alert); 
+       			 }
+       			 $this->view('createnewpsw');
+       			 exit();
+			}
+
+			// elseif ($password!=$passwordRepeat) {
+			// 	$this->view('createnewpsw');
+			// 	exit();
+			// }
 			$currentDate=date("U");
 			$user= new PwdResetModel();
 			$row=$user->where('pwdResetSelector',$selector);
 
 			if(!isset($row))
 			{
-				echo "You need to re-submit your reset req";
-				exit();
+				$errors['arr']="You need to re-submit your reset req";
+				foreach ($errors as $key ) {
+       				$alert = "<script> alert ('$key')</script>";
+         			 print_r($alert); 
+
+       			 }
+       			 $this->view('createnewpsw');
+       			 exit();
 			}
 			else
 			{
 
 				if(empty($row))
 				{
-				echo "You need to re-submit your reset req";
+				$errors['arr']="You need to re-submit your reset req";
+				foreach ($errors as $key ) {
+       				$alert = "<script> alert ('$key')</script>";
+         			 print_r($alert);   
+       			 }
+       			 $this->view('createnewpsw');
 				exit();
 				}
 				$row=$row[0];
 				if($currentDate>$row->pwdResetExpires)
 				{
-				echo "You need to re-submit your reset req";
-				$row=$user->deletepsw($row->pwdResetEmail);
+				$errors['arr']="You need to re-submit your reset req";
+				foreach ($errors as $key ) {
+       				$alert = "<script> alert ('$key')</script>";
+         			 print_r($alert);   
+       			 }
+       			 $this->view('createnewpsw');
 				exit();
 				}
 				$userEmail=$row->pwdResetEmail;
@@ -123,7 +172,12 @@ class Login extends Controller
 
 				if ($tokenCheck===false) 
 				{
-					print_r( "You need to re-submit your reset req");
+					$errors['arr']="You need to re-submit your reset req";
+				foreach ($errors as $key ) {
+       				$alert = "<script> alert ('$key')</script>";
+         			 print_r($alert);   
+       			 }
+       			 $this->view('createnewpsw');
 					exit();
 				}
 				elseif ($tokenCheck===true) {
