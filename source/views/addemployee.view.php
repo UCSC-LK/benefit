@@ -30,7 +30,7 @@
 
     <?php
 
-    for($i = 4; $i < 14; $i++){
+    for($i = 4; $i < 15; $i++){
         if($rows[$i]){
            $alert = "<script> alert ('$rows[$i]') </script>";
            echo $alert;
