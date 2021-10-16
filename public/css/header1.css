@@ -5,7 +5,7 @@ body {
 
 .header1 {
     height: 80px;
-    background-color: #5016d0;
+    background-color: #3700B3;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -20,7 +20,7 @@ body {
     display: flex;
     position: relative;
     width: 70%;
-    background-color: #5016d0;
+    background-color: #3700B3;
     margin-bottom: 5px;
     border-radius: 5px;
 }
@@ -81,7 +81,7 @@ body {
     content: '.';
     color: transparent;
     background: #c7e2ea;
-    height: 1px;
+    height: 2px;
 }
 
 .header1 nav.list1 ul li a:hover:after {
