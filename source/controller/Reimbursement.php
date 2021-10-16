@@ -148,8 +148,10 @@ class Reimbursement extends Controller
 	
         $user = new ReimbursementrequestModel();
         $ar=Auth::user();
-        $data= $user->where('Employee_ID',$ar);
+        
+        // $data= $user->where('invoice_submission',$ar);
 				if(count($_POST)>0){
+                    $data= $user->where('invoice_submission',$_POST['invoice_submission']);
                     // if(isset($_POST['submit'])){
                     $arr['employee_ID']=$ar;
                     $arr['claim_date']=$_POST['claim_date'];
@@ -157,9 +159,12 @@ class Reimbursement extends Controller
                     $arr['reimbursement_reason']=$_POST['subject'];
                     $arr['invoice_submission']=$_POST['invoice_submission'];
                     $arr['reimbursement_status']="pending";
-                    echo "hello";
-				$row=$user->update($ar,$arr);
-                $this->redirect('Reimbursement');
+                    // echo "hello";
+                    // $data= $user->where('invoice_submission',$_POST['invoice_submission']);
+                    $data = $data[0];
+				$row=$user->updatenew($data->invoice_submission,$arr);
+
+                // $this->redirect('Reimbursement');
                     }
 				// }
                 $this->view('reimbursement.update');

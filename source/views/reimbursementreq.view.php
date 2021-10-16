@@ -38,7 +38,7 @@
                             <label for="c_date">Claim Date</label>
                         </div>
                         <div class="column_2">
-                            <input type="date" id="claim_date" name="claim_date" min="2021-10-11" max="2021-10-18" placeholder="mm/dd/yyyy" required>
+                            <input type="date" id="claim_date" name="claim_date" min="2021-10-09" max="2021-10-16" placeholder="mm/dd/yyyy" required>
                         </div>
                     </div>
                     <div class="row">
@@ -82,7 +82,7 @@
             <div class="history">
 
                 <div class="history_header">
-                    <p class="main_title"><i class="material-icons">history</i>Benefit History</p>
+                    <p class="main_title"><i class="material-icons">history</i>Reimbursement History</p>
                 </div>
                 <table id="claim_history_table">
                     <!-- <form method="post" action="Reimbursement/delete"> -->
