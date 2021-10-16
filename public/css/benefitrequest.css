@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #F3E5F5;
+    background-color: var(--background);
 }
 
 .content {
@@ -33,46 +33,49 @@ body {
 
 .benefit_form {
     width: 100%;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .benefit_form .row {
-    background-color: chocolate;
-    width: 60%;
+    /*background-color: chocolate;*/
+    width: 100%;
     /*padding-left: 40px;*/
-    padding-top: 15px;
+    padding-top: 25px;
     /*display: flex;*/
-    display: flex;
-    flex-direction: column;
-    /*justify-content: center;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    justify-content: center;
 }
 
 .benefit_form .row .column_1 {
     font-size: medium;
-    padding-left: 20px;
+    padding-left: 15px;
     padding-bottom: 8px;
     /*padding: 12px 20px;*/
-    width: 100%;
+    width: 60%;
     color: #1C1D1D;
 }
 
 .benefit_form .row .column_2 {
-    width: 100%;
+    width: 60%;
     padding-left: 15px;
 }
 
 .column_2 select, .column_2 input, .column_2 textarea {
-    width: 70%;
+    width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
+    background-color: #EEEEEE;
+    /*margin: 8px 0;*/
+    /*display: inline-block;*/
+    border: 1px  solid #EEEEEE;
     border-radius: 4px;
     box-sizing: border-box;
+    border-bottom: 3px solid #BDBDBD;
 }
 
 .benefit_form .row .report_submission {
-    width: 97%;
+    width: 60%;
     height: 160px;
     justify-content: center;
     text-align: center;
