@@ -5,14 +5,40 @@ body {
     padding: 0;
 }
 
-.footer {
-    position: fixed;
-    width: 100%;
-    height: 70px;
-    background-color: #5016d0;
-    text-align: center;
-    bottom: 0;
+.big-img {
+    background-image: url("../img/1900913.jpg");
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.container {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 35%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/*.footer {*/
+/*    position: fixed;*/
+/*    width: 100%;*/
+/*    height: 70px;*/
+/*    background-color: #5016d0;*/
+/*    text-align: center;*/
+/*    bottom: 0;*/
+/*}*/
 
 .ofs {
     color: #DCDCE0;
@@ -21,33 +47,20 @@ body {
     padding-top: 25px;
 }
 
-.container {
-    width: 30%;
-    margin: auto;
-    padding-top: 7%;
-    border-radius: 5px;
-    border-color: #707070;
-}
-
 .box-a {
-    border: 1px #707070 solid;
-    background-color: white;
-    color: #0D0D0D;
-    padding-top: 1%;
     border-radius: 10px;
-    width: 450px;
 }
 
-.h3 {
+.h2 {
     border: 1px;
     margin: auto;
-    width: 98%;
-    height: 8%;
+    width: 100%;
+    height: 10%;
     color: white;
-    background-color: #5016d0;
+    letter-spacing: 4px;
     text-align: center;
     padding-top: 15px;
-    word-spacing: 3px;
+    word-spacing: 4px;
 }
 
 .frm {
@@ -56,61 +69,89 @@ body {
 }
 
 .form1 {
-    padding-bottom: 8%;
-    padding-left: 105px;
-    padding-top: 5px;
+    padding-top: 8%;
+    width: 100%;
+}
+
+.new1 {
+    width: 50%;
+    height: 40px;
 }
 
 input {
     text-align: center;
     color: #0D0D0D;
-}
-
-.new1 {
-    width: 240px;
-    height: 40px;
-    border-radius: 5px;
-    /* background-color: #DCDCE0; */
+    border-radius: 10px;
+    background-color: transparent;
+    border-bottom: 2px solid #00ACC1;
 }
 
 .shw {
-    font-size: 15px;
-    padding-left: 35%;
+    padding-top: 8%;
+    height: max-content;
+    font-size: 13px;
+    font-weight: normal;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /*padding-left: 35%;*/
+}
+
+.show_password {
+    padding-left: 25%;
+    display: grid;
+    max-width: max-content;
+    grid-column-gap: 1px;
+    grid-template-columns: auto auto auto;
+}
+
+.forgot_password {
+    padding-right: 25%;
+}
+
+.shw input[type=checkbox] {
+    /*margin-top: 3px;*/
+    float: left;
+}
+
+.psw {
+    float: right;
+}
+
+.psw a{
+    color: #26C6DA;
 }
 
 .form2 {
-    padding-left: 29%;
-    padding-top: 5%;
+    padding-top: 8%;
     padding-bottom: 8%;
 }
 
 .form2 button {
-    width: 60%;
-    height: 5%;
+    width: 50%;
+    height: 40px;
     font-size: 20px;
-    border-radius: 5px;
-    /*background-color: #2828CF;*/
-    background-color: #2828CF;
+    font-weight: bold;
+    background: linear-gradient(45deg,  transparent 0%, transparent 57%, #006064 100%),
+    linear-gradient(-45deg, #0277BD 0%,  #B2EBF2 0.3%, #006064 112%,  transparent 11% ),
+    linear-gradient(-90deg, #B2EBF2 100%, #B2EBF2 65%, transparent 20% );
     color: white;
-    box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.5);
+    letter-spacing: 2px;
+    box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.1);
+    border-radius: 10px;
     cursor: pointer;
 }
 
 .form2 button:hover {
-    background-color: blue;
-    box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.7);
+    background: linear-gradient(45deg,  transparent 0%, transparent 57%, #B2EBF2 100%),
+    linear-gradient(-45deg, #0277BD 0%,  #006064 0.3%, #B2EBF2 112%,  transparent 11% ),
+    linear-gradient(-90deg, #006064 100%, #006064 65%, transparent 20% );
+    box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.2);
 }
 
-.psw {
-    color: #2B2BE4;
-    border: #707070;
-    padding-left: 36%;
-    padding-top: 5%;
-    font-size: 15px;
-}
 
 .h {
-    padding-left: 5%;
+    /*padding-left: 5%;*/
     text-align: center;
     margin-top: 10px;
     color: #FF2300;
