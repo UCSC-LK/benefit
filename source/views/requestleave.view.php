@@ -10,74 +10,74 @@
     <title>Request leave</title>
 </head>
 <body id="bdy">
-    <div class="head">
-        <?php
-        $this->view('includes/header1');
-        ?>
+<div class="head">
+    <?php
+    $this->view('includes/header1');
+    ?>
+</div>
+<div class="main_container">
+    <div class="title">
+        <p>REQUEST LEAVE</p>
     </div>
-    <div class="main_container">
-        <div class="title">
-            <p>REQUEST LEAVE</p>
-        </div>
 
-        <div class="input_feild">
-            <form action="#" method="post" enctype="multipart/form-data">
-                <div class="leave_type">
-                    <label for="leave_type">Leave Type</label>
-                    <select name="leave_type" id="leave_type">
-                        <option value="sick">Sick Leave</option>
-                        <option value="casual">Casual Leave</option>
-                        <option value="annual">Annual Leave</option>
-                    </select>
-                </div>
+    <div class="input_feild">
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="leave_type">
+                <label for="leave_type">Leave Type</label>
+                <select name="leave_type" id="leave_type">
+                    <option value="sick">Sick Leave</option>
+                    <option value="casual">Casual Leave</option>
+                    <option value="annual">Annual Leave</option>
+                </select>
+            </div>
 
-                <div class="full_day">
-                    <p>Full Days</p>
-                    <div class="full_duration">
-                      <div class="start_date">
-                          <label for="start_date">Start Date </label>
-                          <input type="date" name="start_date" id="start_date">
-                      </div>
-
-                      <div class="end_date">
-                          <label for="end_date">End Date</label>
-                          <input type="date" name="end_date" id="end_date">
-                      </div>
+            <div class="full_day">
+                <p>Full Days</p>
+                <div class="full_duration">
+                    <div class="start_date">
+                        <label for="start_date">Start Date </label>
+                        <input type="date" name="start_date" id="start_date">
                     </div>
 
+                    <div class="end_date">
+                        <label for="end_date">End Date</label>
+                        <input type="date" name="end_date" id="end_date">
+                    </div>
                 </div>
 
-                <div class="half_day">
-                    <p>Half Days</p>
-                    <div class="half_duration">
-                      <div class="date_item">
+            </div>
+
+            <div class="half_day">
+                <p>Half Days</p>
+                <div class="half_duration">
+                    <div class="date_item">
                         <label for="start_date">Date </label>
                         <input type="date" name="start_date" id="start_date">
-                      </div>
+                    </div>
 
-                      <div class="item">
+                    <div class="item">
                         <label for="half">Morning </label>
                         <input type="radio" id="morning" name="half" value="morning">
-                      </div>
+                    </div>
 
-                      <div class="item">
+                    <div class="item">
                         <label for="half">Evening</label>
                         <input type="radio" name="half" value="evening" id="evening">
-                      </div>
-
                     </div>
-                </div>
 
-                <div class="buttons">
-                    <button type="reset" id="cancel">Cancel</button>
-                    <button type="submit" id="request" name="submit">Request</button>
                 </div>
-            </form>
-        </div>
-    </div>
+            </div>
 
-    <div class="fot">
-        <?php $this->view('includes/footer')?>
+            <div class="buttons">
+                <button type="reset" id="cancel">Cancel</button>
+                <button type="submit" id="request" name="submit">Request</button>
+            </div>
+        </form>
     </div>
+</div>
+
+<div class="fot">
+    <?php $this->view('includes/footer')?>
+</div>
 </body>
 </html>
