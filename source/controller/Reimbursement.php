@@ -30,6 +30,8 @@ class Reimbursement extends Controller
             {
                 $arr['employee_ID']=Auth::user();
                 $arr['claim_date']=$_POST['claim_date'];
+				// $today = date("Y-m-d");
+				// $diff = date_diff(date_create($arr['claim_date']), date_create($today));
                 $arr['claim_amount']=$_POST['claim_amount'];
                 $arr['reimbursement_reason']=$_POST['subject'];
                 $arr['invoice_submission']=$_POST['invoice_submission'];
