@@ -8,9 +8,10 @@
 <title>Forgot-password</title>
 
 <body>
+<div class="big-img"></div>
 <div class="container">
     <div class="box-a">
-        <h3 class="h3">ORACLE FREIGHT SOLUTIONS (PVT) LTD</h3>
+        <h2 class="h2">ORACLE FREIGHT SOLUTIONS</h2>
         <form class="frm" action="" method="post">
     
             <div class="form1" >
@@ -21,7 +22,7 @@
                 <button type="submit" name="reset-req">Reset Password</button>
             </div>
         </form>
-        <div class="check-email" style="text-align: center; color: #5016d0;">
+        <div class="check-email" style="text-align: center; color: white; font-size: 15px">
         <?php
             if(isset($_GET['reset']))
             {
