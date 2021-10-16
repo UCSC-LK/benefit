@@ -164,7 +164,7 @@ class Reimbursement extends Controller
                     $data = $data[0];
 				$row=$user->updatenew($data->invoice_submission,$arr);
 
-                // $this->redirect('Reimbursement');
+                $this->redirect('Reimbursement');
                     }
 				// }
                 $this->view('reimbursement.update');
