@@ -14,7 +14,7 @@ class AddemployeeController extends Controller
 		$sells = $select->where('department_ID',3);
 		$acc = $select->where('department_ID',4);
 		$arr1 = array($oper,$hr,$sells,$acc);
-		for ($x = 4; $x < 14; $x++) {
+		for ($x = 4; $x < 15; $x++) {
 			$arr1[$x] = null;
 		  }
 		// $this->view('addemployee',['rows'=>$arr1]);
@@ -60,35 +60,72 @@ class AddemployeeController extends Controller
 				$lhide = $_POST['lhide'];
 				$phide = $_POST['phide'];
 				$nichide = $_POST['nichide'];
+				$sup = 0;
+				$id = $user->getcol('employee_ID');
+				// print_r($id);
+				// echo $arr['supervisor_ID']."<br>";
 
-				// echo $fhide;
-				// echo $lhide;
-				// echo $phide;
-				// echo $nichide;
+				if($_POST['supervisor']){
+					echo "inside supervisor <br>";
+					foreach($id as $i){
+						if($arr['supervisor_ID'] == $i->employee_ID){
+							$sup = 1;
+						}
+					}
+					// if(in_array($arr['supervisor_ID'], $id, True)){
+					// else{
+					// 	echo "Not Found <br>";
+					// }
+					// foreach($id as $i){
+					// 	echo $i->employee_ID . "<br>";
+					// }
+				}else{
+					$sup = 1;
+				}
 
-				if( $fhide == "false" || $lhide == "false" ){
+				if($sup == 0){
+					$arr1[14] = "Employee's Supervisor Not in the Company!";
+				}
+				
+				
+				// echo $arr['first_name'] . "<br>";
+				// echo $arr['last_name'] . "<br>";
+				// echo $pass."<br>";
+				// echo $arr['employee_NIC']."<br><br>";
+
+				// echo "fhide". " ".$fhide."<br>";
+				// echo "lhide"." ".$lhide."<br>";
+				// echo "phide"." ".$phide."<br>";
+				// echo "nichide"." ".$nichide."<br>";
+				$jsvalidate = 1;
+				// echo "set value ". $jsvalidate."<br>";
+
+				if($fhide == "notvalied" || $lhide == "notvaied") {
 					$arr1[11] = "Name is not valied type";
-					$jsvalidate = false;
-					echo "inside name validation \n <br>";
-					echo $jsvalidate." ".$fhide;
-				}else{
-					$jsvalidate = true;
+					$jsvalidate = 0;
+					// echo "inside name validation ";
+					// echo $jsvalidate." ".$fhide;
+					// echo $fhide."<br>";
+					// echo "set value ". $jsvalidate."<br>";
 				}
-				if($phide == "false"){
-					$jsvalidate = false;
+				
+				if($phide == "notvalied"){
+					$jsvalidate = 0;
 					$arr1[12] = "Include a Strong Password!";
-					echo "inside pass validation \n <br>";
-					echo $jsvalidate." ".$phide;
-				}else{
-					$jsvalidate=true;
+					// echo "inside pass validation ";
+					// echo $phide."<br>";
+					// echo "set value ". $jsvalidate."<br>";
+
+					// echo $jsvalidate." ".$phide;
 				}
-				if($nichide == "false"){
-					$jsvalidate = false;
+				if($nichide == "notvalied"){
+					$jsvalidate = 0;
 					$arr1[13] = "NIC is Invalied!";
-					echo "inside nic validation \n <br>";
-					echo $jsvalidate." ".$nichide;
-				}else{
-					$jsvalidate =true;
+					// echo "inside nic validation ";
+					// echo $nichide."<br>";
+					// echo "set value ". $jsvalidate."<br>";
+
+					// echo $jsvalidate." ".$nichide;
 				}
 
 				
@@ -144,13 +181,13 @@ class AddemployeeController extends Controller
 				elseif($diff->format('%y') < 18){
 					$arr1[10] = "Employee Age must be greater than 18!";
 				}
-				elseif($complete  && $confirm == $pass && ($diff->format('%y') >= 18) && $jsvalidate){
+				elseif($complete  && $confirm == $pass && ($diff->format('%y') >= 18) && $jsvalidate == 1 && $sup == 1){
 					
 
 					$user->insert($arr);
 					$user->update($_POST['supervisor'],$str);
-					echo "inside inseart \n <br>";
-					echo $jsvalidate;
+					// echo "inside inseart ";
+					// echo $jsvalidate;
 					// $arr1[9] = "ff";
 					if($jsvalidate){
 						$this->redirect('AddemployeeRedirectController');	
