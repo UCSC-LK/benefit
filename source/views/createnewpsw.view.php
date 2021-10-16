@@ -34,7 +34,7 @@
         {?>-->
             <div class="container">
     <div class="box-a">
-        <h3 class="h3" style="">ORACAL FIGHT SOUTION (PVT) LTD</h3>
+        <h3 class="h3">ORACLE FREIGHT SOLUTIONS (PVT) LTD</h3>
         <form class="frm"  method="post">
     
             <div class="form1" >
