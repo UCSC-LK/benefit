@@ -65,7 +65,7 @@
                     </div>
                     <div class="row">
                         <div class="invoice_submission">
-                            <input type="file" id="invoice_submission" name="invoice_submission" required>
+                            <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" required>
                         </div>
                     </div>
 

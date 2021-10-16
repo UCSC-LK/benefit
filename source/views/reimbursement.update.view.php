@@ -20,14 +20,14 @@
                 //     foreach($rows as $entry){?>
 
 	<div class="update_reimbursement">
-	<form method="post">
+	<form name="myform" action="#" method="post"  onsubmit=" return validation()">
 
 		<div class="row">
 			<div class="column_1">
 			<label for="c_date">Claim Date</label>
 			</div>
 		<div class="column_2">
-			<input type="date" id="claim_date" name="claim_date">
+			<input type="date" id="claim_date" name="claim_date" min="2021-10-09" max="2021-10-16" required>
 		</div>
 		</div>
 
@@ -36,7 +36,7 @@
 			<label for="c_amount">Claim Amount</label>
 			</div>
 		<div class="column_2">
-			<input type="text" id="claim_amount" name="claim_amount">
+			<input type="text" id="claim_amount" name="claim_amount" required>
 		</div>
 		</div>
 		
@@ -45,7 +45,7 @@
 			<label for="subject">Pay For</label>
 			</div>
 		<div class="column_2">
-			<textarea id="subject" name="subject" style="height:200px;" ></textarea>
+			<textarea id="subject" name="subject" style="height:200px;" required></textarea>
 		</div>
 		</div>
 
@@ -57,7 +57,7 @@
 
 		<div class="row">
 			<div class="invoice_submission">
-			<input type="file" id="invoice_submission" name="invoice_submission">
+			<input type="file" id="invoice_submission" name="invoice_submission"accept=".pdf, .png" required>
 		</div>
 		</div>
 		<!-- </form>	 -->
@@ -71,6 +71,8 @@
 	
 	</form>
                      
-    </div>		     
+    </div>		
+	<script src="public/js/reimbursement.js"></script>
+     
 </body>
 </html>
