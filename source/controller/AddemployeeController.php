@@ -66,7 +66,7 @@ class AddemployeeController extends Controller
 				// echo $arr['supervisor_ID']."<br>";
 
 				if($_POST['supervisor']){
-					echo "inside supervisor <br>";
+					// echo "inside supervisor <br>";
 					foreach($id as $i){
 						if($arr['supervisor_ID'] == $i->employee_ID){
 							$sup = 1;
@@ -155,7 +155,7 @@ class AddemployeeController extends Controller
 								
 								$arr['profile_image'] = $file_designation;
 								
-			
+			 
 							}else {
 								$complete = false;
 								$arr1[4] = "Uploaded image too big (try image size < 500kb)";
@@ -178,7 +178,7 @@ class AddemployeeController extends Controller
 				if($validate){
 					$arr1[8] = "email is allready used!";
 				}
-				elseif($diff->format('%y') < 18){
+				elseif($diff->format('%y') <= 18 && $diff->format('%y') > 60){
 					$arr1[10] = "Employee Age must be greater than 18!";
 				}
 				elseif($complete  && $confirm == $pass && ($diff->format('%y') >= 18) && $jsvalidate == 1 && $sup == 1){
