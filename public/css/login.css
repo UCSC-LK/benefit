@@ -93,6 +93,12 @@ input {
     background-color: #2828CF;
     color: white;
     box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.5);
+    cursor: pointer;
+}
+
+.form2 button:hover {
+    background-color: blue;
+    box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.7);
 }
 
 .psw {
