@@ -101,6 +101,9 @@
                                 <div><?php print_r($row->benefit_type); ?> </div>
                                 <div><?php print_r($row->claim_date); ?></div>
                                 <div><i>Pending</i></div>
+                                <a href="<?=PATH?>Benefit/change/<?=$row->claim_date?>">
+                                    <button type='submit' value='Change' name="change" class='change_button'>Change</button>
+                                </a>
                                 <a href="<?=PATH?>Benefit/delete/<?=$row->claim_date?>">
                                     <button type='submit' value='Decline' name="delete" class='delete_button'>Decline</button>
                                 </a>
@@ -110,27 +113,46 @@
                 }
                 ?>
 
+                <div class="benefit_type">
+                    <form action="">
+
+                        <select id="benefit" name="benefit">
+                            <option value="medical">Medical Insurance</option>
+                            <option value="life">Life Insurance</option>
+                            <option value="accident">Accident Insurance</option>
+                        </select>
+                        <input id="button" type="submit" value="Search"/>
+                    </form>
+                </div>
+
+                <table id="benefit_history_result">
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Used</th>
+                    </tr>
+                </table>
             </div>
 
-            <div class="benefit_type">
-                <form action="">
-
-                    <select id="benefit" name="benefit">
-                        <option value="medical">Medical Insurance</option>
-                        <option value="life">Life Insurance</option>
-                        <option value="accident">Accident Insurance</option>
-                    </select>
-                    <input id="button" type="submit" value="Search"/>
-                </form>
-            </div>
-
-            <table id="benefit_history_result">
-                <tr>
-                    <th>Date</th>
-                    <th>Description</th>
-                    <th>Used</th>
-                </tr>
-            </table>
+<!--            <div class="benefit_type">-->
+<!--                <form action="">-->
+<!---->
+<!--                    <select id="benefit" name="benefit">-->
+<!--                        <option value="medical">Medical Insurance</option>-->
+<!--                        <option value="life">Life Insurance</option>-->
+<!--                        <option value="accident">Accident Insurance</option>-->
+<!--                    </select>-->
+<!--                    <input id="button" type="submit" value="Search"/>-->
+<!--                </form>-->
+<!--            </div>-->
+<!---->
+<!--            <table id="benefit_history_result">-->
+<!--                <tr>-->
+<!--                    <th>Date</th>-->
+<!--                    <th>Description</th>-->
+<!--                    <th>Used</th>-->
+<!--                </tr>-->
+<!--            </table>-->
 
         </div>
     </div>
