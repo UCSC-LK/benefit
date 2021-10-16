@@ -14,9 +14,9 @@
 <body>
 
 <li class="header1">
-<!--    <div class="ofs">-->
-<!--        OFS-->
-<!--    </div>-->
+    <!--    <div class="ofs">-->
+    <!--        OFS-->
+    <!--    </div>-->
 
     <nav class="list1">
         <ul>
@@ -27,7 +27,7 @@
 
             <?php if(Auth::access('Supervisor')):?>
                 <li><a href="<?=PATH?>Approvereimbursement">USER MANAGEMENT(HR)</a></li>
-                <?php endif;?>
+            <?php endif;?>
             <?php if(Auth::access('HR Manager')):?>
                 <li><a href="<?=PATH?>EmployeelistController">USER MANAGEMENT(HR)</a></li>
             <?php endif;?>
@@ -61,14 +61,14 @@
             </div>
         </button>
     </div>
-    
-</div>
-<script>
-	var dd_main = document.querySelector(".dd_main");
 
-	dd_main.addEventListener("click", function(){
-		this.classList.toggle("active");
-	})
-</script>
+    </div>
+    <script>
+        var dd_main = document.querySelector(".dd_main");
+
+        dd_main.addEventListener("click", function(){
+            this.classList.toggle("active");
+        })
+    </script>
 </body>
 </html>
