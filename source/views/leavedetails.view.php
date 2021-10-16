@@ -97,7 +97,7 @@
                     </div>
 
                     <div class="leave_status">
-                        <p id="status">pendin</p>
+                        <p id="status">pending</p>
                     </div>
 
                     

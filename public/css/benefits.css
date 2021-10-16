@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    /*background-color: aqua;*/
+    background-color: #F3E5F5;
 }
 
 .content {
@@ -12,24 +12,27 @@ body {
 }
 
 .benefit_container {
-    margin: 5px;
     display: flex;
     flex-direction: column;
 }
 
 .benefit_container .benefit_head {
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     max-width: 100%;
     padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
 }
 
 /* use .main_title class for every title style */
 .main_title {
     width: 100%;
+    color: #232F34;
     font-size: x-large;
     font-weight: bold;
     display: block;
-    border-bottom: 1px solid var(--grey);
+    border-bottom: 2px solid rgba(99, 94, 94, 0.527);
+    padding-bottom: 10px;
 }
 
 .benefit_container .benefit_head .benefit_card {
@@ -86,10 +89,10 @@ body {
 }
 
 .benefit_container .benefit_head .benefit_card .card .text {
-    color: var(--black);
-    font-weight: bold;
+    color: #344955;
+    /*font-weight: bold;*/
     margin-bottom: 5px;
-    opacity: 60%;
+    opacity: 90%;
 }
 
 .benefit_container .benefit_head .benefit_card .card .remain_amount {
@@ -100,7 +103,7 @@ body {
 }
 
 .benefit_container .benefit_head .benefit_card .card .max_amount {
-    color: var(--black);
+    color: #232F34;
     font-weight: bold;
     font-size: medium;
     margin-bottom: 20px;
@@ -127,6 +130,11 @@ input[type=submit] {
     width: 70%;
 }
 
+/*.pending_benefits a {*/
+/*    padding-left: 10px;*/
+/*    padding-right: 10px;*/
+/*}*/
+
 a .delete_button {
     border-radius: 50px;
     width: 100%;
@@ -137,6 +145,20 @@ a .delete_button {
     border: none;
     cursor: pointer;
     height: 33px;
+    margin: 5px;
+}
+
+a .change_button {
+    border-radius: 50px;
+    width: 100%;
+    background-color: green;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    height: 33px;
+    margin: 5px;
 }
 
 input[type=submit]:hover {
@@ -149,11 +171,14 @@ AAAAAAAAAAAAAAAAAAAAAAAA */
 
 
 .benefit_history {
-    /*background-color: rgb(255, 255, 255);*/
+    background-color: white;
     max-width: 100%;
-    /*padding: 5px;*/
+    padding: 5px;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
+    margin: 5px;
 }
 
 .history_header {
@@ -172,19 +197,20 @@ AAAAAAAAAAAAAAAAAAAAAAAA */
 
 .pending_benefits {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: 15px;
     font-size: medium;
+    height: 50px;
 }
 
 .pending_benefits div {
     justify-content: center;
-    padding: 10px;
     font-size: medium;
-    width: 25%;
+    width: 20%;
+    color: #344955;
 }
 
 .pending_benefits input {
