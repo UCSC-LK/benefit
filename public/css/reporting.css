@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #EEEEEE;
+}
+
+.report_container {
+    background-color: white;
+    padding-bottom: 5px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 5px 5px 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.report_type {
+    padding: 10px;
+    width: 20%;
+}
+
+.report_name p {
+    color: #232F34;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.options button {
+    width: 30%;
+    height: 40px;
+    background-color: blue;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.download {
+    cursor: pointer;
+    margin: 10px;
+    height: 60px;
+    width: 60px;
+    align-content: center;
+    border-radius: 50%;
+    background-color: #B2EBF2;
+}
+
+.download i{
+    margin: 15px;
+}
+
+.divide_line {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 2px solid grey;
+    height: 100%;
+    opacity: 50%;
+}
