@@ -6,75 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public\css\requestleave.css">
     <link rel="stylesheet" href="public\css\color.css">
-   
+    <!-- <script src="../../public/js/request_leave.js"></script> -->
     <title>Request leave</title>
 </head>
 <body id="bdy">
 <div class="head">
     <?php
-    $this->view('includes/header1');
+    $this->view('includes/header1')
     ?>
+
 </div>
+
 <div class="main_container">
-    <div class="title">
-        <p>REQUEST LEAVE</p>
+    <div class="profile">
+        <?php
+        $this->view('includes/profile1');
+        ?>
     </div>
 
-    <div class="input_feild">
-        <form action="#" method="post" enctype="multipart/form-data">
-            <div class="leave_type">
-                <label for="leave_type">Leave Type</label>
-                <select name="leave_type" id="leave_type">
-                    <option value="sick">Sick Leave</option>
-                    <option value="casual">Casual Leave</option>
-                    <option value="annual">Annual Leave</option>
-                </select>
-            </div>
+    <div class="right">
+        <div>
+            <?php
+            $this->view('includes/header2')
+            ?>
+        </div> 
+        
 
-            <div class="full_day">
-                <p>Full Days</p>
-                <div class="full_duration">
-                    <div class="start_date">
-                        <label for="start_date">Start Date </label>
-                        <input type="date" name="start_date" id="start_date">
-                    </div>
-
-                    <div class="end_date">
-                        <label for="end_date">End Date</label>
-                        <input type="date" name="end_date" id="end_date">
-                    </div>
+        <div class="input_feild">
+            <div class="title">
+                <p>REQUEST LEAVE</p>
+        </div>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <div class="leave_type">
+                    <label for="leave_type">Leave Type</label>
+                    <select name="leave_type" id="leave_type">
+                        <option value="sick">Sick Leave</option>
+                        <option value="casual">Casual Leave</option>
+                        <option value="annual">Annual Leave</option>
+                    </select>
                 </div>
 
-            </div>
+                <div class="full_day">
+                    <p>Full Days</p>
+                    <div class="full_duration">
+                        <div class="start_date">
+                            <label for="start_date">Start Date </label>
+                            <input type="date" name="start_date" id="start_date">
+                        </div>
 
-            <div class="half_day">
-                <p>Half Days</p>
-                <div class="half_duration">
-                    <div class="date_item">
-                        <label for="start_date">Date </label>
-                        <input type="date" name="start_date" id="start_date">
-                    </div>
-
-                    <div class="item">
-                        <label for="half">Morning </label>
-                        <input type="radio" id="morning" name="half" value="morning">
-                    </div>
-
-                    <div class="item">
-                        <label for="half">Evening</label>
-                        <input type="radio" name="half" value="evening" id="evening">
+                        <div class="end_date">
+                            <label for="end_date">End Date</label>
+                            <input type="date" name="end_date" id="end_date">
+                        </div>
                     </div>
 
                 </div>
-            </div>
 
-            <div class="buttons">
-                <button type="reset" id="cancel">Cancel</button>
-                <button type="submit" id="request" name="submit">Request</button>
-            </div>
-        </form>
+                <div class="half_day">
+                    <p>Half Days</p>
+                    <div class="half_duration">
+                        <div class="date_item">
+                            <label for="start_date">Date </label>
+                            <input type="date" name="start_date" id="start_date">
+                        </div>
+
+                        <div class="item">
+                            <label for="half">Morning </label>
+                            <input type="radio" id="morning" name="half" value="morning">
+                        </div>
+
+                        <div class="item">
+                            <label for="half">Evening</label>
+                            <input type="radio" name="half" value="evening" id="evening">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="buttons">
+                    <button type="reset" id="cancel">Cancel</button>
+                    <button type="submit" id="request" name="submit">Request</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
+    
 
 <div class="fot">
     <?php $this->view('includes/footer')?>
