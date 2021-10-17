@@ -132,9 +132,10 @@ input {
     height: 40px;
     font-size: 20px;
     font-weight: bold;
-    background: linear-gradient(45deg,  transparent 0%, transparent 57%, #006064 100%),
-    linear-gradient(-45deg, #0277BD 0%,  #B2EBF2 0.3%, #006064 112%,  transparent 11% ),
-    linear-gradient(-90deg, #B2EBF2 100%, #B2EBF2 65%, transparent 20% );
+    /*background: linear-gradient(45deg,  transparent 0%, transparent 57%, #006064 100%),*/
+    /*linear-gradient(-45deg, #0277BD 0%,  #B2EBF2 0.3%, #006064 112%,  transparent 11% ),*/
+    /*linear-gradient(-90deg, #B2EBF2 100%, #B2EBF2 65%, transparent 20% );*/
+    background: #26C6DA;
     color: white;
     letter-spacing: 2px;
     box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.1);
@@ -143,9 +144,10 @@ input {
 }
 
 .form2 button:hover {
-    background: linear-gradient(45deg,  transparent 0%, transparent 57%, #B2EBF2 100%),
-    linear-gradient(-45deg, #0277BD 0%,  #006064 0.3%, #B2EBF2 112%,  transparent 11% ),
-    linear-gradient(-90deg, #006064 100%, #006064 65%, transparent 20% );
+    /*background: linear-gradient(45deg,  transparent 0%, transparent 57%, #B2EBF2 100%),*/
+    /*linear-gradient(-45deg, #0277BD 0%,  #006064 0.3%, #B2EBF2 112%,  transparent 11% ),*/
+    /*linear-gradient(-90deg, #006064 100%, #006064 65%, transparent 20% );*/
+    background: #006064;
     box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.2);
 }
 

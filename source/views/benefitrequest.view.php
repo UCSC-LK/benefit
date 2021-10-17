@@ -11,7 +11,8 @@
 <script type="text/javascript">
     function number_validation() {
         var n = document.forms["myform"]["claiming_amount"].value;
-        if (isNaN(n)) {
+        var decimal = /^[+]?[0-9]+\.[0-9]{2}$/;
+        if (!n.match(decimal)) {
             document.getElementById("numberText").innerHTML = "<div style='font-family: Arial,serif; font-size: smaller; color: red'><i class='fas fa-exclamation' style='color: red;'></i> Please enter Numeric value</div>";
             var r1 = false;
             reason_validation();
