@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public\css\requestleave.css">
     <link rel="stylesheet" href="public\css\color.css">
-    <!-- <script src="../../public/js/request_leave.js"></script> -->
+   
     <title>Request leave</title>
 </head>
 <body id="bdy">
