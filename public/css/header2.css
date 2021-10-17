@@ -15,7 +15,7 @@ body {
     height: 70px;
     margin-bottom: 5px;
     /*margin-left: 5px;*/
-    background-color: #BA68C8;
+    /*background-color: #BA68C8;*/
     display: flex;
     font-family: Arial, serif;
     position: relative;
@@ -31,7 +31,7 @@ body {
     display: flex;
     position: relative;
     width: 100%;
-    background-color: #CE93D8;
+    background-color: #03DAC5;
     border-radius: 10px;
 }
 
@@ -55,7 +55,7 @@ body {
     display: block;
     padding: 12px;
     text-decoration: none;
-    color: #424242;
+    color: var(--header_dark);
     font-weight: 800;
     text-transform: uppercase;
     justify-content: center;
