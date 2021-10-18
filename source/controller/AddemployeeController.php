@@ -177,9 +177,11 @@ class AddemployeeController extends Controller
 
 				if($validate){
 					$arr1[8] = "email is allready used!";
+					unlink($file_designation);
 				}
 				elseif($diff->format('%y') <= 18 && $diff->format('%y') > 60){
 					$arr1[10] = "Employee Age must be greater than 18!";
+					unlink($file_designation);
 				}
 				elseif($complete  && $confirm == $pass && ($diff->format('%y') >= 18) && $jsvalidate == 1 && $sup == 1){
 					
@@ -195,7 +197,7 @@ class AddemployeeController extends Controller
 				}
 				else{
 					$arr1[9] = "Upload Not Completed!";
-					
+					unlink($file_designation);
 				}
 				
 			}
