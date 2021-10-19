@@ -5,6 +5,18 @@ body {
     background-color: #EEEEEE;
 }
 
+.main_container {
+    /*width: 100%;*/
+    margin-top: 0;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-left: 255px;
+    height: 100%;
+    transition: 0.5s;
+}
+
+
 .report_container {
     background-color: white;
     padding-bottom: 5px;

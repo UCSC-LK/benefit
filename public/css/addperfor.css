@@ -6,6 +6,17 @@ body {
     background-color: var(--background);
 }
 
+.main_container {
+    /*width: 100%;*/
+    margin-top: 0;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-left: 255px;
+    height: 100vh;
+    transition: 0.5s;
+}
+
 #cont {
     /* background-color: blueviolet; */
     min-height: 590px;
@@ -13,10 +24,7 @@ body {
 
 /* body, */
 
-div,
-form,
-input,
-p {
+div, form, input, p {
     padding: 0;
     margin: 0;
     outline: none;
@@ -57,14 +65,12 @@ input {
     vertical-align: middle;
 }
 
-input:hover,
-textarea:hover {
+input:hover, textarea:hover {
     outline: none;
     border: 1px solid #095484;
 }
 
-th,
-td {
+th, td {
     width: 15%;
     padding: 15px 0;
     border-bottom: 1px solid #ccc;
@@ -118,8 +124,7 @@ button:hover {
 }
 
 @media (min-width: 568px) {
-    th,
-    td {
+    th, td {
         word-break: keep-all;
     }
 }
