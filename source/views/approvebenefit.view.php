@@ -16,87 +16,93 @@
     $this->view('includes/header1');
     ?>
 </div>
-<div>
+
+<div class="page_content">
     <?php
-    $this->view('includes/hrmanagernavbar');
+    //$this->view('includes/hrmanagernavbar');
+    $this->view('includes/hrnav');
     ?>
-</div>
-<div>
-    <p class="handling_title">Approve Benefit</p>
-</div>
-<div class="approve-container">
-    <?php
 
-    for ($i = 0; $i < sizeof($requested); $i++) {
-        if ($requested>= 1) {
+    <div class="main_container">
+        <div>
+            <p class="handling_title">Approve Benefit</p>
+        </div>
+        <div class="approve-container">
+            <?php
+
+            for ($i = 0; $i < sizeof($requested); $i++) {
+                if ($requested >= 1) {
 //            for ($j = 0; $j < sizeof($requested[$i]); $j++) { ?>
-            <div class='header-approve' id='btn'>
-                <img src='<?= IMG_PATH ?>profile/Chathura.jpeg' alt='Profile Image' class='profile__image'>
-                <p class='name'>
-                    <?php
-                    print_r($requested[$i]['first_name']);
-                    echo " ";
-                    print_r($requested[$i]['last_name']);
-                    ?>
-                </p>
-                <p class='date'>
-                    <?php
-                    print_r($requested[$i]['details']->claim_date); ?>
-                </p>
-            </div>
+                    <div class='header-approve' id='btn'>
+                        <img src='<?= IMG_PATH ?>profile/Chathura.jpeg' alt='Profile Image' class='profile__image'>
+                        <p class='name'>
+                            <?php
+                            print_r($requested[$i]['first_name']);
+                            echo " ";
+                            print_r($requested[$i]['last_name']);
+                            ?>
+                        </p>
+                        <p class='date'>
+                            <?php
+                            print_r($requested[$i]['details']->claim_date); ?>
+                        </p>
+                    </div>
 
 
-            <div class="details">
-                <div class="row">
-                    <div class="column_1">
-                        <label for="benefit_type">Benefit Type</label>
+                    <div class="details">
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="benefit_type">Benefit Type</label>
+                            </div>
+                            <div class="column_2">
+                                <p><?php print_r($requested[$i]['details']->benefit_type) ?></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="date">Date</label>
+                            </div>
+                            <div class="column_2">
+                                <p><?php print_r($requested[$i]['details']->claim_date); ?></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="claim_date">Claim Amount</label>
+                            </div>
+                            <div class="column_2">
+                                <p><?php print_r($requested[$i]['details']->claim_amount); ?></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="reason">Reason</label>
+                            </div>
+                            <div class="column_2">
+                                <p><?php print_r($requested[$i]['details']->benefit_description); ?></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="documents">Documents</label>
+                            </div>
+                            <div class="column_2">
+                                <p><?php print_r($requested[$i]['details']->report_location); ?></p>
+                            </div>
+                        </div>
+                        <div class="buttons">
+                            <input class="reject_button" type="submit" value="Reject" name="reject">
+                            <input class="approve_button" type="submit" value="Approve" name="approve">
+                        </div>
                     </div>
-                    <div class="column_2">
-                        <p><?php print_r($requested[$i]['details']->benefit_type) ?></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column_1">
-                        <label for="date">Date</label>
-                    </div>
-                    <div class="column_2">
-                        <p><?php print_r($requested[$i]['details']->claim_date); ?></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column_1">
-                        <label for="claim_date">Claim Amount</label>
-                    </div>
-                    <div class="column_2">
-                        <p><?php print_r($requested[$i]['details']->claim_amount); ?></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column_1">
-                        <label for="reason">Reason</label>
-                    </div>
-                    <div class="column_2">
-                        <p><?php print_r($requested[$i]['details']->benefit_description); ?></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column_1">
-                        <label for="documents">Documents</label>
-                    </div>
-                    <div class="column_2">
-                        <p><?php print_r($requested[$i]['details']->report_location); ?></p>
-                    </div>
-                </div>
-                <div class="buttons">
-                    <input class="reject_button" type="submit" value="Reject" name="reject">
-                    <input class="approve_button" type="submit" value="Approve" name="approve">
-                </div>
-            </div>
-        <?php }
+                <?php }
 //        }
 
-    } ?>
+            } ?>
+        </div>
+    </div>
 </div>
+
 <!--<template id="temp">-->
 <!--    <div class="details">-->
 <!--        <div class="row">-->

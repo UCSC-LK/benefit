@@ -1,13 +1,19 @@
 body {
-    /*background-color: #E5EDF7;*/
+    background-color: var(--background);
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
-.update_benefit {
-    width: 100%;
+.main_container {
+    /*width: 100%;*/
+    margin-top: 0;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    margin-left: 255px;
     height: 100vh;
-    background-color: #E5EDF7;
+    transition: 0.5s;
 }
 
 .update_head {
