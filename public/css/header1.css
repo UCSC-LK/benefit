@@ -29,7 +29,7 @@ body {
     width: 70%;
     background-color: #0C6170;
     margin-bottom: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .header1 nav ul {
@@ -142,10 +142,10 @@ body {
 
 .dd_main{
     margin-right: 30px;
-	cursor: pointer;
-	color: #fff;
-	font-size: 20px;
-	position: relative;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
 }
 
 .dd_menu {
@@ -172,7 +172,7 @@ body {
     /* padding: 10px 10px; */
     padding-right: 10px;
     border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -214,13 +214,13 @@ body {
 
 .dd_menu::before{
     content: "";
-	position: absolute;
-	top: -20px;
-	right: 30px;
-	border: 10px solid;
-	border-color: transparent transparent #fff transparent;
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    border: 10px solid;
+    border-color: transparent transparent #fff transparent;
 }
 
 .dd_main.active .dd_menu{
-	display: flex;
+    display: flex;
 }

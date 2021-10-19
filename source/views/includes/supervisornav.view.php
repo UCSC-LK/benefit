@@ -20,7 +20,7 @@
     <i class="fas fa-bars" id="sidebar_btn"></i>
 </label>
 
-<div class="side_bar">
+<div class="side_bar" id="mySide">
     <center>
         <img scr="<?= IMG_PATH ?>profile/Chathura.jpeg" class="profile_image" atl="">
         <h4>Sathya</h4>
@@ -31,7 +31,26 @@
     <a href="<?= PATH ?>Supervisor/Performance"><i class="fas fa-edit"></i><span>Handle Performance</span></a>
     <a href="<?= PATH ?>Markattendance"><i class="fas fa-user-check"></i><span>Mark Attendance</span></a>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
 
+
+    window.onscroll = function () {
+        myFunction();
+    }
+
+    var header = document.getElementById("mySide");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
+</script>
 
 </body>
 

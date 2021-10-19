@@ -9,7 +9,7 @@
     <title></title>
 </head>
 <body>
-<div>
+<div id="myProfile">
     <img src="<?= Auth::getprofile_image() ?>" alt="Profile Image" class="profile__image">
     <div class="name"><?= Auth::getfirst_name() ?></div>
     <div class="job"><?= Auth::getuser_role() ?></div>

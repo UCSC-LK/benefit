@@ -21,9 +21,11 @@
 <div class="page_content">
 
     <?php if (Auth::access('HR Manager')): ?>
+    <div>
         <?php
         $this->view('includes/hrnav');
         ?>
+    </div>
     <?php endif; ?>
 
     <?php if (Auth::access('HR Officer')): ?>
@@ -82,12 +84,12 @@
     </div>
 </div>
 
-<div>
-    <?php
-    $this->view('includes/footer')
-    ?>
-
-</div>
+<!--<div>-->
+<!--    --><?php
+//    $this->view('includes/footer')
+//    ?>
+<!---->
+<!--</div>-->
 
 </body>
 </html>
