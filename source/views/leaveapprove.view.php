@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public\css\color.css">
-    <link rel="stylesheet" href="public\css\leaveapprove.css">
+    <link rel="stylesheet" href="public\css\approve.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <title>Leave Approve</title>
 </head>
 <body>
@@ -36,82 +38,71 @@
     <?php endif; ?>
     <!-- <h1>This is Leave Approve Page</h1> -->
     <div class="main_container">
-        <div class="empployee_details">
-            <div class="card">
-                <div class="img">
-                    <img src="public\img\profile\003.PNG" alt="employee name">
-                </div>
-                <p>Chathura Liyanage</p>
-                <p>Leave Date</p>
-            </div>
+        <div>
+            <p class="handling_title">Handle Time Offs</p>
         </div>
-        <div class="leave_details">
-            <table>
-                <tr>
-                    <td class="left">Leave Type</td>
-                    <td>Sick Leave</td>
-                </tr>
+        <div class="approve-container">
+            <div class="card-container">
+                <div class="header-approve" id="btn">
+                    <center>
+                        <img src="<?= IMG_PATH ?>\profile\Dilukshan.png" class="profile__image">
+                    </center>
+                    <p class="name">Dilukshan</p>
+                    <p class="name">Bimasara</p>
+                    <div>
+                        <center>
+                            <i class="fas fa-band-aid"></i>
+                        </center>
+                        <p class="date">06th Oct</p>
+                    </div>
+                    <center>
+                        <button type="button" name="show" value="show">Show</button>
+                    </center>
+                </div>
+                <div class="header-approve" id="btn">
+                    <center>
+                        <img src="<?= IMG_PATH ?>\profile\Dilukshan.png" class="profile__image">
+                    </center>
+                    <p class="name">Dilukshan</p>
+                    <p class="name">Bimasara</p>
+                    <div>
+                        <center>
+                            <i class="fas fa-sun"></i>
+                        </center>
+                        <p class="date">06th Oct</p>
+                    </div>
+                    <center>
+                        <button type="button" name="show" value="show">Show</button>
+                    </center>
+                </div>
+                <div class="header-approve" id="btn">
+                    <center>
+                        <img src="public\img\profile\Dilukshan.png" class="profile__image">
+                    </center>
+                    <p class="name">Dilukshan</p>
+                    <p class="name">Bimasara</p>
+                    <div>
+                        <center>
+                            <i class="far fa-calendar-plus"></i>
+                        </center>
+                        <p class="date">06th Oct</p>
+                    </div>
+                    <center>
+                        <button type="button" name="show" value="show">Show</button>
+                    </center>
+                </div>
+            </div>
+            <div class="detail-container">
 
-                <tr></tr>
-
-                <tr>
-                    <td id="title">Full Days</td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td class="left">Starting Date</td>
-                    <td>Get data db</td>
-                </tr>
-
-                <tr>
-                    <td class="left">Ending Date</td>
-                    <td>Get data db</td>
-                </tr>
-
-                <tr></tr>
-
-                <tr>
-                    <td id="title">Half Day</td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td class="left">Date</td>
-                    <td>Half from db</td>
-                </tr>
-
-                <tr>
-                    <td class="left"></td>
-                    <td>morning or evening</td>
-                </tr>
-
-                <tr>
-                    <td class="left">Remaining Leaves</td>
-                    <td>Reamining sick leaves</td>
-                </tr>
-
-
-                <tr></tr>
-                <tr>
-                    <td class="buttons">
-                        <button type="reset" id="cancel">Reject</button>
-                    </td>
-                    <td class="buttons">
-                        <button type="submit" id="add" name="submit">Approve</button>
-                    </td>
-                </tr>
-                <tr></tr>
-
-            </table>
+            </div>
         </div>
     </div>
 </div>
 
-<div>
-    <?php
-    $this->view('includes/footer')
-    ?>
-</div>
+<!--<div>-->
+<!--    --><?php
+//    $this->view('includes/footer')
+//    ?>
+<!--</div>-->
 </body>
 </html>
