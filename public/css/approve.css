@@ -1,10 +1,11 @@
 @import "color.css";
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, serif;
+    font-family: Roboto, sans-serif;
     background-color: var(--background);
 }
 
@@ -20,66 +21,102 @@ body {
 }
 
 .handling_title {
-    /*width: 100%;*/
-    font-size: xx-large;
-    color: var(--header);
-    text-align: center;
-    justify-content: center;
+    font-size: x-large;
+    color: var(--f);
+    text-align: left;
+    margin: 10px;
 }
 
 .approve-container {
-    padding-left: 20px;
+    padding: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
+}
+
+.card-container {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .header-approve {
-    display: flex;
-    justify-content: space-between;
+    /*display: flex;*/
+    flex-direction: column;
+    display: inline-block;
+    align-items: center;
     background-color: white;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .50);
-    width: 50%;
+    border: 1px solid var(--h2);
+    width: 200px;
+    height: 270px;
     max-height: max-content;
-    border-radius: 50px;
+    border-radius: 10px;
+    font-size: 20px;
     margin: 10px;
-    cursor: pointer;
-}
-
-.header-approve:hover {
-    background-color: var(--grey);
 }
 
 .profile__image {
-    float: left;
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 50%;
-    margin-top: 0;
-    margin-left: 15px;
-    margin-right: 10px;
+    margin: 0;
     padding: 10px;
-    display: flex;
 }
 
 .header-approve .name {
-    max-width: max-content;
-    font-size: large;
     text-decoration: none;
-    margin-left: 10px;
-    margin-right: 10px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.header-approve div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .header-approve .date {
-    margin-right: 30px;
-    font-size: large;
+    text-align: center;
+    margin: 5px 0 0;
+    font-size: medium;
 }
 
-.tab {
-    display: inline-block;
-    margin-left: 20%;
+.header-approve i {
+    font-size: 30px;
+    margin: 0;
+}
+
+.header-approve button {
+    align-self: center;
+    height: 30px;
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    border: 3px solid var(--h2);
+    background-color: var(--w);
+    color: var(--h2);
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/*.header-approve:hover {*/
+/*    background-color: var(--h1);*/
+/*    color: var(--w);*/
+/*}*/
+
+.header-approve button:hover , .header-approve:hover{
+    background-color: var(--h1);
+    color: var(--w);
+}
+
+.detail-container {
+    width: 100%;
 }
 
 .details {
