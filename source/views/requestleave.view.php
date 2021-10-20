@@ -38,8 +38,9 @@
         </div>
             <form action="#" method="post" enctype="multipart/form-data">
                 <div class="leave_type">
-                    <label for="leave_type">Leave Type</label>
+                    <label for="leave_type">Select Leave Type</label>
                     <select name="leave_type" id="leave_type">
+                        <option value="" id="hide"></option>
                         <option value="sick">Sick Leave</option>
                         <option value="casual">Casual Leave</option>
                         <option value="annual">Annual Leave</option>
@@ -51,12 +52,12 @@
                     <div class="full_duration">
                         <div class="start_date">
                             <label for="start_date">Start Date </label>
-                            <input type="date" name="start_date" id="start_date">
+                            <input type="date" name="start_date" id="start_date" min="2021-08-01" max="">
                         </div>
 
                         <div class="end_date">
                             <label for="end_date">End Date</label>
-                            <input type="date" name="end_date" id="end_date">
+                            <input type="date" name="end_date" id="end_date" min="" max="">
                         </div>
                     </div>
 
@@ -67,17 +68,17 @@
                     <div class="half_duration">
                         <div class="date_item">
                             <label for="start_date">Date </label>
-                            <input type="date" name="start_date" id="start_date">
+                            <input type="date" name="start_date" id="half_date" min="2021-08-01" max="2021-10-31" step="1">
                         </div>
 
                         <div class="item">
                             <label for="half">Morning </label>
-                            <input type="radio" id="morning" name="half" value="morning">
+                            <input type="radio" id="half" name="half" value="morning">
                         </div>
 
                         <div class="item">
                             <label for="half">Evening</label>
-                            <input type="radio" name="half" value="evening" id="evening">
+                            <input type="radio" name="half" value="evening" id="half">
                         </div>
 
                     </div>
@@ -96,5 +97,7 @@
 <div class="fot">
     <?php $this->view('includes/footer')?>
 </div>
+
+<script src="public\js\requestleave.js"></script>
 </body>
 </html>
