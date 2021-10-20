@@ -138,6 +138,8 @@
 
                         <div class="claim_button">
                             <input type="submit" value="Apply" name="submit">
+                            <a href="<?=PATH?>/Benefit">
+			 		        <input class="cancle_button" type="button" value="Cancel"></a>
                         </div>
 
                         <script type="text/javascript">

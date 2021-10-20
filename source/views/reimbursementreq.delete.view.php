@@ -16,7 +16,7 @@
  				<form method="post">
 			 	<!--<input disabled autofocus class="form-control" value="<?=get_var('claim',$vai[0]->claim_amount)?>" type="text" name="claim" placeholder="claim"><br><br>-->
 			 	<input type="hidden" name="id">
-			 	<button class="delete-confirmation" type="submit" value="Delete">Delete</button>
+			 	<button class="delete-confirmation" type="submit" value="Delete"><i class="fa fa-trash"></i> Delete</button>
 
 			 	<a href="<?=PATH?>/Reimbursement">
 			 		<input class="cancle-confirmation" type="button" value="Cancel"></a>
