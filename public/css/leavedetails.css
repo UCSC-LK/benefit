@@ -1,3 +1,4 @@
+@import "color.css";
 body {
     margin: 0;
     padding: 0;
@@ -46,10 +47,10 @@ a:link {
 }
 
 .leave_container .timeoff_head .leave_card .card {
-    width: 20%;
-    width: 200px;
+    width: 40%;
+    width: 250px;
     margin: 5px;
-    height: auto;
+    height: 200px;
     background-color: white;
     text-align: center;
     border-radius: 10px;
@@ -64,7 +65,7 @@ a:link {
 
 .leave_container .timeoff_head .leave_card .card .title {
     font-size: x-large;
-    color: rgba(0, 0, 0, 0.600);
+    color: var(--header);
     font-weight: bold;
 }
 
@@ -100,7 +101,6 @@ a:link {
     border-radius: 10px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
     margin: 5px;
-
 }
 
 .leave_container .upcoming_timeoff .upcoming_header {
@@ -119,6 +119,8 @@ a:link {
     align-items: center;
     padding-bottom: 5px;
 }
+
+
 /*code duplicate*/
 
 .leave_container .upcoming_timeoff .upcoming_header .item {
@@ -196,8 +198,8 @@ a:link {
 }
 
 .leave_type {
-    margin: 20px;
-    padding-left: 20px;
+    margin: 23px;
+    padding-left: 23px;
 }
 
 .leave_type #leave,
