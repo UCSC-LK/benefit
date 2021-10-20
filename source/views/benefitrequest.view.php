@@ -66,7 +66,9 @@
 
         <div class="benefit_container">
             <div class="benefit_head">
-                <p class="claim_benefit">Claim Benefit</p>
+            <div class="heading">
+                    <h2>CLAIM BENEFIT</h2>
+                </div>
 
                 <div class="benefit_form">
 
