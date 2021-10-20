@@ -24,7 +24,7 @@
                 <h2>Financial Branch</h2>
                 <p>Manger: Mr.Aruna</p>
                 <p>Employee: 50</p>
-                <button class="show-more">Show More...</button>
+                <button class="show-more">Show More <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
         <div class="column2">
@@ -32,7 +32,7 @@
                 <h2><b>HRM Branch</b></h2>
                 <p>Manger: Mr.Silva</p>
                 <p>Employee: 50</p>
-                <button class="show-more">Show More...</button>
+                <button class="show-more">Show More <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
                 <h2>Operational Branch</h2>
                 <p>Manger: Mr.Chathura</p>
                 <p>Employee: 50</p>
-                <button class="show-more">Show More...</button>
+                <button class="show-more">Show More <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
         <div class="column2">
@@ -51,7 +51,7 @@
                 <h2>Selling Branch</h2>
                 <p>Manger: Mr.Bimsara</p>
                 <p>Employee: 50</p>
-                <button class="show-more">Show More...</button>
+                <button class="show-more">Show More <i class="fas fa-arrow-right"></i></button>
             </div>
         </div>
     </div>
