@@ -32,23 +32,6 @@
             <?php
             $this->view('includes/header2')
             ?>
-<<<<<<< Updated upstream
-        </div>  
-    <div class="leave_container">
-        <div class="timeoff_head">
-            <div class="head_title">
-                <p class="main_title">Time Off</p>
-            </div>
-            
-            <div class="leave_card">
-            
-                <div class="card">
-                <a id = "anchor" href="RequestleaveController">
-                    <p class="title">Casual Leaves</p>
-                    <div class="icon">
-                        <i class="item" data-feather="calendar"></i>
-                        <p class="remain" id="casual_remain">4.5</p>
-=======
         </div>
         <div class="leave_container">
             <div class="timeoff_head">
@@ -67,20 +50,9 @@
                             </div>
                             <p>DAYS AVAILABLE</p>
                         </a>
->>>>>>> Stashed changes
-                    </div>
-                    <p>DAYS AVAILABLE</p>
-                </a>    
-                </div>
 
-<<<<<<< Updated upstream
-                <div class="card">
-                <a id = "anchor" href="RequestleaveController">
-                    <p class="title">Sick Leaves<p>
-                    <div class="icon">
-                        <i class="item" data-feather="plus-square"></i>
-                        <p class="remain"  id="sick_remain">4.5</p>
-=======
+                    </div>
+ 
                     <div class="card" title="Click for Request Lave">
                         <a id = "anchor" href="RequestleaveController">
                             <p class="title">Sick Leaves<p>
@@ -90,20 +62,8 @@
                             </div>
                             <p>DAYS AVAILABLE</p>
                         </a>
->>>>>>> Stashed changes
                     </div>
-                    <p>DAYS AVAILABLE</p>
-                </a>
-                </div>
 
-<<<<<<< Updated upstream
-                <div class="card">
-                <a id = "anchor" href="RequestleaveController">
-                    <p class="title">Annual Leaves</p>
-                    <div class="icon">
-                        <i class="item" data-feather="sun"></i>
-                        <p class="remain"  id="annual_remain">4.5</p>
-=======
                     <div class="card" title="Click for Request Lave">
                         <a id = "anchor" href="RequestleaveController">
                             <p class="title">Annual Leaves</p>
@@ -113,14 +73,9 @@
                             </div>
                             <p>DAYS AVAILABLE</p>
                         </a>
->>>>>>> Stashed changes
                     </div>
-                    <p>DAYS AVAILABLE</p>
-                </a>
                 </div>
-
             </div>
-        </div>
 
         <div class="upcoming_timeoff">
 
