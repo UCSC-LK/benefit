@@ -159,11 +159,11 @@
     </div>
 </div>
 
-<div>
-    <?php
-    $this->view('includes/footer')
-    ?>
-</div>
+<!--<div>-->
+<!--    --><?php
+//    $this->view('includes/footer')
+//    ?>
+<!--</div>-->
 
 </body>
 </html>

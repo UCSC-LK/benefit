@@ -1,6 +1,9 @@
 @import "color.css";
+
 body {
     font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .header1 {
@@ -10,7 +13,6 @@ body {
     justify-content: space-between;
     position: relative;
     max-width: 100%;
-    /* margin-bottom: 5px; */
     border-radius: 10px;
     margin: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -27,8 +29,8 @@ body {
     display: flex;
     position: relative;
     width: 70%;
-    background-color: #0C6170;
-    margin-bottom: 5px;
+    background-color: var(--h1);
+    /*margin-bottom: 5px;*/
     border-radius: 10px;
 }
 
@@ -57,7 +59,7 @@ body {
     font-size: larger;
     font-weight: 800;
     text-transform: uppercase;
-    margin: 0 5px;
+    margin: 0;
 }
 
 .header1 nav ul li a,
@@ -140,7 +142,7 @@ body {
     color: #333333;
 }
 
-.dd_main {
+.dd_main{
     margin-right: 30px;
     cursor: pointer;
     color: #fff;
@@ -150,77 +152,76 @@ body {
 
 .dd_menu {
     position: absolute;
-    right: -35px;
-    top: 47px;
-    display: flex;
+    right:-35px;
+    top:47px;
+    /*display:flex;*/
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
     display: none;
-    cursor: default;
+    cursor:default;
     z-index: 4;
 }
 
-.dd_menu ul {
+.dd_menu ul{
     margin: 0;
     padding: 0;
 }
 
 .dd_menu .dd_left {
     width: 30px;
-    background-color: #0C6170;
-    /* padding: 10px 10px; */
-    padding-right: 10px;
+    background-color: var(--h1);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding: 10px 20px 10px 5px;
 }
 
-.dd_menu .dd_left a {
+.dd_menu .dd_left li {
+    padding-top: 5px;
+}
+
+.dd_menu .dd_left a  {
     color: white;
     list-style-type: none;
     padding-left: 10px;
-    margin: auto;
     cursor: pointer;
 }
 
 .dd_menu .dd_right {
     width: 100px;
-    padding-left: 5px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 20px 10px 5px;
 }
 
-.dd_menu .dd_right li {
+.dd_menu .dd_right li{
     padding-top: 5px;
-    margin-top: 20px;
-    margin: auto;
     cursor: pointer;
 }
 
-.dd_menu li {
+.dd_right li a{
+    text-decoration: none;
+}
+
+.dd_menu li{
     margin-bottom: 10px;
     margin-top: 10px;
-    color: #868686;
+    color:  #868686;
     list-style-type: none;
     cursor: pointer;
     font-weight: bold;
 }
 
-.dd_menu::before {
+.dd_menu::before{
     content: "";
     position: absolute;
     top: -20px;
-    right: 30px;
+    right: 45px;
     border: 10px solid;
     border-color: transparent transparent #fff transparent;
 }
 
-.dd_main.active .dd_menu {
+.dd_main.active .dd_menu{
     display: flex;
 }

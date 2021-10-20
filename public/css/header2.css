@@ -13,7 +13,6 @@ body {
 
 .header2 {
     height: 70px;
-    margin-bottom: 5px;
     /*margin-left: 5px;*/
     /*background-color: #BA68C8;*/
     display: flex;
@@ -21,7 +20,7 @@ body {
     position: relative;
     border-radius: 10px;
     margin-right: 5px;
-    margin-left: 5px;
+    margin-bottom: 5px;
 }
 
 

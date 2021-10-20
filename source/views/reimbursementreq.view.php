@@ -62,8 +62,6 @@
                         <div class="column_1">
                             <label for="submission">Invoice Submission</label>
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="invoice_submission">
                             <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" required>
                         </div>
@@ -135,9 +133,9 @@
         </div>
     </div>
 </div>
-<div>
-    <?php $this->view('includes/footer') ?>
-</div>
+<!--<div>-->
+<!--    --><?php //$this->view('includes/footer') ?>
+<!--</div>-->
 <script src="public/js/reimbursement.js"></script>
 </body>
 </html>

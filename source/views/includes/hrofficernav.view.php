@@ -20,10 +20,10 @@
     <i class="fas fa-bars" id="sidebar_btn"></i>
 </label>
 
-<div class="side_bar">
+<div class="side_bar" id="mySide">
     <center>
         <img scr="<?= IMG_PATH ?>profile/Chathura.jpeg" class="profile_image" atl="">
-        <h4>Sathya</h4>
+        <h4>Bimsara</h4>
     </center>
     <a href="<?=PATH?>AddemployeeController"><i class="far fa-address-book"></i><span>Registration</span></a>
     <a href="<?=PATH?>EmployeelistController"><i class="fas fa-calendar-week"></i></i>
@@ -32,6 +32,24 @@
     <a href="<?=PATH?>Benefit/update"><i class="fas fa-user-check"></i><span>Update Benefits</span></a>
 </div>
 
+<script>
+
+    window.onscroll = function () {
+        myFunction();
+    }
+
+    var header = document.getElementById("mySide");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
+</script>
 
 </body>
 
