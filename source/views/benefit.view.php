@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="<?= CSS_PATH ?>header2.css">
     <link rel="stylesheet" href="<?= CSS_PATH ?>footer.css">
 
+
     <title></title>
 </head>
 <body>
@@ -102,10 +103,10 @@
                                 <div><?php print_r($row->claim_date); ?></div>
                                 <div><i>Pending</i></div>
                                 <a href="<?=PATH?>Benefit/change/<?=$row->claim_date?>">
-                                    <button type='submit' value='Change' name="change" class='change_button'>Change</button>
+                                    <button type='submit' value='Change' name="change" class='change_button'><i class="fa fa-edit"></i> Update</button>
                                 </a>
                                 <a href="<?=PATH?>Benefit/delete/<?=$row->claim_date?>">
-                                    <button type='submit' value='Decline' name="delete" class='delete_button'>Decline</button>
+                                <button type='submit' value='Decline' name="delete" class='delete_button'><i class="fa fa-trash"></i> Delete</button>
                                 </a>
                             </div>
                         <?php }
@@ -115,13 +116,13 @@
 
                 <div class="benefit_type">
                     <form action="">
-
+                    <i class="fa fa-search"></i>
                         <select id="benefit" name="benefit">
                             <option value="medical">Medical Insurance</option>
                             <option value="life">Life Insurance</option>
                             <option value="accident">Accident Insurance</option>
                         </select>
-                        <input id="button" type="submit" value="Search"/>
+                        <!-- <input id="button" type="submit" value="Search"/> -->
                     </form>
                 </div>
 

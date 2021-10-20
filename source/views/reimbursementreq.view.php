@@ -29,7 +29,7 @@
 
             <div class="reimbursement_details">
                 <div class="heading">
-                    <h2>Claim Reimbursement</h2>
+                    <h2>CLAIM REIMBURSEMENT</h2>
                 </div>
                 <form name="myform" action="#" method="POST"  onsubmit=" return validation()">
 
@@ -70,7 +70,10 @@
                     </div>
 
                     <div class="apply_button">
-                        <input type="submit" value="Apply" name="submit">
+                    <input type="submit" value="Apply" name="submit">
+                    <a href="<?=PATH?>/Reimbursement">
+			 		<input class="cancle_button" type="button" value="Cancel"></a>
+
                     </div>
                 </form>
             </div>
@@ -109,12 +112,11 @@
                             if ($vai->reimbursement_status == "pending") {
                                 ?>
                                 <!--<button type="Submit" value="Submit" name="delete">Delete</button>-->
-                                <a href="<?= PATH ?>Reimbursement/delete/<?= $vai->invoice_submission ?>">
-                                    <button type="Submit" value="Submit" name="delete" class="delete_button">Delete</button></a>
-
                                 <a href="<?= PATH ?>Reimbursement/update_reimbursement">
-                                    <button type="Submit" value="Submit" name="update" class="update_button">Update</button></a>
+                                    <button type="Submit" value="Submit" name="update" class="update_button"><i class="fa fa-edit"></i> Update</button></a>
 
+                                <a href="<?= PATH ?>Reimbursement/delete/<?= $vai->invoice_submission ?>">
+                                    <button type="Submit" value="Submit" name="delete" class="delete_button"><i class="fa fa-trash"></i> Delete</button></a>
 
                             <?php } ?>
                         <?php } ?></td>

@@ -1,3 +1,4 @@
+@import "color.css";
 body {
     margin: 0;
     padding: 0;
@@ -17,23 +18,24 @@ body {
 .reimbursement_details {
     background-color: white;
     max-width: 100%;
-    padding: 10px;
+    padding: 50px;
     border-radius: 10px;
     margin: 5px;
 }
 
 .heading h2 {
     /*background-color: rgb(255, 255, 255);*/
+    /*background-color: rgb(255, 255, 255);*/
     max-width: 100%;
-    padding: 10px;
+    padding: 2px;
     text-align: center;
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
-    color: #1C1D1D;
+    color: #057a7a;
 }
 
 .row {
-    padding-left: 40px;
+    padding-left: 150px;
     padding-top: 30px;
     display: flex;
     justify-items: center;
@@ -63,12 +65,13 @@ body {
 }
 
 .invoice_submission {
-    width: 97%;
+    width: 67%;
     height: 160px;
     justify-content: center;
     text-align: center;
     border-radius: 10px;
     border-style: dotted;
+    display: inline-block;
 }
 
 .apply_button {
@@ -76,6 +79,32 @@ body {
     padding-bottom: 30px;
     display: flex;
     justify-content: center;
+}
+
+.cancle_button {
+    background-color: #fcfaf9;
+    border-radius: 100px;
+    color: var(--red);
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    letter-spacing: 2px;
+    border: 1.5px solid black;
+    margin-left: 25px;
+}
+
+.cancle_button:hover {
+    box-shadow: 0px 2px 5px var(--red);
+    transform: scale(1.05);
+    border-style: none;
 }
 
 .reimbursement_container .history {
@@ -108,41 +137,89 @@ body {
 }
 
 input[type=submit] {
-    background-color: #2828CF;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    background-color: #6fccee;
+    border-radius: 100px;
+    color: var(--header);
     cursor: pointer;
-    height: 33px;
-    width: 80%;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 7px 30px 7px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    letter-spacing: 2px;
+    margin-left: 5%;
+    margin-right: 7%;
+    border: 1.5px solid var(--header);
+}
+
+input[type=submit]:hover {
+    box-shadow: 0px 2px 5px var(--header);
+    transform: scale(1.05);
+    border-style: none;
 }
 
 .delete_button {
-    background-color: #2828CF;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: white;
-    border: none;
-    border-radius: 25px;
+    background-color: #f1c4bd;
+    border-radius: 100px;
+    color: var(--red);
     cursor: pointer;
-    height: 33px;
-    width: 20%;
-    margin-left: 25%;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    letter-spacing: 2px;
+}
+
+.delete_button:hover {
+    box-shadow: 0px 2px 5px var(--red);
+    transform: scale(1.05);
 }
 
 .update_button {
-    background-color: #2828CF;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: white;
-    border: none;
-    border-radius: 25px;
+    background-color: #a4dff5;
+    border-radius: 100px;
+    color: var(--header);
     cursor: pointer;
-    height: 33px;
-    width: 20%;
-    margin-left: 2%;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    letter-spacing: 2px;
+    margin-left: 5%;
+    margin-right: 7%;
+}
+
+.update_button:hover {
+    box-shadow: 0px 2px 5px var(--header);
+    transform: scale(1.05);
+}
+
+#claim_history_table {
+    width: max-content;
+    width: 100%;
 }
 
 table {
@@ -153,6 +230,8 @@ table {
 th {
     border: 1px solid rgb(213, 213, 214);
     background-color: rgb(221, 221, 243);
+    max-width: 100%;
+    width: 30%;
 }
 
 
@@ -180,19 +259,28 @@ th {
 }
 
 .delete-confirmation {
-    background-color: #2828CF;
-    font-weight: bold;
-    letter-spacing: 3px;
-    font-family: Arial;
-    color: white;
-    border: none;
-    border-radius: 25px;
+    background-color: #a4dff5;
+    border-radius: 100px;
+    color: var(--header);
     cursor: pointer;
-    height: 33px;
-    width: 25%;
-    margin-left: 15%;
-    margin-right: 7%;
-    margin-top: 3%;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    letter-spacing: 2px;
+}
+
+.delete-confirmation:hover {
+    box-shadow: 0px 15px 20px var(--header);
+    transform: scale(1.05);
 }
 
 .cancle-confirmation {

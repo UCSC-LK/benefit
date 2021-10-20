@@ -17,14 +17,38 @@ body {
     transition: 0.5s;
 }
 
+.performance_details {
+    background-color: white;
+    max-width: 100%;
+    padding: 50px;
+    border-radius: 10px;
+    margin: 5px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.heading h2 {
+    /*background-color: rgb(255, 255, 255);*/
+    max-width: 100%;
+    padding: 2px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    color: #057a7a;
+}
+
 #cont {
     /* background-color: blueviolet; */
     min-height: 590px;
 }
 
+
 /* body, */
 
-div, form, input, p {
+div,
+form,
+input,
+p {
     padding: 0;
     margin: 0;
     outline: none;
@@ -65,12 +89,14 @@ input {
     vertical-align: middle;
 }
 
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
     outline: none;
     border: 1px solid #095484;
 }
 
-th, td {
+th,
+td {
     width: 15%;
     padding: 15px 0;
     border-bottom: 1px solid #ccc;
@@ -124,7 +150,8 @@ button:hover {
 }
 
 @media (min-width: 568px) {
-    th, td {
+    th,
+    td {
         word-break: keep-all;
     }
 }

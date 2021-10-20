@@ -21,7 +21,10 @@
             $this->view('includes/profile1');
             ?>
         </div>
+
+
     <div class="content" id="cont">
+
 <!-- <div class="header2">
     <div class="nav-bar2" id="nav-bar">
         <div class="list"><a href="#">Time Off</a></div>
@@ -33,6 +36,10 @@
     <?php
         $this->view('includes/header2');
         ?>
+    <div class="performance_details">
+    <div class="heading">
+                    <h2>PERFORMANCES</h2>
+                </div>
    <div>
     <div class="conta" style="max-width: 75%;">
         <div class="row">
@@ -81,6 +88,7 @@ else{
     ?>
     <h3 style="text-align: center;">You don't have recods yet</h3>
 <?php }?>
+</div>
 </div>
 </div>
 </div>
