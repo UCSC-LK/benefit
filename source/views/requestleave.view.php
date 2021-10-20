@@ -69,18 +69,24 @@
                     <div class="half_duration">
                         <div class="date_item">
                             <label for="start_date">Date </label>
-                            <input type="date" name="start_date" id="half_date" min="2021-08-01" max="2021-10-31" step="1">
+                            <input type="date" name="start_date" id="half_date" min="" max="" >
                         </div>
 
                         <div class="item">
-                            <label for="half">Morning </label>
-                            <input type="radio" id="half" name="half" value="morning">
+                            <div>
+                                <label for="half">Morning </label>
+                                <input type="radio" id="half" name="half" value="morning">
+                            </div>
+                            <div>
+                                <label for="half">Evening</label>
+                                <input type="radio" name="half" value="evening" id="half">
+                            </div>
                         </div>
 
-                        <div class="item">
+                        <!-- <div class="item">
                             <label for="half">Evening</label>
                             <input type="radio" name="half" value="evening" id="half">
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
