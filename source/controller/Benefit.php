@@ -43,7 +43,7 @@ class Benefit extends Controller
             $user->deleteper('claim_date',$id);
             $this->redirect('Benefit');
         }
-        $this->view('reimbursementreq.delete');
+        $this->view('benefit.delete');
     }
 
 //    function update(){
