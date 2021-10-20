@@ -126,8 +126,7 @@
                             <div class="column_1">
                                 <label for="submission">Report Submission</label>
                             </div>
-                        </div>
-                        <div class="row">
+
                             <div class="report_submission">
                                 <input type="file" id="report_submission" name="report_submission"
                                        accept=".pdf, .png" multiple required>
@@ -166,14 +165,13 @@
         </div>
     </div>
 </div>
-</div>
 
-<div>
-    <?php
-    $this->view('includes/footer')
-    ?>
-
-</div>
+<!--<div>-->
+<!--    --><?php
+//    $this->view('includes/footer')
+//    ?>
+<!---->
+<!--</div>-->
 <!--<script src="public\js\Benefitrequest.js"></script>-->
 </body>
 </html>

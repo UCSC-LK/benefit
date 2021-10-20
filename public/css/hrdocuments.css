@@ -1,11 +1,10 @@
-* {
-    box-sizing: border-box;
+body {
+    font-family: Roboto, sans-serif;
+    background-color: var(--background)
 }
 
-body {
-    font-family: Arial;
-    margin: 0;
-    padding: 0;
+* {
+    box-sizing: border-box;
 }
 
 .main_container {
@@ -15,7 +14,7 @@ body {
     background-color: white;
     padding: 10px;
     margin-left: 255px;
-    height: 100vh;
+    height: 100%;
     transition: 0.5s;
 }
 

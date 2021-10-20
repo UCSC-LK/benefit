@@ -29,13 +29,13 @@
             <?php
             $this->view('includes/header2')
             ?>
-        </div> 
-        
+        </div>
+
 
         <div class="input_feild">
-       
+
             <form action="#" method="post" enctype="multipart/form-data">
-            <div class="heading">
+                <div class="heading">
                     <h2>REQUEST LEAVES</h2>
                 </div>
                 <div class="leave_type">
@@ -69,7 +69,7 @@
                     <div class="half_duration">
                         <div class="date_item">
                             <label for="start_date">Date </label>
-                            <input type="date" name="start_date" id="half_date" min="" max="" >
+                            <input type="date" name="start_date" id="half_date" min="" max="">
                         </div>
 
                         <div class="item">
@@ -100,11 +100,11 @@
         </div>
     </div>
 </div>
-    
 
-<div class="fot">
-    <?php $this->view('includes/footer')?>
-</div>
+
+<!--<div class="fot">-->
+<!--    --><?php //$this->view('includes/footer')?>
+<!--</div>-->
 
 <script src="public\js\requestleave.js"></script>
 </body>

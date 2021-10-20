@@ -52,7 +52,7 @@
                         </a>
 
                     </div>
- 
+
                     <div class="card" title="Click for Request Lave">
                         <a id = "anchor" href="RequestleaveController">
                             <p class="title">Sick Leaves<p>
@@ -77,72 +77,73 @@
                 </div>
             </div>
 
-        <div class="upcoming_timeoff">
+            <div class="upcoming_timeoff">
 
-            <div class="upcoming_header">
-                <i class="item" data-feather="clock"></i>
-                <p class="main_title">Upcoming Time Off</p>
-            </div>
-
-            <div class="upcoming_detail">
-                <div class="icon">
+                <div class="upcoming_header">
                     <i class="item" data-feather="clock"></i>
+                    <p class="main_title">Upcoming Time Off</p>
                 </div>
-                <div class="description">
-                    <!-- Dummy hard code value only -->
-                    <!-- this data filling after open this page and then get data fron database -->
-                    <div class="leave_name">
-                        <p id="day">May 15</p>
-                        <p id="reson">vesak full moon poya day</p>
-                    </div>
 
-                    <div class="leave_status">
-                        <p id="status">pending</p>
+                <div class="upcoming_detail">
+                    <div class="icon">
+                        <i class="item" data-feather="clock"></i>
                     </div>
+                    <div class="description">
+                        <!-- Dummy hard code value only -->
+                        <!-- this data filling after open this page and then get data fron database -->
+                        <div class="leave_name">
+                            <p id="day">May 15</p>
+                            <p id="reson">vesak full moon poya day</p>
+                        </div>
 
-                    
+                        <div class="leave_status">
+                            <p id="status">pending</p>
+                        </div>
+
+
+                    </div>
                 </div>
+
             </div>
-            
-        </div>
-        <div class="leave_history">
-            <div class="history_header">
-                <i class="item" data-feather="clipboard"></i>
-                <p class="main_title">Leave History</p>
-            </div>
+            <div class="leave_history">
+                <div class="history_header">
+                    <i class="item" data-feather="clipboard"></i>
+                    <p class="main_title">Leave History</p>
+                </div>
 
 
-            <div class="leave_type">
-                <!-- <form onsubmit="return doSearch()"> -->
-                <form action="">
-                    <!-- <input type="option" id="search" required/>
-                    <input type="submit" value="Search"/> -->
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <select id="leave" name="leave">
-                        <option value="sick">Sick Leaves</option>
-                        <option value="casual">Casual Leaves</option>
-                        <option value="annual">Annual Leaves</option>
-                    </select>
-                    <!-- <input id="button" type="submit" value="Search"/> -->
-                </form>
+                <div class="leave_type">
+                    <!-- <form onsubmit="return doSearch()"> -->
+                    <form action="">
+                        <!-- <input type="option" id="search" required/>
+                        <input type="submit" value="Search"/> -->
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <select id="leave" name="leave">
+                            <option value="sick">Sick Leaves</option>
+                            <option value="casual">Casual Leaves</option>
+                            <option value="annual">Annual Leaves</option>
+                        </select>
+                        <!-- <input id="button" type="submit" value="Search"/> -->
+                    </form>
+                </div>
+                <table id="leave_history_result" >
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Used</th>
+                    </tr>
+                </table>
             </div>
-            <table id="leave_history_result" >
-                <tr>
-                    <th>Date</th>
-                    <th>Description</th>
-                    <th>Used</th>
-                </tr>
-            </table>
         </div>
     </div>
-    </div>
+</div>
     <script>
         feather.replace()
     </script>
-   
-</div>
-    <?php $this->view('includes/footer')?>
-</div>
+
+<!--</div>-->
+<?php //$this->view('includes/footer')?>
+<!--</div>-->
 </body>
 
 </html>

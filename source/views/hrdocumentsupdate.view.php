@@ -30,7 +30,7 @@
 
     <?php if (Auth::access('HR Officer')): ?>
         <?php
-        $this->view('includes/hrofficernavbar');
+        $this->view('includes/hrofficernav');
         ?>
     <?php endif; ?>
 

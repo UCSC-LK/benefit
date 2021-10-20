@@ -20,7 +20,7 @@ body {
     max-width: 100%;
     padding: 50px;
     border-radius: 10px;
-    margin: 5px;
+    margin: 0 5px 5px 0;
 }
 
 .heading h2 {
@@ -35,27 +35,27 @@ body {
 }
 
 .row {
-    padding-left: 150px;
     padding-top: 30px;
     display: flex;
-    justify-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .column_1 {
     font-size: medium;
-    padding: 12px 20px;
+    /*padding: 12px 20px;*/
     width: 20%;
     color: #1C1D1D;
+    text-align: left;
 }
 
 .column_2 {
-    width: 70%;
-    padding-left: 15px;
+    width: 40%;
 }
 
 .column_2 input,
 .column_2 textarea {
-    width: 70%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -65,13 +65,12 @@ body {
 }
 
 .invoice_submission {
-    width: 67%;
-    height: 160px;
+    width: 40%;
+    height: 120px;
     justify-content: center;
     text-align: center;
     border-radius: 10px;
     border-style: dotted;
-    display: inline-block;
 }
 
 .apply_button {
@@ -115,7 +114,7 @@ body {
     flex-direction: column;
     border-radius: 10px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
-    margin: 10px;
+    margin: 0 5px 5px 0;
 }
 
 .history_header {
