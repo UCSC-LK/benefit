@@ -1,5 +1,4 @@
 @import "color.css";
-
 body {
     margin: 0;
     padding: 0;
@@ -24,7 +23,9 @@ body {
     margin: 5px;
 }
 
+
 /* use .main_title class for every title style */
+
 .main_title {
     width: 100%;
     color: #232F34;
@@ -56,7 +57,7 @@ body {
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .50);
 }
 
-.benefit_container .benefit_head .benefit_card .card:hover{
+.benefit_container .benefit_head .benefit_card .card:hover {
     cursor: pointer;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, 1);
 }
@@ -115,7 +116,6 @@ body {
     padding-bottom: 30px;
     display: flex;
     justify-content: center;
-
 }
 
 input[type=submit] {
@@ -130,45 +130,95 @@ input[type=submit] {
     width: 70%;
 }
 
+
 /*.pending_benefits a {*/
+
+
 /*    padding-left: 10px;*/
+
+
 /*    padding-right: 10px;*/
+
+
 /*}*/
 
-a .delete_button {
-    border-radius: 50px;
-    width: 100%;
-    background-color: #2828CF;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: white;
-    border: none;
+a .change_button {
+    background-color: #a4dff5;
+    border-radius: 100px;
+    color: var(--header);
     cursor: pointer;
-    height: 33px;
-    margin: 5px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    letter-spacing: 2px;
 }
 
-a .change_button {
-    border-radius: 50px;
-    width: 100%;
-    background-color: green;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: white;
-    border: none;
+a .change_button:hover {
+    box-shadow: 0px 2px 5px var(--header);
+    transform: scale(1.05);
+}
+
+a .delete_button {
+    background-color: #f1c4bd;
+    border-radius: 100px;
+    color: var(--red);
     cursor: pointer;
-    height: 33px;
-    margin: 5px;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    letter-spacing: 2px;
+}
+
+.row {
+    padding-left: 150px;
+    padding-top: 30px;
+    display: flex;
+    justify-items: center;
+}
+
+.column_1 {
+    font-size: medium;
+    padding: 12px 20px;
+    width: 20%;
+    color: #1C1D1D;
+}
+
+.column_2 {
+    width: 70%;
+    padding-left: 15px;
+}
+
+a .delete_button:hover {
+    box-shadow: 0px 2px 5px var(--red);
+    transform: scale(1.05);
 }
 
 input[type=submit]:hover {
     background-color: blue;
 }
 
+
 /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAA */
-
 
 .benefit_history {
     background-color: white;
@@ -233,7 +283,13 @@ AAAAAAAAAAAAAAAAAAAAAAAA */
     padding-left: 20px;
 }
 
-.benefit_type #benefit, input {
+.item {
+    margin: auto;
+    padding-right: 10px;
+}
+
+.benefit_type #benefit,
+input {
     height: 25px;
     border-style: none;
     border-bottom: 1px solid rgb(145, 143, 143);
@@ -255,11 +311,11 @@ AAAAAAAAAAAAAAAAAAAAAAAA */
 
 
 /* Dont work */
+
 .benefit_type form #input :hover {
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .50);
     width: 70px;
 }
-
 
 table th {
     border: 1px solid rgb(213, 213, 214);

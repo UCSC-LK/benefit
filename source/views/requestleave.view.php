@@ -33,10 +33,11 @@
         
 
         <div class="input_feild">
-            <div class="title">
-                <p>REQUEST LEAVE</p>
-        </div>
+       
             <form action="#" method="post" enctype="multipart/form-data">
+            <div class="heading">
+                    <h2>REQUEST LEAVES</h2>
+                </div>
                 <div class="leave_type">
                     <label for="leave_type">Select Leave Type</label>
                     <select name="leave_type" id="leave_type">
