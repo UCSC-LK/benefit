@@ -80,6 +80,10 @@
     color: white;
 }
 
+.address p {
+    margin: 0;
+}
+
 .supervisor {
     display: flex;
     align-items: center;

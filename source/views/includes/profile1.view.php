@@ -11,7 +11,7 @@
 <body>
 <div id="myProfile">
     <img src="<?= Auth::getprofile_image() ?>" alt="Profile Image" class="profile__image">
-    <div class="name"><?= Auth::getfirst_name() ?></div>
+    <div class="name"><?= Auth::getfirst_name() ?> <?= Auth::getlast_name() ?></div>
     <div class="job"><?= Auth::getuser_role() ?></div>
     <div class="contact">
         <i class="material-icons1"><?= Auth::getcontact_number() ?></i>
@@ -21,7 +21,7 @@
     </div>
     <div class="hire">Hired Date</div>
     <div class="date">27th Aug 2019</div>
-    <div class="address">No 22, ABD Rd, Galle</div>
+    <div class="address"><?= Auth::getstreet() ?>, <?= Auth::getcity() ?> <p> <?= Auth::getprovince() ?> province </p></div>
     <div class="supervisor">
         <i class="material-icons">supervisor_account</i>Mr.Dilukshan
     </div>
