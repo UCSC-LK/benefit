@@ -53,6 +53,9 @@
                                     <div class="max_amount">200,000 LKR</div>
                                     <div class="text">Renew Date</div>
                                     <div class="text">25th Jan 2022</div>
+                                    <div>
+                                        <button type="submit" value="claim">Claim</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="benefit_card_column">
@@ -64,6 +67,9 @@
                                     <div class="max_amount">200,000 LKR</div>
                                     <div class="text">Renew Date</div>
                                     <div class="text">25th Jan 2022</div>
+                                    <div>
+                                        <button type="submit" value="claim">Claim</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="benefit_card_column">
@@ -75,13 +81,16 @@
                                     <div class="max_amount">200,000 LKR</div>
                                     <div class="text">Renew Date</div>
                                     <div class="text">25th Jan 2022</div>
+                                    <div>
+                                        <button type="submit" value="claim">Claim</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         </a>
-                        <div class="claim_button">
-                            <input type="submit" value="Apply" name="submit">
-                        </div>
+<!--                        <div class="claim_button">-->
+<!--                            <input type="submit" value="Apply" name="submit">-->
+<!--                        </div>-->
                     </form>
                 </div>
 

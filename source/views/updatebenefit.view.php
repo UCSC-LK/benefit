@@ -18,10 +18,21 @@
 </div>
 
 <div class="page_content">
-    <?php
-    //$this->view('includes/hrmanagernavbar');
-    $this->view('includes/hrofficernav');
-    ?>
+    <?php if (Auth::access('HR Manager')): ?>
+        <div>
+            <?php
+            $this->view('includes/hrnav');
+            ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if (Auth::access('HR Officer')): ?>
+        <div>
+            <?php
+            $this->view('includes/hrofficernav');
+            ?>
+        </div>
+    <?php endif; ?>
 
     <div class="main_container">
         <div>
