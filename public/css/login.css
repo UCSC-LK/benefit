@@ -1,6 +1,8 @@
+@import "color.css";
+
 body {
-    background-color: #D3DBDD;
-    font-family: Arial;
+    background-color: #d9e8ea;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -16,10 +18,9 @@ body {
 }
 
 .container {
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/opacity/see-through */
+    /*background-color: rgb(0,0,0); !* Fallback color *!*/
+    background-color: white;
+    /*background-color: rgba(147, 146, 146, 0.4); !* Black w/opacity/see-through *!*/
     color: white;
     font-weight: bold;
     position: absolute;
@@ -33,29 +34,6 @@ body {
     border-radius: 10px;
 }
 
-
-/*.footer {*/
-
-
-/*    position: fixed;*/
-
-
-/*    width: 100%;*/
-
-
-/*    height: 70px;*/
-
-
-/*    background-color: #5016d0;*/
-
-
-/*    text-align: center;*/
-
-
-/*    bottom: 0;*/
-
-
-/*}*/
 
 .ofs {
     color: #DCDCE0;
@@ -73,11 +51,14 @@ body {
     margin: auto;
     width: 100%;
     height: 10%;
-    color: white;
+    color: var(--h1);
+    background-color: var(--h2);
     letter-spacing: 4px;
     text-align: center;
     padding-top: 15px;
+    padding-bottom: 15px;
     word-spacing: 4px;
+    border-radius: 10px;
 }
 
 .frm {
@@ -100,7 +81,7 @@ input {
     color: #0D0D0D;
     border-radius: 10px;
     background-color: transparent;
-    border-bottom: 2px solid #00ACC1;
+    border: 1px solid #8b8989;
 }
 
 .shw {
@@ -120,6 +101,7 @@ input {
     max-width: max-content;
     grid-column-gap: 1px;
     grid-template-columns: auto auto auto;
+    color: var(--h1);
 }
 
 .forgot_password {
@@ -135,8 +117,8 @@ input {
     float: right;
 }
 
-.psw a {
-    color: #26C6DA;
+.psw a{
+    color: var(--h1);
 }
 
 .form2 {
@@ -152,7 +134,7 @@ input {
     /*background: linear-gradient(45deg,  transparent 0%, transparent 57%, #006064 100%),*/
     /*linear-gradient(-45deg, #0277BD 0%,  #B2EBF2 0.3%, #006064 112%,  transparent 11% ),*/
     /*linear-gradient(-90deg, #B2EBF2 100%, #B2EBF2 65%, transparent 20% );*/
-    background: #26C6DA;
+    background: var(--h1);
     color: white;
     letter-spacing: 2px;
     box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.1);
@@ -164,9 +146,10 @@ input {
     /*background: linear-gradient(45deg,  transparent 0%, transparent 57%, #B2EBF2 100%),*/
     /*linear-gradient(-45deg, #0277BD 0%,  #006064 0.3%, #B2EBF2 112%,  transparent 11% ),*/
     /*linear-gradient(-90deg, #006064 100%, #006064 65%, transparent 20% );*/
-    background: #006064;
+    background: rgba(12, 97, 112, 0.71);
     box-shadow: 3px 5px 5px rgba(162, 160, 160, 0.2);
 }
+
 
 .h {
     /*padding-left: 5%;*/

@@ -8,7 +8,7 @@
 <title>Forgot-password</title>
 
 <body>
-<div class="big-img"></div>
+<!--<div class="big-img"></div>-->
 <div class="container">
     <div class="box-a">
         <h2 class="h2">ORACLE FREIGHT SOLUTIONS</h2>
@@ -22,7 +22,7 @@
                 <button type="submit" name="reset-req">Reset Password</button>
             </div>
         </form>
-        <div class="check-email" style="text-align: center; color: white; font-size: 15px">
+        <div class="check-email" style="text-align: center; font-size: 15px; color: #22242A">
         <?php
             if(isset($_GET['reset']))
             {
@@ -37,9 +37,10 @@
     </div>
     </div>
 </div>
-<div class="footer">
-    <p class="ofs">Copyright © 2021 Oracle Freight Solutions | Powered by Oracle Freight Solutions</p>
-</div>
+
+<!--<div class="footer">-->
+<!--    <p class="ofs">Copyright © 2021 Oracle Freight Solutions | Powered by Oracle Freight Solutions</p>-->
+<!--</div>-->
 
 </body>
 </html>

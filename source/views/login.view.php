@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="<?= CSS_PATH ?>login.css">
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <body>
-<div class="big-img"></div>
+<!--<div class="big-img"></div>-->
 <div class="container">
     <div class="box-a">
         <h2 class="h2">ORACLE FREIGHT SOLUTIONS</h2>
@@ -21,12 +21,12 @@
             </div>
             <div class="form1">
                 <label for="uname"></label>
-                <input type="text" class="new1" placeholder="Enter UserEmail" name="email" required><br>
+                <input type="text" class="new1" placeholder="User Email" name="email" required><br>
             </div>
 
             <div class="form1" >
                 <label for="password"></label>
-                <input type="password" class="new1" placeholder="Enter Password" name="password" id="myInput"
+                <input type="password" class="new1" placeholder="Password" name="password" id="myInput"
                        required><br>
             </div>
              <!-- <div class="g-recaptcha" style="margin: 10px 75px;" data-sitekey="6Lc2qbkcAAAAAKbtG3WQneC22v408VLrnmf_4VNW"></div> -->
