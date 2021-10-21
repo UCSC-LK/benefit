@@ -92,8 +92,8 @@
                 </div>
 
                 <div class="buttons">
-                    <button type="submit" id="request" name="submit" class="request_button">Request</button>
-                    <button type="reset" id="cancel" class="cancle_button">Cancel</button>
+                    <button type="submit" id="request" name="submit" class="request-btn">Request</button>
+                    <button type="reset" id="cancel" class="cancle-btn">Cancel</button>
 
                 </div>
             </form>
