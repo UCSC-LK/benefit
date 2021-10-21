@@ -23,7 +23,7 @@
 <div class="side_bar" id="mySide">
     <center>
         <img scr="<?= IMG_PATH ?>profile/Chathura.jpeg" class="profile_image">
-        <h4>Sathya</h4>
+        <h4><?= Auth::getfirst_name() ?></h4>
     </center>
     <a href="<?= PATH ?>EmployeelistController"><i class="fas fa-user-edit"></i><span>Update Employees</span></a>
     <a href="<?= PATH ?>LeaveapproveController"><i class="fas fa-calendar-week"></i></i><span>Handle Time Offs</span></a>

@@ -23,7 +23,7 @@
 <div class="side_bar" id="mySide">
     <center>
         <img scr="<?= IMG_PATH ?>profile/Chathura.jpeg" class="profile_image" atl="">
-        <h4>Bimsara</h4>
+        <h4><?= Auth::getfirst_name() ?></h4>
     </center>
     <a href="<?=PATH?>AddemployeeController"><i class="far fa-address-book"></i><span>Registration</span></a>
     <a href="<?=PATH?>EmployeelistController"><i class="fas fa-calendar-week"></i></i>
