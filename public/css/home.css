@@ -4,7 +4,9 @@ body {
     /* background-color: rgb(138, 138, 247); */
     /* For browsers that do not support gradients */
     /* background-image: linear-gradient(to bottom right, rgb(138, 138, 247) 50%, white 40%); */
-    background-image: linear-gradient(to bottom right, rgb(138, 138, 247), rgb(193, 193, 253), white);
+    /* background-image: linear-gradient(to bottom right, rgb(138, 138, 247), rgb(193, 193, 253), white); */
+    /* background-image: linear-gradient(to bottom right, #1d799a, #88d3ee, white); */
+    /* background-color: #40c0ee; */
     margin: 0;
     padding: 0;
     width: 100%;

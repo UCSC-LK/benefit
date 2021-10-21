@@ -37,6 +37,7 @@
             <div class="timeoff_head">
                 <div class="head_title">
                     <p class="main_title">Time Off</p>
+                    <hr>
                 </div>
 
                 <div class="leave_card">
@@ -82,6 +83,7 @@
                 <div class="upcoming_header">
                     <i class="item" data-feather="clock"></i>
                     <p class="main_title">Upcoming Time Off</p>
+                    <hr>
                 </div>
 
                 <div class="upcoming_detail">
@@ -109,6 +111,7 @@
                 <div class="history_header">
                     <i class="item" data-feather="clipboard"></i>
                     <p class="main_title">Leave History</p>
+                    <hr>
                 </div>
 
 
