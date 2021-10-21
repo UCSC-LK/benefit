@@ -16,10 +16,10 @@ body {
 .leave_container .timeoff_head {
     background-color: white;
     max-width: 100%;
-    padding: 10px;
     border-radius: 10px;
     margin-right: 5px;
     margin-bottom: 5px;
+    padding: 10px 10px 20px;
 }
 
 a:link {
@@ -52,7 +52,7 @@ a:link {
     width: 250px;
     margin: 5px;
     height: 200px;
-    background-color: white;
+    background-color: #d8e6e4;
     text-align: center;
     border-radius: 10px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .20);
