@@ -54,7 +54,7 @@
                     if (boolval($rows)) {
                         if (count($rows) > 0) {
                             foreach ($rows as $entry) {
-                                if ($entry->user_role == "Manager") {
+                                if ($entry->user_role == "Manager" || $entry->designation_code == 3) {
                                     ?>
                                     <form method="post">
                                         <div class="cards">
