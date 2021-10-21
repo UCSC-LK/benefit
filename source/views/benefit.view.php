@@ -38,6 +38,7 @@
         <div class="benefit_container">
             <div class="benefit_head">
                 <p class="main_title">Benefits</p>
+                <hr>
                 <div>
 
                     <form action="BenefitrequestController">
@@ -100,6 +101,7 @@
             <div class="benefit_history">
                 <div class="history_header">
                     <p class="main_title"><i class="material-icons">history</i>Benefit History</p>
+                    <hr>
                 </div>
 
                 <?php

@@ -38,7 +38,9 @@
                 <!-- <form method="post">-->
                 <div class="cards">
                     <center>
-                        <img src='<? echo $entry->profile_image ?>' alt="" class="img">
+                        <!-- <img src='<? //echo $entry->profile_image ?>' alt="" class="img"> -->
+                        <img src="<?= IMG_PATH ?>profile/Lakshani.jpeg"  alt="" class="img">
+
                     </center>
                     <div class="name">
                         <p><?php echo $entry->first_name ?></p>

@@ -330,6 +330,7 @@ th {
     letter-spacing: 2px;
     margin-left: 33%;
     margin-right: 10%;
+    margin-top: 10%;
     border: 1.5px solid var(--header);
 }
 

@@ -27,7 +27,7 @@
 			<label for="c_date">Claim Date</label>
 			</div>
 		<div class="column_2">
-			<input type="date" id="claim_date" name="claim_date" min="2021-10-09" max="2021-10-16" required>
+			<input type="date" id="claim_date" name="claim_date" min="2021-10-14" max="2021-10-21" required>
 		</div>
 		</div>
 
@@ -50,16 +50,13 @@
 		</div>
 
 		<div class="row">
-			<div class="column_1">
-			<label for="submission">Invoice Submission</label>
-		</div>
-		</div>
-
-		<div class="row">
-			<div class="invoice_submission">
-			<input type="file" id="invoice_submission" name="invoice_submission"accept=".pdf, .png" required>
-		</div>
-		</div>
+            <div class="column_1">
+                <label for="submission">Invoice Submission</label>
+                </div>
+                <div class="invoice_submission">
+                    <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" required>
+                </div>
+                    </div>
 		<!-- </form>	 -->
 		
 		<a href="<?=PATH?>Reimbursement/update_reimbursement">
