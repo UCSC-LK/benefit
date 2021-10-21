@@ -99,11 +99,11 @@
         </ol>
     </div>
 
-    <div>
+    <!-- <div>
     <?php
-    $this->view('includes/footer');
+    // $this->view('includes/footer');
     ?>
-</div>
+</div> -->
 </body>
 
 </html>

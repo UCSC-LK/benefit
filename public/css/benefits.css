@@ -20,28 +20,33 @@ body {
     max-width: 100%;
     padding: 10px;
     border-radius: 10px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    margin: 5px;
+}
+
+hr {
+    margin-top: 0;
+    padding: 0;
+    border-top: 2px solid rgba(201, 197, 197, 0.993);
 }
 
 
 /* use .main_title class for every title style */
 
 .main_title {
-    width: 100%;
+    width: 98%;
     color: #232F34;
     font-size: x-large;
     font-weight: bold;
     display: block;
-    border-bottom: 2px solid rgba(99, 94, 94, 0.527);
-    padding-bottom: 10px;
+    padding-bottom: 0px;
+    padding-left: 16px;
+    margin-bottom: 8px;
 }
 
 .benefit_container .benefit_head .benefit_card {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 20px;
 }
 
 .benefit_card_column {
@@ -53,15 +58,15 @@ body {
 .benefit_container .benefit_head .benefit_card .card {
     padding: 10px;
     height: auto;
-    background-color: #d8e6e4;
+    background-color: rgb(255, 255, 255);
     text-align: center;
     border-radius: 10px;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .20);
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, .50);
 }
 
 .benefit_container .benefit_head .benefit_card .card:hover {
     cursor: pointer;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.6);
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 1);
 }
 
 .benefit_card:after {
@@ -112,42 +117,25 @@ body {
     margin-bottom: 20px;
 }
 
-.card div button {
-    background-color: var(--w);
-    color: var(--h2);
+.claim_button {
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type=submit] {
+    background-color: #2828CF;
     font-weight: bold;
-    font-size: 15px;
-    width: 120px;
-    height: 40px;
-    border-radius: 50px;
-    margin: 20px;
-    border: 3px solid var(--h2);
+    letter-spacing: 3px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 33px;
+    width: 70%;
 }
-
-.card div button:hover {
-    background-color: var(--h1);
-    color: var(--w);
-}
-
-/*.claim_button {*/
-/*    padding-left: 40px;*/
-/*    padding-top: 30px;*/
-/*    padding-bottom: 30px;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
-
-/*input[type=submit] {*/
-/*    background-color: #2828CF;*/
-/*    font-weight: bold;*/
-/*    letter-spacing: 3px;*/
-/*    color: white;*/
-/*    border: none;*/
-/*    border-radius: 4px;*/
-/*    cursor: pointer;*/
-/*    height: 33px;*/
-/*    width: 70%;*/
-/*}*/
 
 
 /*.pending_benefits a {*/
@@ -206,25 +194,6 @@ a .delete_button {
     letter-spacing: 2px;
 }
 
-.row {
-    padding-left: 150px;
-    padding-top: 30px;
-    display: flex;
-    justify-items: center;
-}
-
-.column_1 {
-    font-size: medium;
-    padding: 12px 20px;
-    width: 20%;
-    color: #1C1D1D;
-}
-
-.column_2 {
-    width: 70%;
-    padding-left: 15px;
-}
-
 a .delete_button:hover {
     box-shadow: 0px 2px 5px var(--red);
     transform: scale(1.05);
@@ -247,8 +216,7 @@ AAAAAAAAAAAAAAAAAAAAAAAA */
     flex-direction: column;
     border-radius: 10px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
-    margin-right: 5px;
-    margin-bottom: 5px;
+    margin: 5px;
 }
 
 .history_header {
