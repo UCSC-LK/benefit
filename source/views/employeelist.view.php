@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public\css\color.css">
     <link rel="stylesheet" href="public\css\employeelist.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Employees</title>
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- <script src="https://kit.fontawesome.com/b99e675b6e.js"></script> -->
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div>
@@ -32,7 +36,6 @@
 
 
     <!-- nAAaAaaaaaaa -->
-
 
     <div class="main_container">
         <div class="head">
@@ -67,11 +70,8 @@
                                                 <p><?php echo $entry->email ?></p>
                                             </div>
                                             <div class="butons">
-                                                <button class="button-btn" type="submit" id="edit" name="edit">Edit
-                                                </button>
-                                                <button class="button-btn" type="submit" id="delete" name="delete">
-                                                    Delete
-                                                </button>
+                                                <button class="button-btn" type="submit" id="edit" name="edit"> <i class='fas fa-edit'></i> </button>
+                                                <button class="button-btn" type="submit" id="delete" name="delete"> <i class='fas fa-trash-alt'></i> </button>
                                             </div>
                                         </div>
                                     </form>
@@ -109,11 +109,8 @@
                                                 <p><?php echo $entry->email ?></p>
                                             </div>
                                             <div class="butons">
-                                                <button class="button-btn" type="submit" id="edit" name="edit">Edit
-                                                </button>
-                                                <button class="button-btn" type="submit" id="delete" name="delete">
-                                                    Delete
-                                                </button>
+                                                <button class="button-btn" type="submit" id="edit" name="edit"> <i class='fas fa-edit'></i> </button>
+                                                <button class="button-btn" type="submit" id="delete" name="delete"> <i class='fas fa-trash-alt'></i> </button>
                                             </div>
                                         </div>
                                     </form>
@@ -151,11 +148,8 @@
                                                 <p><?php echo $entry->email ?></p>
                                             </div>
                                             <div class="butons">
-                                                <button class="button-btn" type="submit" id="edit" name="edit">Edit
-                                                </button>
-                                                <button class="button-btn" type="submit" id="delete" name="delete">
-                                                    Delete
-                                                </button>
+                                                <button class="button-btn" type="submit" id="edit" name="edit"> <i class='fas fa-edit'></i> </button>
+                                                <button class="button-btn" type="submit" id="delete" name="delete"> <i class='fas fa-trash-alt'></i> </button>
                                             </div>
                                         </div>
                                     </form>
@@ -173,5 +167,6 @@
 <!--<div>-->
 <!--    --><?php //$this->view('includes/footer')?>
 <!--</div>-->
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </body>
 </html>
