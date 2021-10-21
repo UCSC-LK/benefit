@@ -23,13 +23,13 @@
 <div class="side_bar" id="mySide">
     <center>
         <img scr="<?= IMG_PATH ?>profile/Chathura.jpeg" class="profile_image" atl="">
-        <h4>Sathya</h4>
+        <h4><?= Auth::getfirst_name() ?></h4>
     </center>
     <a href="<?= PATH ?>Supervisor"><i class="fas fa-coins"></i><span>Handle Reimbursements</span></a>
     <a href="<?= PATH ?>LeaveapproveController"><i class="fas fa-calendar-week"></i></i>
         <span>Handle Time Offs</span></a>
     <a href="<?= PATH ?>Supervisor/Performance"><i class="fas fa-edit"></i><span>Handle Performance</span></a>
-    <a href="<?= PATH ?>Markattendance"><i class="fas fa-user-check"></i><span>Mark Attendance</span></a>
+    <a href="<?= PATH ?>Markattendance"><i class="fas fa-user-check"></i><span>Attendance</span></a>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">

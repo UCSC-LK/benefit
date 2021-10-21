@@ -1,27 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
     background-color: var(--background);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* background-color: aqua; */
-    width: 100vw;
-    /* height: 100%; */
 }
 
 .main_container {
-    /*width: 100%;*/
-    margin-top: 0;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: white;
     padding: 10px;
-    margin-left: 255px;
     height: 100vh;
     transition: 0.5s;
+    margin: 0 5px 0 255px;
 }
 
+.title {
+    font-size: x-large;
+    color: var(--f);
+    text-align: left;
+    margin: 10px;
+}
+
+.title p {
+    margin: 0;
+}
 
 .details {
     display: flex;
@@ -35,91 +40,83 @@ body {
     font-weight: bolder;
 }
 
-.title {
-    color: var(--header);
-    font-size: larger;
-    font-weight: bolder;
+.approve-container {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .data {
-    width: 90%;
-    margin: 5px;
-    border-radius: 10px;
+    /*width: 90%;*/
+    /*margin: 5px;*/
+    /*border-radius: 10px;*/
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
     /* box-shadow: 3px 5px 15px rgba(0,0,0,.20); */
 }
 
-.data :hover {
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .30);
-}
+/*.data :hover {*/
+/*    box-shadow: 3px 5px 15px rgba(0, 0, 0, .30);*/
+/*}*/
 
 .cards {
-    /* margin: 5px; */
-    width: 100%;
-    height: 50px;
-    margin-top: 10px;
+    flex-direction: column;
+    display: inline-block;
+    align-items: center;
     background-color: white;
-    display: flex;
-    justify-content: space-between;
+    border: 1px solid var(--h2);
+    width: 200px;
+    height: 270px;
+    max-height: max-content;
     border-radius: 10px;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .20);
-    cursor: pointer;
+    font-size: 20px;
+    margin: 10px;
 }
 
-.cards :hover {
-    box-shadow: none;
+.cards:hover {
+    background-color: var(--h1);
 }
 
 .manager {
     height: auto;
 }
 
-.img {
-    height: 45px;
-    width: 45px;
-    background-color: rgb(97, 22, 22);
-    margin-top: 2.5px;
-    margin-left: 5px;
-    border-radius: 50%;
-}
-
 img {
-    height: 45px;
-    width: 45px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     border-radius: 50%;
+    padding: 10px;
+    margin: 0 0 20px;
 }
 
-.name,
+.name {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.name p {
+    margin: 0;
+}
+
 .email {
-    width: 30%;
-    overflow: scroll;
-    overflow-y: hidden;
-    /* background-color: aqua; */
     text-align: center;
-    opacity: 65%;
-    font-weight: bold;
+    margin: 5px 0 0;
     font-size: medium;
 }
 
-.butons {
-    width: 30%;
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
+.options {
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-}
-
-button {
-    width: auto;
-    color: rgb(255, 255, 255);
-    font-size: medium;
-    border-radius: 5px;
-    height: 30px;
-    cursor: pointer;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .50);
-    border-style: none;
-    margin-top: 10px;
-    /* margin: auto;*/
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 #edit {

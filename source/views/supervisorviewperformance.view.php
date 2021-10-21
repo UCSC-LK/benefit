@@ -21,62 +21,58 @@
     ?>
 
     <div class="main_container">
+        <div class="title">
+            <p>Performance</p>
+        </div>
+        <!--        <div class="details">-->
+        <!--            <div class="employee">-->
 
-        <div class="details">
-            <div class="employee">
-                <div class="title">
-                    <p>Employees</p>
+        <div class="approve-container">
+            <div class="data">
+                <?php
+                if (boolval($row)) {
+                if (count($row) > 0) {
+                foreach ($row
+
+                as $entry) { ?>
+                <!-- <form method="post">-->
+                <div class="cards">
+                    <center>
+                        <img src='<? echo $entry->profile_image ?>' alt="" class="img">
+                    </center>
+                    <div class="name">
+                        <p><?php echo $entry->first_name ?></p>
+                        <p><?php echo $entry->last_name ?> </p>
+                    </div>
+                    <div class="email">
+                        <p><?php echo $entry->user_role ?></p>
+                    </div>
+                    <div class="options">
+                        <a href="<?= PATH ?>Supervisor/Insert_Performance/<?= $entry->employee_ID ?>">
+                            <i class="fas fa-plus"></i>
+                        </a>
+
+                        <a href="<?= PATH ?>Supervisor/Update_Performance/<?= $entry->employee_ID ?>">
+                            <i class="fas fa-edit"></i>
+                        </a>
+
+                        <a href="<?= PATH ?>Supervisor/Delete_Performance/<?= $entry->employee_ID ?>">
+                            <i class="fas fa-trash-alt"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="data">
                     <?php
-                    if (boolval($row)) {
-                        if (count($row) > 0) {
-                            foreach ($row as $entry) {
-
-
-                                ?>
-                                <!-- <form method="post">-->
-                                <div class="cards">
-
-                                    <!-- <div class="img">
-                                            <img src="<?php echo $entry->profile_image ?>" alt="not found">
-
-                                        </div> -->
-                                    <div class="name">
-                                        <p><?php echo $entry->first_name ?><?php echo $entry->last_name ?> </p>
-                                    </div>
-                                    <div class="email">
-                                        <p><?php echo $entry->email ?></p>
-                                    </div>
-                                    <div class="butons">
-
-                                        <a href="<?= PATH ?>Supervisor/Insert_Performance/<?= $entry->employee_ID ?>">
-                                            <button type="submit" id="edit" name="edit">Insert</button>
-                                        </a>
-                                        <a href="<?= PATH ?>Supervisor/Update_Performance/<?= $entry->employee_ID ?>">
-                                            <button type="submit" id="edit" name="edit">Update</button>
-                                        </a>
-                                        <a href="<?= PATH ?>Supervisor/Delete_Performance/<?= $entry->employee_ID ?>">
-                                            <button type="submit" id="delete" name="delete">Delete</button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!--</form>-->
-                                <?php
-
-
-                            }
-                        }
-                    } ?>
-                </div>
+                }
+                }
+                } ?>
             </div>
-
+            <!--</form>-->
         </div>
     </div>
 </div>
 
-<div>
-    <?php $this->view('includes/footer') ?>
-</div>
+<!--<div>-->
+<!--    --><?php //$this->view('includes/footer') ?>
+<!--</div>-->
 </body>
 </html>

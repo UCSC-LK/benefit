@@ -7,7 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?= CSS_PATH ?>hrdocuments.css">
+    <link rel="stylesheet" href="<?= CSS_PATH ?>hrdocumentsupdate.css">
 
     <title></title>
 </head>
@@ -35,7 +35,9 @@
     <?php endif; ?>
 
     <div class="main_container">
-        <h1 class="h1">HR Documents</h1>
+        <div>
+            <p class="handling_title">Handle Documents</p>
+        </div>
         <div class="row">
             <div class="column">
                 <div class="card">
