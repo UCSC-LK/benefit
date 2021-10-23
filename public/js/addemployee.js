@@ -3,7 +3,52 @@ var eye2 = document.getElementById("eye2");
 var password = document.getElementById("pwd");
 var confir = document.getElementById("confirm");
 
+var dob = document.getElementById("dob");
+
 var showPassword = false;
+
+function dob_validate(){
+    var dateObj = new Date();
+    var min_date = subDays(dateObj,18000);
+    var max_date = subDays(dateObj,6570);
+
+    var max_m = dateObj.getUTCMonth()+1;
+    var max_d = dateObj.getUTCDate();
+    var max_y = dateObj.getUTCFullYear();
+    
+
+    var min_m = min_date.getUTCMonth() + 1; //months from 1-12
+    var min_d = min_date.getUTCDate();
+    var min_y = min_date.getUTCFullYear();
+
+    newdate = min_y + "-" + min_m + "-" + min_d;
+
+    
+    var max_m = max_date.getUTCMonth()+1;
+    var max_d = max_date.getUTCDate();
+    var max_y = max_date.getUTCFullYear();
+
+    max_date = max_y + "-" + max_m + "-" + max_d;
+
+
+    // console.log(newdate);
+
+    dob.min = newdate;
+    dob.max = max_date;
+    // console.log(dob.value);
+    // console.log(dob.min);
+}
+
+dob_validate()
+
+
+function subDays(myDate,days) {
+    return new Date(myDate.getTime() - days*24*60*60*1000);
+}
+
+
+
+
 
 eye1.addEventListener("click",function(){
 

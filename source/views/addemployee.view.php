@@ -23,13 +23,13 @@
 </div>
 
 <div class="page_content">
-    <?php if (Auth::access('HR Officer')): ?>
+    <!-- <?php if (Auth::access('HR Officer')): ?>
         <div>
             <?php
             $this->view('includes/hrofficernav');
             ?>
         </div>
-    <?php endif; ?>
+    <?php endif; ?> -->
 
 
     <?php
@@ -60,7 +60,7 @@
                                 foreach ($rows[0] as $entry) { ?>
                                     <tr>
                                         <td> <?php echo $entry->employee_ID ?> </td>
-                                        <td> <?php echo $entry->first_name ?><?php echo $entry->last_name ?> </td>
+                                        <td> <?php echo $entry->first_name ?><?php echo " " ?><?php echo $entry->last_name ?> </td>
                                     </tr>
 
                                     <?php
@@ -85,7 +85,7 @@
                                 foreach ($rows[1] as $entry) { ?>
                                     <tr>
                                         <td> <?php echo $entry->employee_ID ?> </td>
-                                        <td> <?php echo $entry->first_name ?><?php echo $entry->last_name ?> </td>
+                                        <td> <?php echo $entry->first_name ?><?php echo " " ?><?php echo $entry->last_name ?> </td>
                                     </tr>
 
                                     <?php
@@ -114,7 +114,7 @@
                                 foreach ($rows[2] as $entry) { ?>
                                     <tr>
                                         <td> <?php echo $entry->employee_ID ?> </td>
-                                        <td> <?php echo $entry->first_name ?><?php echo $entry->last_name ?> </td>
+                                        <td> <?php echo $entry->first_name ?><?php echo " " ?><?php echo $entry->last_name ?> </td>
                                     </tr>
 
                                     <?php
@@ -139,7 +139,7 @@
                                 foreach ($rows[3] as $entry) { ?>
                                     <tr>
                                         <td> <?php echo $entry->employee_ID ?> </td>
-                                        <td> <?php echo $entry->first_name ?><?php echo $entry->last_name ?> </td>
+                                        <td> <?php echo $entry->first_name ?><?php echo " " ?><?php echo $entry->last_name ?> </td>
                                     </tr>
 
                                     <?php
@@ -158,145 +158,206 @@
                 </div>
                 <div class="input_feild">
                     <form method="post" enctype="multipart/form-data">
-                        <div>
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="fname" size="50" required><br>
-                            <p id="fval">Name Not Valied</p>
-                            <input type="hidden" name="fhide" id="fhide" value="">
-                        </div>
 
-                        <div>
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lname" size="50"><br>
-                            <p id="lval">Name Not Valied</p>
-                            <input type="hidden" name="lhide" id="lhide" value="">
-                        </div>
+                        <table style="max-width: 100%;">
+                            <tr>
+                                <th id="c1"></th>
+                                <th id="c2"></th>
+                                <th id="c3"></th>
+                                <th id="c4"></th>
+                                <th id="c5"></th>
+                                <th id="c6"></th>
+                                <th id="c7"></th>
+                                <th id="c8"></th>
+                            </tr>
+                            <tr>
+                                <!-- <td id="c1" ></td> -->
+                                <td id="c2" colspan="2"><label for="fname">First Name</label></td>
+                                <!-- <td id="c3">  </td> -->
+                                <td id="c4" colspan="6"><input type="text" id="fname" name="fname"  required><p id="fval">Name Not Valied</p>
+                            <input type="hidden" name="fhide" id="fhide" value=""></td>
+                                
+                            </tr>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="lname">Last Name</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><input type="text" id="lname" name="lname" ><p id="lval">Name Not Valied</p>
+                            <input type="hidden" name="lhide" id="lhide" value=""></td>
+                               
+                            </tr>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="dob">Date Of Birth</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><input type="date" id="dob" name="dob" required min="" max="" onload = "public/js/addemployee.js/dob_validate()"></td>
+                                
+                            </tr>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="nic">NIC</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><input type="text" id="nic" name="nic"  required><p id="nicval"></p>
+                            <input type="hidden" name="nichide" id="nichide" value=""></td>
+                                
+                            </tr>
+                            <!-- <tr>
+                                <td id="c1" colspan="2"></td>
+                                <td id="c2"></td>
+                                <td id="c3"></td>
+                                <td id="c4"></td>
+                                <td id="c5"></td>
+                                <td id="c6"></td>
+                                <td id="c7"></td>
+                                <td id="c8"></td>
+                            </tr> -->
+                            <tr>
+                              
+                                <td id="c2" colspan="2">Address</td>
+                            
+                            </tr>
+                            <tr>
+                                <td id="c2" colspan="2"><label for="street" id="address">Street</label> </td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><input type="text" id="street" name="street"></td>
+                              
+                            </tr>
+                            <tr>
+                                <td id="c2" colspan="2"><label for="city" id="address">City</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><input type="text" id="city" name="city" required></td>
+                                
+                            </tr>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="Province" id="address">Province</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><select id="province" name="province">
+                                    <option value="Western">Western Province</option>
+                                    <option value="Central">Central Province</option>
+                                    <option value="Southern">Southern Province</option>
+                                    <option value="Uva">Uva Province</option>
+                                    <option value="Sabaragamuwa">Sabaragamuwa Province</option>
+                                    <option value="North_western">North Western Province</option>
+                                    <option value="North_central">North Central Province</option>
+                                    <option value="Nothern">Nothern Province</option>
+                                    <option value="Eastern">Eastern Province</option>
 
-                        <div>
-                            <label for="dob">Date Of Birth</label>
-                            <input type="date" id="dob" name="dob" required>
-                        </div>
+                                </select></td>
+                                
+                            </tr>
 
-                        <div class="address">
-                            <label for="">Address</label>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="marital" name="marital">Marital Status</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4"><label for="yes">Yes</label></td>
+                                <td id="c5"><input type="radio" id="yes" name="marital" value="Yes"></td>
+                        
+                                <td id="c6"></td>
+                                <td id="c7"><label for="no">No</label></td>
+                                <td id="c8"><input type="radio" id="no" name="marital" value="No"></td>                            
+                            </tr>
+                            <tr>
+                                
+                                <td id="c2" colspan="2"><label for="gender" name="gender">Gender</label></td>
+                                
+                                <td id="c4"><label for="gender">Male</label></td>
+                                <td id="c5"><input type="radio" id="male" name="gender" value="Male"></td>
+                        
+                                <td id="c6"></td>
+                                <td id="c7"><label for="gender">Female</label></td>
+                                <td id="c8"><input type="radio" id="female" name="gender" value="Female"></td>                           
+                            </tr>
 
-                            <div class="address_content">
-                                <label for="street">Street</label>
-                                <input type="text" id="street" name="street">
-                                <label for="city">City</label>
-                                <input type="text" id="city" name="city" required>
-                                <label for="Province">Province</label>
-                                <select id="province" name="province">
-                                    <option value="western">Western Province</option>
-                                    <option value="central">Central Province</option>
-                                    <option value="southern">Southern Province</option>
-                                    <option value="uva">Uva Province</option>
-                                    <option value="sabaragamuwa">Sabaragamuwa Province</option>
-                                    <option value="north_western">North Western Province</option>
-                                    <option value="north_central">North Central Province</option>
-                                    <option value="nothern">Nothern Province</option>
-                                    <option value="eastern">Eastern Province</option>
-
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="marital">
-                            <label for="marital" name="marital">Marital Status</label>
-                            <input type="radio" id="yes" name="marital" value="yes">
-                            <label for="yes">Yes</label>
-                            <input type="radio" id="no" name="marital" value="no">
-                            <label for="no">No</label><br>
-                        </div>
-
-                        <div>
-                            <label for="nic">NIC</label>
-                            <input type="text" id="nic" name="nic" size="50" required><br>
-                            <p id="nicval"></p>
-                            <input type="hidden" name="nichide" id="nichide" value="">
-                        </div>
-
-                        <div class="gender">
-                            <label for="gender" name="gender">Gender</label>
-                            <input type="radio" id="male" name="gender" value="male">
-                            <label for="gender">Male</label>
-                            <input type="radio" id="female" name="gender" value="female">
-                            <label for="gender">Female</label>
-                            <input type="radio" id="other" name="gender" value="other">
-                            <label for="gender">Other</label> <br>
-                        </div>
-
-                        <div>
-                            <label for="contact">Contact Number</label>
-                            <input type="tel" id="contact" name="contact" placeholder="076-256****"
+                            <tr>
+                                <td id="c2" colspan="2"><label for="contact">Contact Number</label></td>
+                                
+                                <td id="c4" colspan="6"><input type="tel" id="contact" name="contact" placeholder="076-256****"
                                    pattern="[0-9]{3}-[0-9]{7}"
-                                   size="50" required>
-                        </div>
+                                   size="50" required></td>
+                       
+                            </tr>
+                            <tr>
+                            
+                                <td id="c2" colspan="2"><label for="email">E Mail</label></td>
+                                <td id="c4" colspan="6">    <input type="email" id="email" name="email" required></td>
+            
+                            </tr>
 
-                        <div>
-                            <label for="user_role">User Role</label>
-                            <select id="user_role" name="user_role">
-                                <option value="Employee">Employee</option>
-                                <!-- <option value="Supervisor">Supervisor</option> -->
-                                <option value="HR Manager">HR Manager</option>
-                                <option value="HR Officer">HR Officer</option>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="password">Password</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><input type="password" id="pwd" name="pwd" required> <i class="far fa-eye" id="eye1" ></i>
+                                <input type="hidden" name="phide" id="phide" value="">
+                                <p id="message"> Password is <span id="strenght"></span></p>
+                                </td>
+                                
+                            </tr>
 
-                            </select>
-                        </div>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="confirm">Confirm Password</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><input type="password" id="confirm" name="confirm" required><i class="far fa-eye"id="eye2"></i>
+                                    <input type="hidden" name="phide" id="phide" value="">
+                                    <p id="message"> Password is <span id="strenght"></span></p>   
+                                </td>
+                               
+                            </tr>
 
-                        <div>
-                            <label for="email">E Mail</label>
-                            <input type="email" id="email" name="email" size="50" required><br>
-                        </div>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="user_role">User Role</label> </td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><select id="user_role" name="user_role">
+                                    <option value="Employee">Employee</option>
+                                    <option value="HR Manager">HR Manager</option>
+                                    <option value="HR Officer">HR Officer</option>
+                                    </select>
+                                </td>
+                               
+                            </tr>
 
-                        <div class="pwd">
-                            <label for="password">Password</label>
-                            <!-- <div class="pwdinner"> -->
-                            <input type="password" id="pwd" name="pwd" size="50" required> <i class="far fa-eye"
-                                                                                              id="eye1"></i><br>
-                            <!-- </div> -->
-                            <input type="hidden" name="phide" id="phide" value="">
-                            <p id="message"> Password is <span id="strenght"></span></p>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="department">Department</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><select id="department" name="department">
+                                    <option value="1">Operational Department</option>
+                                    <option value="2">HR Department</option>
+                                    <option value="3">Sells Department</option>
+                                    <option value="4">Account Department</option>
+                                </select></td>
+                            </tr>
 
-                        </div>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="designation">Designation Code</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><select id="designation" name="designation">
+                                    <option value="1">CEO</option>
+                                    <option value="2">Director</option>
+                                    <option value="3">Manager</option>
+                                    <option value="4">HR Officer</option>
+                                    <option value="5">Employee</option>
+                                </select></td>
+                            </tr>
 
-                        <div class="pwd">
-                            <label for="confirm">Confirm Password</label>
-                            <input type="password" id="confirm" name="confirm" size="50" required><i class="far fa-eye"
-                                                                                                     id="eye2"></i><br>
-                        </div>
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="supervisor">Supervisor ID</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><input type="text" id="supervisor" name="supervisor" size="50"></td>
+                                
+                            </tr>
 
-                        <div class="department">
-                            <label for="department">Department</label>
-                            <select id="departmnet" name="department">
-                                <option value="1">Operational Department</option>
-                                <option value="2">HR Department</option>
-                                <option value="3">Sells Department</option>
-                                <option value="4">Account Department</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="supervisor">Supervisor ID</label>
-                            <input type="text" id="supervisor" name="supervisor" size="50"><br>
-                        </div>
-
-                        <div>
-                            <label for="designation">Designation code</label>
-                            <select id="designation" name="designation">
-                                <option value="1">CEO</option>
-                                <option value="2">Director</option>
-                                <option value="3">Manager</option>
-                                <option value="4">HR Officer</option>
-                                <option value="5">Employee</option>
-                            </select>
-                        </div>
-
-                        <div class="image">
-                            <label for="">Profile Picture (less than 500Kb)</label>
-
-                            <div class="upload">
-                                <input type="file" name="image" id="image" onchange="loadFile(event)"
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="">Profile Picture (less than 500Kb)</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><input type="file" name="image" id="image" onchange="loadFile(event)"
                                        style="display: none;">
                                 <label for="image" id="image" name="image">Upload Image </label>
                                 <div>
@@ -308,25 +369,28 @@
                                         var image = document.getElementById('output');
                                         image.src = URL.createObjectURL(event.target.files[0]);
                                     };
-                                </script>
-                            </div>
-                        </div>
-
-                        <div class="buttons">
-                            <button type="reset" id="cancel">Cancel</button>
-                            <button type="submit" id="add" name="submit">Add</button>
-                        </div>
-
+                                </script></td>
+                                
+                            </tr>
+                            
+                            <tr>
+                                <td id="c1"></td>
+                                <td id="c2"></td>
+                                <td id="c3"><button type="reset" id="cancel">Cancel</button></td>
+                                <td id="c4"></td>
+                                <td id="c5"></td>
+                                <td id="c6"></td>
+                                <td id="c7"><button type="submit" id="add" name="submit">Add</button></td>
+                                <td id="c8"></td>
+                            </tr>   
+                        </table>
+                       
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<!--<div class="foot">-->
-<!--    <p class="fot">Copyright © 2021 Oracle Freight Solutions | Powered by Oracle Freight Solutions</p>-->
-<!--</div>-->
 <script src="public\js\addemployee.js"></script>
 </body>
 </html>
