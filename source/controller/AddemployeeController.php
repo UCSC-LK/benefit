@@ -34,8 +34,8 @@ class AddemployeeController extends Controller
 				$arr['last_name'] = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
 				$arr['dob'] = $_POST['dob'];
 
-				$today = date("Y-m-d");
-				$diff = date_diff(date_create($arr['dob']), date_create($today));
+				// $today = date("Y-m-d");
+				// $diff = date_diff(date_create($arr['dob']), date_create($today));
 
 				$arr['street'] = filter_input(INPUT_POST, 'street', FILTER_SANITIZE_STRING);
 				$arr['city'] = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_STRING);
@@ -88,15 +88,6 @@ class AddemployeeController extends Controller
 				}
 				
 				
-				// echo $arr['first_name'] . "<br>";
-				// echo $arr['last_name'] . "<br>";
-				// echo $pass."<br>";
-				// echo $arr['employee_NIC']."<br><br>";
-
-				// echo "fhide". " ".$fhide."<br>";
-				// echo "lhide"." ".$lhide."<br>";
-				// echo "phide"." ".$phide."<br>";
-				// echo "nichide"." ".$nichide."<br>";
 				$jsvalidate = 1;
 				// echo "set value ". $jsvalidate."<br>";
 
@@ -179,11 +170,11 @@ class AddemployeeController extends Controller
 					$arr1[8] = "email is allready used!";
 					unlink($file_designation);
 				}
-				elseif($diff->format('%y') <= 18 && $diff->format('%y') > 60){
-					$arr1[10] = "Employee Age must be greater than 18!";
-					unlink($file_designation);
-				}
-				elseif($complete  && $confirm == $pass && ($diff->format('%y') >= 18) && $jsvalidate == 1 && $sup == 1){
+				// elseif($diff->format('%y') <= 18 && $diff->format('%y') > 60){
+				// 	$arr1[10] = "Employee Age must be greater than 18!";
+				// 	unlink($file_designation);
+				// }
+				elseif($complete  && $confirm == $pass  && $jsvalidate == 1 && $sup == 1){
 					
 
 					$user->insert($arr);
