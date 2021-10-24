@@ -6,7 +6,17 @@
 <link rel="stylesheet" href="<?= CSS_PATH ?>login.css">
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <body>
-<!--<div class="big-img"></div>-->
+    <!-- <div class="login-container">
+<div class="big-img"></div> -->
+<!-- <svg viewBox="0 0 500 200" 
+            preserveAspectRatio="xMinYMin meet">
+              
+            <path d="M0, 100 C150, 200 350,
+                0 500, 100 L500, 00 L0, 0 Z"
+                style="stroke:none; fill:dodgerblue;">
+            </path>
+        </svg> -->
+
 <div class="container">
     <div class="box-a">
         <h2 class="h2">ORACLE FREIGHT SOLUTIONS</h2>
@@ -58,6 +68,7 @@
         </form>
     </div>
 </div>
+    <!-- </div> -->
 <!--<div class="footer">-->
 <!--    <p class="ofs">Copyright © 2021 Oracle Freight Solutions | Powered by Oracle Freight Solutions</p>-->
 <!--</div>-->
