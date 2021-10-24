@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
     background-color: var(--background);
 }
 
@@ -33,7 +33,7 @@ a:link {
     font-weight: bold;
     display: block;
     /* border-bottom: 2px solid rgba(147, 141, 141, 0.527); */
-    padding-bottom: 0px;
+    padding-bottom: 0;
     padding-left: 16px;
     margin-bottom: 8px;
 }
@@ -45,8 +45,11 @@ a:link {
 
 hr {
     margin-top: 0;
-    padding: 0;
-    border-top: 2px solid rgba(209, 207, 207, 0.993);
+    /*border-top: px solid rgba(201, 197, 197, 0.993);*/
+    margin-bottom: 32px;
+    padding: 0 0 0 26px;
+    margin-left: 16px;
+    background-color: rgba(213, 211, 211, 0.99);
 }
 
 .leave_container .timeoff_head .leave_card {
@@ -111,8 +114,7 @@ hr {
 .leave_container .upcoming_timeoff {
     background-color: white;
     max-width: 100%;
-    padding: 10px;
-    padding-left: 0px;
+    padding: 10px 10px 10px 16px;
     border-radius: 10px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
     margin-right: 5px;
@@ -122,11 +124,7 @@ hr {
 .leave_container .upcoming_timeoff .upcoming_header {
     display: flex;
     justify-content: left;
-    /* background-color: var(--background_light); */
-    padding: 5px 5px 5px 16px;
-    margin-bottom: 10px;
-    /*border-radius: 10px;*/
-    /*box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);*/
+    padding: 5px 5px 0 10px;
 }
 
 .upcoming_timeoff .upcoming_header .main_title {
@@ -134,15 +132,17 @@ hr {
     display: flex;
     align-items: center;
     padding-bottom: 5px;
-    padding-left: 0px;
+    padding-left: 0;
+    margin-bottom: 5px;
 }
 
 
 /*code duplicate*/
 
 .leave_container .upcoming_timeoff .upcoming_header .item {
-    margin: auto;
     padding-right: 10px;
+    padding-bottom: 0;
+    margin: auto auto 10px;
 }
 
 .leave_container .upcoming_timeoff .upcoming_detail {
@@ -181,9 +181,7 @@ hr {
 .leave_container .leave_history {
     background-color: white;
     max-width: 100%;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
+    padding: 10px 10px 10px 16px;
     border-radius: 10px;
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
     margin-right: 5px;
@@ -192,11 +190,8 @@ hr {
 
 .leave_container .leave_history .history_header {
     display: flex;
-    /*background-color: var(--white);*/
-    padding: 10px 10px 10px 16px;
-    margin-bottom: 10px;
-    /*border-radius: 10px;*/
-    /*box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);*/
+    justify-content: left;
+    padding: 5px 5px 0 10px;
 }
 
 .leave_history .history_header .main_title {
@@ -204,7 +199,8 @@ hr {
     display: flex;
     align-items: center;
     padding-bottom: 5px;
-    padding-left: 0px;
+    padding-left: 0;
+    margin-bottom: 5px;
 }
 
 .leave_container .leave_history .history_header .item {
@@ -217,39 +213,56 @@ hr {
 }
 
 .leave_type {
-    margin: 23px;
-    padding-left: 23px;
+    margin: 15px;
 }
 
-.leave_type #leave,
-input {
-    height: 25px;
-    border-style: none;
-    border-bottom: 1px solid rgb(145, 143, 143);
-    cursor: pointer;
-}
-
-.leave_type input {
-    color: white;
-    background-color: blue;
-    padding: 2px;
-    width: 80px;
+.leave_type select {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
     border-radius: 5px;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .25);
 }
-
 
 /* Dont work */
+#leave_history_result {
+    width: 95%;
+    padding: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+table {
+    padding-top: 10px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
 
-/* .leave_type form #input :hover {
-    box-shadow: 3px 5px 15px rgba(0,0,0,.50);
-    width:70px;
-} */
+table tr {
+    border-right: 2px solid var(--h2);
+    border-left: 2px solid var(--h2);
+    border-top: 2px solid var(--h2);
+    border-bottom: 2px solid var(--h2);
+}
+
+table th, table td {
+    height: 56px;
+    text-align: left;
+    padding-left: 8px;
+}
 
 table th {
-    border: 1px solid rgb(213, 213, 214);
-    background-color: rgb(221, 221, 243);
+    height: 56px;
+}
+
+table td {
+    height: 52px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--h2);
 }
 
 .leave_container .timeoff_head .leave_card :hover {

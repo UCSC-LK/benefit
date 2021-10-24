@@ -5,15 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <!--    <link rel="stylesheet" href="includes/css/header2.css" >-->
-    <!--    <link rel="stylesheet" href="includes/css/benefit.css" >-->
     <link rel="stylesheet" href="<?= CSS_PATH ?>benefits.css">
-    <link rel="stylesheet" href="<?= CSS_PATH ?>header1.css">
-    <link rel="stylesheet" href="<?= CSS_PATH ?>header2.css">
-    <link rel="stylesheet" href="<?= CSS_PATH ?>footer.css">
+    <link href="assets/css/feather.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 
-
-    <title></title>
+    <title>Benefits</title>
 </head>
 <body>
 <div>
@@ -42,56 +39,56 @@
                 <div>
 
                     <form action="BenefitrequestController">
-                        <a href="<?=PATH?>BenefitrequestController">
-                        <div class="benefit_card">
+                        <a href="<?= PATH ?>BenefitrequestController">
+                            <div class="benefit_card">
 
-                            <div class="benefit_card_column">
-                                <div class="card">
-                                    <p class="title">Medical Insurance</p>
-                                    <div class="text">Remaining Amount</div>
-                                    <div class="remain_amount">100,000 LKR</div>
-                                    <div class="text">Max Amount</div>
-                                    <div class="max_amount">200,000 LKR</div>
-                                    <div class="text">Renew Date</div>
-                                    <div class="text">25th Jan 2022</div>
-                                    <div>
-                                        <button type="submit" value="claim">Claim</button>
+                                <div class="benefit_card_column">
+                                    <div class="card">
+                                        <p class="title">Medical Insurance</p>
+                                        <div class="text">Remaining Amount</div>
+                                        <div class="remain_amount">10,000 LKR</div>
+                                        <div class="text">Max Amount</div>
+                                        <div class="max_amount">30,000 LKR</div>
+                                        <div class="text">Renew Date</div>
+                                        <div class="text">25th Jan 2022</div>
+                                        <div>
+                                            <button type="submit" value="claim">Claim</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="benefit_card_column">
+                                    <div class="card">
+                                        <p class="title">Life Insurance</p>
+                                        <div class="text">Remaining Amount</div>
+                                        <div class="remain_amount">10,000 LKR</div>
+                                        <div class="text">Max Amount</div>
+                                        <div class="max_amount">20,000 LKR</div>
+                                        <div class="text">Renew Date</div>
+                                        <div class="text">25th Jan 2022</div>
+                                        <div>
+                                            <button type="submit" value="claim">Claim</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="benefit_card_column">
+                                    <div class="card">
+                                        <p class="title">Accident Insurance</p>
+                                        <div class="text">Remaining Amount</div>
+                                        <div class="remain_amount">15,000 LKR</div>
+                                        <div class="text">Max Amount</div>
+                                        <div class="max_amount">20,000 LKR</div>
+                                        <div class="text">Renew Date</div>
+                                        <div class="text">25th Jan 2022</div>
+                                        <div>
+                                            <button type="submit" value="claim">Claim</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="benefit_card_column">
-                                <div class="card">
-                                    <p class="title">Life Insurance</p>
-                                    <div class="text">Remaining Amount</div>
-                                    <div class="remain_amount">100,000 LKR</div>
-                                    <div class="text">Max Amount</div>
-                                    <div class="max_amount">200,000 LKR</div>
-                                    <div class="text">Renew Date</div>
-                                    <div class="text">25th Jan 2022</div>
-                                    <div>
-                                        <button type="submit" value="claim">Claim</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="benefit_card_column">
-                                <div class="card">
-                                    <p class="title">Accident Insurance</p>
-                                    <div class="text">Remaining Amount</div>
-                                    <div class="remain_amount">100,000 LKR</div>
-                                    <div class="text">Max Amount</div>
-                                    <div class="max_amount">200,000 LKR</div>
-                                    <div class="text">Renew Date</div>
-                                    <div class="text">25th Jan 2022</div>
-                                    <div>
-                                        <button type="submit" value="claim">Claim</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         </a>
-<!--                        <div class="claim_button">-->
-<!--                            <input type="submit" value="Apply" name="submit">-->
-<!--                        </div>-->
+                        <!--                        <div class="claim_button">-->
+                        <!--                            <input type="submit" value="Apply" name="submit">-->
+                        <!--                        </div>-->
                     </form>
                 </div>
 
@@ -100,9 +97,10 @@
 
             <div class="benefit_history">
                 <div class="history_header">
-                    <p class="main_title"><i class="material-icons">history</i>Benefit History</p>
-                    <hr>
+                    <i class="item" data-feather="clipboard"></i>
+                    <p class="main_title">Benefit History</p>
                 </div>
+                <hr>
 
                 <?php
                 if (boolval($pending)) {
@@ -113,11 +111,15 @@
                                 <div><?php print_r($row->benefit_type); ?> </div>
                                 <div><?php print_r($row->claim_date); ?></div>
                                 <div><i>Pending</i></div>
-                                <a href="<?=PATH?>Benefit/change/<?=$row->claim_date?>">
-                                    <button type='submit' value='Change' name="change" class='change_button'><i class="fa fa-edit"></i> Update</button>
+                                <a href="<?= PATH ?>Benefit/change/<?= $row->claim_date ?>">
+                                    <button type='submit' value='Change' name="change" class='change_button'><i
+                                                class="fa fa-edit"></i> Update
+                                    </button>
                                 </a>
-                                <a href="<?=PATH?>Benefit/delete/<?=$row->claim_date?>">
-                                <button type='submit' value='Decline' name="delete" class='delete_button'><i class="fa fa-trash"></i> Delete</button>
+                                <a href="<?= PATH ?>Benefit/delete/<?= $row->claim_date ?>">
+                                    <button type='submit' value='Decline' name="delete" class='delete_button'><i
+                                                class="fa fa-trash"></i> Delete
+                                    </button>
                                 </a>
                             </div>
                         <?php }
@@ -127,13 +129,12 @@
 
                 <div class="benefit_type">
                     <form action="">
-                    <i class="fa fa-search"></i>
-                        <select id="benefit" name="benefit">
+                        <select id="benefit_type" name="benefit">
                             <option value="medical">Medical Insurance</option>
                             <option value="life">Life Insurance</option>
                             <option value="accident">Accident Insurance</option>
                         </select>
-                        <!-- <input id="button" type="submit" value="Search"/> -->
+                        <a href="#"><i class="fa fa-search"></i></a>
                     </form>
                 </div>
 
@@ -141,30 +142,41 @@
                     <tr>
                         <th>Date</th>
                         <th>Description</th>
-                        <th>Used</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>27th June</td>
+                        <td>Hospitalization</td>
+                        <td>5000.00 LKR</td>
+                    </tr>
+                    <tr>
+                        <td>27th June</td>
+                        <td>Hospitalization</td>
+                        <td>5000.00 LKR</td>
                     </tr>
                 </table>
+
             </div>
 
-<!--            <div class="benefit_type">-->
-<!--                <form action="">-->
-<!---->
-<!--                    <select id="benefit" name="benefit">-->
-<!--                        <option value="medical">Medical Insurance</option>-->
-<!--                        <option value="life">Life Insurance</option>-->
-<!--                        <option value="accident">Accident Insurance</option>-->
-<!--                    </select>-->
-<!--                    <input id="button" type="submit" value="Search"/>-->
-<!--                </form>-->
-<!--            </div>-->
-<!---->
-<!--            <table id="benefit_history_result">-->
-<!--                <tr>-->
-<!--                    <th>Date</th>-->
-<!--                    <th>Description</th>-->
-<!--                    <th>Used</th>-->
-<!--                </tr>-->
-<!--            </table>-->
+            <!--            <div class="benefit_type">-->
+            <!--                <form action="">-->
+            <!---->
+            <!--                    <select id="benefit" name="benefit">-->
+            <!--                        <option value="medical">Medical Insurance</option>-->
+            <!--                        <option value="life">Life Insurance</option>-->
+            <!--                        <option value="accident">Accident Insurance</option>-->
+            <!--                    </select>-->
+            <!--                    <input id="button" type="submit" value="Search"/>-->
+            <!--                </form>-->
+            <!--            </div>-->
+            <!---->
+            <!--            <table id="benefit_history_result">-->
+            <!--                <tr>-->
+            <!--                    <th>Date</th>-->
+            <!--                    <th>Description</th>-->
+            <!--                    <th>Used</th>-->
+            <!--                </tr>-->
+            <!--            </table>-->
 
         </div>
     </div>
