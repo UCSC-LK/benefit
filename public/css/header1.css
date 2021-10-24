@@ -1,5 +1,4 @@
 @import "color.css";
-
 body {
     font-family: Roboto, sans-serif;
     margin: 0;
@@ -21,6 +20,23 @@ body {
     overflow: hidden;
     top: 0;
     margin: 0 5px 5px;
+}
+
+.logged_name {
+    padding-top: 36px;
+    color: #d9e8ea;
+    position: absolute;
+    padding-right: 0;
+    /* padding-left: 90%; */
+    margin-left: 90%;
+}
+
+.notification {
+    padding-top: 33px;
+    padding-right: 0;
+    /* padding-left: 87%; */
+    margin-left: 87%;
+    position: absolute;
 }
 
 .ofs {
@@ -111,9 +127,9 @@ body {
     right: 5%;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    top: 20px;
+    width: 35px;
+    height: 35px;
+    top: 27px;
     color: #333333;
     background: #dddddd;
     border: none;
@@ -147,7 +163,7 @@ body {
     color: #333333;
 }
 
-.dd_main{
+.dd_main {
     margin-right: 30px;
     cursor: pointer;
     color: #fff;
@@ -157,18 +173,18 @@ body {
 
 .dd_menu {
     position: absolute;
-    right:-35px;
-    top:47px;
+    right: -35px;
+    top: 47px;
     /*display:flex;*/
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
     display: none;
-    cursor:default;
+    cursor: default;
     z-index: 4;
 }
 
-.dd_menu ul{
+.dd_menu ul {
     margin: 0;
     padding: 0;
 }
@@ -188,7 +204,7 @@ body {
     padding-top: 5px;
 }
 
-.dd_menu .dd_left a  {
+.dd_menu .dd_left a {
     color: white;
     list-style-type: none;
     padding-left: 10px;
@@ -200,25 +216,25 @@ body {
     padding: 10px 20px 10px 5px;
 }
 
-.dd_menu .dd_right li{
+.dd_menu .dd_right li {
     padding-top: 5px;
     cursor: pointer;
 }
 
-.dd_right li a{
+.dd_right li a {
     text-decoration: none;
 }
 
-.dd_menu li{
+.dd_menu li {
     margin-bottom: 10px;
     margin-top: 10px;
-    color:  #868686;
+    color: #868686;
     list-style-type: none;
     cursor: pointer;
     font-weight: bold;
 }
 
-.dd_menu::before{
+.dd_menu::before {
     content: "";
     position: absolute;
     top: -20px;
@@ -227,6 +243,6 @@ body {
     border-color: transparent transparent #fff transparent;
 }
 
-.dd_main.active .dd_menu{
+.dd_main.active .dd_menu {
     display: flex;
 }

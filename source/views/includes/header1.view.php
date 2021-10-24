@@ -34,14 +34,28 @@
             <?php if (Auth::access('HR Officer')): ?>
                 <li><a href="<?= PATH ?>AddemployeeController">USER MANAGEMENT</a></li>
             <?php endif; ?>
-        </ul>
+            <!-- <a>
+                <span class="material-icons">notifications</span>
+            </a>
+            <span class=logged_name></span>
+        </ul> -->
     </nav>
+    
+    <div class="notification">
+        <a>
+                <span class="material-icons">notifications</span>
+            </a>
+    </div>
+    <div class="logged_name">
+         <span class=log_name><?= Auth::getfirst_name() ?></span>
+
+        </div>
 
     <div class="dd_main">
         <button type="button" class="icon-button">
             <a>
-                <span class="material-icons">notifications</span>
-                <span class="icon-button_badge">2</span>
+                <i class="fas fa-user"></i>
+                <!-- <span class="icon-button_badge">2</span> -->
             </a>
 
             <div class="dd_menu">
