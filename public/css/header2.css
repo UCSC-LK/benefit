@@ -17,7 +17,7 @@ body {
     /*background-color: #BA68C8;*/
     display: flex;
     font-family: Arial, serif;
-    position: relative;
+    /*position: relative;*/
     border-radius: 10px;
     margin-right: 5px;
     margin-bottom: 5px;
@@ -28,7 +28,7 @@ body {
 
 .header2 nav {
     display: flex;
-    position: relative;
+    /*position: relative;*/
     width: 100%;
     /* background-color: #A4E5E0; */
     background-color: #e4f9fc;
