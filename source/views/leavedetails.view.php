@@ -43,7 +43,7 @@
                 <div class="leave_card">
 
                     <div class="card" title="Click for Request Lave">
-                        <a id = "anchor" href="RequestleaveController">
+                        <a id="anchor" href="RequestleaveController">
                             <p class="title">Casual Leaves</p>
                             <div class="icon">
                                 <i class="item" data-feather="calendar"></i>
@@ -55,22 +55,23 @@
                     </div>
 
                     <div class="card" title="Click for Request Lave">
-                        <a id = "anchor" href="RequestleaveController">
-                            <p class="title">Sick Leaves<p>
+                        <a id="anchor" href="RequestleaveController">
+                            <p class="title">Sick Leaves
+                            <p>
                             <div class="icon">
                                 <i class="item" data-feather="plus-square"></i>
-                                <p class="remain"  id="sick_remain">4.5</p>
+                                <p class="remain" id="sick_remain">4.5</p>
                             </div>
                             <p>DAYS AVAILABLE</p>
                         </a>
                     </div>
 
                     <div class="card" title="Click for Request Lave">
-                        <a id = "anchor" href="RequestleaveController">
+                        <a id="anchor" href="RequestleaveController">
                             <p class="title">Annual Leaves</p>
                             <div class="icon">
                                 <i class="item" data-feather="sun"></i>
-                                <p class="remain"  id="annual_remain">4.5</p>
+                                <p class="remain" id="annual_remain">4.5</p>
                             </div>
                             <p>DAYS AVAILABLE</p>
                         </a>
@@ -79,16 +80,15 @@
             </div>
 
             <div class="upcoming_timeoff">
-
                 <div class="upcoming_header">
                     <i class="item" data-feather="clock"></i>
                     <p class="main_title">Upcoming Time Off</p>
-                    <hr>
                 </div>
+                <hr>
 
                 <div class="upcoming_detail">
                     <div class="icon">
-                        <i class="item" data-feather="clock"></i>
+                        <i class="item" data-feather="smile"></i>
                     </div>
                     <div class="description">
                         <!-- Dummy hard code value only -->
@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="leave_status">
-                            <p id="status">pending</p>
+                            <p id="status"><i>Pending</i></p>
                         </div>
 
 
@@ -111,38 +111,47 @@
                 <div class="history_header">
                     <i class="item" data-feather="clipboard"></i>
                     <p class="main_title">Leave History</p>
-                    <hr>
                 </div>
+                <hr>
 
 
                 <div class="leave_type">
-                    <!-- <form onsubmit="return doSearch()"> -->
                     <form action="">
-                        <!-- <input type="option" id="search" required/>
-                        <input type="submit" value="Search"/> -->
-                        <i class="fa fa-search" aria-hidden="true"></i>
                         <select id="leave" name="leave">
                             <option value="sick">Sick Leaves</option>
                             <option value="casual">Casual Leaves</option>
                             <option value="annual">Annual Leaves</option>
                         </select>
-                        <!-- <input id="button" type="submit" value="Search"/> -->
+                        <a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                     </form>
                 </div>
-                <table id="leave_history_result" >
+                <table id="leave_history_result">
                     <tr>
                         <th>Date</th>
                         <th>Description</th>
+                        <th>Type</th>
                         <th>Used</th>
+                    </tr>
+                    <tr>
+                        <td>23th August</td>
+                        <td>Doctor Meet</td>
+                        <td>Sick Leave</td>
+                        <td>+1</td>
+                    </tr>
+                    <tr>
+                        <td>23th August</td>
+                        <td>Doctor Meet</td>
+                        <td>Sick Leave</td>
+                        <td>+2</td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
 </div>
-    <script>
-        feather.replace()
-    </script>
+<script>
+    feather.replace()
+</script>
 
 <!--</div>-->
 <?php //$this->view('includes/footer')?>

@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= CSS_PATH ?>header2.css">
     <link rel="stylesheet" href="<?= CSS_PATH ?>reimbursement.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <title></title>
 </head>
 <body>
@@ -31,14 +34,15 @@
                 <div class="heading">
                     <h2>CLAIM REIMBURSEMENT</h2>
                 </div>
-                <form name="myform" action="#" method="POST"  onsubmit=" return validation()">
+                <form name="myform" action="#" method="POST" onsubmit=" return validation()">
 
                     <div class="row">
                         <div class="column_1">
                             <label for="c_date">Claim Date</label>
                         </div>
                         <div class="column_2">
-                            <input type="date" id="claim_date" name="claim_date" min="2021-10-14" max="2021-10-21" placeholder="mm/dd/yyyy" required>
+                            <input type="date" id="claim_date" name="claim_date" min="2021-10-14" max="2021-10-21"
+                                   placeholder="mm/dd/yyyy" required>
                         </div>
                     </div>
                     <div class="row">
@@ -54,7 +58,8 @@
                             <label for="subject">Pay For</label>
                         </div>
                         <div class="column_2">
-                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;" required></textarea>
+                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;"
+                                      required></textarea>
                         </div>
                     </div>
 
@@ -63,28 +68,55 @@
                             <label for="submission">Invoice Submission</label>
                         </div>
                         <div class="invoice_submission">
-                            <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" required>
+                            <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png"
+                                   required>
                         </div>
                     </div>
 
                     <div class="apply_button">
-                    <input type="submit" value="Apply" name="submit">
-                    <a href="<?=PATH?>/Reimbursement">
-			 		<input class="cancle_button" type="button" value="Cancel"></a>
+                        <input type="submit" value="Apply" name="submit">
+                        <a href="<?= PATH ?>/Reimbursement">
+                            <input class="cancle_button" type="button" value="Cancel"></a>
 
                     </div>
                 </form>
             </div>
-                <?php
-                if (boolval($errors)) {
-                    print_r($errors);
-                }
-                ?>
+            <?php
+            if (boolval($errors)) {
+                print_r($errors);
+            }
+            ?>
             <div class="history">
 
                 <div class="history_header">
                     <p class="main_title"><i class="material-icons">history</i>Reimbursement History</p>
                 </div>
+                <hr>
+                <?php
+                $i = 0;
+
+                if (boolval($row)) {
+                    for ($i = 0; $i < sizeof($row); $i++) {
+                        $vai = $row[$i];
+                        if ($vai->reimbursement_status == "pending") { ?>
+                            <div class="pending_items">
+                                <div><?php print_r($vai->claim_date); ?></div>
+                                <div><?php print_r($vai->claim_amount); ?></div>
+                                <div><i>Pending</i></div>
+                                <a href="<?= PATH ?>Reimbursement/update_reimbursement"">
+                                <button type="Submit" value="Submit" name="update" class="update_button"><i
+                                            class="fa fa-edit"></i> Update
+                                </button>
+                                </a>
+                                <a href="<?= PATH ?>Reimbursement/delete/<?= $vai->invoice_submission ?>">
+                                    <button type='submit' value='Decline' name="delete" class='delete_button'><i
+                                                class="fa fa-trash"></i> Delete
+                                    </button>
+                                </a>
+                            </div>
+                        <?php }
+                    }
+                } ?>
                 <table id="claim_history_table">
                     <!-- <form method="post" action="Reimbursement/delete"> -->
                     <tr>
@@ -97,35 +129,24 @@
                     <?php
                     $i = 0;
 
-                    if (boolval($row)){
+                    if (boolval($row)) {
 
                         for ($i = 0; $i < sizeof($row); $i++) {
 
                             $vai = $row[$i];
-                            ?>
-                            <tr>
-                            <td><?php print_r($vai->claim_date); ?></td>
-                            <td><?php print_r($vai->claim_amount); ?></td>
-                            <td><?php print_r($vai->reimbursement_status);
-                            if ($vai->reimbursement_status == "pending") {
-                                ?>
-                                <!--<button type="Submit" value="Submit" name="delete">Delete</button>-->
-                                <a href="<?= PATH ?>Reimbursement/update_reimbursement">
-                                    <button type="Submit" value="Submit" name="update" class="update_button"><i class="fa fa-edit"></i> Update</button></a>
+                            if ($vai->reimbursement_status == "accepted" || $vai->reimbursement_status == "rejected") { ?>
+                                <tr>
+                                    <td><?php print_r($vai->claim_date); ?></td>
+                                    <td><?php print_r($vai->claim_amount); ?></td>
+                                    <td><?php print_r($vai->reimbursement_status); ?></td>
+                                </tr>
 
-                                <a href="<?= PATH ?>Reimbursement/delete/<?= $vai->invoice_submission ?>">
-                                    <button type="Submit" value="Submit" name="delete" class="delete_button"><i class="fa fa-trash"></i> Delete</button></a>
+                            <?php }
+                        }
+                    } ?>
 
-                            <?php } ?>
-                        <?php } ?></td>
-
-                        </tr>
-                        <?php
-                    }
-                    else{
-                    ?>
-                    <td><?php echo "No history";
-                        } ?></td>
+                    <!--                    <td>--><?php //echo "No history";
+                    //                        } ?><!--</td>-->
                     <!-- </form> -->
                 </table>
             </div>
