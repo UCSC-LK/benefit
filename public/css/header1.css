@@ -10,16 +10,11 @@ body {
     background-color: #0C6170;
     display: flex;
     justify-content: space-between;
-    /*position: relative;*/
+    position: relative;
     max-width: 100%;
     border-radius: 10px;
+    margin: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-    position: fixed;
-    width: 100%;
-    overflow: hidden;
-    top: 0;
-    margin: 0 5px 5px;
 }
 
 .logged_name {
@@ -48,9 +43,9 @@ body {
 
 .header1 nav {
     display: flex;
-    /*position: relative;*/
+    position: relative;
     width: 70%;
-    /*background-color: var(--h1);*/
+    background-color: var(--h1);
     /*margin-bottom: 5px;*/
     border-radius: 10px;
 }
