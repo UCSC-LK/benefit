@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="<?= CSS_PATH ?>header2.css"> -->
-    <link rel="stylesheet" href="<?= CSS_PATH ?>addperfor.css">
+    <link rel="stylesheet" href="<?= CSS_PATH ?>performance.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title></title>
 </head>
@@ -32,7 +32,7 @@
                 <h2>PERFORMANCES</h2>
             </div>
             <div>
-                <div class="conta" style="max-width: 75%;">
+                <div class="conta">
                     <div class="row">
                         <div class="col-6 chart">
                             <canvas id="myChart2"></canvas>
@@ -77,7 +77,7 @@
                 <?php }
                 else{
                 ?>
-                    <h3 style="text-align: center;">You don't have recods yet</h3>
+                    <h3>You don't have records yet</h3>
                 <?php } ?>
             </div>
         </div>

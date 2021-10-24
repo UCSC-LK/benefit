@@ -6,8 +6,8 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600'>
 
 
-    <link rel="stylesheet" href="<?= CSS_PATH ?>addperfor.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="<?= CSS_PATH ?>addperformance.css">
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">-->
 
 </head>
 <body>
@@ -40,9 +40,9 @@ if (boolval($errors)) {
         <div class="testbox">
             <form method="post">
                 <h1>Employees Feedback Form</h1>
-
                 <hr/>
-                <h3>Overall experience of employee</h3>
+
+                <h3>Overall Experience of Employee</h3>
                 <table>
                     <tr>
                         <th class="first-col"></th>
