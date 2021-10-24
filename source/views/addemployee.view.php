@@ -23,13 +23,13 @@
 </div>
 
 <div class="page_content">
-    <!-- <?php if (Auth::access('HR Officer')): ?>
+     <?php if (Auth::access('HR Officer')): ?>
         <div>
             <?php
             $this->view('includes/hrofficernav');
             ?>
         </div>
-    <?php endif; ?> -->
+    <?php endif; ?>
 
 
     <?php
