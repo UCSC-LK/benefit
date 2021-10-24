@@ -3,16 +3,17 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--background);
-    height: 100%;
-
+    background-image: url("public/img/wave.svg");
+    max-height: 100%;
 }
+
 
 .main_container {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    background-color: white;
+    /* background-color: white; */
     padding: 10px;
-    height: 100vh;
+    height: 100%;
     transition: 0.5s;
     margin: 0 5px 0 255px;
     display: flex;
@@ -31,22 +32,52 @@ body {
 .details {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    justify-content: center;
+    width: 90%;
+    max-height: 100%;
+    margin: auto;
+    margin-top: 0;
+    /* margin-bottom: 0; */
+    /* justify-content: center; */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, .20);
+}
 
+.details svg{
+    display: block;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 5px;
 }
 
 .manager, .supervisor, .employee{
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    margin:auto;
+    margin-top: 0;
+    margin-bottom: 0;
     border-radius: 10px;
+    /* z-index: 1; */
 }
 
 .head {
     padding: 10px;
     text-align: left;
-    font-size: x-large;
+    font-size: large;
+    color: var(--header);
     font-weight: bolder;
+    display: flex;
+    justify-content: left;
+}
+
+.head label{
+    width: 30%;
+    height: 30px;
+    text-align: center;
+}
+.head select {
+    width: 50%;
+    height: 30px;
+    font-size: large;
 }
 
 .title {
@@ -56,7 +87,7 @@ body {
 }
 
 .data {
-    width: 90%;
+    width: 100%;
     margin: 5px;
     border-radius: 10px;
 }
@@ -103,11 +134,11 @@ img {
 .name,
 .email {
     width: 45%;
-    overflow: scroll;
+    /* overflow: scroll; */
     overflow-y: hidden;
    
     text-align: center;
-    opacity: 65%;
+    color: rgba(0, 0, 0, 0.603);
     font-weight: bold;
     font-size: medium;
 }
