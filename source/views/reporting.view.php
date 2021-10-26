@@ -20,7 +20,8 @@
 <div class="page_content">
     <?php if (Auth::access('HR Manager')): ?>
         <?php
-        $this->view('includes/hrnav');
+//        $this->view('includes/hrnav');
+        $this->view('includes/hrmanagernavbar');
         ?>
     <?php endif; ?>
 

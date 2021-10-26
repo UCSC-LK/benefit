@@ -23,7 +23,8 @@
     <?php if (Auth::access('Supervisor')): ?>
 
         <?php
-        $this->view('includes/supervisornav');
+//        $this->view('includes/supervisornav');
+        $this->view('includes/parentemployeenavbar');
         ?>
 
     <?php endif; ?>
@@ -31,8 +32,8 @@
     <?php if (Auth::access('HR Manager')): ?>
         <div>
             <?php
-            //$this->view('includes/hrmanagernavbar');
-            $this->view('includes/hrnav');
+            $this->view('includes/hrmanagernavbar');
+//            $this->view('includes/hrnav');
             ?>
         </div>
     <?php endif; ?>

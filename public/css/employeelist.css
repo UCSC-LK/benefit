@@ -9,13 +9,13 @@ body {
 
 
 .main_container {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /*border-top-right-radius: 10px;*/
+    /*border-bottom-right-radius: 10px;*/
     /* background-color: white; */
     padding: 10px;
     height: 100%;
     transition: 0.5s;
-    margin: 0 5px 0 255px;
+    /*margin: 0 5px 0 255px;*/
     display: flex;
     flex-direction: column;
 }
