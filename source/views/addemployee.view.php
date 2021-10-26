@@ -34,7 +34,7 @@
 
     <?php
 
-    for ($i = 4; $i < 15; $i++) {
+    for ($i = 4; $i < 16; $i++) {
         if ($rows[$i]) {
             $alert = "<script> alert ('$rows[$i]') </script>";
             echo $alert;
@@ -256,7 +256,7 @@
                                 <td id="c2" colspan="2"><label for="marital" name="marital">Marital Status</label></td>
                                 <!-- <td id="c3"></td> -->
                                 <td id="c4"><label for="yes">Yes</label></td>
-                                <td id="c5"><input type="radio" id="yes" name="marital" value="Yes"></td>
+                                <td id="c5"><input type="radio" id="yes" name="marital" value="Yes" required></td>
                         
                                 <td id="c6"></td>
                                 <td id="c7"><label for="no">No</label></td>
@@ -267,7 +267,7 @@
                                 <td id="c2" colspan="2"><label for="gender" name="gender">Gender</label></td>
                                 
                                 <td id="c4"><label for="gender">Male</label></td>
-                                <td id="c5"><input type="radio" id="male" name="gender" value="Male"></td>
+                                <td id="c5"><input type="radio" id="male" name="gender" value="Male" required></td>
                         
                                 <td id="c6"></td>
                                 <td id="c7"><label for="gender">Female</label></td>
@@ -306,7 +306,7 @@
                                 <!-- <td id="c3"></td> -->
                                 <td id="c4" colspan="6"><input type="password" id="confirm" name="confirm" required><i class="far fa-eye"id="eye2"></i>
                                     <input type="hidden" name="phide" id="phide" value="">
-                                    <p id="message"> Password is <span id="strenght"></span></p>   
+                                    <p id="message">  <span id="strenght"></span></p>   
                                 </td>
                                
                             </tr>
