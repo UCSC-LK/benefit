@@ -47,7 +47,7 @@ body {
     width: 70%;
     background-color: var(--h1);
     /*margin-bottom: 5px;*/
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
 .header1 nav ul {
@@ -63,6 +63,9 @@ body {
 .header1 nav ul li {
     display: inline-block;
     width: max-content;
+    /*margin: auto;*/
+    /*margin-bottom: 20px;*/
+    /*vertical-align: middle;*/
 }
 
 .header1 nav ul li a {
@@ -75,7 +78,9 @@ body {
     font-size: larger;
     font-weight: 800;
     text-transform: uppercase;
-    margin: 0;
+    padding-top: 10px;
+    /*margin: 20px;*/
+    /*padding-bottom: 15px;*/
 }
 
 .header1 nav ul li a,
