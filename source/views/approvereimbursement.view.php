@@ -20,8 +20,8 @@
 <div class="page_content">
 
     <?php
-    //    $this->view('includes/parentemployeenavbar');
-    $this->view('includes/supervisornav');
+        $this->view('includes/parentemployeenavbar');
+//    $this->view('includes/supervisornav');
     ?>
 
     <div class="main_container">

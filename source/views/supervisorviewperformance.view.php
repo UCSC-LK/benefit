@@ -17,7 +17,8 @@
 
 <div class="page_content">
     <?php
-    $this->view('includes/supervisornav');
+//    $this->view('includes/supervisornav');
+    $this->view('includes/parentemployeenavbar');
     ?>
 
     <div class="main_container">

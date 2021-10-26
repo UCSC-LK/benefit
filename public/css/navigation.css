@@ -1,55 +1,72 @@
+@import "color.css";
 body {
-    font-family: Arial;
+    font-family: Roboto, sans-serif;
 }
 
 .header {
     height: 70px;
     display: flex;
-    justify-content: space-between;
-    border-radius: 5px;
+    /*justify-content: space-between;*/
     /* background-color: #5B7CFE; */
-}
 
-.nav-bar {
-    /*height: 100px;*/
     align-items: center;
     text-align: center;
-    background-color: #5B7CFE;
+    background-color: var(--h2);
+    max-width: 100%;
+    /*border-radius: 10px;*/
+    /*margin-bottom: 5px;*/
+    /*margin-left: 5px;*/
+    /*margin-right: 5px;*/
+    /*justify-content: space-evenly;*/
+
+}
+
+/*.nav-bar {*/
+/*    !*height: 100px;*!*/
+/*    align-items: center;*/
+/*    text-align: center;*/
+/*    background-color: #5B7CFE;*/
+/*    width: 100%;*/
+/*    border-radius: 10px;*/
+/*    margin-bottom: 5px;*/
+/*    margin-left: 5px;*/
+/*    margin-right: 5px;*/
+/*}*/
+
+.header ul {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.nav-bar ul {
-    width: 30%;
-    height: 75%;
-    padding-left: 60px;
     display: flex;
-    justify-content: normal;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-bar ul li {
-    display: flex;
-    flex: 10;
-    justify-content: space-between;
-    text-align: left;
-    align-items: center;
-    list-style: none;
+.header ul li {
+
 }
 
-.nav-bar ul li a {
-    padding: 50px;
-    font-size: 40;
+.header ul li a {
+    /*padding: 50px;*/
+    font-size: large;
+    font-weight: bolder;
     text-decoration: none;
-    color: white;
-    display: block;
-    line-height: normal;
-    width: max-content;
+    /*color: white;*/
+    /*display: block;*/
+    /*line-height: normal;*/
+    /*width: max-content;*/
+    justify-content: space-between;
+    color: var(--h1);
+    display: inline-block;
+    margin: 0;
 }
 
-.nav-bar li:hover {
-    background-color: #065B7A;
-    height: 40px;
+.header i {
+    padding-right: 5px;
+}
+
+.header li:hover {
+    /*background-color: #065B7A;*/
+    /*height: 40px;*/
 }

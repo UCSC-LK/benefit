@@ -19,8 +19,8 @@
 
 <div class="page_content">
     <?php
-    //$this->view('includes/hrmanagernavbar');
-    $this->view('includes/hrnav');
+    $this->view('includes/hrmanagernavbar');
+//    $this->view('includes/hrnav');
     ?>
 
     <div class="main_container">

@@ -12,12 +12,12 @@ body {
     padding: 10px;
     height: 100vh;
     transition: 0.5s;
-    margin: 0 5px 0 255px;
+    /*margin: 0 5px 0 255px;*/
 }
 
 .main_container .benefit_head {
     background-color: white;
-    max-width: 100%;
+    max-width: 60%;
     padding: 50px;
     border-radius: 10px;
     margin-right: 5px;

@@ -26,7 +26,8 @@
      <?php if (Auth::access('HR Officer')): ?>
         <div>
             <?php
-            $this->view('includes/hrofficernav');
+//            $this->view('includes/hrofficernav');
+            $this->view('includes/hrofficernavbar');
             ?>
         </div>
     <?php endif; ?>
