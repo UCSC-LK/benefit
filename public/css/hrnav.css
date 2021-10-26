@@ -5,9 +5,9 @@ body{
     height: 100%;
 }
 
-.main_container {
-    transition: height 100ms ease;
-}
+/*.main_container {*/
+/*    transition: height 100ms ease;*/
+/*}*/
 
 .page_content {
     /*display: flex;*/
@@ -23,7 +23,7 @@ body{
     width: 250px;
     height: 100%;
     border-radius: 10px;
-    /*transition: 0.5s;*/
+    transition: 0.5s;
     transition-property: left;
     /*transition: top 1ms ease;*/
 }
