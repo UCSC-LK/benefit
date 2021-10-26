@@ -33,11 +33,15 @@
 
 
         <div class="input_feild">
+            <div class="leave_feild">
+
+        <fieldset>
+                <legend>LEAVE REQUEST</legend>
 
             <form action="#" method="post" enctype="multipart/form-data">
-                <div class="heading">
+                <!-- <div class="heading">
                     <h2>REQUEST LEAVES</h2>
-                </div>
+                </div> -->
                 <div class="leave_type">
                     <label for="leave_type">Select Leave Type</label>
                     <select name="leave_type" id="leave_type">
@@ -73,11 +77,11 @@
                         </div>
 
                         <div class="item">
-                            <div>
+                            <div class="item-1">
                                 <label for="half">Morning </label>
                                 <input type="radio" id="half" name="half" value="morning">
                             </div>
-                            <div>
+                            <div class="item-1">
                                 <label for="half">Evening</label>
                                 <input type="radio" name="half" value="evening" id="half">
                             </div>
@@ -97,6 +101,8 @@
 
                 </div>
             </form>
+        </fieldset>
+            </div>
         </div>
     </div>
 </div>

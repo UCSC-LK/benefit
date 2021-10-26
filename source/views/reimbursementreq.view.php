@@ -31,9 +31,11 @@
         <div class="reimbursement_container">
 
             <div class="reimbursement_details">
-                <div class="heading">
+            <fieldset>
+                <legend>CLAIM REIMBURSEMENT</legend>
+                <!-- <div class="heading">
                     <h2>CLAIM REIMBURSEMENT</h2>
-                </div>
+                </div> -->
                 <form name="myform" action="#" method="POST" onsubmit=" return validation()">
 
                     <div class="row">
@@ -72,14 +74,16 @@
                                    required>
                         </div>
                     </div>
-
                     <div class="apply_button">
                         <input type="submit" value="Apply" name="submit">
                         <a href="<?= PATH ?>/Reimbursement">
                             <input class="cancle_button" type="button" value="Cancel"></a>
 
                     </div>
+
                 </form>
+                </fieldset>
+
             </div>
             <?php
             if (boolval($errors)) {
