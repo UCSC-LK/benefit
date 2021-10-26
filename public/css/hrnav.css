@@ -5,13 +5,8 @@ body{
     height: 100%;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    height: 100%;
-    /*border-top-right-radius: 10px;*/
-    /*border-bottom-right-radius: 10px;*/
-    /*width: 100%;*/
+.main_container {
+    transition: height 100ms ease;
 }
 
 .page_content {
@@ -28,8 +23,9 @@ body{
     width: 250px;
     height: 100%;
     border-radius: 10px;
-    transition: 0.5s;
+    /*transition: 0.5s;*/
     transition-property: left;
+    /*transition: top 1ms ease;*/
 }
 
 .side_bar .profile_image {
@@ -102,4 +98,36 @@ label #sidebar_btn:hover {
 
 #check {
     display: none;
+}
+
+.sticky_10 {
+    top: 75px;
+}
+
+.sticky_20 {
+    top: 65px;
+}
+
+.sticky_30 {
+    top: 55px;
+}
+
+.sticky_40 {
+    top: 45px;
+}
+
+.sticky_50 {
+    top: 35px;
+}
+
+.sticky_60 {
+    top: 25px;
+}
+
+.sticky_70 {
+    top: 15px;
+}
+
+.sticky_80 {
+    top: 0;
 }
