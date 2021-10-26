@@ -7,7 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?= CSS_PATH ?>hrdocuments.css">
+    <link rel="stylesheet" href="<?= CSS_PATH ?>updatedocuments.css">
 
     <title></title>
 </head>
@@ -35,95 +35,42 @@
     <?php endif; ?>
 
     <div class="main_container">
-        <div>
-            <p class="handling_title">Handle Documents</p>
-        </div>
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <h4>Employee Application Form</h4>
-                    <img src="<?= IMG_PATH ?>hrdocuments/emp_application_form.png" alt="" style="width:100%">
-                    <?php if (Auth::access('HR Manager') || Auth::access('HR Officer')): ?>
-                        <button class="btn" onclick="document.getElementById('link-1').click()"><i
-                                    class="fa fa-download"></i> Update
-                        </button>
-                    <?php endif; ?>
-
-                    <a id="link-1" href="<?= DOC_PATH ?>employment-application-form.docx" download hidden></a>
+    <div class="benefit_head">
+    <fieldset>
+                <legend>UPDATE DOCUMENTS</legend>
+               
+                <form name="myform" action="#" method="POST">
+                <div class="row">
+                        <div class="column_1">
+                            <label for="d_name">Document Name</label>
+                        </div>
+                        <div class="column_2">
+                            <input type="text" id="d_name" name="d_name" required>
+                        </div>
                 </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h4>Employee Emergency Contact Form</h4>
-                    <img src="<?= IMG_PATH ?>hrdocuments/emp_emergency_form.png" alt="" style="width:100%">
-                    <?php if (Auth::access('HR Manager') || Auth::access('HR Officer')): ?>
-                        <button class="btn" onclick="document.getElementById('link-1').click()"><i
-                                    class="fa fa-download"></i> Update
-                        </button>
-                    <?php endif; ?>
 
-                    <a id="link-2" href="<?= DOC_PATH ?>employee-emergency-form.docx" download hidden></a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h4>Disciplinary action form</h4>
-                    <img src="<?= IMG_PATH ?>hrdocuments/emp_disciplinary_form.png" alt="" style="width:100%">
-                    <?php if (Auth::access('HR Manager') || Auth::access('HR Officer')): ?>
-                        <button class="btn" onclick="document.getElementById('link-1').click()"><i
-                                    class="fa fa-download"></i> Update
-                        </button>
-                    <?php endif; ?>
+                <div class="row">
+                        <div class="column_1">
+                            <label for="d_submission">Upload Document</label>
+                        </div>
+                        <div class="d_submission">
+                            <input type="file" id="d_submission" name="d_submission" accept=".doc" required>
+                        </div>
+                    </div>
+                    <div class="d_button">
+                        <input type="submit" value="Update" name="submit">
+                        <a href="<?= PATH ?>Hrdocuments/updatedecuments">
+                            <input class="cancle_button" type="button" value="Cancel"></a>
 
-                    <a id="link-3" href="<?= DOC_PATH ?>disciplinary-action-form.docx" download hidden></a>
-                </div>
-            </div>
-        </div>
+                    </div>
 
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <h4>HR Service Request Form</h4>
-                    <img src="<?= IMG_PATH ?>hrdocuments/emp_hr_request_form.png" alt="" style="width:100%">
-                    <?php if (Auth::access('HR Manager') || Auth::access('HR Officer')): ?>
-                        <button class="btn" onclick="document.getElementById('link-1').click()"><i
-                                    class="fa fa-download"></i> Update
-                        </button>
-                    <?php endif; ?>
+                </form>
 
-                    <a id="link-4" href="<?= DOC_PATH ?>hr-service-request-form.docx" download hidden></a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h4>Exit Interview Form</h4>
-                    <img src="<?= IMG_PATH ?>hrdocuments/emp_exit_interview_form.png" alt="" style="width:100%">
-                    <?php if (Auth::access('HR Manager') || Auth::access('HR Officer')): ?>
-                        <button class="btn" onclick="document.getElementById('link-1').click()"><i
-                                    class="fa fa-download"></i> Update
-                        </button>
-                    <?php endif; ?>
-
-
-                    <a id="link-5" href="<?= DOC_PATH ?>exit-interview-form.docx" download hidden></a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <h4>Travel Request Form</h4>
-                    <img src="<?= IMG_PATH ?>hrdocuments/emp_travel_request_form.png" alt="" style="width:100%">
-                    <?php if (Auth::access('HR Manager') || Auth::access('HR Officer')): ?>
-                        <button class="btn" onclick="document.getElementById('link-1').click()"><i
-                                    class="fa fa-download"></i> Update
-                        </button>
-                    <?php endif; ?>
-
-                    <a id="link-6" href="<?= DOC_PATH ?>travel-request-form.docx" download hidden></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </fieldset>
+    </div> 
 </div>
+</div>
+
 
 </body>
 
