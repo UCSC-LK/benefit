@@ -18,9 +18,9 @@ body {
     display: flex;
     font-family: Arial, serif;
     /*position: relative;*/
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    /*border-radius: 10px;*/
+    /*margin-right: 5px;*/
+    /*margin-bottom: 5px;*/
 }
 
 
@@ -32,7 +32,7 @@ body {
     width: 100%;
     /* background-color: #A4E5E0; */
     background-color: #e4f9fc;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
 .header2 nav ul {

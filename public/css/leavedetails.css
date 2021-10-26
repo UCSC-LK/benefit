@@ -16,9 +16,9 @@ body {
 .leave_container .timeoff_head {
     background-color: white;
     max-width: 100%;
-    border-radius: 10px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    /*border-radius: 10px;*/
+    /*margin-right: 5px;*/
+    /*margin-bottom: 5px;*/
     padding: 10px 10px 20px;
 }
 
@@ -115,10 +115,10 @@ hr {
     background-color: white;
     max-width: 100%;
     padding: 10px 10px 10px 16px;
-    border-radius: 10px;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
-    margin-right: 5px;
-    margin-bottom: 5px;
+    /*border-radius: 10px;*/
+    /*box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);*/
+    /*margin-right: 5px;*/
+    /*margin-bottom: 5px;*/
 }
 
 .leave_container .upcoming_timeoff .upcoming_header {
@@ -182,10 +182,10 @@ hr {
     background-color: white;
     max-width: 100%;
     padding: 10px 10px 10px 16px;
-    border-radius: 10px;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
-    margin-right: 5px;
-    margin-bottom: 5px;
+    /*border-radius: 10px;*/
+    /*box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);*/
+    /*margin-right: 5px;*/
+    /*margin-bottom: 5px;*/
 }
 
 .leave_container .leave_history .history_header {
