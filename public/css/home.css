@@ -10,42 +10,66 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+
 }
 
-.row {
+.container {
+    max-width: 100%;
+    background-image: url("../img/wave.svg");
+    background-repeat: no-repeat;
+    /* background-color: blanchedalmond; */
+    display: flex;
+    justify-content: space-between;
     height: 100%;
-    width: 100%;
+    margin: 5px;
+    border-radius: 5px;
 }
 
-.column1 {
-    float: left;
-    width: 35%;
-    height: 35%;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    padding-left: 330px;
+.left{
+    width: 60%;
+    /* background-color:white; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 5px;
 }
 
-.column2 {
-    float: right;
-    width: 35%;
-    height: 35%;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    padding-right: 120px;
+.right{
+    width: 39%;
+    background-color: blueviolet;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.card_container {
+    /* background-image:url("../img/wave1.svg") ; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 45%;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
 }
 
 .card {
+    
+    /* background-repeat: no-repeat;
+    background-size:auto; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 8px;
     padding-right: 8px;
-    max-width: 60%;
-    max-height: 100%;
+    width: 80%;
     text-align: center;
-    background-color: #b2e4f3;
+    background-color: white;
     border-radius: 10px;
+    margin: auto;
+    height: 250px;
+
+
+    /* background-image:url("../img/wave.svg") ; */
 }
 
 .card h2 {
@@ -58,14 +82,14 @@ body {
     color: #070707;
     font-family: Arial;
     font-size: 40;
-    line-height: 40px;
+    /* line-height: 40px; */
 }
 
 .show-more {
-    width: 120px;
+    min-width: 120px;
     height: 40px;
-    margin-top: 40px;
-    margin-bottom: 10px;
+    margin: 20px;
+    /* margin-bottom: 10px; */
     background-color: white;
     /* border: 1px solid black; */
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .250);
@@ -99,4 +123,31 @@ footer {
     font-size: 15px;
     /* margin: auto; */
     padding-top: 25px;
+}
+
+@media screen and (max-width: 965px){
+    .container{
+        background-image: url("../img/wave.svg");
+        background-repeat: no-repeat;
+        background-size:auto;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left, .right {
+         margin:auto;
+         width:100%;
+    }
+
+}
+
+@media screen and (max-width: 412px){
+    .card {
+        width: 80%;
+    }
+    .card_container {
+        width: 100%;
+    }
+    
+
 }
