@@ -66,9 +66,11 @@
 
         <div class="benefit_container">
             <div class="benefit_head">
-            <div class="heading">
+            <fieldset>
+                <legend>CLAIM BENEFIT</legend>
+            <!-- <div class="heading">
                     <h2>CLAIM BENEFIT</h2>
-                </div>
+                </div> -->
 
                 <div class="benefit_form">
 
@@ -160,6 +162,8 @@
 
                         </script>
                     </form>
+                    </fieldset>
+
                 </div>
             </div>
         </div>
