@@ -35,12 +35,12 @@
     <?php endif; ?>
 
     <div class="main_container">
-    <div class="benefit_head">
+        <div class="benefit_head">
             <fieldset>
                 <legend>UPDATE BENEFIT</legend>
-            <!-- <div class="heading">
-                    <h2>CLAIM BENEFIT</h2>
-                </div> -->
+                <!-- <div class="heading">
+                        <h2>CLAIM BENEFIT</h2>
+                    </div> -->
 
                 <div class="benefit_form">
 
@@ -65,7 +65,8 @@
                                 <label for="claiming_amount">Maximum Amount</label>
                             </div>
                             <div class="column_2">
-                                <input type="text" id="claiming_amount" name="claiming_amount" placeholder="Rs.200,000.00" required pattern="[0-9._%+-]+\.[0-9]{2}$">
+                                <input type="text" id="claiming_amount" name="claiming_amount"
+                                       placeholder="Rs.200,000.00" required pattern="[0-9._%+-]+\.[0-9]{2}$">
                             </div>
                         </div>
 
@@ -74,21 +75,21 @@
                                 <label for="claiming_date">Renew Date</label>
                             </div>
                             <div class="column_2">
-                            <input type="date" id="claim_date" name="claim_date" placeholder="mm/dd/yyyy" required>
-                        </div>
+                                <input type="date" id="claim_date" name="claim_date" placeholder="mm/dd/yyyy" required>
+                            </div>
                         </div>
 
                         <div class="claim_button">
                             <input type="submit" value="Update" name="submit">
-                            <a href="<?=PATH?>/Benefit/update">
-			 		        <input class="cancle_button" type="button" value="Cancel"></a>
+                            <a href="<?= PATH ?>/Benefit/update">
+                                <input class="cancle_button" type="button" value="Cancel"></a>
                         </div>
 
                     </form>
-                    </fieldset>
+            </fieldset>
 
-                </div>
-            </div>
         </div>
+    </div>
+</div>
 </body>
 </html>

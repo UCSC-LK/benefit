@@ -22,21 +22,26 @@ body {
     border-radius: 10px;
     margin-right: 5px;
     margin-bottom: 5px;
-    /* display: flex;
-    flex-direction: row; */
+
+
+    display: flex;
+    flex-direction: row;
+
 }
 
 legend {
-    margin-left: 60px;
+    /*margin-left: 60px;*/
     padding: 8px;
     font-family: Roboto, Arial, sans-serif;
     font-size: 18px;
     color: #fff;
     background-color: #0C6170;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 fieldset {
-    width: 60%;
+    width: 100%;
     justify-content: center;
     padding-bottom: 20px;
     padding-top: 20px;
