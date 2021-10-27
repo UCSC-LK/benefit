@@ -15,6 +15,7 @@
 <body class="hierarchy-body">
 
     <div class="hierarchy-container">
+    <h1 class="h1">Hierarchy</h1>
 
         <h1 class="level-1 rectangle">CEO</h1>
         <ol class="level-2-wrapper">
