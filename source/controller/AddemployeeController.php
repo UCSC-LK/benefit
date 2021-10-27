@@ -14,7 +14,7 @@ class AddemployeeController extends Controller
 		$sells = $select->where('department_ID',3);
 		$acc = $select->where('department_ID',4);
 		$arr1 = array($oper,$hr,$sells,$acc);
-		for ($x = 4; $x < 15; $x++) {
+		for ($x = 4; $x < 16; $x++) {
 			$arr1[$x] = null;
 		  }
 		// $this->view('addemployee',['rows'=>$arr1]);
@@ -30,22 +30,30 @@ class AddemployeeController extends Controller
 			// if(!empty($_POST) && $_SERVER['REQUEST_METHOD'] == 'POST')
 			{
 				
-				$arr['first_name'] = filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING);
-				$arr['last_name'] = filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING);
+				$arr['first_name'] = ucwords(strtolower(filter_input(INPUT_POST, 'fname', FILTER_SANITIZE_STRING))); 
+				$arr['last_name'] = ucwords(strtolower(filter_input(INPUT_POST, 'lname', FILTER_SANITIZE_STRING)));
 				$arr['dob'] = $_POST['dob'];
 
 				// $today = date("Y-m-d");
 				// $diff = date_diff(date_create($arr['dob']), date_create($today));
 
-				$arr['street'] = filter_input(INPUT_POST, 'street', FILTER_SANITIZE_STRING);
-				$arr['city'] = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_STRING);
+				$arr['street'] = ucwords(strtolower(filter_input(INPUT_POST, 'street', FILTER_SANITIZE_STRING))) ;
+				$arr['city'] = ucwords(strtolower(filter_input(INPUT_POST, 'city', FILTER_SANITIZE_STRING)));
 				$arr['province'] = filter_input(INPUT_POST, 'province', FILTER_SANITIZE_STRING);
 				$arr['employee_NIC'] = filter_input(INPUT_POST, 'nic', FILTER_SANITIZE_STRING);
+
+				$row = "employee_NIC";
+				$nic_validate = $this->validate($arr['employee_NIC'], $user,$row);
+
+				// print_r( $nic_validate);
+
 				$arr['marital_status'] = $_POST['marital'];
 				$arr['gender'] = $_POST['gender'];
 				$arr['contact_number'] = $_POST['contact'];
 				$arr['email'] =  filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
-				$validate = $this->email_validate($arr['email'],$user);
+
+				$row = "email";
+				$email_validate = $this->validate($arr['email'],$user,$row);
 				
 
 				$pass = $_POST['pwd'];
@@ -138,7 +146,7 @@ class AddemployeeController extends Controller
 			
 					if (in_array($file_actual_ext, $allowed)) {
 						if ($file_error === 0) {
-							if ($file_size < 5000000){ //set max size of image 5000 KB
+							// if ($file_size < 5000000){ //set max size of image 5000 KB
 			
 								$file_name_new = $arr['first_name']. "." .$file_actual_ext; //Rename profile picture with employee id
 								$file_designation =  'public/img/profile/' .$file_name_new;
@@ -147,11 +155,11 @@ class AddemployeeController extends Controller
 								$arr['profile_image'] = $file_designation;
 								
 			 
-							}else {
-								$complete = false;
-								$arr1[4] = "Uploaded image too big (try image size < 500kb)";
+							// }else {
+							// 	$complete = false;
+							// 	$arr1[4] = "Uploaded image too big (try image size < 500kb)";
 
-							}
+							// }
 						}else {
 							
 							$complete = false;
@@ -166,8 +174,12 @@ class AddemployeeController extends Controller
 				$arr['designation_code'] = $_POST['designation'];
 				$arr['department_ID'] = $_POST['department'];
 
-				if($validate){
+				if($email_validate){
 					$arr1[8] = "email is allready used!";
+					unlink($file_designation);
+				}
+				if($nic_validate){
+					$arr1[15] = "NIC is already used!";
 					unlink($file_designation);
 				}
 				// elseif($diff->format('%y') <= 18 && $diff->format('%y') > 60){
@@ -201,10 +213,11 @@ class AddemployeeController extends Controller
 
 	}
 
-	function email_validate($email , $user){
+	function validate($email , $user,$row){
 		// $select = new AddemployeeModel();
-		$validate = $user->where('email',$email);
+		$validate = $user->where($row,$email);
 		
 		return $validate;
 	}
+
 }
