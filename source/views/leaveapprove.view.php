@@ -39,10 +39,10 @@
     <?php endif; ?>
     <!-- <h1>This is Leave Approve Page</h1> -->
     <div class="main_container">
-        <div>
-            <p class="handling_title">Handle Time Offs</p>
-        </div>
         <div class="approve-container">
+            <div>
+                <p class="handling_title">Handle Time Offs</p>
+            </div>
             <div class="card-container">
                 <div class="header-approve" id="btn">
                     <center>
