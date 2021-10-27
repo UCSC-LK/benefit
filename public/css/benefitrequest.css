@@ -19,9 +19,23 @@ body {
     background-color: white;
     max-width: 100%;
     padding: 50px;
-    /*border-radius: 10px;*/
-    /*margin-right: 5px;*/
-    /*margin-bottom: 5px;*/
+    display: flex;
+    flex-direction: row;
+}
+
+.back_btn {
+    width: 60px;
+    height: 60px;
+}
+
+.back_btn i {
+    font-size: 35px;
+    vertical-align: middle;
+    color: var(--f);
+}
+
+.back_btn i:hover {
+    transform: scale(1.2);
 }
 
 legend {
@@ -39,7 +53,6 @@ fieldset {
     padding-bottom: 20px;
     padding-top: 20px;
     margin: 0;
-    margin-left: 9%;
     /* display: inline-block; */
 }
 
