@@ -7,7 +7,7 @@
 
 
     <link rel="stylesheet" href="<?= CSS_PATH ?>addperformance.css">
-<!--    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">-->
+    <!--    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">-->
 
 </head>
 <body>
@@ -33,17 +33,28 @@ if (boolval($errors)) {
 <div class="page_content">
 
     <?php
-//    $this->view('includes/supervisornav');
-        $this->view('includes/parentemployeenavbar');
+    //    $this->view('includes/supervisornav');
+    $this->view('includes/parentemployeenavbar');
     ?>
 
     <div class="main_container">
         <div class="testbox">
-            <form method="post">
-                <h1>Employees Feedback Form</h1>
-                <hr/>
 
-                <h3>Overall Experience of Employee</h3>
+            <form method="post">
+                <div class="form_head">
+                    <div>
+                        <h1>Employees Feedback Form</h1>
+                        <hr/>
+                    </div>
+                    <div class="employee_details">
+                        <center>
+                            <img src="<?= IMG_PATH ?>profile/download.png">
+                        </center>
+                        <p>Chathura Bimalka<br>
+                        (Operational Worker)</p>
+                    </div>
+                </div>
+                <h3>Overall Experience of Worker</h3>
                 <table>
                     <tr>
                         <th class="first-col"></th>
@@ -95,14 +106,14 @@ if (boolval($errors)) {
                     </tr>
                 </table>
                 <button type="submit" value="submit" name="submit">Add Performance</button>
+            </form>
         </div>
-        </form>
     </div>
 </div>
 
-<!--<div>-->
-<!--    --><?php //$this->view('includes/footer') ?>
-<!--</div>-->
+    <!--<div>-->
+    <!--    --><?php //$this->view('includes/footer') ?>
+    <!--</div>-->
 </body>
 </html>
 

@@ -1,3 +1,4 @@
+@import "color.css";
 body {
     height: 100%;
     padding: 0;
@@ -17,6 +18,41 @@ body {
     /*transition: 0.5s;*/
 }
 
+.form_head {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.employee_details {
+    margin: 0 10px 10px 0;
+    height: max-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*background-color: chocolate;*/
+    float: left;
+}
+
+.employee_details img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    /*margin: 10px;*/
+    margin-right: 10px;
+}
+
+.employee_details p {
+    text-align: center;
+    margin: 0;
+    color: var(--h1);
+    font-weight: bold;
+    font-size: large;
+    vertical-align: middle;
+}
+
 .testbox {
     display: flex;
     justify-content: center;
@@ -28,11 +64,18 @@ body {
 .testbox form {
     width: 100%;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
+    height: max-content;
 }
 
-.testbox h1 {
-    font-weight: 400;
-    margin: 0;
+.testbox div h1 {
+    font-size: x-large;
+    color: var(--f);
+    text-align: left;
+    margin: 10px;
+    font-weight: bold;
+    float: right;
 }
 
 .testbox h3 {
