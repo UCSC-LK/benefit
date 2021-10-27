@@ -118,8 +118,7 @@
                                 <label for="subject">Reason</label>
                             </div>
                             <div class="column_2">
-                                    <textarea id="subject" name="subject" placeholder="Why You Are Applying..."
-                                              required></textarea>
+                                    <textarea id="subject" name="subject" placeholder="Why You Are Applying..." style="height:100px;" required></textarea>
                                 <span id="reasonText"></span>
                             </div>
                         </div>
