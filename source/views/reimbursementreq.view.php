@@ -60,7 +60,7 @@
                             <label for="subject">Pay For</label>
                         </div>
                         <div class="column_2">
-                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px;"
+                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px;"
                                       required></textarea>
                         </div>
                     </div>

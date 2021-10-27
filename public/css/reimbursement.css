@@ -26,8 +26,8 @@ body {
 legend {
     margin-left: 60px;
     padding: 8px;
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    font-size: 19px;
     color: #fff;
     background-color: #0C6170;
 }
@@ -37,7 +37,7 @@ fieldset {
     justify-content: center;
     padding-bottom: 20px;
     padding-top: 20px;
-    margin: 0;
+    margin-left: 9%;
     /* display: inline-block; */
 }
 
@@ -61,11 +61,12 @@ fieldset {
 }
 
 .column_1 {
-    font-size: medium;
+    font-size: 18px;
     /*padding: 12px 20px;*/
-    width: 20%;
+    width: 25%;
     color: #1C1D1D;
     text-align: left;
+    font-family: Roboto, sans-serif;
 }
 
 .column_2 {
@@ -81,6 +82,8 @@ fieldset {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
 }
 
 .invoice_submission {
@@ -90,6 +93,8 @@ fieldset {
     text-align: center;
     border-radius: 10px;
     border-style: dotted;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
 }
 
 .apply_button {
