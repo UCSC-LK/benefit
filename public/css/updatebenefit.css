@@ -1,3 +1,4 @@
+@import "color.css";
 body {
     background-color: var(--background);
     font-family: Roboto, sans-serif;
@@ -6,13 +7,37 @@ body {
 }
 
 .main_container {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /*border-top-right-radius: 10px;*/
+    /*border-bottom-right-radius: 10px;*/
     background-color: white;
     padding: 10px;
-    height: 100vh;
-    transition: 0.5s;
+    height: 100%;
+    /*transition: 0.5s;*/
     /*margin: 0 5px 0 255px;*/
+}
+
+.handling_title {
+    font-size: x-large;
+    color: var(--f);
+    text-align: left;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.benefit_list {
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.benefit_list table {
+    width: 100%;
+}
+
+.benefit_list table tr td i {
+    padding-right: 20px;
 }
 
 .main_container .benefit_head {
@@ -22,11 +47,8 @@ body {
     border-radius: 10px;
     margin-right: 5px;
     margin-bottom: 5px;
-
-
     display: flex;
     flex-direction: row;
-
 }
 
 legend {
@@ -154,3 +176,4 @@ input[type=submit]:hover {
     transform: scale(1.05);
     border-style: none;
 }
+

@@ -47,7 +47,7 @@ hr {
     margin-bottom: 8px;
 }
 
-.benefit_container .benefit_head .benefit_card {
+ .benefit_card {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -60,7 +60,7 @@ hr {
     padding: 0 10px;
 }
 
-.benefit_container .benefit_head .benefit_card .card {
+ .benefit_card .card {
     padding: 10px;
     height: auto;
     /*background-color: rgb(255, 255, 255);*/
@@ -70,7 +70,7 @@ hr {
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .50);
 }
 
-.benefit_container .benefit_head .benefit_card .card:hover {
+.benefit_card .card:hover {
     box-shadow: 3px 5px 15px rgba(0, 0, 0, 1);
 }
 
@@ -88,11 +88,11 @@ hr {
     }
 }
 
-.benefit_container .benefit_head .benefit_card .card p {
+ .benefit_card .card p {
     font-size: small;
 }
 
-.benefit_container .benefit_head .benefit_card .card .title {
+ .benefit_card .card .title {
     margin-top: 0;
     padding-top: 5px;
     height: 30px;
@@ -101,20 +101,20 @@ hr {
     font-weight: bold;
 }
 
-.benefit_container .benefit_head .benefit_card .card .text {
+.benefit_card .card .text {
     color: #344955;
     margin-bottom: 5px;
     opacity: 90%;
 }
 
-.benefit_container .benefit_head .benefit_card .card .remain_amount {
+ .benefit_card .card .remain_amount {
     color: var(--h1);
     font-weight: bold;
     font-size: x-large;
     margin-bottom: 20px;
 }
 
-.benefit_container .benefit_head .benefit_card .card .max_amount {
+ .benefit_card .card .max_amount {
     color: #232F34;
     font-weight: bold;
     font-size: medium;
