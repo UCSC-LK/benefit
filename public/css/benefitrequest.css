@@ -28,7 +28,7 @@ legend {
     margin-left: 60px;
     padding: 8px;
     font-family: Roboto, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 19px;
     color: #fff;
     background-color: #0C6170;
 }
@@ -39,6 +39,7 @@ fieldset {
     padding-bottom: 20px;
     padding-top: 20px;
     margin: 0;
+    margin-left: 9%;
     /* display: inline-block; */
 }
 
@@ -63,11 +64,12 @@ fieldset {
 }
 
 .benefit_form .row .column_1 {
-    font-size: medium;
+    font-size: 18px;
     /*padding: 12px 20px;*/
-    width: 20%;
+    width: 25%;
     color: #1C1D1D;
     text-align: left;
+    font-family: Roboto, sans-serif;
 }
 
 .benefit_form .row .column_2 {
@@ -94,6 +96,7 @@ fieldset {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 15px;
 }
 
 .benefit_form .row .report_submission {
@@ -103,6 +106,8 @@ fieldset {
     text-align: center;
     border-radius: 10px;
     border-style: dotted;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
 }
 
 .report_submission .file_text {
