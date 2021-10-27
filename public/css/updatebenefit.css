@@ -42,7 +42,7 @@ body {
 
 .main_container .benefit_head {
     background-color: white;
-    max-width: 60%;
+    max-width: 100%;
     padding: 50px;
     border-radius: 10px;
     margin-right: 5px;
@@ -63,11 +63,11 @@ legend {
 }
 
 fieldset {
-    width: 100%;
+    width: 60%;
     justify-content: center;
     padding-bottom: 20px;
     padding-top: 20px;
-    margin: 0;
+    margin-left: 20%;
     /* display: inline-block; */
 }
 
@@ -176,4 +176,3 @@ input[type=submit]:hover {
     transform: scale(1.05);
     border-style: none;
 }
-

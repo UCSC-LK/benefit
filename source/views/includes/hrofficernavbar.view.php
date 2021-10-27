@@ -22,7 +22,7 @@
             <li><a href="<?= PATH ?>EmployeelistController"><i class="fas fa-calendar-week"></i></i>
                     <span>Remove Employees</span></a></li>
             <li><a href="<?= PATH ?>Hrdocuments/updatedecuments"><i class="fas fa-edit"></i><span>Update Documents</span></a></li>
-            <li><a href="<?= PATH ?>Benefit/update"></i><span>Update Benefits</span></a></li>
+            <li><a href="<?= PATH ?>Benefit/update"><i class="fas fa-edit"></i><span>Update Benefits</span></a></li>
         <?php endif; ?>
     </ul>
 
