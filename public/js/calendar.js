@@ -127,7 +127,7 @@ function initButtons() {
         load();
     });
 
-    document.getElementById('saveButton'),addEventListener('click',saveEvent);
+    document.getElementById('saveButton').addEventListener('click',saveEvent);
     document.getElementById('cancelButton').addEventListener('click',closeModal);
     document.getElementById('closeButton').addEventListener('click',closeModal);
     document.getElementById('deleteButton').addEventListener('click',deleteEvent);

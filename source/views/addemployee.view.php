@@ -154,7 +154,7 @@
             </div>
 
             <div class="form">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220"><path fill="#0f9eb8" fill-opacity="1" d="M0,128L40,149.3C80,
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 10 1440 200"><path fill="#0f9eb8" fill-opacity="1" d="M0,128L40,149.3C80,
             171,160,213,240,208C320,203,400,149,480,138.7C560,128,640,160,720,144C800,128,880,64,960,74.7C1040,85,1120,171,1200,197.3C1280,
             224,1360,192,1400,176L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,
             0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path></svg>
@@ -360,7 +360,7 @@
 
                             <tr>
                                 <!-- <td id="c1"></td> -->
-                                <td id="c2" colspan="2"><label for="">Profile Picture (less than 500Kb)</label></td>
+                                <td id="c2" colspan="2"><label for="">Profile Picture </label></td>
                                 <!-- <td id="c3"></td> -->
                                 <td id="c4" colspan="6"><input type="file" name="image" id="image" onchange="loadFile(event)"
                                        style="display: none;">
@@ -389,14 +389,15 @@
                                 <td id="c8"></td>
                             </tr>   
                         </table>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"><path fill="#0f9eb8" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,80C384,
+                    </form>
+                          
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1439 250"><path fill="#0f9eb8" fill-opacity="1" d="M0,160L48,144C96,128,192,96,288,80C384,
                         64,480,64,576,96C672,128,768,192,864,192C960,192,1056,128,1152,90.7C1248,53,1344,43,1392,37.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,
                         320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-        
-                       
-                    </form>
-                </div>
+ 
             </div>
+            
         </div>
     </div>
 </div>
