@@ -1,3 +1,4 @@
+@import "color.css";
 .head {
     width: 100%;
 }
@@ -18,8 +19,25 @@ body {
     background-color: white;
     max-width: 100%;
     padding: 50px;
+    display: flex;
+    flex-direction: row;
     /*border-radius: 10px;*/
     /*margin: 0 5px 5px 0;*/
+}
+
+.back_btn {
+    width: 60px;
+    height: 60px;
+}
+
+.back_btn i {
+    font-size: 35px;
+    vertical-align: middle;
+    color: var(--f);
+}
+
+.back_btn i:hover {
+    transform: scale(1.2);
 }
 
 legend {
@@ -37,7 +55,7 @@ fieldset {
     padding-bottom: 20px;
     padding-top: 20px;
     margin: 0;
-    margin-left: 10%;
+    /*margin-left: 10%;*/
     /* display: inline-block; */
 }
 
