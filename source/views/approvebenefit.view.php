@@ -24,10 +24,10 @@
     ?>
 
     <div class="main_container">
-        <div>
-            <p class="handling_title">Handle Benefits</p>
-        </div>
         <div class="approve-container">
+            <div>
+                <p class="handling_title">Pending List</p>
+            </div>
             <div class="card-container">
                 <?php
                 for ($i = 0;$i < sizeof($requested);$i++) {

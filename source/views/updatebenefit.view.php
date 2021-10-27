@@ -7,6 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= CSS_PATH ?>updatebenefit.css">
+    <link rel="stylesheet" href="<?= CSS_PATH ?>benefits.css">
     <title></title>
 </head>
 
@@ -37,6 +38,36 @@
     <?php endif; ?>
 
     <div class="main_container">
+        <div class="benefit_list">
+            <div>
+                <p class="handling_title">Pending List</p>
+            </div>
+            <table>
+                <tr>
+                    <th>Benefit Type</th>
+                    <th>Max Amount</th>
+                    <th>Valid Years</th>
+                    <th>Valid Months</th>
+                    <th>Option</th>
+                </tr>
+                <tr>
+                    <td>Medical Insurance</td>
+                    <td>20000.00 LKR</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td><a href=""><i class="fas fa-trash-alt"></i></a>
+                        <a href=""><i class="fas fa-edit"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Life Insurance</td>
+                    <td>20000.00 LKR</td>
+                    <td>01</td>
+                    <td>00</td>
+                    <td><a href=""><i class="fas fa-trash-alt"></i></a>
+                        <a href=""><i class="fas fa-edit"></i></a></td>
+                </tr>
+            </table>
+        </div>
         <div class="benefit_head">
             <fieldset>
                 <legend>UPDATE BENEFIT</legend>
@@ -74,10 +105,18 @@
 
                         <div class="row">
                             <div class="column_1">
-                                <label for="claiming_date">Renew Date</label>
+                                <label for="valid_years">Valid Years</label>
                             </div>
                             <div class="column_2">
-                                <input type="date" id="claim_date" name="claim_date" placeholder="mm/dd/yyyy" required>
+                                <input type="text" id="valid_years" name="valid_years" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="valid_months">Valid Months</label>
+                            </div>
+                            <div class="column_2">
+                                <input type="text" id="valid_months name="valid_years" required>
                             </div>
                         </div>
 

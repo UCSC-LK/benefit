@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?= CSS_PATH ?>updatedocuments.css">
-
+    <link rel="stylesheet" href="<?= CSS_PATH ?>benefits.css">
     <title></title>
 </head>
 
@@ -37,6 +37,30 @@
     <?php endif; ?>
 
     <div class="main_container">
+        <div class="document_list">
+            <div>
+                <p class="handling_title">Documents</p>
+            </div>
+            <table>
+                <tr>
+                    <th>Document Name</th>
+                    <th>File Path</th>
+                    <th>Option</th>
+                </tr>
+                <tr>
+                    <td>Payroll Application</td>
+                    <td>Documents/payroll.docx</td>
+                    <td><a href=""><i class="fas fa-trash-alt"></i></a>
+                        <a href=""><i class="fas fa-edit"></i></a></td>
+                </tr>
+                <tr>
+                    <td>Job Vacancy Application</td>
+                    <td>Documents/vacancy.docx</td>
+                    <td><a href=""><i class="fas fa-trash-alt"></i></a>
+                        <a href=""><i class="fas fa-edit"></i></a></td>
+                </tr>
+            </table>
+        </div>
     <div class="benefit_head">
     <fieldset>
                 <legend>UPDATE DOCUMENTS</legend>
