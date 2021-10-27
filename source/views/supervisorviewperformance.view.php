@@ -22,13 +22,13 @@
     ?>
 
     <div class="main_container">
-        <div class="title">
-            <p>Performance</p>
-        </div>
         <!--        <div class="details">-->
         <!--            <div class="employee">-->
 
         <div class="approve-container">
+            <div>
+                <p class="title">Performance</p>
+            </div>
             <div class="data">
                 <?php
                 if (boolval($row)) {
