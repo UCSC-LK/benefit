@@ -22,7 +22,7 @@
     <?php if (Auth::access('HR Manager')): ?>
         <div>
             <?php
-//            $this->view('includes/hrnav');
+            //            $this->view('includes/hrnav');
             $this->view('includes/hrmanagernavbar');
             ?>
         </div>
@@ -31,7 +31,7 @@
     <?php if (Auth::access('HR Officer')): ?>
         <div>
             <?php
-//            $this->view('includes/hrofficernav');
+            //            $this->view('includes/hrofficernav');
             $this->view('includes/hrofficernavbar')
             ?>
         </div>
@@ -39,8 +39,13 @@
 
     <div class="main_container">
         <div class="benefit_list">
-            <div>
-                <p class="handling_title">Pending List</p>
+            <div class="title_container">
+                <p class="handling_title">Benefits List</p>
+                <?php if(Auth::access('HR Manager')): ?>
+                <div class="add_benefits">
+                    <p><i class="fas fa-plus-circle"></i> Add New Benefit</p>
+                </div>
+                <?php endif; ?>
             </div>
             <table>
                 <tr>
@@ -55,16 +60,22 @@
                     <td>20000.00 LKR</td>
                     <td>01</td>
                     <td>00</td>
-                    <td><a href=""><i class="fas fa-trash-alt"></i></a>
-                        <a href=""><i class="fas fa-edit"></i></a></td>
+                    <td><a href=""><i class="fas fa-edit"></i></a>
+                        <?php if(Auth::access('HR Manager')): ?>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        <?php endif; ?>
+                    </td>
                 </tr>
                 <tr>
                     <td>Life Insurance</td>
                     <td>20000.00 LKR</td>
                     <td>01</td>
                     <td>00</td>
-                    <td><a href=""><i class="fas fa-trash-alt"></i></a>
-                        <a href=""><i class="fas fa-edit"></i></a></td>
+                    <td><a href=""><i class="fas fa-edit"></i></a>
+                        <?php if(Auth::access('HR Manager')): ?>
+                        <a href=""><i class="fas fa-trash-alt"></i></a>
+                        <?php endif; ?>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -116,7 +127,7 @@
                                 <label for="valid_months">Valid Months</label>
                             </div>
                             <div class="column_2">
-                                <input type="text" id="valid_months name="valid_years" required>
+                                <input type="text" id="valid_months name=" valid_years" required>
                             </div>
                         </div>
 
