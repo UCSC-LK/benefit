@@ -58,23 +58,9 @@
                                 </div>
                                 <div class="benefit_card_column">
                                     <div class="card">
-                                        <p class="title">Life Insurance</p>
+                                        <p class="title">Educational Expenditure</p>
                                         <div class="text">Remaining Amount</div>
                                         <div class="remain_amount">10,000 LKR</div>
-                                        <div class="text">Max Amount</div>
-                                        <div class="max_amount">20,000 LKR</div>
-                                        <div class="text">Renew Date</div>
-                                        <div class="text">25th Jan 2022</div>
-                                        <div>
-                                            <button type="submit" value="claim">Claim</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="benefit_card_column">
-                                    <div class="card">
-                                        <p class="title">Accident Insurance</p>
-                                        <div class="text">Remaining Amount</div>
-                                        <div class="remain_amount">15,000 LKR</div>
                                         <div class="text">Max Amount</div>
                                         <div class="max_amount">20,000 LKR</div>
                                         <div class="text">Renew Date</div>
@@ -97,7 +83,8 @@
 
             <div class="benefit_history">
                 <div class="history_header">
-                    <i class="item" data-feather="clipboard"></i>
+<!--                    <i class="item" data-feather="clipboard"></i>-->
+                    <i class="fa fa-history" aria-hidden="true"></i>
                     <p class="main_title">Benefit History</p>
                 </div>
                 <hr>
@@ -117,8 +104,7 @@
                                     </button>
                                 </a>
                                 <a href="<?= PATH ?>Benefit/delete/<?= $row->claim_date ?>">
-                                    <button type='submit' value='Decline' name="delete" class='delete_button'><i
-                                                class="fa fa-trash"></i> Delete
+                                    <button type='submit' value='Decline' name="delete" class='delete_button'><i class="fa fa-trash"></i> Delete
                                     </button>
                                 </a>
                             </div>
