@@ -38,8 +38,13 @@
 
     <div class="main_container">
         <div class="document_list">
-            <div>
+            <div class="title_container">
                 <p class="handling_title">Documents</p>
+                <?php if(Auth::access('HR Manager')): ?>
+                <div class="add_documents">
+                    <p><i class="fas fa-plus-circle"></i> Add New Benefit</p>
+                </div>
+                <?php endif; ?>
             </div>
             <table>
                 <tr>
@@ -50,14 +55,20 @@
                 <tr>
                     <td>Payroll Application</td>
                     <td>Documents/payroll.docx</td>
-                    <td><a href=""><i class="fas fa-trash-alt"></i></a>
-                        <a href=""><i class="fas fa-edit"></i></a></td>
+                    <td><a href=""><i class="fas fa-edit"></i></a>
+                        <?php if(Auth::access('HR Manager')): ?>
+                        <a href=""><i class="fas fa-trash-alt"></i></a>
+                        <?php endif; ?>
+                    </td>
                 </tr>
                 <tr>
                     <td>Job Vacancy Application</td>
                     <td>Documents/vacancy.docx</td>
-                    <td><a href=""><i class="fas fa-trash-alt"></i></a>
-                        <a href=""><i class="fas fa-edit"></i></a></td>
+                    <td><a href=""><i class="fas fa-edit"></i></a>
+                        <?php if(Auth::access('HR Manager')): ?>
+                        <a href=""><i class="fas fa-trash-alt"></i></a>
+                        <?php endif; ?>
+                    </td>
                 </tr>
             </table>
         </div>
