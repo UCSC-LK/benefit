@@ -31,6 +31,14 @@
             ?>
         </div>
     <?php endif; ?>
+    <?php if (Auth::access('HR Manager')): ?>
+        <div>
+            <?php
+            //            $this->view('includes/hrofficernav');
+            $this->view('includes/hrmanagernavbar');
+            ?>
+        </div>
+    <?php endif; ?>
 
 
     <?php
