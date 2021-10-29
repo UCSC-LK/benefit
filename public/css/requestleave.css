@@ -50,13 +50,11 @@ legend {
 }
 
 fieldset {
-    width: 80.5%;
+    width: 80%;
     justify-content: center;
     padding-bottom: 20px;
     padding-top: 20px;
-    margin: 0;
-    /*margin-left: 10%;*/
-    /* display: inline-block; */
+    margin: auto;
 }
 
 .main_container {
@@ -84,7 +82,6 @@ p {
     color: var(--header);
     padding-top: 10px;
     display: flex;
-    margin-left: 13%;
     padding-bottom: 0;
     padding-top: 0;
     font-size: 18px;
@@ -120,12 +117,11 @@ p {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     margin: auto;
-    /* box-shadow: 3px 3px 5px rgba(0, 0, 0, .1); */
 }
 
 .main_container .input_feild form div {
     margin-top: 35px;
-    /* margin-left: 20px; */
+  
 }
 
 #start_date,
@@ -145,8 +141,6 @@ p {
     display: inline-block;
     width: 350px;
     height: 43px;
-    /* padding: 12px 0px;
-    margin: 8px 0; */
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -154,10 +148,6 @@ p {
     font-size: 15px;
 }
 
-
-/* .main_container .input_feild form .leave_type label {
-    width: 180px;
-} */
 
 .main_container .input_feild form .leave_type select,
 option {
@@ -169,7 +159,7 @@ option {
 .main_container .input_feild form .leave_type {
     display: flex;
     margin-top: 0;
-    margin-right: 18%;
+    /* margin-right: 18%; */
 }
 
 .main_container .input_feild form .full_day .full_duration {
@@ -183,62 +173,50 @@ option {
     display: flex;
     padding-top: 5px;
     margin-top: 0;
-    margin-right: 18%;
-}
-
-.main_container .input_feild form .half_day .half_duration {
-    margin-left: 30px;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
+    /* margin-right: 18%; */
 }
 
 .main_container .input_feild form .half_day .half_duration .item,
 .date_item {
+   
     display: flex;
-    margin: 0;
-    padding: 0;
-    margin-right: 18%;
+    padding-top: 5px;
+    margin-top: 0;
+    /* margin-right: 18%; */
 }
 
 .main_container .input_feild form .half_day .half_duration .item .item-1 {
-    margin-left: 20%;
+    max-width: 175px;
     margin-right: 15%;
     flex-direction: row;
     display: flex;
 }
 
+.data{
+    margin: auto;
+    width:65%;
+    /* background-color: chocolate; */
+}
 label {
-    /* display: block;
-    width: 150px;
-    margin-right: 100px; */
-    /* padding-top: 20px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 18px;
     width: 25%;
     font-family: Roboto, sans-serif;
 }
 
 #half {
-    margin-left: 80%;
+    padding: 10px;
     flex-direction: row;
-    margin-top: 10%;
+    margin-left: 10px;
+    width: 25px;
 }
 
 .main_container .input_feild form .half_day .half_duration .item label {
-    text-align: right;
+    text-align: left;
     width: auto;
-    padding-left: 20px;
 }
 
 .main_container .input_feild form .half_day .half_duration .item {
-    padding: 5px;
+    margin-left: 25%;
 }
 
 .main_container .input_feild form .half_day .half_duration .item input {
@@ -247,22 +225,8 @@ label {
 
 .cancle-btn {
     background-color: #fcfaf9;
-    border-radius: 100px;
     color: var(--red);
-    cursor: pointer;
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    padding: 7px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    letter-spacing: 2px;
     border: 1.5px solid black;
-    margin-right: 25%;
 }
 
 .cancle-btn:hover {
@@ -273,8 +237,27 @@ label {
 
 .request-btn {
     background-color: #6fccee;
-    border-radius: 100px;
     color: var(--header);
+    border: 1.5px solid var(--header);
+}
+
+.request-btn:hover {
+    box-shadow: 0px 2px 5px var(--header);
+    transform: scale(1.05);
+    border-style: none;
+
+}
+
+.main_container .input_feild form .buttons {
+    margin-top: 55px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
     cursor: pointer;
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
@@ -289,23 +272,7 @@ label {
     -webkit-user-select: none;
     touch-action: manipulation;
     letter-spacing: 2px;
-    margin-left: 25%;
-    border: 1.5px solid var(--header);
-}
-
-.request-btn:hover {
-    box-shadow: 0px 2px 5px var(--header);
-    transform: scale(1.05);
-    border-style: none;
-}
-
-.main_container .input_feild form .buttons {
-    margin-top: 55px;
-    margin-left: 10px;
-    margin-right: 10px;
-    max-width: 100%;
-    display: flex;
-    justify-content: space-between;
+    border-radius: 100px;
 }
 
 .main_container .input_feild form .buttons :hover {
@@ -332,7 +299,7 @@ label {
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
-    .main_container .input_feild {
+    /* .main_container .input_feild {
         display: flex;
         justify-content: center;
         height: auto;
@@ -360,5 +327,5 @@ label {
     .fot {
         width: 100%;
         position: relative;
-    }
+    } */
 }
