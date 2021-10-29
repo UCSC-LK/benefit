@@ -1,24 +1,19 @@
+@import "color.css";
+
 body {
     height: auto;
-    /* background-color: #E4F1F5; */
-    /* background-color: rgb(138, 138, 247); */
-    /* For browsers that do not support gradients */
-    /* background-image: linear-gradient(to bottom right, rgb(138, 138, 247) 50%, white 40%); */
-    /* background-image: linear-gradient(to bottom right, rgb(138, 138, 247), rgb(193, 193, 253), white); */
-    /* background-image: linear-gradient(to bottom right, #1d799a, #88d3ee, white); */
-    /* background-color: #40c0ee; */
     margin: 0;
     padding: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
+    font-family: Roboto, sans-serif;
 }
 
 .container {
     max-width: 100%;
     background-image: url("../img/wave.svg");
     background-repeat: no-repeat;
-    /* background-color: blanchedalmond; */
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -28,7 +23,6 @@ body {
 
 .left{
     width: 60%;
-    /* background-color:white; */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -40,7 +34,6 @@ body {
     display: flex;
     width: 39%;
     margin: 10px;
-    /* justify-content: center; */
 }
 
 .cal{
@@ -49,7 +42,6 @@ body {
 }
 
 .card_container {
-    /* background-image:url("../img/wave1.svg") ; */
     background-repeat: no-repeat;
     background-size: cover;
     width: 45%;
@@ -60,49 +52,49 @@ body {
 }
 
 .card {
-    
-    /* background-repeat: no-repeat;
-    background-size:auto; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 10px 8px;
     width: 80%;
     text-align: center;
     background-color:#dbe3e6;
     border-radius: 10px;
     margin: auto;
     height: 250px;
-
-
-    /* background-image:url("../img/wave.svg") ; */
 }
 
 .card h2 {
-    color: #065B7A;
-    font-family: Arial;
-    font-size: 50;
+    color: var(--h1);
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.card #manager {
+    color: var(--h1);
+    font-size: larger;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 .card p {
-    color: #070707;
-    font-family: Arial;
-    font-size: 40;
-    /* line-height: 40px; */
+    color: var(--h1);
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.card p i{
+    font-size: 30px;
+    color: var(--h1);
+    padding-right: 10px;
 }
 
 .show-more {
     min-width: 120px;
     height: 40px;
-    margin: 20px;
-    /* margin-bottom: 10px; */
     background-color: #dbe3e6;
-    /* border: 1px solid black; */
     box-shadow: 3px 5px 15px rgba(0, 0, 0, .250);
     border-radius: 20px;
     padding: 12px;
-    font-family: Arial;
     border-style: none;
     cursor: pointer;
     color: black;
