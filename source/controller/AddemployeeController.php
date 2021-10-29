@@ -40,7 +40,7 @@ class AddemployeeController extends Controller
 				$arr['street'] = ucwords(strtolower(filter_input(INPUT_POST, 'street', FILTER_SANITIZE_STRING))) ;
 				$arr['city'] = ucwords(strtolower(filter_input(INPUT_POST, 'city', FILTER_SANITIZE_STRING)));
 				$arr['province'] = filter_input(INPUT_POST, 'province', FILTER_SANITIZE_STRING);
-				$arr['employee_NIC'] = filter_input(INPUT_POST, 'nic', FILTER_SANITIZE_STRING);
+				$arr['employee_NIC'] = strtoupper(filter_input(INPUT_POST, 'nic', FILTER_SANITIZE_STRING));
 
 				$row = "employee_NIC";
 				$nic_validate = $this->validate($arr['employee_NIC'], $user,$row);

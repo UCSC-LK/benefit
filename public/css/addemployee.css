@@ -152,7 +152,7 @@ input {
     font-size: large;
     color: var(--header_dark);
     border-style: none;
-    border-bottom:1px black;
+    border-bottom:0.5px solid #0000006c;
 }
 
 .add_employee_main_container .form .input_feild form table tr td select option{
