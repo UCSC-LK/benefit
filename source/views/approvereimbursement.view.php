@@ -7,7 +7,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?= CSS_PATH ?>approve.css">
-
     <title></title>
 </head>
 
@@ -59,20 +58,6 @@
                         <button type="button" name="show" value="show">Show</button>
                     </center>
                 </div>
-
-                <div class="header-approve" id="btn">
-                    <center>
-                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
-                    </center>
-                    <p class="name">Sathya</p>
-                    <p class="name"> Udayangi</p>
-                    <div>
-                        <p class="date"> 2021/09/10</p>
-                    </div>
-                    <center>
-                        <button type="button" name="show" value="show">Show</button>
-                    </center>
-                </div>
                 <div class="header-approve" id="btn">
                     <center>
                         <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
@@ -99,32 +84,24 @@
                         <button type="button" name="show" value="show">Show</button>
                     </center>
                 </div>
-                <div class="header-approve" id="btn">
-                    <center>
-                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
-                    </center>
-                    <p class="name">Chathura</p>
-                    <p class="name">Liyanage</p>
-                    <div>
-                        <p class="date"> 2021/09/10</p>
-                    </div>
-                    <center>
-                        <button type="button" name="show" value="show">Show</button>
-                    </center>
-                </div>
-                <div class="header-approve" id="btn">
-                    <center>
-                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
-                    </center>
-                    <p class="name">Sathya</p>
-                    <p class="name"> Udayangi</p>
-                    <div>
-                        <p class="date"> 2021/09/10</p>
-                    </div>
-                    <center>
-                        <button type="button" name="show" value="show">Show</button>
-                    </center>
-                </div>
+
+            </div>
+        </div>
+        <div class="history">
+            <div>
+                <p class="handling_title">Reimbursement History</p>
+            </div>
+            <hr>
+            <div class="history_table">
+                <table id="claim_history_table">
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </table>
             </div>
         </div>
 <!--        <div class="details">-->
