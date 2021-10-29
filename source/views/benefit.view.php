@@ -127,18 +127,21 @@
                 <table id="benefit_history_result">
                     <tr>
                         <th>Date</th>
+                        <th>Type</th>
                         <th>Description</th>
                         <th>Amount</th>
                         <th>Status</th>
                     </tr>
                     <tr>
                         <td>27th June</td>
+                        <td>Medical Insurance</td>
                         <td>Hospitalization</td>
                         <td>5000.00 LKR</td>
                         <td>Accepted</td>
                     </tr>
                     <tr>
                         <td>27th June</td>
+                        <td>Medical Insurance</td>
                         <td>Hospitalization</td>
                         <td>5000.00 LKR</td>
                         <td>Rejected</td>
