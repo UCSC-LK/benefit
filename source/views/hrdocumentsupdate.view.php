@@ -50,11 +50,13 @@
                 <tr>
                     <th>Document Name</th>
                     <th>File Path</th>
+                    <th>Last Update</th>
                     <th>Option</th>
                 </tr>
                 <tr>
                     <td>Payroll Application</td>
                     <td>Documents/payroll.docx</td>
+                    <td>24th Jun</td>
                     <td><a href=""><i class="fas fa-edit"></i></a>
                         <?php if(Auth::access('HR Manager')): ?>
                         <a href=""><i class="fas fa-trash-alt"></i></a>
@@ -64,9 +66,40 @@
                 <tr>
                     <td>Job Vacancy Application</td>
                     <td>Documents/vacancy.docx</td>
+                    <th>12th Aug</th>
                     <td><a href=""><i class="fas fa-edit"></i></a>
                         <?php if(Auth::access('HR Manager')): ?>
                         <a href=""><i class="fas fa-trash-alt"></i></a>
+                        <?php endif; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Employee Emergency Contact Form</td>
+                    <td>Documents/contact.docx</td>
+                    <th>12th Aug</th>
+                    <td><a href=""><i class="fas fa-edit"></i></a>
+                        <?php if(Auth::access('HR Manager')): ?>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        <?php endif; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Disciplinary Action Form</td>
+                    <td>Documents/action.docx</td>
+                    <th>12th Aug</th>
+                    <td><a href=""><i class="fas fa-edit"></i></a>
+                        <?php if(Auth::access('HR Manager')): ?>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
+                        <?php endif; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Travel Request Form</td>
+                    <td>Documents/ravel-request.docx</td>
+                    <th>12th Aug</th>
+                    <td><a href=""><i class="fas fa-edit"></i></a>
+                        <?php if(Auth::access('HR Manager')): ?>
+                            <a href=""><i class="fas fa-trash-alt"></i></a>
                         <?php endif; ?>
                     </td>
                 </tr>
