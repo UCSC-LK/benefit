@@ -27,7 +27,7 @@
 
         <div class="approve-container">
             <div>
-                <p class="title">Performance</p>
+                <p class="title">To Be Add</p>
             </div>
             <div class="data">
                 <?php
@@ -70,6 +70,32 @@
                 } ?>
             </div>
             <!--</form>-->
+        </div>
+        <div class="approve-container">
+            <div>
+                <p class="title">Added List</p>
+            </div>
+            <hr>
+            <table id="claim_history_table">
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Last Update</th>
+                    <th>Options</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>Jack Howei</td>
+                    <td>Seller</td>
+                    <th>10th Oct</th>
+                    <td><a href=""><i class="fas fa-edit"></i></a>
+                        <a href=""><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
