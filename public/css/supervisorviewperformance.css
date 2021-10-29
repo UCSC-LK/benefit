@@ -44,7 +44,7 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
+    /*box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);*/
 }
 
 .data {
@@ -118,12 +118,12 @@ img {
     margin-top: 30px;
 }
 
-#edit {
-    background-color: blue;
+.options i {
+    color: var(--h1);
 }
 
-#delete {
-    background-color: red;
+.options i:hover {
+    transform: scale(1.1);
 }
 
 input {
@@ -164,4 +164,58 @@ input {
         margin: 2px;
         margin-top: 5px;
     }
+}
+
+hr {
+    padding-left: 10px;
+    margin: 0 20px 32px 10px;
+    background-color: rgba(213, 211, 211, 0.99);
+}
+
+#claim_history_table {
+    width: 95%;
+    padding: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    padding-top: 10px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+table tr {
+    border-right: 2px solid var(--h2);
+    border-left: 2px solid var(--h2);
+    border-top: 2px solid var(--h2);
+    border-bottom: 2px solid var(--h2);
+}
+
+table th,
+table td {
+    height: 56px;
+    text-align: left;
+    padding-left: 8px;
+}
+
+table th {
+    height: 56px;
+}
+
+table td {
+    height: 52px;
+}
+
+table td a {
+    padding-right: 20px;
+    color: var(--h1);
+}
+
+table td i:hover {
+    transform: scale(1.2);
+}
+
+tr:nth-child(even) {
+    background-color: var(--h2);
 }
