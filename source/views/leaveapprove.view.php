@@ -46,7 +46,7 @@
             <div class="card-container">
                 <div class="header-approve" id="btn">
                     <center>
-                        <img src="<?= IMG_PATH ?>\profile\Dilukshan.png" class="profile__image">
+                        <img src="<?= IMG_PATH ?>\profile\download.png" class="profile__image">
                     </center>
                     <p class="name">Dilukshan</p>
                     <p class="name">Bimasara</p>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="header-approve" id="btn">
                     <center>
-                        <img src="<?= IMG_PATH ?>\profile\Dilukshan.png" class="profile__image">
+                        <img src="<?= IMG_PATH ?>\profile\download.png" class="profile__image">
                     </center>
                     <p class="name">Dilukshan</p>
                     <p class="name">Bimasara</p>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="header-approve" id="btn">
                     <center>
-                        <img src="public\img\profile\Dilukshan.png" class="profile__image">
+                        <img src="<?= IMG_PATH ?>\profile\download.png" class="profile__image">
                     </center>
                     <p class="name">Dilukshan</p>
                     <p class="name">Bimasara</p>

@@ -39,6 +39,8 @@ body {
 
 .card-container {
     width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
     overflow: auto;
     white-space: nowrap;
 }
@@ -49,7 +51,7 @@ body {
     display: inline-block;
     align-items: center;
     background-color: white;
-    border: 1px solid var(--h2);
+    border: 2px solid var(--h1);
     width: 200px;
     height: 270px;
     max-height: max-content;
@@ -99,9 +101,9 @@ body {
     width: 100px;
     margin-bottom: 10px;
     border-radius: 30px;
-    border: 3px solid var(--h2);
+    border: 3px solid var(--h1);
     background-color: var(--w);
-    color: var(--h2);
+    color: var(--h1);
     font-weight: bold;
     letter-spacing: 2px;
     cursor: pointer;
@@ -113,8 +115,9 @@ body {
 /*}*/
 
 .header-approve button:hover , .header-approve:hover{
-    background-color: var(--h1);
-    color: var(--w);
+    /*background-color: var(--h1);*/
+    /*color: var(--w);*/
+    transform: scale(1.1);
 }
 
 .detail-container {
