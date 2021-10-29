@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="<?= CSS_PATH ?>supervisorviewperformance.css">
     <title>Employees</title>
 </head>
+<script>
+    var dataTable = document.getElementById('claim_history_table');
+    var checkItAll = dataTable.querySelector('input[name="select_all"]');
+    var inputs = dataTable.querySelectorAll('tbody>tr>td>input');
+
+    checkItAll.addEventListener('change', function() {
+        if (checkItAll.checked) {
+            inputs.forEach(function(input) {
+                input.checked = true;
+            });
+        }
+    });
+</script>
 <body>
 <div>
     <?php
@@ -29,6 +42,7 @@
             <div>
                 <p class="title">To Be Add</p>
             </div>
+            <hr>
             <div class="data">
                 <?php
                 if (boolval($row)) {
@@ -78,16 +92,16 @@
             <hr>
             <table id="claim_history_table">
                 <tr>
-                    <th></th>
+                    <th><label>
+                            <input name="select_all" value="1" type="checkbox">
+                        </label></th>
                     <th>Name</th>
                     <th>Designation</th>
                     <th>Last Update</th>
                     <th>Options</th>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="checkbox">
-                    </td>
+                    <td><input type="checkbox" name="name1" /></td>
                     <td>Jack Howei</td>
                     <td>Seller</td>
                     <th>10th Oct</th>
