@@ -95,7 +95,7 @@
                                                 <?php if (Auth::access('HR Manager')): ?>                                              
                                                     <button class="button-btn" type="submit" id="edit" name="edit"> <i class='fas fa-edit'></i> </button>       
                                                 <?php endif; ?>
-                                                <?php if (Auth::access('HR Officer')): ?>                                              
+                                                <?php if (Auth::access('HR Officer') || Auth::access('HR Manager')): ?>                                              
                                                     <button class="button-btn" type="submit" id="delete" name="delete"> <i class='fas fa-trash-alt'></i> </button>                                                
                                                 <?php endif; ?>
                                                                                         

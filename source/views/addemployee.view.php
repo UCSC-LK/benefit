@@ -347,7 +347,7 @@
 
                             <tr>
                                 <!-- <td id="c1"></td> -->
-                                <td id="c2" colspan="2"><label for="designation">Designation Code</label></td>
+                                <td id="c2" colspan="2"><label for="designation">Designation</label></td>
                                 <!-- <td id="c3"></td> -->
                                 <td id="c4" colspan="6"><select id="designation" name="designation">
                                     <option value="1">CEO</option>
