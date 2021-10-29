@@ -1,4 +1,5 @@
 @import "color.css";
+
 body {
     margin: 0;
     padding: 0;
@@ -42,25 +43,28 @@ hr {
     font-size: x-large;
     font-weight: bold;
     display: block;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     padding-left: 16px;
     margin-bottom: 8px;
 }
 
- .benefit_card {
+.benefit_card {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .benefit_card_column {
     float: left;
-    width: 25%;
-    padding: 0 10px;
+    width: 250px;
+    padding: 0 20px;
 }
 
- .benefit_card .card {
+.benefit_card .card {
     padding: 10px;
     height: auto;
     /*background-color: rgb(255, 255, 255);*/
@@ -72,6 +76,7 @@ hr {
 
 .benefit_card .card:hover {
     box-shadow: 3px 5px 15px rgba(0, 0, 0, 1);
+    /*transform: scale(1.07);*/
 }
 
 .benefit_card:after {
@@ -88,11 +93,11 @@ hr {
     }
 }
 
- .benefit_card .card p {
+.benefit_card .card p {
     font-size: small;
 }
 
- .benefit_card .card .title {
+.benefit_card .card .title {
     margin-top: 0;
     padding-top: 5px;
     height: 30px;
@@ -107,14 +112,14 @@ hr {
     opacity: 90%;
 }
 
- .benefit_card .card .remain_amount {
+.benefit_card .card .remain_amount {
     color: var(--h1);
     font-weight: bold;
     font-size: x-large;
     margin-bottom: 20px;
 }
 
- .benefit_card .card .max_amount {
+.benefit_card .card .max_amount {
     color: #232F34;
     font-weight: bold;
     font-size: medium;
@@ -231,7 +236,7 @@ AAAAAAAAAAAAAAAAAAAAAAAA */
     margin-bottom: 5px;
 }
 
-.history_header i{
+.history_header i {
     margin: auto;
     vertical-align: middle;
     padding-right: 10px;
@@ -287,7 +292,7 @@ AAAAAAAAAAAAAAAAAAAAAAAA */
 }
 
 
-#benefit_history_result{
+#benefit_history_result {
     width: 95%;
     padding: 20px 0;
     margin-left: auto;
