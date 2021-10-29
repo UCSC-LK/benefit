@@ -36,7 +36,7 @@
             <div class="card-container">
                 <div class="header-approve" id="btn">
                     <center>
-                        <img src="<?= IMG_PATH ?>profile/Sathya.jpeg" class="profile__image">
+                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
                     </center>
                     <p class="name">Sathya</p>
                     <p class="name"> Udayangi</p>
@@ -62,7 +62,7 @@
 
                 <div class="header-approve" id="btn">
                     <center>
-                        <img src="<?= IMG_PATH ?>profile/Sathya.jpeg" class="profile__image">
+                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
                     </center>
                     <p class="name">Sathya</p>
                     <p class="name"> Udayangi</p>
@@ -75,7 +75,20 @@
                 </div>
                 <div class="header-approve" id="btn">
                     <center>
-                        <img src="<?= IMG_PATH ?>profile/Sathya.jpeg" class="profile__image">
+                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
+                    </center>
+                    <p class="name">Bimsara</p>
+                    <p class="name">Dilukshan</p>
+                    <div>
+                        <p class="date"> 2021/09/10</p>
+                    </div>
+                    <center>
+                        <button type="button" name="show" value="show">Show</button>
+                    </center>
+                </div>
+                <div class="header-approve" id="btn">
+                    <center>
+                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
                     </center>
                     <p class="name">Sathya</p>
                     <p class="name"> Udayangi</p>
@@ -88,10 +101,10 @@
                 </div>
                 <div class="header-approve" id="btn">
                     <center>
-                        <img src="<?= IMG_PATH ?>profile/Sathya.jpeg" class="profile__image">
+                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
                     </center>
-                    <p class="name">Sathya</p>
-                    <p class="name"> Udayangi</p>
+                    <p class="name">Chathura</p>
+                    <p class="name">Liyanage</p>
                     <div>
                         <p class="date"> 2021/09/10</p>
                     </div>
@@ -101,20 +114,7 @@
                 </div>
                 <div class="header-approve" id="btn">
                     <center>
-                        <img src="<?= IMG_PATH ?>profile/Sathya.jpeg" class="profile__image">
-                    </center>
-                    <p class="name">Sathya</p>
-                    <p class="name"> Udayangi</p>
-                    <div>
-                        <p class="date"> 2021/09/10</p>
-                    </div>
-                    <center>
-                        <button type="button" name="show" value="show">Show</button>
-                    </center>
-                </div>
-                <div class="header-approve" id="btn">
-                    <center>
-                        <img src="<?= IMG_PATH ?>profile/Sathya.jpeg" class="profile__image">
+                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
                     </center>
                     <p class="name">Sathya</p>
                     <p class="name"> Udayangi</p>
