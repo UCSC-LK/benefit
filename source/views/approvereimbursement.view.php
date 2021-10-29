@@ -30,8 +30,9 @@
         //     if ($requested>= 1) {?>
         <div class="approve-container">
             <div>
-                <p class="handling_title">Handle Reimbursements</p>
+                <p class="handling_title">To Be Handle</p>
             </div>
+            <hr>
             <div class="card-container">
                 <div class="header-approve" id="btn">
                     <center>
@@ -87,7 +88,7 @@
 
             </div>
         </div>
-        <div class="history">
+        <div class="approve-container">
             <div>
                 <p class="handling_title">Reimbursement History</p>
             </div>
