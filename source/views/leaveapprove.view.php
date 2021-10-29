@@ -43,6 +43,7 @@
             <div>
                 <p class="handling_title">Handle Time Offs</p>
             </div>
+            <hr>
             <div class="card-container">
                 <div class="header-approve" id="btn">
                     <center>
