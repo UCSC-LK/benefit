@@ -33,7 +33,6 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
     /*justify-content: center;*/
 }
 
@@ -170,45 +169,58 @@ body {
     padding: 10px 20px 20px;
 }
 
-.approve_button {
-    background-color: #2828CF;
-    color: white;
-    font-weight: bold;
-    font-size: medium;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 20%;
-}
-
-.reject_button {
-    background-color: #cc0000;
-    color: white;
-    font-weight: bold;
-    font-size: medium;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 20%;
-}
-
-.reject_button:hover {
-    background-color: red;
-}
-
-.approve_button:hover {
-    background-color: blue;
-}
-
-
-/*mark attendance*/
-
-
-/* .name {
-    padding: 5%;
-    padding-left: 10%;
-    float: center;
+.handle_history {
+    padding: 20px;
+    width: 100%;
     display: flex;
-} */
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+hr {
+    margin-bottom: 32px;
+    margin-top: 0;
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-right: 20px;
+    background-color: rgba(213, 211, 211, 0.99);
+}
+
+#claim_history_table {
+    width: 95%;
+    padding: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    padding-top: 10px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+table tr {
+    border-right: 2px solid var(--h2);
+    border-left: 2px solid var(--h2);
+    border-top: 2px solid var(--h2);
+    border-bottom: 2px solid var(--h2);
+}
+
+table th,
+table td {
+    height: 56px;
+    text-align: left;
+    padding-left: 8px;
+}
+
+table th {
+    height: 56px;
+}
+
+table td {
+    height: 52px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--h2);
+}
