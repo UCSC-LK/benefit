@@ -14,16 +14,16 @@
     <div class="name"><?= Auth::getfirst_name() ?> <?= Auth::getlast_name() ?></div>
     <div class="job"><?= Auth::getuser_role() ?></div>
     <div class="contact">
-        <i class="material-icons1"><?= Auth::getcontact_number() ?></i>
+        <span class="material-icons" style="padding-right: 6px">call</span><?= Auth::getcontact_number() ?>
     </div>
     <div class="email">
-        <i class="material-icons">email</i><?= Auth::getemail() ?>
+        <i class="material-icons" style="padding-right: 6px">email</i><?= Auth::getemail() ?>
     </div>
     <div class="hire">Hired Date</div>
     <div class="date">27th Aug 2019</div>
-    <div class="address"><?= Auth::getstreet() ?>, <?= Auth::getcity() ?> <p> <?= Auth::getprovince() ?> province </p></div>
+    <div class="address"><?= Auth::getstreet() ?>, <?= Auth::getcity() ?> <br> <?= Auth::getprovince() ?> province</div>
     <div class="supervisor">
-        <i class="material-icons">supervisor_account</i>Mr.Dilukshan
+        <i class="material-icons" style="padding-right: 6px">supervisor_account</i>Mr.Dilukshan
     </div>
 </div>
 </body>
