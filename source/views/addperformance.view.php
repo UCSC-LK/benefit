@@ -65,7 +65,7 @@ if (boolval($errors)) {
                         <th>Very Poor</th>
                     </tr>
                     <tr>
-                        <td class="first-col">Communication</td>
+                        <td class="first-col">Task Completing</td>
                         <td><input type="radio" value="100" name="communication"/></td>
                         <td><input type="radio" value="75" name="communication"/></td>
                         <td><input type="radio" value="50" name="communication"/></td>
@@ -73,7 +73,7 @@ if (boolval($errors)) {
                         <td><input type="radio" value="1" name="communication"/></td>
                     </tr>
                     <tr>
-                        <td class="first-col">Quality of work</td>
+                        <td class="first-col">Quality Of Work</td>
                         <td><input type="radio" value="100" name="quality_of_work"/></td>
                         <td><input type="radio" value="75" name="quality_of_work"/></td>
                         <td><input type="radio" value="50" name="quality_of_work"/></td>
@@ -81,7 +81,7 @@ if (boolval($errors)) {
                         <td><input type="radio" value="1" name="quality_of_work"/></td>
                     </tr>
                     <tr>
-                        <td class="first-col">organization</td>
+                        <td class="first-col">Duely Work</td>
                         <td><input type="radio" value="100" name="organization"/></td>
                         <td><input type="radio" value="75" name="organization"/></td>
                         <td><input type="radio" value="50" name="organization"/></td>
@@ -89,7 +89,7 @@ if (boolval($errors)) {
                         <td><input type="radio" value="1" name="organization"/></td>
                     </tr>
                     <tr>
-                        <td class="first-col">Team skills</td>
+                        <td class="first-col">Team Skills</td>
                         <td><input type="radio" value="100" name="team_skills"/></td>
                         <td><input type="radio" value="75" name="team_skills"/></td>
                         <td><input type="radio" value="50" name="team_skills"/></td>
@@ -97,7 +97,7 @@ if (boolval($errors)) {
                         <td><input type="radio" value="1" name="team_skills"/></td>
                     </tr>
                     <tr>
-                        <td class="first-col">Multitasking ability</td>
+                        <td class="first-col">Multitasking Ability</td>
                         <td><input type="radio" value="100" name="multitasking_ability"/></td>
                         <td><input type="radio" value="75" name="multitasking_ability"/></td>
                         <td><input type="radio" value="50" name="multitasking_ability"/></td>
