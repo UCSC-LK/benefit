@@ -56,8 +56,6 @@ body {
 
 .document_list {
     width: auto;
-    border-radius: 10px;
-    box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);
     padding: 20px;
     margin-bottom: 10px;
 }
@@ -69,14 +67,20 @@ body {
 
 .document_list table tr td i {
     padding-right: 20px;
-    color: var(--f);
+}
+
+#edit {
+    color: #58ccf7;
+}
+
+#delete {
+    color: rgb(240, 88, 88);
 }
 
 .main_container .benefit_head {
     background-color: white;
     max-width: 100%;
     padding: 50px;
-    border-radius: 10px;
     margin-right: 5px;
     margin-bottom: 5px;
     /* display: flex;
