@@ -36,7 +36,6 @@
             ?>
         </div>
     <?php endif; ?>
-
     <div class="main_container">
         <div class="benefit_list">
             <div class="title_container">
@@ -142,6 +141,9 @@
 
         </div>
     </div>
+    <center>
+        <img src="<?= IMG_PATH ?>down.png"  alt="" class="img">
+    </center>
 </div>
 </body>
 </html>
