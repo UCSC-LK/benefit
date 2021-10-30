@@ -118,15 +118,62 @@ fieldset {
     margin: 8px 0;
 }
 
+/*.benefit_form .row .report_submission {*/
+/*    width: 100%;*/
+/*    height: 120px;*/
+/*    justify-content: center;*/
+/*    text-align: center;*/
+/*    border-radius: 10px;*/
+/*    border-style: dotted;*/
+/*    font-family: Roboto, sans-serif;*/
+/*    font-size: 15px;*/
+/*}*/
+
 .benefit_form .row .report_submission {
-    width: 100%;
-    height: 120px;
-    justify-content: center;
-    text-align: center;
-    border-radius: 10px;
-    border-style: dotted;
-    font-family: Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.file-upload__button {
+    width: 90%;
+    -webkit-appearance: none;
+    background-color: white;
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 4px;*/
+    border: none;
+    outline: none;
+    padding: 0.5em 0.8em;
+    margin-right: 20px;
+    margin-left: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.file-upload__button:active {
+    background-color: var(--update_button);
+}
+
+.report_submission:active {
+    background-color: var(--update_button);
+}
+
+.file-upload__label {
+    max-width: 250px;
+    font-size: 0.95em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*////////////////////////////////////////////*/
+
+.report_submission_input {
+    display: none;
 }
 
 .report_submission .file_text {
