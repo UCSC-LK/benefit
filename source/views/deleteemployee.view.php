@@ -37,19 +37,19 @@
                         <table>
                             <tr>
                                 <td class="left">EMPLOYEE ID</td>
-                                <td><?php echo ": " . $entry->employee_ID ?></td>
+                                <td><?php echo $entry->employee_ID ?></td>
                             </tr>
                             <tr>
                                 <td class="left">NAME</td>
-                                <td><?php echo ": " . $entry->first_name . " " . $entry->last_name ?></td>
+                                <td><?php echo $entry->first_name . " " . $entry->last_name ?></td>
                             </tr>
                             <tr>
                                 <td class="left">E MAIL</td>
-                                <td><?php echo ": " . $entry->email ?></td>
+                                <td><?php echo $entry->email ?></td>
                             </tr>
                             <tr>
                                 <td class="left">NIC</td>
-                                <td><?php echo ": " . $entry->employee_NIC ?></td>
+                                <td><?php echo $entry->employee_NIC ?></td>
                             </tr>
                             <?php
                             if ($entry->department_ID == 1) {
@@ -65,7 +65,7 @@
 
                             <tr>
                                 <td class="left">Department</td>
-                                <td><?php echo ": " . $department ?></td>
+                                <td><?php echo  $department ?></td>
                             </tr>
                         </table>
 
