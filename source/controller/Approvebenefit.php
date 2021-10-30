@@ -31,6 +31,7 @@ class Approvebenefit extends Controller
                         //print_r($benefit_details[0]);
                         $requested[$i+$j]['first_name'] = $employee_details[0]->first_name;
                         $requested[$i+$j]['last_name'] = $employee_details[0]->last_name;
+                        $requested[$i+$j]['profile_image'] = $employee_details[0]->profile_image;
                         $requested[$i+$j]['details'] = $benefit_details[$j];
                         //$i = $i+1;
                         //print_r($requested[$i+$j]);
