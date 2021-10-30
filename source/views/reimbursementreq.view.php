@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="<?= CSS_PATH ?>reimbursement.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title></title>
 </head>
 <body>
@@ -43,7 +45,7 @@
                             <label for="c_date">Claim Date</label>
                         </div>
                         <div class="column_2">
-                            <input type="date" id="claim_date" name="claim_date" min="2021-10-14" max="2021-10-21"
+                            <input type="date" id="claim_date" name="claim_date" min="2021-10-23" max="2021-10-30"
                                    placeholder="mm/dd/yyyy" required>
                         </div>
                     </div>
@@ -75,12 +77,10 @@
                         </div>
                     </div>
                     <div class="apply_button">
-                        <input type="submit" value="Apply" name="submit">
-                        <a href="<?= PATH ?>/Reimbursement">
-                            <input class="cancle_button" type="button" value="Cancel"></a>
-
+                    <a href="<?= PATH ?>/Reimbursement">
+                        <input class="cancle_button" type="button" value="Cancel"></a>
+                    <input type="submit" value="Apply" name="submit">
                     </div>
-
                 </form>
                 </fieldset>
 

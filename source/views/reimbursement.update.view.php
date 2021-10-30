@@ -10,9 +10,9 @@
 </head>
 <body class="update-body">
 	<!-- <h1>delete</h1> -->
-	<div class="heading-2">
-                <h2>Update Claim Reimbursement</h2>
-            </div>
+	<div class="reimbursement_details">
+            <fieldset class="feildset-1">
+                <legend>UPDATE REIMBURSEMENT</legend>
 
 			<?php 
                 // if(boolval($rows)){
@@ -67,8 +67,11 @@
 
 	
 	</form>
-                     
-    </div>		
+	</fieldset>
+
+	</div>
+	</div>     
+    		
 	<script src="public/js/reimbursement.js"></script>
      
 </body>
