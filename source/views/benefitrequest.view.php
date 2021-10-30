@@ -105,11 +105,11 @@
 
                             <div class="row">
                                 <div class="column_1">
-                                    <label for="claiming_amount">Claiming Amount</label>
+                                    <label for="claiming_amount">Claiming Amount (LKR)</label>
                                 </div>
                                 <div class="column_2">
                                     <input type="text" id="claiming_amount" name="claiming_amount"
-                                           placeholder="Rs.20,000.00" required pattern="[0-9._%+-]+\.[0-9]{2}$">
+                                           placeholder="20000.00" required pattern="[0-9._%+-]+\.[0-9]{2}$">
                                     <span id="numberText"></span>
                                 </div>
                             </div>
