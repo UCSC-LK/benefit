@@ -47,11 +47,11 @@ if (boolval($errors)) {
                         <hr/>
                     </div>
                     <div class="employee_details">
-                        <center>
-                            <img src="<?= IMG_PATH ?>profile/download.png">
-                        </center>
-                        <p>Chathura Bimalka<br>
-                        (Operational Worker)</p>
+<!--                        <center>-->
+<!--                            <img src="--><?//= IMG_PATH ?><!--profile/download.png">-->
+<!--                        </center>-->
+<!--                        <p>Chathura Bimalka<br>-->
+<!--                        (Operational Worker)</p>-->
                     </div>
                 </div>
                 <h3>Overall Experience of Worker</h3>
