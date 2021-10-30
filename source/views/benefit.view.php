@@ -103,7 +103,7 @@
                                                 class="fa fa-edit"></i> Update
                                     </button>
                                 </a>
-                                <a href="<?= PATH ?>Benefit/delete/<?= $row->claim_date ?>">
+                                <a href="<?= PATH ?>Benefit/delete/<?= $row->report_hashing ?>">
                                     <button type='submit' value='Decline' name="delete" class='delete_button'><i class="fa fa-trash"></i> Delete
                                     </button>
                                 </a>
