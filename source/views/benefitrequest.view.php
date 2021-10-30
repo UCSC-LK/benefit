@@ -78,7 +78,7 @@
                     <div class="benefit_form">
 
                         <form name="myform" action="BenefitrequestController" method="post"
-                              onsubmit=" return number_validation()">
+                              onsubmit=" return number_validation()" enctype="multipart/form-data">
 
                             <div class="row">
                                 <div class="column_1">
@@ -88,8 +88,7 @@
                                     <select id="benefit_type" name="benefit_type" required>
                                         <option></option>
                                         <option>Medical Insurance</option>
-                                        <option>Life Insurance</option>
-                                        <option>Accident Insurance</option>
+                                        <option>Educational Expenditure</option>
                                     </select>
                                 </div>
                             </div>
@@ -131,12 +130,17 @@
                                 <div class="column_1">
                                     <label for="submission">Report Submission</label>
                                 </div>
-
+                                <div id="error_show">
                                 <div class="report_submission">
                                     <input type="file" id="report_submission" name="report_submission"
                                            accept=".pdf, .png" multiple required>
                                     <span id="custom-text"><div class="file_text">No file chosen, yet....</div></span>
                                     <span id="upload"><div class="upload"><a href="#">Upload Here</a></div></span>
+                                </div>
+                                <?php
+                                if(boolval($file_error)): ?>
+                                    <br><div style='font-family: Arial,serif; font-size: smaller; color: red; padding-left: 50px'><i class='fas fa-exclamation' style='color: red;'></i>Sorry, file already exists</div>
+                                <?php  endif;?>
                                 </div>
                             </div>
 

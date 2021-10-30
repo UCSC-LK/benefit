@@ -112,8 +112,14 @@ fieldset {
     font-size: 15px;
 }
 
-.benefit_form .row .report_submission {
+.row #error_show{
     width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+.benefit_form .row .report_submission {
+    width: 100%;
     height: 120px;
     justify-content: center;
     text-align: center;
