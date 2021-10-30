@@ -54,7 +54,7 @@
                 <div class="cards">
                     <center>
                         <!-- <img src='<? //echo $entry->profile_image ?>' alt="" class="img"> -->
-                        <img src="<?= IMG_PATH ?>profile/Chathuri.png"  alt="" class="img">
+                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
 
                     </center>
                     <div class="name">
