@@ -132,11 +132,14 @@
                                 </div>
                                 <div id="error_show">
                                 <div class="report_submission">
-                                    <input type="file" id="report_submission" name="report_submission"
-                                           accept=".pdf, .png" multiple required>
-                                    <span id="custom-text"><div class="file_text">No file chosen, yet....</div></span>
-                                    <span id="upload"><div class="upload"><a href="#">Upload Here</a></div></span>
+                                    <input class="file-upload__input" type="file" id="report_submission" name="report_submission"
+                                           accept=".pdf, .png" multiple required hidden="hidden">
+                                    <button class="file-upload__button" type="button">Choose File(s)</button>
+<!--                                    <span id="custom-text"><div class="file_text">No file chosen, yet....</div></span>-->
+<!--                                    <span id="upload"><div class="upload"><a href="#">Upload Here</a></div></span>-->
+                                    <span class="file-upload__label"></span>
                                 </div>
+
                                 <?php
                                 if(boolval($file_error)): ?>
                                     <br><div style='font-family: Arial,serif; font-size: smaller; color: red; padding-left: 50px'><i class='fas fa-exclamation' style='color: red;'></i>Sorry, file already exists</div>
@@ -145,26 +148,50 @@
                             </div>
 
                             <div class="claim_button">
-                                <input type="submit" value="Apply" name="submit">
+
                                 <a href="<?= PATH ?>/Benefit">
                                     <input class="cancle_button" type="button" value="Cancel"></a>
+                                <input type="submit" value="Apply" name="submit">
                             </div>
 
                             <script type="text/javascript">
-                                const report_submission = document.getElementById('report_submission');
-                                const custom_text = document.getElementById('custom_text');
-                                const upload = document.getElementById('upload');
+                                // const report_submission = document.getElementById('report_submission');
+                                // const custom_text = document.getElementById('custom_text');
+                                // const upload = document.getElementById('upload');
+                                //
+                                // upload.addEventListener("click", function () {
+                                //     report_submission.click();
+                                // });
+                                //
+                                // report_submission.addEventListener("click", function () {
+                                //     if (report_submission.value) {
+                                //         custom_text.innerHTML = report_submission.value;
+                                //     } else {
+                                //         custom_text.innerHTML = "No File chose, yet";
+                                //     }
+                                // });
 
-                                upload.addEventListener("click", function () {
-                                    report_submission.click();
-                                });
+                                Array.prototype.forEach.call(document.querySelectorAll('.file-upload__button'), function (button){
+                                    const hiddenInput = button.parentElement.querySelector('.file-upload__input');
+                                    const label = button.parentElement.querySelector('.file-upload__label');
+                                    const defaultLabelText = 'No file(s) selected';
 
-                                report_submission.addEventListener("click", function () {
-                                    if (report_submission.value) {
-                                        custom_text.innerHTML = report_submission.value;
-                                    } else {
-                                        custom_text.innerHTML = "No File chose, yet";
-                                    }
+                                    //set default text for label
+                                    label.textContent = defaultLabelText;
+                                    label.title = defaultLabelText;
+
+                                    button.addEventListener('click', function (){
+                                        hiddenInput.click();
+                                    });
+
+                                    hiddenInput.addEventListener('change', function (){
+                                        const filenameList = Array.prototype.map.call(hiddenInput.files, function (file){
+                                            return file.name;
+                                        });
+
+                                        label.textContent = filenameList.join(', ') || defaultLabelText;
+                                        label.title = label.textContent;
+                                    });
                                 });
 
                             </script>
