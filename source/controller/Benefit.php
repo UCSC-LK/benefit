@@ -40,7 +40,7 @@ class Benefit extends Controller
         // print_r($id);
         if(count($_POST)>0)
         {
-            $user->deleteper('claim_date',$id);
+            $user->deleteper('report_hashing',$id);
             $this->redirect('Benefit');
         }
         $this->view('benefit.delete');
