@@ -23,7 +23,7 @@
 			 	<input type="hidden" name="id">
 			 	<button class="delete-confirmation" type="submit" value="Delete">Delete</button>
 
-			 	<a href="<?=PATH?>/Supervisor">
+			 	<a href="<?=PATH?>Supervisor/Performance">
 			 		<input class="cancle-confirmation" type="button" value="Cancel">
 			 	</a>
 			 </form>
