@@ -175,7 +175,7 @@ class AddemployeeController extends Controller
 				$arr['department_ID'] = $_POST['department'];
 
 				if($email_validate){
-					$arr1[8] = "email is allready used!";
+					$arr1[8] = "email is already used!";
 					unlink($file_designation);
 				}
 				if($nic_validate){
