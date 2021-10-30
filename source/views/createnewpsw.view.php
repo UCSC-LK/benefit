@@ -50,6 +50,9 @@
                  <button type="submit" name="reset-password">reset password</button>
             </div>
         </form>
+          <div class="reset_form">
+            <a href="<?=PATH?>"><button type="submit" name="back_btn" class="back_btn" value="Back"><i class="large material-icons"></i><span>Back</span></button></a>
+        </div>
     </div>
 </div>
 
