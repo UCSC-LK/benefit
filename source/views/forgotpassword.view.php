@@ -26,7 +26,7 @@
             </div>
         </form>
         <div class="reset_form">
-            <a href="Benefit"><button type="submit" name="back_btn" class="back_btn" value="Back"><i class="large material-icons">arrow_back</i><span>Back</span></button></a>
+            <a href="<?=PATH?>"><button type="submit" name="back_btn" class="back_btn" value="Back"><i class="large material-icons">arrow_back</i><span>Back</span></button></a>
         </div>
         <div class="check-email" style="text-align: center; font-size: 15px; color: #22242A">
         <?php
