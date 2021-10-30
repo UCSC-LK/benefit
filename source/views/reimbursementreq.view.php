@@ -49,7 +49,7 @@
                     </div>
                     <div class="row">
                         <div class="column_1">
-                            <label for="c_amount">Claim Amount</label>
+                            <label for="c_amount">Claim Amount (LKR)</label>
                         </div>
                         <div class="column_2">
                             <input type="text" id="claim_amount" name="claim_amount" placeholder="2000.00" required>
