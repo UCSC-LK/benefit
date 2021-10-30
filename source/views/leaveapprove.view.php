@@ -41,7 +41,7 @@
     <div class="main_container">
         <div class="approve-container">
             <div>
-                <p class="handling_title">Handle Time Offs</p>
+                <p class="handling_title">Handle Time Off</p>
             </div>
             <hr>
             <div class="card-container">
