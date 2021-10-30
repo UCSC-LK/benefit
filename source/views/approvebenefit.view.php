@@ -35,7 +35,7 @@
                 //            for ($j = 0; $j < sizeof($requested[$i]); $j++) { ?>
                         <div class='header-approve' id='btn'>
                             <center>
-                                <img src='<?= IMG_PATH ?>profile/Chathura.jpeg' alt='Profile Image'
+                                <img src="<?php echo $requested[$i]['profile_image'];?>" alt='Profile Image'
                                      class='profile__image'>
                             </center>
                             <p class='name'>
