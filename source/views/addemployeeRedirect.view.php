@@ -23,20 +23,20 @@
                 <div class="details">
                     <table>
                         <tr>
-                            <td>EMPLOYEE ID </td> 
-                            <td><?php echo ": ".$entry->employee_ID ?></td>  
+                            <td class="left">EMPLOYEE ID </td> 
+                            <td><?php echo $entry->employee_ID ?></td>  
                         </tr>
                         <tr>
-                            <td>NAME</td>
-                            <td><?php echo ": ".$entry->first_name ." " . $entry->last_name ?></td>
+                            <td class="left">NAME</td>
+                            <td><?php echo $entry->first_name ." " . $entry->last_name ?></td>
                         </tr>
                         <tr>
-                            <td>E MAIL</td>
-                            <td><?php echo ": ".$entry->email ?></td>
+                            <td class="left">E MAIL</td>
+                            <td><?php echo $entry->email ?></td>
                         </tr>
                         <tr>
-                            <td>NIC </td>
-                            <td><?php echo ": ".$entry->employee_NIC ?></td>
+                            <td class="left">NIC </td>
+                            <td><?php echo $entry->employee_NIC ?></td>
                         </tr>
                     </table>
                     
@@ -52,8 +52,6 @@
             </div>
         </div>
     </div>
-    <div>
-    <?php $this->view('includes/footer')?>
-</div>
+    
 </body>
 </html>
