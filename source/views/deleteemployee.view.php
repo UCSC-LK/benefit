@@ -10,19 +10,19 @@
     <title>Sucsess</title>
 </head>
 <body>
-<div>
-    <?php
-    $this->view('includes/header1')
-    ?>
-</div>
+<!--<div>-->
+<!--    --><?php
+//    $this->view('includes/header1')
+//    ?>
+<!--</div>-->
 <div class="page_content">
-    <?php if (Auth::access('HR Officer')): ?>
-        <div>
-            <?php
-            $this->view('includes/hrofficernav');
-            ?>
-        </div>
-    <?php endif; ?>
+<!--    --><?php //if (Auth::access('HR Officer')): ?>
+<!--        <div>-->
+<!--            --><?php
+//            $this->view('includes/hrofficernavbar');
+//            ?>
+<!--        </div>-->
+<!--    --><?php //endif; ?>
     <div class="main_container">
         <div class="msg">
             <div class="title">
