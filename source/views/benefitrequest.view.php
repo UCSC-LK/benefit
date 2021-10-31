@@ -131,19 +131,24 @@
                                     <label for="submission">Report Submission</label>
                                 </div>
                                 <div id="error_show">
-                                <div class="report_submission">
-                                    <input class="file-upload__input" type="file" id="report_submission" name="report_submission"
-                                           accept=".pdf, .png" multiple required hidden="hidden">
-                                    <button class="file-upload__button" type="button">Choose File(s)</button>
-<!--                                    <span id="custom-text"><div class="file_text">No file chosen, yet....</div></span>-->
-<!--                                    <span id="upload"><div class="upload"><a href="#">Upload Here</a></div></span>-->
-                                    <span class="file-upload__label"></span>
-                                </div>
+                                    <div class="report_submission">
+                                        <input class="file-upload__input" type="file" id="report_submission"
+                                               name="report_submission"
+                                               accept=".pdf, .png" multiple required hidden="hidden">
+                                        <button class="file-upload__button" type="button">Choose File(s)</button>
+                                        <!--                                    <span id="custom-text"><div class="file_text">No file chosen, yet....</div></span>-->
+                                        <!--                                    <span id="upload"><div class="upload"><a href="#">Upload Here</a></div></span>-->
+                                        <span class="file-upload__label"></span>
+                                    </div>
 
-                                <?php
-                                if(boolval($file_error)): ?>
-                                    <br><div style='font-family: Arial,serif; font-size: smaller; color: red; padding-left: 50px'><i class='fas fa-exclamation' style='color: red;'></i>Sorry, file already exists</div>
-                                <?php  endif;?>
+                                    <?php
+                                    if (boolval($file_error)): ?>
+                                        <br>
+                                        <div style='font-family: Arial,serif; font-size: smaller; color: red; padding-left: 50px'>
+                                            <i class='fas fa-exclamation' style='color: red;'></i>Sorry, file already
+                                            exists
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
 
@@ -171,7 +176,7 @@
                                 //     }
                                 // });
 
-                                Array.prototype.forEach.call(document.querySelectorAll('.file-upload__button'), function (button){
+                                Array.prototype.forEach.call(document.querySelectorAll('.file-upload__button'), function (button) {
                                     const hiddenInput = button.parentElement.querySelector('.file-upload__input');
                                     const label = button.parentElement.querySelector('.file-upload__label');
                                     const defaultLabelText = 'No file(s) selected';
@@ -180,12 +185,12 @@
                                     label.textContent = defaultLabelText;
                                     label.title = defaultLabelText;
 
-                                    button.addEventListener('click', function (){
+                                    button.addEventListener('click', function () {
                                         hiddenInput.click();
                                     });
 
-                                    hiddenInput.addEventListener('change', function (){
-                                        const filenameList = Array.prototype.map.call(hiddenInput.files, function (file){
+                                    hiddenInput.addEventListener('change', function () {
+                                        const filenameList = Array.prototype.map.call(hiddenInput.files, function (file) {
                                             return file.name;
                                         });
 
