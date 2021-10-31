@@ -20,7 +20,7 @@
                 //     foreach($rows as $entry){?>
 
 	<div class="update_reimbursement">
-	<form name="myform" action="#" method="post"  onsubmit=" return validation()">
+	<form name="myform" action="#" method="post"  onsubmit=" return validation()" enctype="multipart/form-data">
 
 		<div class="row">
 			<div class="column_1">
@@ -53,7 +53,7 @@
             <div class="column_1">
                 <label for="submission">Invoice Submission</label>
                 </div>
-                <div class="invoice_submission">
+                <div class="invoice_submission1">
                     <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" required>
                 </div>
                     </div>

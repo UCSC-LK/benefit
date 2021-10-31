@@ -13,9 +13,27 @@ body {
     /*border-bottom-right-radius: 10px;*/
     background-color: white;
     padding: 10px;
-    height: 100vh;
+    /* height: 100vh; */
     /*transition: 0.5s;*/
     /*margin: 0 5px 0 255px;*/
+}
+
+legend {
+    margin-left: 60px;
+    padding: 8px;
+    font-family: Roboto, sans-serif;
+    font-size: 19px;
+    color: #fff;
+    background-color: #0C6170;
+}
+
+fieldset {
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    /* margin-left: 9%; */
+    /* display: inline-block; */
 }
 
 .handling_title {
@@ -201,34 +219,139 @@ hr {
     margin-right: auto;
 }
 
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: 35;
+}
+
+.row {
+    padding-left: 2%;
+}
+
+.column_1 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+}
+
+.column_2 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+}
+
+.column_3 {
+    float: left;
+    padding-top: 15px;
+    margin-top: 6px;
+    width: 80%;
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40%;
+    padding-right: 20%;
+    padding-top: 2%;
+}
+
+.approve_button {
+    background-color: #6fccee;
+    border-radius: 100px;
+    color: var(--header);
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 7px 30px 7px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    /*border: 0;*/
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    letter-spacing: 2px;
+    margin-left: 30px;
+    margin-right: 10%;
+    border: 1.5px solid var(--header);
+}
+
+.reject_button {
+    background-color: #fcfaf9;
+    border-radius: 100px;
+    color: var(--red);
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    letter-spacing: 2px;
+    border: 1.5px solid black;
+}
+
+.reject_button:hover {
+    box-shadow: 0px 2px 5px var(--red);
+    transform: scale(1.05);
+    border-style: none;
+}
+
+input[type=submit]:hover {
+    box-shadow: 0px 2px 5px var(--header);
+    transform: scale(1.05);
+    border-style: none;
+}
+
 table {
     padding-top: 10px;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
+    padding-left: 15%;
+    width: 80%;
+    padding-bottom: 50px;
 }
 
-table tr {
-    border-right: 2px solid var(--h2);
-    border-left: 2px solid var(--h2);
-    border-top: 2px solid var(--h2);
-    border-bottom: 2px solid var(--h2);
+th {
+    background-color: #E4F1F5;
+    border: 1px solid white;
+    height: 40px;
 }
 
-table th,
-table td {
-    height: 56px;
-    text-align: left;
-    padding-left: 8px;
+input[type=text],
+textarea {
+    font-family: Arial;
+    width: 90%;
+    height: 40px;
+    padding: 15px;
+    padding-left: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: vertical;
 }
 
-table th {
-    height: 56px;
+input[type=date],
+textarea {
+    font-family: Arial;
+    width: 90%;
+    height: 40px;
+    padding: 15px;
+    padding-left: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
 }
 
-table td {
-    height: 52px;
-}
 
-tr:nth-child(even) {
-    background-color: var(--h2);
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
