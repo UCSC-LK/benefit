@@ -13,7 +13,14 @@ class Approvereimbursement extends Controller
 		{
 			$this->redirect('login');
 		}
+		if(Auth::access('Supervisor'))
+		{
 		$this->view('approvereimbursement');
+		}
+		else
+		{
+			$this->view('404');
+		}
 		
 //         $user_x = new ReimbursementrequestModel();
 
