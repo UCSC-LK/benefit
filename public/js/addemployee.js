@@ -166,7 +166,16 @@ var nicval = document.getElementById("nicval");
 var nichide = document.getElementById("nichide");
 
 nic.addEventListener('input',()=>{
-    if(nic.value.length < 10 && nic.value.length > 0){
+    var space = nic.value.split(" ");
+    console.log(space.length);
+    if(space.length > 1){
+        console.log("Fuck");
+        nicval.innerHTML = "Cannot Include Spaces";
+        document.getElementById("nichide").value = "notvalied";
+        nicval.style.display = "block";
+        nicval.style.color = "red";
+    }
+    else if(nic.value.length < 10 && nic.value.length > 0){
         nicval.innerHTML = "Minimum 10 digits must includes";
         // nichide.innerHTML = "notvalied";
         document.getElementById("nichide").value = "notvalied";
@@ -178,14 +187,23 @@ nic.addEventListener('input',()=>{
         var le = nic.value.slice(9);
         var num = nic.value.slice(0,9);
         if(!format.test(num) && !lett.test(num) && (le == "v" || le == "V") ){
-            nicval.innerHTML = "NIC is Valied";
-            nicval.style.display = "block";
-            nicval.style.color = "green";
-            // nichide.innerHTML = "valied";
-            document.getElementById("nichide").value = "valied";
+            nicval.innerHTML = "NIC is Valid";
+            var nbd = mynicfunction(nic.value);
+            if(nbd.valid.length > 0){
+                // console.log(nbd.valid);
+                nicval.innerHTML = nbd.valid;
+                nicval.style.color = "red";
+                document.getElementById("nichide").value = "notvalied";
+            }
+            else{
+                nicval.style.display = "block";
+                nicval.style.color = "green";
+                document.getElementById("nichide").value = "valied";
+            }
+           
         }
         else{
-            nicval.innerHTML = "NIC is Not Valied";
+            nicval.innerHTML = "NIC is Not Valid";
             // nichide.innerHTML = "notvalied";
             document.getElementById("nichide").value = "notvalied";
             nicval.style.display = "block";
@@ -194,14 +212,25 @@ nic.addEventListener('input',()=>{
     }
     else if(nic.value.length == 12){
         if(!format.test(nic.value) && !lett.test(nic.value)){
-            nicval.innerHTML = "NIC is Valied";
+            nicval.innerHTML = "NIC is Valid";
+
+            var nbd = mynicfunction(nic.value);
+            if(nbd.valid.length > 0){
+                // console.log(nbd.valid);
+                nicval.innerHTML = nbd.valid;
+                nicval.style.color = "red";
+                document.getElementById("nichide").value = "notvalied";
+            }
+            else{
+                document.getElementById("nichide").value = "valied";
+                nicval.style.display = "block";
+                nicval.style.color = "green";
+            }
             // nichide.innerHTML = "valied";
-            document.getElementById("nichide").value = "valied";
-            nicval.style.display = "block";
-            nicval.style.color = "green";
+            
         }
         else{
-            nicval.innerHTML = "NIC is Not Valied";
+            nicval.innerHTML = "NIC is Not Valid";
             nicval.style.color = "red";
             nicval.style.display = "block";
             // nichide.innerHTML = "notvalied";
@@ -209,11 +238,115 @@ nic.addEventListener('input',()=>{
         }
     }
     else{
-        nicval.innerHTML = "NIC is Not Valied";
+        nicval.innerHTML = "NIC is Not Valid";
         // nichide.innerHTML = "notvalied";
         document.getElementById("nichide").value = "notvalied";
         nicval.style.display = "block";
         nicval.style.color = "red";
-    
     }
 })
+
+
+function mynicfunction(nic) {
+    const nyear = [31,59,90,120,151,181,212,243,273,304,334,365];
+    const leapyear = [31,60,91,121,152,182,213,244,274,305,335,365];
+    const bday = {month:"",date:"",year:"",gender:"",valid:""};
+
+    var len = nic.length;
+    console.log(len);
+
+    if(len == 12){
+        const year = nic[0]*1000 + nic[1]*100 + nic[2]*10 + nic[3]*1;
+        var day = nic[4]*100 + nic[5]*10 + nic[6]*1;
+        console.log(day);
+        bday.year = year;
+
+        if(day == 500 || day == 0){
+            bday.valid = "####500##### or ####000##### Not Valid";
+        }
+
+        if(day > 500){
+            bday.gender = "Female";
+            day = day - 500;
+        }else{
+            bday.gender = "Male";
+        }
+
+        if(year % 100 != 0 && year%4 == 0){
+            console.log("inside leap year function");
+            for(var i = 0; i<12; i++){
+                if(leapyear[i] - day >= 0 && leapyear[i] - day <=31 ){
+                    bday.month = i+1;
+                    bday.date = day - leapyear[i-1];
+                    break;
+                }else{
+                    bday.date = day;
+                }
+            }
+        }else{
+            console.log("inside normal year part");
+            for(var i = 0; i<12; i++){
+
+                console.log(i,nyear[i]);
+                if(leapyear[i] - day >= 0 && leapyear[i] - day <=31 ){
+                    bday.month = i+1;
+                    bday.date = day - leapyear[i-1];
+                    break;
+                }else{
+                    bday.date = day;
+                }
+            }
+        }
+    }
+    else if(len == 10){
+        const year = 1*1000 + 9*100 + nic[0]*10 + nic[1]*1;
+        var day = nic[2]*100 + nic[3]*10 + nic[4]*1;
+        // var date = 0;
+        console.log(day);
+
+        bday.year = year;
+
+        if(day == 500 || day == 0){
+            bday.valid = "##500##### or ####000##### Not Valid";
+        }
+
+        if(day > 500){
+            bday.gender = "Female";
+            day = day - 500;
+        }else{
+            bday.gender = "Male";
+        }
+
+        if(year % 100 != 0 && year%4 == 0){
+            console.log("inside leap year part");
+            
+            for(var i = 0; i<12; i++){
+                console.log(i,nyear[i]);
+                if(leapyear[i] - day >= 0 && leapyear[i] - day <=31 ){
+                    bday.month = i+1;
+                    bday.date = day - leapyear[i-1];
+                    break;
+                }else{
+                    bday.date = day;
+                }
+            }
+        }else{
+            console.log("inside normal year part");
+            for(var i = 0; i<12; i++){
+                console.log(i, nyear[i]);
+                if(leapyear[i] - day >= 0 && leapyear[i] - day <=31 ){
+                    bday.month = i+1;
+                    bday.date = day - leapyear[i-1];
+                    break;
+                }else{
+                    bday.date = day;
+                }
+            }
+        }
+    }
+    return bday;
+}
+
+// var n = "995000373v";
+// var d = myfunction(n);
+// console.log(d.date,d.gender,d.valid);
