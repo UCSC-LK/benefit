@@ -29,6 +29,7 @@ function validation() {
         }
     } else {
         alert('Please enter valid numeric value')
+            // Swal.fire('Please enter valid numeric value')
         reason_validation();
         return false;
     }
