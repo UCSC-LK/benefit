@@ -7,7 +7,7 @@ body{
 
 input {
    outline: none !important;
-   font-size: medium;
+   font-size: large;
    border-style: none;
    border-bottom: solid 1px rgba(0, 0, 0, 0.418);
    color: var(--header_dark);  
@@ -147,6 +147,10 @@ input {
     padding-left: 50px;
 }
 
+#c4{
+    font-size: large;
+}
+
 #province, #user_role, #department, #designation {
     width: 90%;
     font-size: large;
@@ -208,7 +212,7 @@ input {
 }
 
 
-.add_employee_main_container .form .input_feild form table #cancell :hover{
+.add_employee_main_container .form .input_feild form table .button :hover{
     box-shadow: 0px 2px 5px var(--header);
     transform: scale(1.05);
     border-style: none;

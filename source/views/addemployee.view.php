@@ -199,21 +199,24 @@
                             <input type="hidden" name="lhide" id="lhide" value=""></td>
                                
                             </tr>
-                            <tr>
-                                <!-- <td id="c1"></td> -->
-                                <td id="c2" colspan="2"><label for="dob">Date Of Birth</label></td>
-                                <!-- <td id="c3"></td> -->
-                                <td id="c4" colspan="6"><input type="date" id="dob" name="dob" required min="" max="" onload = "public/js/addemployee.js/dob_validate()"></td>
-                                
-                            </tr>
+
                             <tr>
                                 <!-- <td id="c1"></td> -->
                                 <td id="c2" colspan="2"><label for="nic">NIC</label></td>
                                 <!-- <td id="c3"></td> -->
-                                <td id="c4" colspan="6"><input type="text" id="nic" name="nic"  required><p id="nicval"></p>
+                                <td id="c4" colspan="6"><input type="text" id="nic" name="nic"  required maxlength="12"><p id="nicval"></p>
                             <input type="hidden" name="nichide" id="nichide" value=""></td>
                                 
                             </tr>
+
+                            <tr>
+                                <!-- <td id="c1"></td> -->
+                                <td id="c2" colspan="2"><label for="dob">Date Of Birth</label></td>
+                                <!-- <td id="c3"></td> -->
+                                <td id="c4" colspan="6"><input type="date" id="dob" name="dob" required min="" max="" onload = "public/js/addemployee.js/dob_validate()" value=""></td>
+                                
+                            </tr>
+                            
                             <!-- <tr>
                                 <td id="c1" colspan="2"></td>
                                 <td id="c2"></td>
@@ -288,7 +291,7 @@
                                 
                                 <td id="c4" colspan="6"><input type="tel" id="contact" name="contact" placeholder="###-#######"
                                    pattern="[0-9]{3}-[0-9]{7}"
-                                   size="50" required></td>
+                                    required maxlength="11"></td>
                        
                             </tr>
                             <tr>
