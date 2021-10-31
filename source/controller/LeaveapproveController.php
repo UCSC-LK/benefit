@@ -8,6 +8,12 @@ class LeaveapproveController extends Controller{
 		{
 			$this->redirect('login');
 		}
+    if(Auth::access('Supervisor'))
+    {
     $this->view('leaveapprove');
+  }
+  else{
+    $this->view('404');
+  }
   }
 }
