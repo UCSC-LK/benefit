@@ -7,7 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?= CSS_PATH ?>approve.css">
+    <link rel="stylesheet" href="<?= CSS_PATH ?>attendance.css">
 
     <title></title>
 </head>
@@ -27,12 +27,26 @@
 
     <div class="main_container">
         <div class="approve-container">
-            <div class="header-approve">
-                <img src="<?= IMG_PATH ?>profile/Sathya.jpeg" alt="Profile Image" class="profile__image">
-                <p class="name">Sathya Udayangi</p>
-            </div>
+        <div class="header-approve" id="btn">
+                    <center>
+                        <img src="<?= IMG_PATH ?>\profile\download.png" class="profile__image">
+                    </center>
+                    <p class="name">Dilukshan</p>
+                    <p class="name">Bimasara</p>
+                    <div>
+                        <center>
+                            <i class="fas fa-band-aid"></i>
+                        </center>
+                        <p class="date">06th Oct</p>
+                    </div>
+                    <center>
+                        <button type="button" name="show" value="show">Show</button>
+                    </center>
+                </div>
 
             <div class="details">
+            <fieldset>
+                <legend>MARK ATTENDANCE</legend>
                 <form action="#">
                     <div class="row">
                         <div class="column_1">
@@ -74,7 +88,7 @@
                             <input type="text" id="hours" name="hours" placeholder="8 hours" required>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="column_3">
                             <label for="history">Attendance History</label>
                         </div>
@@ -90,12 +104,13 @@
                                 <th>0 h</th>
                             </tr>
                         </table>
-                    </div>
+                    </div> -->
                     <div class="buttons">
                         <input class="reject_button" type="submit" value="Cancel" name="reject">
                         <input class="approve_button" type="submit" value="Mark" name="approve">
                     </div>
                 </form>
+            </fieldset>
             </div>
         </div>
     </div>

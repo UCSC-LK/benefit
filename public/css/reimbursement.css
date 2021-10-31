@@ -87,7 +87,7 @@ fieldset {
 }
 
 .invoice_submission {
-    width: 40%;
+    width: 70%;
     height: 120px;
     justify-content: center;
     text-align: center;
@@ -95,6 +95,22 @@ fieldset {
     border-style: dotted;
     font-family: Roboto, sans-serif;
     font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30%;
+}
+
+.row #error_show {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+#error-mzg {
+    color: red;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 5px;
 }
 
 .apply_button {
@@ -427,6 +443,19 @@ tr:nth-child(even) {
     padding-top: 20px;
     margin-left: 18%;
     /* display: inline-block; */
+}
+
+.invoice_submission1 {
+    width: 40%;
+    height: 120px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    border-style: dotted;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 

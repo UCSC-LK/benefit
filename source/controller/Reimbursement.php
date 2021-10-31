@@ -18,7 +18,7 @@ class Reimbursement extends Controller
         $ar=Auth::user();
         $row=array();
         $row = $user->where('employee_ID',$ar);
-
+        $file_error = array();
 
 
         if(count($_POST)>0)
@@ -70,7 +70,8 @@ class Reimbursement extends Controller
                     $this->redirect('Reimbursement');
                 }
                 else {
-                    $file_error = "Sorry, file is already exists!";
+                    $errors="This invoice is already used please make sure your invoice";
+                    // $file_error = "Sorry, file is already exists!";
                 }
 
             } else {
@@ -78,8 +79,6 @@ class Reimbursement extends Controller
             }
 
         }
-
-
 
         $this->view('reimbursementreq',
             ['errors'=>$errors,
@@ -163,7 +162,7 @@ class Reimbursement extends Controller
         // print_r($id);
         if(count($_POST)>0)
         {
-            $user->deleteper('invoice_submission',$id);
+            $user->deleteper('invoice_hashing',$id);
             $this->redirect('Reimbursement');
         }
         $this->view('reimbursementreq.delete');
@@ -180,7 +179,6 @@ class Reimbursement extends Controller
 
         $user = new ReimbursementrequestModel();
         $ar=Auth::user();
-
         // $data= $user->where('invoice_submission',$ar);
         if(count($_POST)>0){
             $data= $user->where('invoice_submission',$_POST['invoice_submission']);

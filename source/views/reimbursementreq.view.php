@@ -71,9 +71,20 @@
                         <div class="column_1">
                             <label for="submission">Invoice Submission</label>
                         </div>
+                        <div id="error_show">
+
                         <div class="invoice_submission">
-                            <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" required>
+                           <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" required>
                         </div>
+                        <div id="error-mzg">
+                        <?php
+                        if (boolval($errors)) {
+                        print_r($errors);?>
+                        <?php
+                        }
+                        ?>
+                        </div>
+                        </div>                   
                     </div>
                     <div class="apply_button">
                     <a href="<?= PATH ?>/Reimbursement">
@@ -85,9 +96,9 @@
 
             </div>
             <?php
-            if (boolval($errors)) {
-                print_r($errors);
-            }
+            // if (boolval($errors)) {
+            //     print_r($errors);
+            // }
             ?>
             <div class="history">
 
@@ -106,12 +117,12 @@
                                 <div><?php print_r($vai->claim_date); ?></div>
                                 <div><?php print_r($vai->claim_amount); ?></div>
                                 <div><i>Pending</i></div>
-                                <a href="<?= PATH ?>Reimbursement/update_reimbursement"">
+                                <a href="<?= PATH ?>Reimbursement/update_reimbursement">
                                 <button type="Submit" value="Submit" name="update" class="update_button"><i
                                             class="fa fa-edit"></i> Update
                                 </button>
                                 </a>
-                                <a href="<?= PATH ?>Reimbursement/delete/<?= $vai->invoice_submission ?>">
+                                <a href="<?= PATH ?>Reimbursement/delete/<?= $vai->invoice_hashing ?>">
                                     <button type='submit' value='Decline' name="delete" class='delete_button'><i
                                                 class="fa fa-trash"></i> Delete
                                     </button>
