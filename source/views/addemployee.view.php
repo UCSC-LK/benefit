@@ -286,7 +286,7 @@
                             <tr>
                                 <td id="c2" colspan="2"><label for="contact">Contact Number</label></td>
                                 
-                                <td id="c4" colspan="6"><input type="tel" id="contact" name="contact" placeholder="076-256****"
+                                <td id="c4" colspan="6"><input type="tel" id="contact" name="contact" placeholder="###-#######"
                                    pattern="[0-9]{3}-[0-9]{7}"
                                    size="50" required></td>
                        

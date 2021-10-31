@@ -214,5 +214,6 @@ nic.addEventListener('input',()=>{
         document.getElementById("nichide").value = "notvalied";
         nicval.style.display = "block";
         nicval.style.color = "red";
+    
     }
 })
