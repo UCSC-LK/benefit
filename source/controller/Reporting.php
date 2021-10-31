@@ -7,7 +7,7 @@ class Reporting extends Controller
             $this->redirect('login');
         }
 
-        if(Auth::access('Supervisor')){
+        if(Auth::access('HR Manager')){
             $this->view('reporting');
         }
         else{
