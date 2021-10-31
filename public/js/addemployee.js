@@ -163,8 +163,9 @@ var nichide = document.getElementById("nichide");
 nic.addEventListener('input', () => {
     var space = nic.value.split(" ");
     console.log(space.length);
-    if (space.length > 1) {
-        // console.log("Fuck");
+    if(space.length > 1){
+        
+
         nicval.innerHTML = "Cannot Include Spaces";
         document.getElementById("nichide").value = "notvalied";
         nicval.style.display = "block";
@@ -187,10 +188,35 @@ nic.addEventListener('input', () => {
                 nicval.innerHTML = nbd.valid;
                 nicval.style.color = "red";
                 document.getElementById("nichide").value = "notvalied";
-            } else {
+            }
+            else{
+                document.getElementById("nichide").value = "valied";
+
                 nicval.style.display = "block";
                 nicval.style.color = "green";
-                document.getElementById("nichide").value = "valied";
+
+                var date = nbd.date;
+                var month = nbd.month;
+                var formattedMonth = ("0" + month).slice(-2);
+                var formattedDate = ("0" + date).slice(-2);
+                // console.log(formattedMonth);
+                // console.log(date);
+
+                var year = nbd.year;
+                var gender = nbd.gender;
+
+                var bday =  `${year}-${formattedMonth}-${formattedDate}`;
+                document.getElementById("dob").value = bday;
+
+                if(gender == "Male"){
+                    radiobtn = document.getElementById("male");
+                    radiobtn.checked = true;
+                }else{
+                    radiobtn = document.getElementById("female");
+                    radiobtn.checked = true;
+                }
+                // console.log(document.getElementById("dob").value);
+                // console.log(bday);
             }
 
         } else {
@@ -214,6 +240,32 @@ nic.addEventListener('input', () => {
                 document.getElementById("nichide").value = "valied";
                 nicval.style.display = "block";
                 nicval.style.color = "green";
+
+                var date = nbd.date;
+                var month = nbd.month;
+
+                // console.log(month.length)
+                // var myNumber = 7;
+                var formattedMonth = ("0" + month).slice(-2);
+                var formattedDate = ("0" + date).slice(-2);
+                // console.log(formattedMonth);
+                // console.log(date);
+
+                var year = nbd.year;
+                var gender = nbd.gender;
+
+                var bday =  `${year}-${formattedMonth}-${formattedDate}`;
+                document.getElementById("dob").value = bday;
+
+                if(gender == "Male"){
+                    radiobtn = document.getElementById("male");
+                    radiobtn.checked = true;
+                }else{
+                    radiobtn = document.getElementById("female");
+                    radiobtn.checked = true;
+                }
+                // console.log(document.getElementById("dob").value);
+                // console.log(bday);
             }
             // nichide.innerHTML = "valied";
 
@@ -235,17 +287,20 @@ nic.addEventListener('input', () => {
 
 
 function mynicfunction(nic) {
-    const nyear = [31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365];
-    const leapyear = [31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 365];
-    const bday = { month: "", date: "", year: "", gender: "", valid: "" };
+
+    // const nyear = [31,59,90,120,151,181,212,243,273,304,334,365];
+    const nyear = [31,60,91,121,152,182,213,244,274,305,335,366];
+    const bday = {month:"",date:"",year:"",gender:"",valid:""};
+
 
     var len = nic.length;
-    console.log(len);
+    // console.log(len);
 
-    if (len == 12) {
-        const year = nic[0] * 1000 + nic[1] * 100 + nic[2] * 10 + nic[3] * 1;
-        var day = nic[4] * 100 + nic[5] * 10 + nic[6] * 1;
-        console.log(day);
+
+    if(len == 12){
+        const year = nic[0]*1000 + nic[1]*100 + nic[2]*10 + nic[3]*1;
+        var day = nic[4]*100 + nic[5]*10 + nic[6]*1;
+        console.log("Day in length 12 : ",day);
         bday.year = year;
 
         if (day == 500 || day == 0) {
@@ -255,40 +310,50 @@ function mynicfunction(nic) {
         if (day > 500) {
             bday.gender = "Female";
             day = day - 500;
-        } else {
+
+            // console.log("Day in length 12 inside day > 500 : ",day);
+        }else{
+            // console.log("Day in length 12 inside day < 500 : ",day);
             bday.gender = "Male";
         }
 
-        if (year % 100 != 0 && year % 4 == 0) {
-            console.log("inside leap year function");
-            for (var i = 0; i < 12; i++) {
-                if (leapyear[i] - day >= 0 && leapyear[i] - day <= 31) {
-                    bday.month = i + 1;
-                    bday.date = day - leapyear[i - 1];
-                    break;
-                } else {
-                    bday.date = day;
-                }
+        // if(year % 100 != 0 && year%4 == 0){
+        //     console.log("inside leap year function");
+        //     while(day - leapyear[i] > 0){
+        //         i++;
+        //     }
+        //     console.log("While loop : ",i);
+        //     bday.month = i+1;
+        //     console.log(day - leapyear[i]);
+        //     if(day - leapyear[i-1]>0){
+        //         console.log("hbdbchbk",day - leapyear[i-1] );
+        //     }else{
+        //         console.log("day",day);
+        //     }
+        // }else{
+            // console.log("inside normal year part length 12");
+            var i =0;
+            while(day - nyear[i] > 0){
+                i++;
             }
-        } else {
-            console.log("inside normal year part");
-            for (var i = 0; i < 12; i++) {
+            // console.log("While loop : ",i);
+            bday.month = i+1;
+            // console.log(day - nyear[i]);
+            if(day - nyear[i-1]>0){
+                // console.log("hbdbchbk",day - nyear[i-1] );
+                bday.date = day - nyear[i-1];
+            }else{
+                // console.log("day",day);
+                bday.date = day;
+            }
+        // }
+    }
+    else if(len == 10){
+        const year = 1*1000 + 9*100 + nic[0]*10 + nic[1]*1;
+        var day = nic[2]*100 + nic[3]*10 + nic[4]*1;
 
-                console.log(i, nyear[i]);
-                if (leapyear[i] - day >= 0 && leapyear[i] - day <= 31) {
-                    bday.month = i + 1;
-                    bday.date = day - leapyear[i - 1];
-                    break;
-                } else {
-                    bday.date = day;
-                }
-            }
-        }
-    } else if (len == 10) {
-        const year = 1 * 1000 + 9 * 100 + nic[0] * 10 + nic[1] * 1;
-        var day = nic[2] * 100 + nic[3] * 10 + nic[4] * 1;
         // var date = 0;
-        console.log(day);
+        // console.log(day);
 
         bday.year = year;
 
@@ -303,33 +368,40 @@ function mynicfunction(nic) {
             bday.gender = "Male";
         }
 
-        if (year % 100 != 0 && year % 4 == 0) {
-            console.log("inside leap year part");
+        ///////////////////////////// CALCULATE FOR LEAP YEAR /////////////////////////////
 
-            for (var i = 0; i < 12; i++) {
-                console.log(i, nyear[i]);
-                if (leapyear[i] - day >= 0 && leapyear[i] - day <= 31) {
-                    bday.month = i + 1;
-                    bday.date = day - leapyear[i - 1];
-                    break;
-                } else {
-                    bday.date = day;
-                }
+        // if(year % 100 != 0 && year%4 == 0){
+        //     console.log("inside leap year function");
+        //     while(day - leapyear[i] > 0){
+        //         i++;
+        //     }
+        //     console.log("While loop : ",i);
+        //     bday.month = i+1;
+        //     console.log(day - leapyear[i]);
+        //     if(day - leapyear[i-1]>0){
+        //         console.log("hbdbchbk",day - leapyear[i-1] );
+        //     }else{
+        //         console.log("day",day);
+        //     }
+        // }else{
+            // console.log("inside normal year part length 12");
+            var i =0;
+            while(day - nyear[i] > 0){
+                i++;
             }
-        } else {
-            console.log("inside normal year part");
-            for (var i = 0; i < 12; i++) {
-                console.log(i, nyear[i]);
-                if (leapyear[i] - day >= 0 && leapyear[i] - day <= 31) {
-                    bday.month = i + 1;
-                    bday.date = day - leapyear[i - 1];
-                    break;
-                } else {
-                    bday.date = day;
-                }
+            // console.log("While loop : ",i);
+            bday.month = i+1;
+            // console.log(day - nyear[i]);
+            if(day - nyear[i-1]>0){
+                // console.log("hbdbchbk",day - nyear[i-1] );
+                bday.date = day - nyear[i-1];
+            }else{
+                // console.log("day",day);
+                bday.date = day;
             }
-        }
+        // }
     }
+    // console.log(bday.date,"--",bday.month,"--",bday.year,"///");
     return bday;
 }
 
