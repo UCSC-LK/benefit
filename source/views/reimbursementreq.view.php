@@ -38,7 +38,7 @@
                 <!-- <div class="heading">
                     <h2>CLAIM REIMBURSEMENT</h2>
                 </div> -->
-                <form name="myform" action="#" method="POST" onsubmit=" return validation()">
+                <form name="myform" action="#" method="POST" onsubmit=" return validation()" enctype="multipart/form-data">
 
                     <div class="row">
                         <div class="column_1">
@@ -72,8 +72,7 @@
                             <label for="submission">Invoice Submission</label>
                         </div>
                         <div class="invoice_submission">
-                            <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png"
-                                   required>
+                            <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" required>
                         </div>
                     </div>
                     <div class="apply_button">
