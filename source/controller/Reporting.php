@@ -6,6 +6,12 @@ class Reporting extends Controller
         if (!Auth::logged_in()) {
             $this->redirect('login');
         }
-        $this->view('reporting');
+
+        if(Auth::access('Supervisor')){
+            $this->view('reporting');
+        }
+        else{
+            $this->view('404');
+        }
     }
 }

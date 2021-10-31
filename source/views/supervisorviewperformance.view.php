@@ -47,14 +47,14 @@
                 <?php
                 if (boolval($row)) {
                 if (count($row) > 0) {
-                foreach ($row
-
-                as $entry) { ?>
+                foreach ($row as $entry) { ?>
                 <!-- <form method="post">-->
                 <div class="cards">
                     <center>
+<!--                        --><?php //echo ($entry->profile_image);?>
                         <!-- <img src='<? //echo $entry->profile_image ?>' alt="" class="img"> -->
-                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
+<!--                        <img src="--><?//= IMG_PATH ?><!--profile/download.png" class="profile__image">-->
+                        <img src="<?php echo ($entry->profile_image);?>" alt='Profile Image' class="profile__image">
 
                     </center>
                     <div class="name">
