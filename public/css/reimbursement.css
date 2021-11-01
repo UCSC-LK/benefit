@@ -331,6 +331,7 @@ tr:nth-child(even) {
     padding-top: 10%;
     padding-left: 30%;
     text-align: center;
+    background-color: white;
 }
 
 .confirmation {
