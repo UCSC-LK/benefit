@@ -42,7 +42,7 @@
                 <p class="handling_title">Documents</p>
                 <?php if(Auth::access('HR Manager')): ?>
                 <div class="add_documents">
-                    <p><i class="fas fa-plus-circle"></i> Add New Benefit</p>
+                    <p><i class="fas fa-plus-circle"></i> Add New Document</p>
                 </div>
                 <?php endif; ?>
             </div>
