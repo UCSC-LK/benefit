@@ -110,7 +110,7 @@
 
                 <div class="sells_dp">
                     <div class="title">
-                        <p>Sells Department</p>
+                        <p>Sales Department</p>
                     </div>
                     <div class="data">
                         <table>
@@ -343,7 +343,7 @@
                                 <td id="c4" colspan="6"><select id="department" name="department">
                                     <option value="1">Operational Department</option>
                                     <option value="2">HR Department</option>
-                                    <option value="3">Sells Department</option>
+                                    <option value="3">Sales Department</option>
                                     <option value="4">Account Department</option>
                                 </select></td>
                             </tr>
