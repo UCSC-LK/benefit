@@ -12,7 +12,7 @@ class Reimbursement extends Controller
             $this->redirect('login');
         }
 
-
+        if (Auth::access('Employee') || Auth::access('Supervisor') || Auth::access('HR Officer') || Auth::access('HR Manager')) {
         $errors=array();
         $user=new ReimbursementrequestModel();
         $ar=Auth::user();
@@ -83,6 +83,10 @@ class Reimbursement extends Controller
         $this->view('reimbursementreq',
             ['errors'=>$errors,
                 'row'=>$row]);
+
+            } else {
+                $this->view('404');
+            }
 
     }
 

@@ -45,7 +45,7 @@
                             <label for="c_date">Claim Date</label>
                         </div>
                         <div class="column_2">
-                            <input type="date" id="claim_date" name="claim_date" min="2021-10-23" max="2021-10-30"
+                            <input type="date" id="claim_date" name="claim_date" min="2021-10-25" max="2021-11-01"
                                    placeholder="mm/dd/yyyy" required>
                         </div>
                     </div>
