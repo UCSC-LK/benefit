@@ -47,7 +47,7 @@
                             <p class="title">Casual Leaves</p>
                             <div class="icon">
                                 <i class="item" data-feather="calendar"></i>
-                                <p class="remain" id="casual_remain">4.5</p>
+                                <p class="remain" id="casual_remain">7</p>
                             </div>
                             <p>DAYS AVAILABLE</p>
                         </a>
@@ -60,7 +60,7 @@
                             <p>
                             <div class="icon">
                                 <i class="item" data-feather="plus-square"></i>
-                                <p class="remain" id="sick_remain">4.5</p>
+                                <p class="remain" id="sick_remain">7</p>
                             </div>
                             <p>DAYS AVAILABLE</p>
                         </a>
@@ -71,7 +71,7 @@
                             <p class="title">Annual Leaves</p>
                             <div class="icon">
                                 <i class="item" data-feather="sun"></i>
-                                <p class="remain" id="annual_remain">4.5</p>
+                                <p class="remain" id="annual_remain">14</p>
                             </div>
                             <p>DAYS AVAILABLE</p>
                         </a>
@@ -94,8 +94,8 @@
                         <!-- Dummy hard code value only -->
                         <!-- this data filling after open this page and then get data fron database -->
                         <div class="leave_name">
-                            <p id="day">May 15</p>
-                            <p id="reson">vesak full moon poya day</p>
+                            <p id="day">May 25</p>
+                            <p id="reson">Request Casual Leave</p>
                         </div>
 
                         <div class="leave_status">
