@@ -172,6 +172,7 @@ hr {
 
 .leave_container .upcoming_timeoff .upcoming_detail .description .leave_status {
     text-align: center;
+    color: rgb(116, 107, 107);
 }
 
 .leave_container .upcoming_timeoff .upcoming_detail .description #reson {
