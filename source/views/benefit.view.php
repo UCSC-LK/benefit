@@ -98,7 +98,7 @@
                                 <div><?php print_r($row->benefit_type); ?> </div>
                                 <div><?php print_r($row->claim_date); ?></div>
                                 <div><i>Pending</i></div>
-                                <a href="<?= PATH ?>Benefit/change/<?= $row->claim_date ?>">
+                                <a href="<?= PATH ?>Benefit/change/<?= $row->report_hashing ?>">
                                     <button type='submit' value='Change' name="change" class='change_button'><i
                                                 class="fa fa-edit"></i> Update
                                     </button>
