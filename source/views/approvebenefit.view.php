@@ -28,6 +28,7 @@
             <div>
                 <p class="handling_title">Pending List</p>
             </div>
+            <hr>
             <div class="card-container">
                 <?php
                 for ($i = 0;$i < sizeof($requested);$i++) {
@@ -48,7 +49,11 @@
                                 print_r($requested[$i]['last_name']);
                                 ?>
                             </p>
-                            <div>
+                            <div style="margin-bottom: 15px">
+                                <p class='date'>
+                                    <?php
+                                    print_r($requested[$i]['details']->benefit_type); ?>
+                                </p>
                                 <p class='date'>
                                     <?php
                                     print_r($requested[$i]['details']->claim_date); ?>
@@ -62,6 +67,32 @@
                     }
 
                 } ?>
+            </div>
+            <div class="approve-container">
+                <div>
+                    <p class="handling_title">Benefit History</p>
+                </div>
+                <hr>
+                <div class="history_table">
+                    <table id="claim_history_table">
+                        <tr>
+                            <th>Date</th>
+                            <th>Name</th>
+                            <th>Benefit_type</th>
+                            <th>Description</th>
+                            <th>Amount(LKR)</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>12th May</td>
+                            <td>ABC CDEF</td>
+                            <td>Medical Tnsurance</td>
+                            <td>Hospitalization</td>
+                            <td>2000.00</td>
+                            <td>Accepted</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
 
 <!--            <div class="detail-container">-->
