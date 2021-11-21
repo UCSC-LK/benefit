@@ -31,6 +31,8 @@
             <hr>
             <div class="card-container">
                 <?php
+
+                if(boolval($requested)){
                 for ($i = 0;$i < sizeof($requested);$i++) {
                     if ($requested >= 1) {
                 //            for ($j = 0; $j < sizeof($requested[$i]); $j++) { ?>
@@ -59,14 +61,43 @@
                                     print_r($requested[$i]['details']->claim_date); ?>
                                 </p>
                             </div>
+                            <?php
+                                $btnChange = 'btnChange';
+                                $btnChange .= $i;
+                                //echo $btnChange;
+                            ?>
                             <center>
-                                <button type="button" name="show" value="show">Show</button>
+                                <button class="show_btn" type="button" name="show" value="show" id="<?php echo $btnChange ?>" onclick="reply_click(this.id)">Show</button>
                             </center>
+                            <script type="text/javascript">
+
+                                document.querySelector('<?php echo "#".$btnChange;?>').addEventListener('click', () => {
+                                    //document.getElementById("this.id").addEventListener('click', () => {
+                                    Confirm.open({
+                                        title: 'Request From <?php print_r($requested[$i]['first_name']); echo " "; print_r($requested[$i]['last_name']); ?>',
+                                        message: 'Benefit Type : <?php print_r($requested[$i]['details']->benefit_type); echo "<br>";?> ' +
+                                            'Claimed Date : <?php print_r($requested[$i]['details']->claim_date); echo "<br>";?>' +
+                                            'Claimed Amount : <?php print_r($requested[$i]['details']->claim_amount); echo "<br>";?>' +
+                                            'Description : <?php print_r($requested[$i]['details']->benefit_description); echo "<br>";?>' +
+                                            'Report : <?php print_r($requested[$i]['details']->report_location); echo "<br>";?>',
+                                        onok: () => {
+                                            //document.body.style.backgroundColor = 'blue';
+                                            window.location.href = "Approvebenefit/accept/<?php print_r($requested[$i]['details']->report_hashing); ?>"
+                                        },
+                                        onreject: () => {
+                                            window.location.href = "Approvebenefit/reject/<?php print_r($requested[$i]['details']->report_hashing); ?>"
+                                        }
+
+                                    })
+                                });
+                            </script>
+
                         </div>
                         <?php
                     }
-
+                }
                 } ?>
+
             </div>
             <div class="approve-container">
                 <div>
@@ -74,128 +105,39 @@
                 </div>
                 <hr>
                 <div class="history_table">
+                    <?php
+                    if(boolval($handled)){ ?>
                     <table id="claim_history_table">
                         <tr>
                             <th>Date</th>
                             <th>Name</th>
-                            <th>Benefit_type</th>
+                            <th>Benefit Type</th>
                             <th>Description</th>
                             <th>Amount(LKR)</th>
                             <th>Status</th>
                         </tr>
+                        <?php
+                        for($i=0;$i<sizeof($handled);$i++){ ?>
                         <tr>
-                            <td>12th May</td>
-                            <td>ABC CDEF</td>
-                            <td>Medical Tnsurance</td>
-                            <td>Hospitalization</td>
-                            <td>2000.00</td>
-                            <td>Accepted</td>
+                            <td><?php print_r($handled[$i]['benefit_details']->claim_date); ?></td>
+                            <td><?php print_r($handled[$i]['emp_details'][0]->first_name); echo ' '; print_r($handled[$i]['emp_details'][0]->last_name);?></td>
+                            <td><?php print_r($handled[$i]['benefit_details']->benefit_type); ?></td>
+                            <td><?php print_r($handled[$i]['benefit_details']->benefit_description); ?></td>
+                            <td><?php print_r($handled[$i]['benefit_details']->claim_amount); ?></td>
+                            <td class="status"><?php print_r($handled[$i]['benefit_details']->benefit_status); ?></td>
                         </tr>
+                        <?php
+                        }?>
                     </table>
+                    <?php
+                    }?>
                 </div>
             </div>
-
-<!--            <div class="detail-container">-->
-<!--                <div class="details">-->
-<!--                    <div class="row">-->
-<!--                        <div class="column_1">-->
-<!--                            <label for="benefit_type">Benefit Type</label>-->
-<!--                        </div>-->
-<!--                        <div class="column_2">-->
-<!--                            <p>--><?php //print_r($requested[$i]['details']->benefit_type) ?><!--</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="row">-->
-<!--                        <div class="column_1">-->
-<!--                            <label for="date">Date</label>-->
-<!--                        </div>-->
-<!--                        <div class="column_2">-->
-<!--                            <p>--><?php //print_r($requested[$i]['details']->claim_date); ?><!--</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="row">-->
-<!--                        <div class="column_1">-->
-<!--                            <label for="claim_date">Claim Amount</label>-->
-<!--                        </div>-->
-<!--                        <div class="column_2">-->
-<!--                            <p>--><?php //print_r($requested[$i]['details']->claim_amount); ?><!--</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="row">-->
-<!--                        <div class="column_1">-->
-<!--                            <label for="reason">Reason</label>-->
-<!--                        </div>-->
-<!--                        <div class="column_2">-->
-<!--                            <p>--><?php //print_r($requested[$i]['details']->benefit_description); ?><!--</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="row">-->
-<!--                        <div class="column_1">-->
-<!--                            <label for="documents">Documents</label>-->
-<!--                        </div>-->
-<!--                        <div class="column_2">-->
-<!--                            <p>--><?php //print_r($requested[$i]['details']->report_location); ?><!--</p>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="buttons">-->
-<!--                        <input class="reject_button" type="submit" value="Reject" name="reject">-->
-<!--                        <input class="approve_button" type="submit" value="Approve" name="approve">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            --><?php
-//            }
-//
-//            } ?>
         </div>
 
     </div>
 </div>
 
-<!--<template id="temp">-->
-<!--    <div class="details">-->
-<!--        <div class="row">-->
-<!--            <div class="column_1">-->
-<!--                <label for="benefit_type">Benefit Type</label>-->
-<!--            </div>-->
-<!--            <div class="column_2">-->
-<!--                <p class="values">--><?php //print_r($requested[0]['details'][0]->benefit_type) ?><!--</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--            <div class="column_1">-->
-<!--                <label for="date">Date</label>-->
-<!--            </div>-->
-<!--            <div class="column_2">-->
-<!--                <p class="values">--><?php //print_r($requested[0]['details'][0]->claim_date) ?><!--</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--            <div class="column_1">-->
-<!--                <label for="claim_date">Claim Amount</label>-->
-<!--            </div>-->
-<!--            <div class="column_2">-->
-<!--                <p class="values">--><?php //print_r($requested[0]['details'][0]->claim_amount) ?><!--</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--            <div class="column_1">-->
-<!--                <label for="reason">Reason</label>-->
-<!--            </div>-->
-<!--            <div class="column_2">-->
-<!--                <p class="values">--><?php //print_r($requested[0]['details'][0]->benefit_description) ?><!--</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--            <div class="column_1">-->
-<!--                <label for="documents">Documents</label>-->
-<!--            </div>-->
-<!--            <div class="column_2">-->
-<!--                <p class="values">https://www.arisirihospital.lk</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</template>-->
 <script>
 
     function addBox() {
@@ -206,5 +148,145 @@
     document.getElementById("btn").addEventListener("click", addBox);
 
 </script>
+<!--
+<div class="confirm">
+    <div class="confirm__window">
+        <div class="confirm__titlebar">
+            <span class="confirm__title">Benefit Request By ASDFG</span>
+            <button class="confirm__close">&times;</button>
+        </div>
+        <div class="confirm__content">
+            <div class="row">
+                <div class="column_1">
+                    <label for="claim_date">Claimed Date :</label>
+                </div>
+                <div class="column_2">
+                    <p class="values">
+                        <?php
+                        print_r($requested[0]['details']->benefit_type); ?> </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column_1">
+                    <label for="claim_date">Claimed Date :</label>
+                </div>
+                <div class="column_2">
+                    <p class="values">
+                        <?php
+                        print_r($requested[0]['details']->claim_date); ?> </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column_1">
+                    <label for="claim_date">Claimed Date :</label>
+                </div>
+                <div class="column_2">
+                    <p class="values">
+                        <?php
+                        print_r($requested[0]['details']->claim_amount); ?> </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column_1">
+                    <label for="claim_date">Claimed Date :</label>
+                </div>
+                <div class="column_2">
+                    <p class="values">
+                        <?php
+                        print_r($requested[0]['details']->benefit_description); ?> </p>
+                </div>
+            </div>
+        </div>
+        <div class="confirm__buttons">
+            <button class="confirm__button confirm__button--ok confirm__button--fill">OK</button>
+            <button class="confirm__button confirm__button--cancel">Cancel</button>
+        </div>
+    </div>
+</div>
+-->
+
+<!--<script src="http://localhost/benefit/public/js/approve.js">-->
+<script>
+    const  Confirm = {
+        open(options){
+            options = Object.assign({},{
+                title: '',
+                message: '',
+                okText: 'Accept',
+                //cancelText: 'Reject',
+                rejectText: 'Reject',
+                onok: function () {},
+                oncancel: function () {},
+                onreject: function () {}
+            }, options);
+
+
+            const html = `<div class="confirm">
+    <div class="confirm__window">
+        <div class="confirm__titlebar">
+            <span class="confirm__title">${options.title}</span>
+            <button class="confirm__close">&times;</button>
+        </div>
+        <div class="confirm__content">${options.message}
+        </div>
+        <div class="confirm__buttons">
+            <button class="confirm__button confirm__button--ok confirm__button--fill">${options.okText}</button>
+            <button class="confirm__button confirm__button--cancel">${options.rejectText}</button>
+
+</div>
+    </div>
+</div>`;
+
+            const template = document.createElement('template');
+            template.innerHTML = html;
+
+            const confirmEl = template.content.querySelector('.confirm');
+            const btnReject = template.content.querySelector('.confirm__button--cancel');
+            const btnClose = template.content.querySelector('.confirm__close');
+            const btnOk = template.content.querySelector('.confirm__button--ok');
+            //const btnCancel = template.content.querySelector('.confirm__button--cancel');
+
+            confirmEl.addEventListener('click', e => {
+                if(e.target === confirmEl){
+                    options.oncancel();
+                    this._close(confirmEl);
+                }
+            });
+
+            btnReject.addEventListener('click', e => {
+                options.onreject();
+                this._close(confirmEl);
+            });
+
+            btnOk.addEventListener('click', () => {
+                options.onok();
+                this._close(confirmEl);
+            });
+
+            // [btnCancel, btnClose].forEach(el => {
+            //     el.addEventListener('click', () => {
+            //         options.oncancel();
+            //         this._close(confirmEl);
+            //     });
+            // });
+            [btnClose].forEach(el => {
+                el.addEventListener('click', () => {
+                    options.oncancel();
+                    this._close(confirmEl);
+                });
+            });
+
+            document.body.appendChild(template.content);
+        },
+
+        _close (confirmEl){
+            confirmEl.classList.add('confirm--close');
+            confirmEl.addEventListener('animationend', () => {
+                document.body.removeChild(confirmEl);
+            });
+        }
+    }
+</script>
+
 </body>
 </html>
