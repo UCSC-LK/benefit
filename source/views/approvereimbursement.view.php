@@ -24,67 +24,50 @@
     ?>
 
     <div class="main_container">
-        <?php
-
-        // for ($i = 0; $i < sizeof($requested); $i++) {
-        //     if ($requested>= 1) {?>
         <div class="approve-container">
             <div>
                 <p class="handling_title">To Be Handle</p>
             </div>
             <hr>
             <div class="card-container">
-                <div class="header-approve" id="btn">
-                    <center>
-                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
-                    </center>
-                    <p class="name">Sathya</p>
-                    <p class="name"> Udayangi</p>
-                    <div>
-                    <p class="date"> 2021/09/10</p>
-                    </div>
-            <!-- <p class='name'>
-                    <?php
-            // print_r($requested[$i]['first_name']);
-            // echo " ";
-            // print_r($requested[$i]['last_name']);
-            ?>
-                </p> -->
-            <!-- <p class='date'>
-                    <?php
+            <?php
+            if(boolval($requested)){
+                // print_r(sizeof($requested));
+                for ($i = 0;$i < sizeof($requested);$i++) {
+                
+                    // if ($requested >= 1) {
+                //            for ($j = 0; $j < sizeof($requested[$i]); $j++) { ?>
+                        <div class='header-approve' id='btn'>
+                            <center>
+                                <img src="<?php echo $requested[$i]['profile_image'];?>" alt='Profile Image'
+                                     class='profile__image'>
+                            </center>
+                            <p class='name'>
+                                <?php
+                                print_r($requested[$i]['first_name']); ?>
+                            </p>
+                            <p class="name">
+                                <?php
+                                echo " ";
+                                print_r($requested[$i]['last_name']);
+                                ?>
+                            </p>
+                            <div>
+                                <p class='date'>
+                                    <?php
+                                    print_r($requested[$i]['details']->claim_date); ?>
+                                </p>
+                            </div>
+                            <center>
+                                <button type="button" name="show" value="show">Show</button>
+                            </center>
+                        </div>
+                        <?php
+                    }
 
-            // print_r($requested[$i]['details']->claim_date); ?>
-                </p> -->
-                    <center>
-                        <button type="button" name="show" value="show">Show</button>
-                    </center>
-                </div>
-                <div class="header-approve" id="btn">
-                    <center>
-                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
-                    </center>
-                    <p class="name">Bimsara</p>
-                    <p class="name">Dilukshan</p>
-                    <div>
-                        <p class="date"> 2021/09/10</p>
-                    </div>
-                    <center>
-                        <button type="button" name="show" value="show">Show</button>
-                    </center>
-                </div>
-                <div class="header-approve" id="btn">
-                    <center>
-                        <img src="<?= IMG_PATH ?>profile/download.png" class="profile__image">
-                    </center>
-                    <p class="name">Sathya</p>
-                    <p class="name"> Udayangi</p>
-                    <div>
-                        <p class="date"> 2021/09/10</p>
-                    </div>
-                    <center>
-                        <button type="button" name="show" value="show">Show</button>
-                    </center>
-                </div>
+                } 
+            // }
+            ?>
 
             </div>
         </div>
@@ -94,6 +77,9 @@
             </div>
             <hr>
             <div class="history_table">
+                <?php
+                if(boolval($requested_approve)){
+                ?>
                 <table id="claim_history_table">
                     <tr>
                         <th>Date</th>
@@ -102,7 +88,25 @@
                         <th>Amount</th>
                         <th>Status</th>
                     </tr>
+                    <?php
+                    for ($i = 0;$i < sizeof($requested_approve);$i++) {
+                    ?>
+                    <tr>
+                        <td><?php print_r($requested_approve[$i]['details']->claim_date)?></td>
+                        <td><?php print_r($requested_approve[$i]['first_name']); echo "  "; print_r($requested_approve[$i]['last_name']);?></td>
+                        <td><?php print_r($requested_approve[$i]['details']->reimbursement_reason)?></td>
+                        <td><?php print_r($requested_approve[$i]['details']->claim_amount)?></td>
+                        <td><?php print_r($requested_approve[$i]['details']->reimbursement_status)?></td>
+
+
+                    </tr>
+                    <?php
+                    }
+                    ?>
                 </table>
+                <?php
+                }
+                ?>
             </div>
         </div>
 <!--        <div class="details">-->

@@ -100,6 +100,21 @@ fieldset {
     padding-left: 30%;
 }
 
+.invoice_submission i {
+    font-size: 50px;
+    color: #0C6170;
+    margin-right: 85px;
+    margin-top: 10px;
+}
+
+.invoice_submission p {
+    margin-top: 10px;
+    font-size: 16px;
+    margin-right: 85px;
+    color: #717171;
+    margin-bottom: 1px;
+}
+
 .row #error_show {
     width: 40%;
     padding: 12px 20px;

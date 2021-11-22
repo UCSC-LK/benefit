@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="<?= CSS_PATH ?>reimbursement.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <title></title>
@@ -45,9 +46,10 @@
                             <label for="c_date">Claim Date</label>
                         </div>
                         <div class="column_2">
-                            <input type="date" id="claim_date" name="claim_date" min="2021-10-25" max="2021-11-01"
+                            <input type="date" id="claim_date" name="claim_date" min="" max=""
                                    placeholder="mm/dd/yyyy" required>
                         </div>
+                        <p id="hello"></p>
                     </div>
                     <div class="row">
                         <div class="column_1">
@@ -74,8 +76,17 @@
                         <div id="error_show">
 
                         <div class="invoice_submission">
-                           <input type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" required>
+                            <form2>
+                           <input class="file-input" type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" multiple required hidden>
+                           <i class="fas fa-cloud-upload-alt"></i>
+                           <p>Browse File to Upload</p>
+                            </form2>
+                            <div>
+                            <section class="progress-area"></section>
+                          
                         </div>
+                        </div>
+                        
                         <div id="error-mzg">
                         <?php
                         if (boolval($errors)) {
@@ -117,7 +128,7 @@
                                 <div><?php print_r($vai->claim_date); ?></div>
                                 <div><?php print_r($vai->claim_amount); ?></div>
                                 <div><i>Pending</i></div>
-                                <a href="<?= PATH ?>Reimbursement/update_reimbursement">
+                                <a href="<?= PATH ?>Reimbursement/updating/<?= $vai->invoice_hashing?>">
                                 <button type="Submit" value="Submit" name="update" class="update_button"><i
                                             class="fa fa-edit"></i> Update
                                 </button>
@@ -168,9 +179,6 @@
         </div>
     </div>
 </div>
-<!--<div>-->
-<!--    --><?php //$this->view('includes/footer') ?>
-<!--</div>-->
 <script src="public/js/reimbursement.js"></script>
 </body>
 </html>
