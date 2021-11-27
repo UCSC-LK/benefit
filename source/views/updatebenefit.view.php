@@ -44,6 +44,25 @@
                 <div class="add_benefits" id="add_benefits" onclick="openForm()">
                     <p><i class="fas fa-plus-circle"></i> Add New Benefit</p>
                 </div>
+                    <script type="text/javascript">
+
+                        document.querySelector('#add_benefits').addEventListener('click', () => {
+                            //document.getElementById("this.id").addEventListener('click', () => {
+                            Confirm.open({
+                                title: 'New Benefit!',
+                                // message: 'Benefit Type : ' +
+                                //     'Claimed Date : ' +
+                                //     'Claimed Amount : ' +
+                                //     'Description : ' +
+                                //     'Report : ',
+                                // onok: () => {
+                                //     //document.body.style.backgroundColor = 'blue';
+                                //     window.location.href = "#"
+                                // }
+
+                            })
+                        });
+                    </script>
                 <?php endif; ?>
             </div>
             <?php
@@ -139,12 +158,129 @@
     </center>
 </div>
 <script>
-    function openForm(){
-        document.getElementById("myForm").style.display = "block";
-    }
+    const  Confirm = {
+        open(options){
+            options = Object.assign({},{
+                title: '',
+                message: '',
+                //okText: 'Save',
+                cancelText: 'Cancel',
+                //rejectText: 'Reject',
+                //onok: function () {},
+                oncancel: function () {}
+            }, options);
 
-    function closeForm(){
-        document.getElementById("myForm").style.display = "none"
+
+            const html = `<div class="confirm">
+    <div class="confirm__window">
+        <div class="confirm__titlebar">
+            <span class="confirm__title">${options.title}</span>
+            <button class="confirm__close">&times;</button>
+        </div>
+        <div class="confirm__content">${options.message}
+            <div class="benefit_head" id="myForm">
+                <!-- <div class="heading">
+                        <h2>CLAIM BENEFIT</h2>
+                    </div> -->
+
+                <div class="benefit_form">
+
+                    <form action="#" method="post">
+
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="benefit_type">Benefit Type</label>
+                            </div>
+                            <div class="column_2">
+                                <input type="text" id="benefit_type" name="benefit_type" required>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="claiming_amount">Maximum Amount (LKR)</label>
+                            </div>
+                            <div class="column_2">
+                                <input type="text" id="max_amount" name="max_amount"
+                                       placeholder="200,000.00" required pattern="[0-9._%+-]+\.[0-9]{2}$">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="valid_months">Valid Months</label>
+                            </div>
+                            <div class="column_2">
+                                <input type="text" id="valid_months" name="valid_months" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="valid_years">Valid Years</label>
+                            </div>
+                            <div class="column_2">
+                                <input type="text" id="valid_years" name="valid_years" required>
+                            </div>
+                        </div>
+                        <div class="confirm__buttons">
+                            <button class="confirm__button confirm__button--ok confirm__button--fill" type="submit" value="Update" name="submit">Add</button>
+                            <button class="confirm__button confirm__button--cancel" type="reset">${options.cancelText}</button>
+                        </div>
+                    </form>
+
+        </div>
+        </div>
+
+    </div>
+</div>`;
+
+            const template = document.createElement('template');
+            template.innerHTML = html;
+
+            const confirmEl = template.content.querySelector('.confirm');
+            //const btnReject = template.content.querySelector('.confirm__button--cancel');
+            const btnClose = template.content.querySelector('.confirm__close');
+            //const btnOk = template.content.querySelector('.confirm__button--ok');
+            const btnCancel = template.content.querySelector('.confirm__button--cancel');
+
+            confirmEl.addEventListener('click', e => {
+                if(e.target === confirmEl){
+                    options.oncancel();
+                    this._close(confirmEl);
+                }
+            });
+
+            // btnReject.addEventListener('click', e => {
+            //     options.onreject();
+            //     this._close(confirmEl);
+            // });
+
+            // btnOk.addEventListener('click', () => {
+            //     options.onok();
+            //     this._close(confirmEl);
+            // });
+
+            [btnCancel, btnClose].forEach(el => {
+                el.addEventListener('click', () => {
+                    options.oncancel();
+                    this._close(confirmEl);
+                });
+            });
+            // [btnClose].forEach(el => {
+            //     el.addEventListener('click', () => {
+            //         options.oncancel();
+            //         this._close(confirmEl);
+            //     });
+            // });
+
+            document.body.appendChild(template.content);
+        },
+
+        _close (confirmEl){
+            confirmEl.classList.add('confirm--close');
+            confirmEl.addEventListener('animationend', () => {
+                document.body.removeChild(confirmEl);
+            });
+        }
     }
 </script>
 </body>
