@@ -2,25 +2,11 @@
 body {
     background-color: var(--background);
     font-family: Roboto, sans-serif;
-    /*margin: 0;*/
-    /*padding: 0;*/
 }
 
-/*.page_content{*/
-/*    position: relative;*/
-/*}*/
-
 .main_container {
-    /*border-top-right-radius: 10px;*/
-    /*border-bottom-right-radius: 10px;*/
     background-color: white;
-    padding: 10px;
-    padding-top: 0;
-    padding-bottom: 0;
-    /*height: 100%;*/
-    /*padding-bottom: 0;*/
-    /*transition: 0.5s;*/
-    /*margin: 0 5px 0 255px;*/
+    padding: 0 10px;
     z-index: 9;
 }
 
@@ -29,8 +15,6 @@ body {
     height: 150px;
     margin: 0;
     background-color: var(--w);
-    /*position: absolute;*/
-    /*opacity: 0.7;*/
 }
 
 .main_container svg path{
@@ -42,6 +26,13 @@ body {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+
+.no_benefits {
+    margin: 20px;
+    text-align: center;
+    font-size: large;
+    color: var(--grey1);
 }
 
 .handling_title {
@@ -80,7 +71,6 @@ body {
 .benefit_list {
     width: auto;
     border-radius: 10px;
-    /*box-shadow: 3px 5px 15px rgba(0, 0, 0, .15);*/
     padding: 20px;
     margin-bottom: 10px;
 }
@@ -105,13 +95,11 @@ body {
     padding: 50px;
     border-radius: 10px;
     margin-right: 5px;
-    /*margin-bottom: 5px;*/
     display: flex;
     flex-direction: row;
 }
 
 legend {
-    /*margin-left: 60px;*/
     padding: 8px;
     font-family: Roboto, Arial, sans-serif;
     font-size: 18px;
@@ -124,16 +112,14 @@ legend {
 fieldset {
     width: 60%;
     justify-content: center;
-    /*padding-bottom: 20px;*/
-    /*padding-top: 20px;*/
     margin-left: 20%;
-    /* display: inline-block; */
 }
 
 .benefit_form {
     width: 100%;
     display: flex;
     flex-direction: column;
+    z-index: 9;
 }
 
 .benefit_form .row {
@@ -146,7 +132,6 @@ fieldset {
 
 .benefit_form .row .column_1 {
     font-size: medium;
-    /*padding: 12px 20px;*/
     width: 31%;
     color: #1C1D1D;
     text-align: left;
@@ -157,7 +142,6 @@ fieldset {
 
 .benefit_form .row .column_2 {
     width: 51%;
-    /*padding-left: 15px;*/
 }
 
 .column_2 select,
@@ -173,7 +157,6 @@ fieldset {
 }
 
 .claim_button {
-    /*padding-left: 40px;*/
     padding-top: 50px;
     padding-bottom: 30px;
     display: flex;
@@ -202,12 +185,12 @@ fieldset {
 }
 
 .cancle_button:hover {
-    box-shadow: 0px 2px 5px var(--red);
+    box-shadow: 0 2px 5px var(--red);
     transform: scale(1.05);
     border-style: none;
 }
 
-input[type=submit] {
+.update_button {
     background-color: #6fccee;
     border-radius: 100px;
     color: var(--header);
@@ -219,7 +202,6 @@ input[type=submit] {
     text-align: center;
     text-decoration: none;
     transition: all 250ms;
-    border: 0;
     font-size: 16px;
     user-select: none;
     -webkit-user-select: none;
@@ -230,8 +212,162 @@ input[type=submit] {
     border: 1.5px solid var(--header);
 }
 
-input[type=submit]:hover {
-    box-shadow: 0px 2px 5px var(--header);
+.update_button:hover {
+    box-shadow: 0 2px 5px var(--header);
     transform: scale(1.05);
     border-style: none;
+}
+
+/*input[type=submit] {*/
+/*    background-color: #6fccee;*/
+/*    border-radius: 100px;*/
+/*    color: var(--header);*/
+/*    cursor: pointer;*/
+/*    display: inline-block;*/
+/*    font-family: Arial, Helvetica, sans-serif;*/
+/*    font-weight: bold;*/
+/*    padding: 7px 20px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    transition: all 250ms;*/
+/*    font-size: 16px;*/
+/*    user-select: none;*/
+/*    -webkit-user-select: none;*/
+/*    touch-action: manipulation;*/
+/*    letter-spacing: 2px;*/
+/*    margin-left: 1%;*/
+/*    margin-right: 7%;*/
+/*    border: 1.5px solid var(--header);*/
+/*}*/
+
+/*input[type=submit]:hover {*/
+/*    box-shadow: 0 2px 5px var(--header);*/
+/*    transform: scale(1.05);*/
+/*    border-style: none;*/
+/*}*/
+
+.confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6) ;
+    padding: 10px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    animation-name: confirm---open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm--close {
+    animation-name: confirm---close;
+}
+
+.confirm__window {
+    /*height: 250px;*/
+    height: min-content;
+
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    font-size: 14px;
+    font-family: sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    opacity: 0;
+    transform: scale(0.75);
+    animation-name: confir__window---open;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+
+.confirm__titlebar, .confirm__content, .confirm__buttons {
+    padding: 1.25em;
+}
+
+.confirm__titlebar {
+    background-color: var(--h1);
+    color: var(--w);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.confirm__title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.confirm__close {
+    background: none;
+    outline: none;
+    border: none;
+    transform: scale(2.5);
+    color: var(--w);
+    transition: color 0.1s;
+}
+
+.confirm__close:hover {
+    color: var(--red);
+    cursor: pointer;
+}
+
+.confirm__content {
+    line-height: 1.8em;
+}
+
+.confirm__buttons {
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.confirm__button {
+    padding: 0.4em 0.8em;
+    border: 2px solid var(--h1);
+    border-radius: 5px;
+    background-color: var(--w);
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: sans-serif;
+    margin-left: 0.6em;
+    cursor: pointer;
+    outline: none;
+}
+
+.confirm__button--fill {
+    background-color: var(--h1);
+    color: var(--w);
+}
+
+.confirm__button:focus {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes confirm---open {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+@keyframes confirm---close {
+    from {opacity: 1}
+    to {opacity: 0}
+}
+
+@keyframes confir__window---open {
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
 }
