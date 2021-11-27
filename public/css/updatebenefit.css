@@ -123,7 +123,7 @@ fieldset {
 }
 
 .benefit_form .row {
-    padding-top: 20px;
+    padding-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,6 +246,7 @@ fieldset {
 /*    border-style: none;*/
 /*}*/
 
+/*Pop up form*/
 .confirm {
     position: fixed;
     top: 0;
@@ -275,7 +276,7 @@ fieldset {
     height: min-content;
 
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     background-color: white;
     font-size: 14px;
     font-family: sans-serif;
@@ -330,7 +331,7 @@ fieldset {
 .confirm__buttons {
     background-color: #EEEEEE;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .confirm__button {
