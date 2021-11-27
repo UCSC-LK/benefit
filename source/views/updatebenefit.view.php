@@ -41,44 +41,44 @@
             <div class="title_container">
                 <p class="handling_title">Benefits List</p>
                 <?php if(Auth::access('HR Manager')): ?>
-                <div class="add_benefits">
+                <div class="add_benefits" id="add_benefits" onclick="openForm()">
                     <p><i class="fas fa-plus-circle"></i> Add New Benefit</p>
                 </div>
                 <?php endif; ?>
             </div>
+            <?php
+            if(boolval($details)){ ?>
             <table>
                 <tr>
                     <th>Benefit Type</th>
-                    <th>Max Amount</th>
+                    <th>Max Amount (LKR)</th>
                     <th>Valid Years</th>
                     <th>Valid Months</th>
-                    <th>Option</th>
+                    <th>Options</th>
                 </tr>
+                <?php
+                for($i=0 ;$i<sizeof($details); $i++){ ?>
                 <tr>
-                    <td>Medical Insurance</td>
-                    <td>20000.00 LKR</td>
-                    <td>01</td>
-                    <td>00</td>
+                    <td><?php print_r($details[$i]->benefit_type); ?></td>
+                    <td><?php print_r($details[$i]->max_amount); ?></td>
+                    <td><?php print_r($details[$i]->valid_years); ?></td>
+                    <td><?php print_r($details[$i]->valid_months); ?></td>
                     <td><a href=""><i class="fas fa-edit"></i></a>
                         <?php if(Auth::access('HR Manager')): ?>
                             <a href=""><i class="fas fa-trash-alt"></i></a>
                         <?php endif; ?>
                     </td>
                 </tr>
-                <tr>
-                    <td>Life Insurance</td>
-                    <td>20000.00 LKR</td>
-                    <td>01</td>
-                    <td>00</td>
-                    <td><a href=""><i class="fas fa-edit"></i></a>
-                        <?php if(Auth::access('HR Manager')): ?>
-                        <a href=""><i class="fas fa-trash-alt"></i></a>
-                        <?php endif; ?>
-                    </td>
-                </tr>
+                <?php
+                } ?>
             </table>
+            <?php
+            }
+            else { ?>
+                    <div class="no_benefits">No Benefits Yet!</div>
+            <?php }?>
         </div>
-        <div class="benefit_head">
+        <div class="benefit_head" id="myForm">
             <fieldset>
                 <legend>UPDATE BENEFIT</legend>
                 <!-- <div class="heading">
@@ -87,32 +87,34 @@
 
                 <div class="benefit_form">
 
-                    <form name="myform" action="#" method="post">
+                    <form action="#" method="post">
 
                         <div class="row">
                             <div class="column_1">
                                 <label for="benefit_type">Benefit Type</label>
                             </div>
                             <div class="column_2">
-                                <select id="benefit_type" name="benefit_type" required>
-                                    <option></option>
-                                    <option>Medical Insurance</option>
-                                    <option>Life Insurance</option>
-                                    <option>Accident Insurance</option>
-                                </select>
+                                <input type="text" id="benefit_type" name="benefit_type" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="column_1">
-                                <label for="claiming_amount">Maximum Amount</label>
+                                <label for="claiming_amount">Maximum Amount (LKR)</label>
                             </div>
                             <div class="column_2">
-                                <input type="text" id="claiming_amount" name="claiming_amount"
-                                       placeholder="Rs.200,000.00" required pattern="[0-9._%+-]+\.[0-9]{2}$">
+                                <input type="text" id="max_amount" name="max_amount"
+                                       placeholder="200,000.00" required pattern="[0-9._%+-]+\.[0-9]{2}$">
                             </div>
                         </div>
-
+                        <div class="row">
+                            <div class="column_1">
+                                <label for="valid_months">Valid Months</label>
+                            </div>
+                            <div class="column_2">
+                                <input type="text" id="valid_months" name="valid_months" required>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="column_1">
                                 <label for="valid_years">Valid Years</label>
@@ -121,19 +123,10 @@
                                 <input type="text" id="valid_years" name="valid_years" required>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="column_1">
-                                <label for="valid_months">Valid Months</label>
-                            </div>
-                            <div class="column_2">
-                                <input type="text" id="valid_months name=" valid_years" required>
-                            </div>
-                        </div>
 
                         <div class="claim_button">
-                            <input type="submit" value="Update" name="submit">
-                            <a href="<?= PATH ?>/Benefit/update">
-                                <input class="cancle_button" type="button" value="Cancel"></a>
+                            <button class="update_button" type="submit" value="Update" name="submit">Add</button>
+                            <button class="cancle_button" type="button" onclick="closeForm()">Cancel</button>
                         </div>
 
                     </form>
@@ -145,5 +138,14 @@
         <img src="<?= IMG_PATH ?>down.png"  alt="" class="img">
     </center>
 </div>
+<script>
+    function openForm(){
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm(){
+        document.getElementById("myForm").style.display = "none"
+    }
+</script>
 </body>
 </html>

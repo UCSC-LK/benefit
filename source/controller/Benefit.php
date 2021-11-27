@@ -26,7 +26,25 @@ class Benefit extends Controller
             $this->redirect('login');
         }
 
-        $this->view('updatebenefit');
+        if(Auth::access('HR Manager')){
+            $benefits = new BenefitdetailsModel();
+            $all_details = $benefits->findAll();
+            if (count($_POST) > 0) {
+                if (isset($_POST['submit'])) {
+                    $arr['benefit_type'] = $_POST['benefit_type'];
+                    $arr['max_amount'] = $_POST['max_amount'];
+                    $arr['valid_months'] = $_POST['valid_months'];
+                    $arr['valid_years'] = $_POST['valid_years'];
+                    //print_r($arr);
+                    $benefits->insert($arr);
+                    $this->redirect('updatebenefit');
+                }
+            }
+            $this->view('updatebenefit', ['details'=> $all_details]);
+        }
+        else{
+            $this->view('404');
+        }
     }
 
     function delete($id = null)
@@ -67,8 +85,6 @@ class Benefit extends Controller
                 $row = $user->where('employee_ID',$employee_id);
                 if(count($_POST)>0){
                     if(isset($_POST['submit'])){
-                        $array['employee_ID'] = $employee_id;
-                        $array['claim_date'] = $_POST['claiming_date'];
                         $array['benefit_type'] = $_POST['benefit_type'];
                         $array['claim_amount'] = $_POST['claiming_amount'];
                         $array['benefit_status'] = "pending";
@@ -109,9 +125,8 @@ class Benefit extends Controller
                         }
                     }
                 }
-                $this->view('benefit.change', ['arr' => $arr]);
             }
-
+            $this->view('benefit.change', ['arr' => $arr]);
         }
     }
 }
