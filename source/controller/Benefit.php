@@ -37,7 +37,7 @@ class Benefit extends Controller
                     $arr['valid_years'] = $_POST['valid_years'];
                     //print_r($arr);
                     $benefits->insert($arr);
-                    $this->redirect('updatebenefit');
+                    $this->redirect('Benefit/update');
                 }
             }
             $this->view('updatebenefit', ['details'=> $all_details]);
@@ -53,21 +53,10 @@ class Benefit extends Controller
 
         if (!Auth::logged_in()) {
             $this->redirect('login');
-        } else {
-            $employee_id = Auth::user();
-            $user = new BenefitrequestModel();
-            $arr = $user->where_condition('employee_ID', 'report_hashing', $employee_id, $id);
-//            print_r($arr);
-            if (boolval($arr)) {
-                if (count($_POST) > 0) {
-                    $user->deleteper('report_hashing', $id);
-                    $this->redirect('Benefit');
-                }
-                $this->view('benefit.delete');
-            } else {
-                $this->view('404');
-            }
-            // print_r($id);
+        } else if(Auth::access('HR Manager')) {
+            $user = new BenefitdetailsModel();
+            $user->deleteper('benefit_ID', $id);
+            $this->redirect('Benefit/update');
         }
 
     }
