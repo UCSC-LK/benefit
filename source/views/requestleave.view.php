@@ -76,8 +76,8 @@
                                 <p>Half Days</p>
                                 <div class="half_duration">
                                     <div class="date_item">
-                                        <label for="start_date">Date </label>
-                                        <input type="date" name="start_date" id="half_date" min="" max="">
+                                        <label for="half_date">Date </label>
+                                        <input type="date" name="half_date" id="half_date" min="" max="">
                                     </div>
 
                                     <div class="item">
@@ -108,6 +108,12 @@
                         
                     </form>
                 </fieldset>
+
+                <?php if(boolval($rows))
+                    { 
+                        print_r($rows);
+                        
+                    } ?>
             </div>
         </div>
     </div>
