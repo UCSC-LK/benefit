@@ -41,10 +41,24 @@ leave_type.addEventListener('input',()=>{
 
         start_date.min = newdate;
         start_date.max = max_date;
-        console.log(start_date.value);
-        console.log(start_date.min);
+        // end_date.min = start_date;
+        //end_date.min = max_date;
 
-        console.log("inside if condition ");
+        start_date.addEventListener('input',()=>{
+            var end_date = document.getElementById("end_date");
+            console.log(start_date.value);
+            end_date.min = start_date.value;
+            end_date.max = max_date;
+            console.log(`${end_date.min} end date min`);
+            console.log(`${end_date.max} end date max`);
+            // today accident and full week in hospital senario have to discuss
+        })
+        
+
+        // console.log(start_date.value);
+        // console.log(start_date.min);
+
+        // console.log("inside if condition ");
     }
     else if(leave_type.value == "casual"){
         start_date.min = today_date;
@@ -58,6 +72,17 @@ leave_type.addEventListener('input',()=>{
         max_date = max_y + "-" + max_m + "-" + max_d;
         
         start_date.max = max_date;
+
+        start_date.addEventListener('input',()=>{
+            var end_date = document.getElementById("end_date");
+            console.log(start_date.value);
+            end_date.min = start_date.value;
+            end_date.max = max_date;
+            console.log(`${end_date.min} end date min`);
+            console.log(`${end_date.max} end date max`);
+            // today accident and full week in hospital senario have to discuss
+        })
+        
     }
     else if(leave_type.value == "annual"){
         start_date.min = today_date;
@@ -71,23 +96,17 @@ leave_type.addEventListener('input',()=>{
         max_date = max_y + "-" + max_m + "-" + max_d;
         
         start_date.max = max_date;
+        start_date.addEventListener('input',()=>{
+            var end_date = document.getElementById("end_date");
+            console.log(start_date.value);
+            end_date.min = start_date.value;
+            end_date.max = max_date;
+            console.log(`${end_date.min} end date min`);
+            console.log(`${end_date.max} end date max`);
+            // today accident and full week in hospital senario have to discuss
+        })
+        
     }
-    
-    // var td = new Date(start_date.value);
-    // console.log(td);
-    // var tn = new Date(today);
-    // console.log(tn);
-    // console.log(today);
-    // console.log(today.getDay() );
-    // console.log(today.getMonth() + 1);
-    // console.log(today.getDate() );
-    // console.log(td.getDay() );
-    // var newDate = addDays(td,5);
-
-    // var neww = addDays(tn,5);
-    // console.log(neww);
-    // console.log(newDate);
-    // console.log(start_date.min);
 })
 
 function addDays(myDate,days) {
