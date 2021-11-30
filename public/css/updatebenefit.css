@@ -1,24 +1,27 @@
 @import "color.css";
 body {
-    background-color: var(--background);
+    /*background-color: var(--background);*/
     font-family: Roboto, sans-serif;
+    background-color: #fff;
+    /*max-height: 100vh;*/
 }
 
 .main_container {
     background-color: white;
-    padding: 0 10px;
-    z-index: 9;
+    min-height: 100vh;
+    display: flex;
 }
 
 .img {
     width: 100%;
     height: 150px;
     margin: 0;
+    bottom: 0;
     background-color: var(--w);
 }
 
 .main_container svg path{
-    max-height: 100%;
+    min-height: 100%;
 }
 
 .benefit_list .title_container {
@@ -69,10 +72,10 @@ body {
 }
 
 .benefit_list {
-    width: auto;
+    width: 100%;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
 }
 
 .benefit_list table {
@@ -80,9 +83,42 @@ body {
     color: var(--f);
 }
 
+#options{
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+#options div {
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 .benefit_list table tr td i {
     padding-right: 20px;
     color: var(--f);
+}
+
+td button {
+    width: 30%;
+    border-radius: 5px;
+    height: 70%;
+    cursor: pointer;
+    padding-left: 20px;
+    margin-left: 5px;
+}
+
+#edit {
+    color: #58ccf7;
+}
+
+#delete {
+    color: rgb(240, 88, 88);
+}
+
+td button i {
+    /*padding-left: 10px;*/
 }
 
 .benefit_list table tr td i:hover {
@@ -92,7 +128,7 @@ body {
 .main_container .benefit_head {
     background-color: white;
     max-width: 100%;
-    padding: 50px;
+    padding: 10px;
     border-radius: 10px;
     margin-right: 5px;
     display: flex;
@@ -110,9 +146,9 @@ legend {
 }
 
 fieldset {
-    width: 60%;
+    width: 100%;
     justify-content: center;
-    margin-left: 20%;
+    /*margin-left: 20%;*/
 }
 
 .benefit_form {
@@ -132,28 +168,41 @@ fieldset {
 
 .benefit_form .row .column_1 {
     font-size: medium;
-    width: 31%;
+    /*width: 31%;*/
     color: #1C1D1D;
     text-align: left;
     margin-left: 0;
     padding-left: 0;
-    margin-right: 20%;
+    /*margin-right: 20%;*/
+    /*justify-content: flex-start;*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.benefit_form .row .column_1 label {
+    width: 70%;
 }
 
 .benefit_form .row .column_2 {
-    width: 51%;
+    /*width: 51%;*/
+    /*justify-content: flex-start;*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .column_2 select,
 .column_2 input,
 .column_2 textarea {
-    width: 100%;
+    width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    /*float: left;*/
 }
 
 .claim_button {
@@ -302,12 +351,14 @@ fieldset {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 
 }
 
 .confirm__title {
     font-weight: bold;
     font-size: 1.1em;
+    text-align: center;
 }
 
 .confirm__close {
@@ -332,6 +383,7 @@ fieldset {
     background-color: #EEEEEE;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .confirm__button {
