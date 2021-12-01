@@ -41,14 +41,16 @@
                     <form action="BenefitrequestController">
                         <a href="<?= PATH ?>BenefitrequestController">
                             <div class="benefit_card">
-
+                            <?php
+                            if(boolval($all_details)){
+                                for($i=0;$i<sizeof($all_details);$i++){?>
                                 <div class="benefit_card_column">
                                     <div class="card">
-                                        <p class="title">Medical Insurance</p>
+                                        <p class="title"><?php print_r($all_details[$i]->benefit_type); ?></p>
                                         <div class="text">Remaining Amount</div>
                                         <div class="remain_amount">10,000 LKR</div>
                                         <div class="text">Max Amount</div>
-                                        <div class="max_amount">30,000 LKR</div>
+                                        <div class="max_amount"><?php print_r($all_details[$i]->max_amount); ?></div>
                                         <div class="text">Renew Date</div>
                                         <div class="text">25th Jan 2022</div>
                                         <div>
@@ -56,20 +58,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="benefit_card_column">
-                                    <div class="card">
-                                        <p class="title">Educational Expenditure</p>
-                                        <div class="text">Remaining Amount</div>
-                                        <div class="remain_amount">10,000 LKR</div>
-                                        <div class="text">Max Amount</div>
-                                        <div class="max_amount">20,000 LKR</div>
-                                        <div class="text">Renew Date</div>
-                                        <div class="text">25th Jan 2022</div>
-                                        <div>
-                                            <button type="submit" value="claim">Claim</button>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php
+                                }
+                            }?>
                             </div>
                         </a>
                         <!--                        <div class="claim_button">-->
@@ -98,7 +89,7 @@
                                 <div><?php print_r($row->benefit_type); ?> </div>
                                 <div><?php print_r($row->claim_date); ?></div>
                                 <div><i>Pending</i></div>
-                                <a href="<?= PATH ?>Benefit/change/<?= $row->report_hashing ?>">
+                                <a href="<?= PATH ?>BenefitrequestController/change/<?= $row->report_hashing ?>">
                                     <button type='submit' value='Change' name="change" class='change_button'><i
                                                 class="fa fa-edit"></i> Update
                                     </button>
@@ -123,29 +114,33 @@
                         <a href="#"><i class="fa fa-search"></i></a>
                     </form>
                 </div>
-
+                <?php
+                if(boolval($handled)){?>
                 <table id="benefit_history_result">
                     <tr>
                         <th>Date</th>
                         <th>Type</th>
                         <th>Description</th>
-                        <th>Amount</th>
+                        <th>Amount(LKR)</th>
                         <th>Status</th>
                     </tr>
+                    <?php
+                    for($i=0;$i<sizeof($handled);$i++){
+                    ?>
                     <tr>
-                        <td>27th June</td>
-                        <td>Medical Insurance</td>
-                        <td>Hospitalization</td>
-                        <td>5000.00 LKR</td>
-                        <td>Accepted</td>
+                        <td><?php print_r($handled[$i]->claim_date); ?> </td>
+                        <td><?php print_r($handled[$i]->benefit_type); ?> </td>
+                        <td><?php print_r($handled[$i]->benefit_description); ?> </td>
+                        <td><?php print_r($handled[$i]->claim_amount); ?> </td>
+                        <td><?php print_r($handled[$i]->benefit_status); ?> </td>
                     </tr>
-                    <tr>
-                        <td>27th June</td>
-                        <td>Medical Insurance</td>
-                        <td>Hospitalization</td>
-                        <td>5000.00 LKR</td>
-                        <td>Rejected</td>
-                    </tr>
+                <?php
+                    }
+                }
+                else{
+                    echo "No Request Done Yet";
+                }
+                ?>
                 </table>
 
             </div>
