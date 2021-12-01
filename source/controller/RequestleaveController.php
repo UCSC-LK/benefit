@@ -21,7 +21,7 @@ class RequestleaveController extends Controller{
                     $arr['start_date'] = $_POST['half_date'];
                     $arr['end_date'] = $_POST['half_date'];
                 }
-
+                
             }
             $this->view('requestleave',['rows'=>$arr]);
         }else{

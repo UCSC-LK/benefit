@@ -61,7 +61,7 @@
                                 <div class="full_duration">
                                     <div class="start_date">
                                         <label for="start_date">Start Date </label>
-                                        <input type="date" name="start_date" id="start_date" min="2021-08-01" max="">
+                                        <input type="date" name="start_date" id="start_date" min="" max="2021-12-01">
                                     </div>
 
                                     <div class="end_date">
@@ -82,12 +82,12 @@
 
                                     <div class="item">
                                         <div class="item-1">
-                                            <label for="half">Morning </label>
-                                            <input type="radio" id="half" name="half" value="morning">
+                                            <label for="half_time">Morning </label>
+                                            <input type="radio" id="half_time" name="half_time" value="morning" >
                                         </div>
                                         <div class="item-1">
                                             <label for="half">Evening</label>
-                                            <input type="radio" name="half" value="evening" id="half">
+                                            <input type="radio" name="half_time" value="evening" id="half_time">
                                         </div>
                                     </div>
 
