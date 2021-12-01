@@ -86,7 +86,7 @@
                                             <input type="radio" id="half_time" name="half_time" value="morning" >
                                         </div>
                                         <div class="item-1">
-                                            <label for="half">Evening</label>
+                                            <label for="half_time">Evening</label>
                                             <input type="radio" name="half_time" value="evening" id="half_time">
                                         </div>
                                     </div>
@@ -109,11 +109,11 @@
                     </form>
                 </fieldset>
 
-                <?php if(boolval($rows))
+                <!-- <?php if(boolval($rows))
                     { 
                         print_r($rows);
                         
-                    } ?>
+                    } ?> -->
             </div>
         </div>
     </div>
