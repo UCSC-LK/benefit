@@ -12,34 +12,28 @@
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 </head>
 <body>
+<div class="topnav" id="myTopnav">
+    <div class="list">
+        <a href="<?= PATH ?>Home" class="active">Home</a>
+        <a href="<?= PATH ?>leavedetailscontroller">My Info</a>
+        <a href="<?= PATH ?>hrdocuments">Documents</a>
+        <a href="<?= PATH ?>Hierarchy">Time Off</a>
+        <?php if (Auth::access('Supervisor')): ?>
+            <a href="<?= PATH ?>Approvereimbursement">USER MANAGEMENT</a>
+        <?php endif; ?>
+        <?php if (Auth::access('HR Manager')): ?>
+            <a href="<?= PATH ?>EmployeelistController">USER MANAGEMENT</a>
+        <?php endif; ?>
+        <?php if (Auth::access('HR Officer')): ?>
+            <a href="<?= PATH ?>AddemployeeController">USER MANAGEMENT</a>
+        <?php endif; ?>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="<?= PATH ?>Logout" id="#show_hide" style="display: none">Log Out </a>
+        <a href="" id="#show_hide" style="display: none">Notifications </a>
+    </div>
 
-<div class="header1" id="myHeader">
-    <!--    <div class="ofs">-->
-    <!--        OFS-->
-    <!--    </div>-->
-
-    <nav class="list1">
-        <ul>
-            <li><a href="<?= PATH ?>Home">Home</a></li>
-            <li><a href="<?= PATH ?>leavedetailscontroller">My Info</a></li>
-            <li><a href="<?= PATH ?>hrdocuments">Documents</a></li>
-            <li><a href="<?= PATH ?>Hierarchy">Hierarchy</a></li>
-
-            <?php if (Auth::access('Supervisor')): ?>
-                <li><a href="<?= PATH ?>Approvereimbursement">USER MANAGEMENT</a></li>
-            <?php endif; ?>
-            <?php if (Auth::access('HR Manager')): ?>
-                <li><a href="<?= PATH ?>EmployeelistController">USER MANAGEMENT</a></li>
-            <?php endif; ?>
-            <?php if (Auth::access('HR Officer')): ?>
-                <li><a href="<?= PATH ?>AddemployeeController">USER MANAGEMENT</a></li>
-            <?php endif; ?>
-            <!-- <a>
-                <span class="material-icons">notifications</span>
-            </a>
-            <span class=logged_name></span>
-        </ul> -->
-    </nav>
     <div class="toggle_section">
         <div class="notification">
             <a><span class="material-icons">notifications</span></a>
@@ -47,6 +41,16 @@
         <div class="logged_name">
             <span class=log_name><?= Auth::getfirst_name() ?></span>
         </div>
+        <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
 
         <div class="dd_main">
             <button type="button" class="icon-button">
