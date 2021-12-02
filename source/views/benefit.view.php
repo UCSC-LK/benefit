@@ -63,9 +63,6 @@
                             }?>
                             </div>
                         </a>
-                        <!--                        <div class="claim_button">-->
-                        <!--                            <input type="submit" value="Apply" name="submit">-->
-                        <!--                        </div>-->
                     </form>
                 </div>
 
@@ -74,7 +71,6 @@
 
             <div class="benefit_history">
                 <div class="history_header">
-<!--                    <i class="item" data-feather="clipboard"></i>-->
                     <i class="fa fa-history" aria-hidden="true"></i>
                     <p class="main_title">Benefit History</p>
                 </div>
@@ -104,18 +100,26 @@
                 }
                 ?>
 
+                <?php
+                if(boolval($all_details)){?>
                 <div class="benefit_type">
                     <form action="">
                         <select id="benefit_type" name="benefit">
-                            <option value="medical">Medical Insurance</option>
-                            <option value="life">Life Insurance</option>
-                            <option value="accident">Accident Insurance</option>
+                            <option></option>
+                            <?php
+                            for($i=0;$i<sizeof($all_details);$i++){?>
+                            <option value="medical"><?php print_r($all_details[$i]->benefit_type); ?></option>
+                            <?php
+                            }?>
                         </select>
                         <a href="#"><i class="fa fa-search"></i></a>
                     </form>
                 </div>
                 <?php
+                }?>
+                <?php
                 if(boolval($handled)){?>
+                <div class="history_table">
                 <table id="benefit_history_result">
                     <tr>
                         <th>Date</th>
@@ -142,38 +146,13 @@
                 }
                 ?>
                 </table>
+                </div>
 
             </div>
-
-            <!--            <div class="benefit_type">-->
-            <!--                <form action="">-->
-            <!---->
-            <!--                    <select id="benefit" name="benefit">-->
-            <!--                        <option value="medical">Medical Insurance</option>-->
-            <!--                        <option value="life">Life Insurance</option>-->
-            <!--                        <option value="accident">Accident Insurance</option>-->
-            <!--                    </select>-->
-            <!--                    <input id="button" type="submit" value="Search"/>-->
-            <!--                </form>-->
-            <!--            </div>-->
-            <!---->
-            <!--            <table id="benefit_history_result">-->
-            <!--                <tr>-->
-            <!--                    <th>Date</th>-->
-            <!--                    <th>Description</th>-->
-            <!--                    <th>Used</th>-->
-            <!--                </tr>-->
-            <!--            </table>-->
 
         </div>
     </div>
 </div>
-
-<!--<div>-->
-<!--    --><?php
-//    $this->view('includes/footer')
-//    ?>
-<!--</div>-->
 
 </body>
 </html>
