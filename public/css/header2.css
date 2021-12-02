@@ -13,28 +13,19 @@ body {
 
 .header2 {
     height: 70px;
-    /*margin-left: 5px;*/
-    /*background-color: #BA68C8;*/
     display: flex;
-    /*position: relative;*/
-    /*border-radius: 10px;*/
-    /*margin-right: 5px;*/
-    /*margin-bottom: 5px;*/
 }
 
 
 /* NAVIGATION */
 
-.header2 nav {
+.header2 .stroke {
     display: flex;
-    /*position: relative;*/
     width: 100%;
-    /* background-color: #A4E5E0; */
     background-color: #e4f9fc;
-    /*border-radius: 10px;*/
 }
 
-.header2 nav ul {
+.header2 .stroke ul, .header2 .stroke2 ul {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
@@ -42,44 +33,46 @@ body {
     padding-inline-start: 20px;
     padding-inline-end: 20px;
     width: 100%;
+    align-items: center;
 }
 
-.header2 nav ul li {
+.header2 .stroke ul li, .header2 .stroke2 ul li {
     display: inline-block;
     justify-content: space-evenly;
-    width: 20%;
 }
 
-.header2 nav ul li a {
+.header2 .stroke ul li a, .header2 .stroke2 ul li a {
     display: block;
     padding: 12px;
     text-decoration: none;
-    /* color: var(--header_dark); */
     color: var(--h1);
     font-weight: 800;
     text-transform: uppercase;
     justify-content: center;
-    /*margin: 0 5px;*/
+    width:fit-content;
 }
 
-.header2 nav ul li a,
-.header2 nav ul li a:after,
-.header2 nav ul li a:before {
+.header2 .stroke ul li a,
+.header2 .stroke ul li a:after,
+.header2 .stroke ul li a:before,
+.header2 .stroke2 ul li a,
+.header2 .stroke2 ul li a:after,
+.header2 .stroke2 ul li a:before{
     transition: all .5s;
 }
 
-.header2 nav ul li a:hover {
+.header2 .stroke ul li a:hover, .header2 .stroke2 ul li a:hover {
     color: #212121;
 }
 
 
 /* stroke */
 
-.header2 nav.stroke ul li a {
+.header2 .stroke ul li a, .header2 .stroke2 ul li a {
     position: relative;
 }
 
-.header2 nav.stroke ul li a:after {
+.header2 .stroke ul li a:after, .header2 .stroke2 ul li a:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -92,6 +85,26 @@ body {
     height: 2px;
 }
 
-.header2 nav.stroke ul li a:hover:after {
+.header2 .stroke ul li a:hover:after, .header2 .stroke2 ul li a:hover:after {
     width: 100%;
+}
+
+/*Responsive*/
+.header2 .stroke2 {
+    display: none;
+    width: 100%;
+    background-color: #e4f9fc;
+}
+
+
+@media screen and (max-width: 780px) {
+    .header2 .stroke2 {
+        display: flex;
+    }
+    .header2 .stroke {
+        display: none;
+    }
+    .header2 .stroke2 a {
+        font-size: x-large;
+    }
 }
