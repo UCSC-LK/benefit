@@ -195,6 +195,7 @@ body {
     list-style-type: none;
     padding-left: 10px;
     cursor: pointer;
+    width: 25%;
 }
 
 .dd_menu .dd_right {
@@ -237,13 +238,13 @@ body {
     .topnav.responsive {
         min-width: 100%;
     }
-    .topnav .list{
-        display: block;
-        justify-content: left;
-        flex-direction:row;
-        align-items: center;
-        max-height:50px;
-    }
+    /*.topnav .list{*/
+    /*    display: block;*/
+    /*    justify-content: left;*/
+    /*    flex-direction:row;*/
+    /*    align-items: center;*/
+    /*    max-height:50px;*/
+    /*}*/
     .topnav a:not(:first-child) {
         display: none;
     }
