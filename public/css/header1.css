@@ -17,6 +17,7 @@ body {
 }
 
 .topnav  .list{
+    width:100%;
 }
 
 .topnav a {
@@ -233,8 +234,14 @@ body {
 }
 
 @media screen and (max-width: 930px) {
-    .topnav a:not(:first-child) {display: none;}
+    .topnav.responsive {
+        min-width: 100%;
+    }
+    .topnav a:not(:first-child) {
+        display: none;
+    }
     .topnav a.icon {
+        right: 0;
         float: right;
         display: block;
     }
