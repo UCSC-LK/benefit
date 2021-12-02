@@ -40,41 +40,35 @@
             <span class=logged_name></span>
         </ul> -->
     </nav>
-    
-    <div class="notification">
-        <a>
-                <span class="material-icons">notifications</span>
-            </a>
-    </div>
-    <div class="logged_name">
-         <span class=log_name><?= Auth::getfirst_name() ?></span>
-
+    <div class="toggle_section">
+        <div class="notification">
+            <a><span class="material-icons">notifications</span></a>
+        </div>
+        <div class="logged_name">
+            <span class=log_name><?= Auth::getfirst_name() ?></span>
         </div>
 
-    <div class="dd_main">
-        <button type="button" class="icon-button">
-            <a>
-                <i class="fas fa-user"></i>
-                <!-- <span class="icon-button_badge">2</span> -->
-            </a>
+        <div class="dd_main">
+            <button type="button" class="icon-button">
+                <a><i class="fas fa-user"></i></a>
 
-            <div class="dd_menu">
-                <div class="dd_left">
-                    <ul>
-                        <li><a href="<?= PATH ?>leavedetailscontroller"> <i class="fa fa-user" aria-hidden="true"></i>
-                            </a></li>
-                        <!-- <li></li> -->
-                        <li><a href="<?= PATH ?>Logout"> <i class="fas fa-sign-out-alt"> </i></a></li>
-                    </ul>
+                <div class="dd_menu">
+                    <div class="dd_left">
+                        <ul>
+                            <li><a href="<?= PATH ?>leavedetailscontroller"> <i class="fa fa-user"
+                                                                                aria-hidden="true"></i></a></li>
+                            <li><a href="<?= PATH ?>Logout"> <i class="fas fa-sign-out-alt"> </i></a></li>
+                        </ul>
+                    </div>
+                    <div class="dd_right">
+                        <ul>
+                            <li><a href="<?= PATH ?>leavedetailscontroller">My Info </a></li>
+                            <li><a href="<?= PATH ?>Logout">Log Out </a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="dd_right">
-                    <ul>
-                        <li><a href="<?= PATH ?>leavedetailscontroller">My Info </a></li>
-                        <li><a href="<?= PATH ?>Logout">Log Out </a></li>
-                    </ul>
-                </div>
-            </div>
-        </button>
+            </button>
+        </div>
     </div>
 </div>
 <script>
