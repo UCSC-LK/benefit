@@ -1,6 +1,6 @@
 @import "color.css";
 body {
-    font-family: 'Arial', Serif, serif;
+    font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -16,7 +16,6 @@ body {
     /*margin-left: 5px;*/
     /*background-color: #BA68C8;*/
     display: flex;
-    font-family: Arial, serif;
     /*position: relative;*/
     /*border-radius: 10px;*/
     /*margin-right: 5px;*/
