@@ -11,7 +11,7 @@
 	<title>Update Reimbursment Details</title>
 	
 </head>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	function validation() {
     var p = document.forms["myform"]["claim_amount"].value;
     var decimal = /^[+]?[0-9]+\.[0-9]+$/;
@@ -71,10 +71,26 @@ function subDays(myDate, days) {
 }
 }
 
-</script>
+</script> -->
 <body class="update-body">
-	<!-- <h1>delete</h1> -->
-	<div class="reimbursement_details">
+
+<div>
+    <?php
+    $this->view('includes/header1');
+    ?>
+</div>
+<div class="profile_container">
+    <div class="profile">
+        <?php
+        $this->view('includes/profile1');
+        ?>
+    </div>
+    <div class="content">
+        <?php
+        $this->view('includes/header2');
+        ?>
+        <div class="reimbursement_container">
+<div class="reimbursement_details">
             <fieldset class="feildset-1">
                 <legend>UPDATE REIMBURSEMENT</legend> 
               
@@ -119,10 +135,17 @@ function subDays(myDate, days) {
             </div>
             <div id="error_show">
 
-            <div class="invoice_submission">
+            <div class="invoice_submission1">
                 <form2>
                 <input class="file-input" type="file" id="invoice_submission" name="invoice_submission" accept=".pdf, .png" multiple required hidden>
-				<?php $report=$arr[0]->invoice_submission; print_r($report); ?>
+				<div class="invoice_name">
+				<?php $report=array();
+				$report=$arr[0]->invoice_submission;
+                // $report_name = $report(2:5);
+				// print_r(array_slice($report,30));
+				print_r($report); 
+				?>
+				</div>
             	<i class="fas fa-cloud-upload-alt"></i>
                     <p>Browse File to Upload</p>
                     </form2>
@@ -143,8 +166,8 @@ function subDays(myDate, days) {
             </div>
 		<!-- </form>	 -->
 		
-		<a href="<?=PATH?>Reimbursement/updating">
-        <button  type="submit" value="submit" name="update" class="update-confirmation">Update</button></a>
+		<a href="<?=PATH?>Reimbursement/updating/<?= $arr->invoice_hashing?>">
+        <button  type="submit" value="submit" name="submit" class="update-confirmation">Update</button></a>
 
 		<a href="<?=PATH?>/Reimbursement">
 		<input class="cancle-confirmation" type="button" value="Cancel"></a>
@@ -183,7 +206,71 @@ function subDays(myDate, days) {
 	</fieldset>
 
 	</div>
-	</div>      		
+	</div>
+	</div>
+</div>
+<script type="text/javascript">
+	function validation() {
+    var p = document.forms["myform"]["claim_amount"].value;
+    var decimal = /^[+]?[0-9]+\.[0-9]+$/;
+    if (p.match(decimal)) {
+        var f1 = reason_validation();
+        var f2 = true
+        if (f1 && f2) {
+            return true;
+        } else {
+            return false;
+        }
+    } else {
+        alert('Please enter valid numeric value')
+            // Swal.fire('Please enter valid numeric value')
+        reason_validation();
+        return false;
+    }
+}
+
+function reason_validation() {
+    var m = document.forms["myform"]["subject"].value;
+    if (isNaN(m)) {
+        // document.getElementById("validText").innerHTML = "Reason: " + m;
+        return true;
+    } else {
+        alert("Please enter a valid reason");
+        return false;
+    }
+}
+
+//get claim date
+function dating(){
+
+var today = new Date();
+var max_m = today.getUTCMonth() + 1;
+var max_d = today.getUTCDate();
+var max_y = today.getUTCFullYear();
+
+today_date = max_y + "-" + max_m + "-" + max_d;
+
+document.getElementById("claim_date").setAttribute("max", today_date);
+
+var dateObj = new Date();
+
+var min_date = subDays(dateObj, 6);
+
+var min_m = min_date.getUTCMonth() + 1; //months from 1-12
+var min_d = min_date.getUTCDate();
+var min_y = min_date.getUTCFullYear();
+
+newdate = min_y + "-" + min_m + "-" + min_d;
+
+document.getElementById("claim_date").setAttribute("min", newdate);
+
+
+function subDays(myDate, days) {
+    return new Date(myDate.getTime() - days * 24 * 60 * 60 * 1000);
+}
+}
+
+</script>   		
 	<!-- <script src="public/js/reimbursement.js"></script> -->
      
 </body>
