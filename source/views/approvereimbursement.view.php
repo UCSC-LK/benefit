@@ -58,9 +58,33 @@
                                     print_r($requested[$i]['details']->claim_date); ?>
                                 </p>
                             </div>
+                            <?php
+                                $btnChange = 'btnChange';
+                                $btnChange .= $i;
+                                //echo $btnChange;
+                            ?>
                             <center>
-                                <button type="button" name="show" value="show">Show</button>
+                                <button class="show_btn" type="button" name="show" value="show" id="<?php echo $btnChange ?>" onclick="reply_click(this.id)">Show</button>
                             </center>
+                            <script type="text/javascript">
+
+                                document.querySelector('<?php echo "#".$btnChange;?>').addEventListener('click', () => {
+                                    Confirm.open({
+                                        title: 'Request From <?php print_r($requested[$i]['first_name']); echo " "; print_r($requested[$i]['last_name']); ?>',
+                                        message: 'Claimed Date : <?php print_r($requested[$i]['details']->claim_date); echo "<br>";?> ' +
+                                            'Claimed Amount : <?php print_r($requested[$i]['details']->claim_amount); echo "<br>";?>' +
+                                            'Description : <?php print_r($requested[$i]['details']->reimbursement_reason); echo "<br>";?>' +
+                                            'Report : <?php print_r($requested[$i]['details']->invoice_submission); echo "<br>";?>',
+                                        onok: () => {
+                                            window.location.href = "Approvereimbursement/accept/<?php print_r($requested[$i]['details']->invoice_hashing); ?>"
+                                        },
+                                        onreject: () => {
+                                            window.location.href = "Approvereimbursement/reject/<?php print_r($requested[$i]['details']->invoice_hashing); ?>"
+                                        }
+
+                                    })
+                                });
+                            </script>
                         </div>
                         <?php
                     }
@@ -109,62 +133,95 @@
                 ?>
             </div>
         </div>
-<!--        <div class="details">-->
-<!--            <div class="row">-->
-<!--                <div class="column_1">-->
-<!--                    <label for="c_date">Claim Date</label>-->
-<!--                </div>-->
-<!--                <div class="column_2">-->
-<!--                    --><?php //// print_r($requested[$i]['details']->claim_date); ?>
-<!--                    <p class="values">2021/09/21</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="column_1">-->
-<!--                    <label for="c_amount">Claim Amount</label>-->
-<!--                </div>-->
-<!--                <div class="column_2">-->
-<!--                    --><?php //// print_r($requested[$i]['details']->claim_amount); ?>
-<!--                    <p class="values">10 000 LKR</p>-->
-<!---->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="column_1">-->
-<!--                    <label for="subject">Reason</label>-->
-<!--                </div>-->
-<!--                <div class="column_2">-->
-<!--                    <p class="values">Fuel Cost</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="column_1">-->
-<!--                    <label for="document">Documents</label>-->
-<!--                </div>-->
-<!--                <div class="column_2">-->
-<!--                    --><?php ////print_r($requested[$i]['details']->invoice_submission); ?>
-<!--                    <p class="values">https://www.abc.lk</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="column_3">-->
-<!--                    <label for="claim_history">Reimbursement History</label>-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!---->
-<!--            <div class="buttons">-->
-<!--                <input class="reject_button" type="submit" value="Reject" name="reject">-->
-<!--                <input class="approve_button" type="submit" value="Approve" name="approve">-->
-<!--            </div>-->
-<!--        </div>-->
-        <?php
-        //      }
-        // }
-        ?>
+
     </div>
 </div>
 
+<script>
+
+    function addBox() {
+        var temp = document.getElementById("temp").content;
+        document.getElementById("btn").appendChild(temp);
+    }
+
+    document.getElementById("btn").addEventListener("click", addBox);
+
+</script>
+
+<script>
+    const  Confirm = {
+        open(options){
+            options = Object.assign({},{
+                title: '',
+                message: '',
+                okText: 'Accept',
+                //cancelText: 'Reject',
+                rejectText: 'Reject',
+                onok: function () {},
+                oncancel: function () {},
+                onreject: function () {}
+            }, options);
+
+
+            const html = `<div class="confirm">
+    <div class="confirm__window">
+        <div class="confirm__titlebar">
+            <span class="confirm__title">${options.title}</span>
+            <button class="confirm__close">&times;</button>
+        </div>
+        <div class="confirm__content">${options.message}
+        </div>
+        <div class="confirm__buttons">
+            <button class="confirm__button confirm__button--ok confirm__button--fill">${options.okText}</button>
+            <button class="confirm__button confirm__button--cancel">${options.rejectText}</button>
+
+</div>
+    </div>
+</div>`;
+
+            const template = document.createElement('template');
+            template.innerHTML = html;
+
+            const confirmEl = template.content.querySelector('.confirm');
+            const btnReject = template.content.querySelector('.confirm__button--cancel');
+            const btnClose = template.content.querySelector('.confirm__close');
+            const btnOk = template.content.querySelector('.confirm__button--ok');
+
+            confirmEl.addEventListener('click', e => {
+                if(e.target === confirmEl){
+                    options.oncancel();
+                    this._close(confirmEl);
+                }
+            });
+
+            btnReject.addEventListener('click', e => {
+                options.onreject();
+                this._close(confirmEl);
+            });
+
+            btnOk.addEventListener('click', () => {
+                options.onok();
+                this._close(confirmEl);
+            });
+
+            [btnClose].forEach(el => {
+                el.addEventListener('click', () => {
+                    options.oncancel();
+                    this._close(confirmEl);
+                });
+            });
+
+            document.body.appendChild(template.content);
+        },
+
+        _close (confirmEl){
+            confirmEl.classList.add('confirm--close');
+            confirmEl.addEventListener('animationend', () => {
+                document.body.removeChild(confirmEl);
+            });
+        }
+    }
+</script>
 <!--<div>-->
 <!--    --><?php //$this->view('includes/footer') ?>
 <!--</div>-->

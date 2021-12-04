@@ -453,16 +453,16 @@ tr:nth-child(even) {
 }
 
 .feildset-1 {
-    width: 63%;
+    width: 80%;
     justify-content: center;
     padding-bottom: 20px;
     padding-top: 20px;
-    margin-left: 18%;
+    margin-left: 10%;
     /* display: inline-block; */
 }
 
 .invoice_submission1 {
-    width: 40%;
+    width: 70%;
     height: 120px;
     justify-content: center;
     text-align: center;
@@ -470,8 +470,48 @@ tr:nth-child(even) {
     border-style: dotted;
     font-family: Roboto, sans-serif;
     font-size: 15px;
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 30%;
+}
+
+.invoice_name {
+    width: 100%;
+    font-size: 12px;
+    margin-left: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 50%;
+    margin-top: 1%;
+}
+
+.invoice_submission1 i {
+    font-size: 50px;
+    color: #0C6170;
+    margin-right: 85px;
+    margin-top: 10px;
+}
+
+.invoice_submission1 p {
+    margin-top: 2px;
+    font-size: 16px;
+    margin-right: 85px;
+    color: #717171;
+    margin-bottom: 1px;
+}
+
+.row #error_show {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+#error-mzg {
+    color: red;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 5px;
 }
 
 
