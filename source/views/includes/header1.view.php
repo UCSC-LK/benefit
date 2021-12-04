@@ -17,7 +17,7 @@
         <a href="<?= PATH ?>Home" class="active">Home</a>
         <a href="<?= PATH ?>leavedetailscontroller">My Info</a>
         <a href="<?= PATH ?>hrdocuments">Documents</a>
-        <a href="<?= PATH ?>Hierarchy">Time Off</a>
+        <a href="<?= PATH ?>Hierarchy">Hierarchy</a>
         <?php if (Auth::access('Supervisor')): ?>
             <a href="<?= PATH ?>Approvereimbursement">USER MANAGEMENT</a>
         <?php endif; ?>

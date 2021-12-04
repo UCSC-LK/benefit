@@ -24,7 +24,7 @@
             <li><a href="<?= PATH ?>Reporting"><i class="fas fa-chart-line"></i><span>Reports</span></a></li>
             <li><a href="<?= PATH ?>AddemployeeController"><i class="far fa-address-book"></i><span>Registration</span></a></li>
             <li><a href="<?= PATH ?>EmployeelistController"><i class="fas fa-user-edit"></i><span>Employee Management</span></a>
-            <li><a href="<?= PATH ?>Hrdocuments/updatedecuments"><i class="fas fa-edit"></i><span>Document Settings</span></a></li>
+            <li><a href="<?= PATH ?>Hrdocuments/updatedocuments"><i class="fas fa-edit"></i><span>Document Settings</span></a></li>
             <li><a href="<?= PATH ?>Benefit/update"><i class="fas fa-address-card"></i><span>Benefit Settings</span></a></li>
         <?php endif; ?>
     </ul>
